@@ -92,7 +92,7 @@
 					<?php _e('Visibility Control', CCTM_TXTDOMAIN); ?>
 				</label>
 				<input type="text" name="visibility_control" class="cctm_text" id="visibility_control" value="<?php print htmlspecialchars($data['visibility_control']); ?>"/>
-				<span class="cctm_description"><?php _e('Fine-tune the display of your metabox by specifying additional conditions. This field must be valid PHP which returns a boolean. If the statement evaluates to true, the metabox will be drawn. E.g. to show the metabox only when the page template is page-about.php:<br /><code>return basename( get_page_template() ) == "page-about.php"</code><br />If nothing is displaying, see <a href="http://php.net/manual/en/function.eval.php">http://php.net/manual/en/function.eval.php</a> and check your code', CCTM_TXTDOMAIN); ?></span>
+				<span class="cctm_description"><?php _e('Fine-tune the display of your metabox by specifying template file names, e.g. <code>page-about.php</code> or you may comma-separate multiple names.', CCTM_TXTDOMAIN); ?></span>
 			</div>
 
 		</div><!-- /inside -->

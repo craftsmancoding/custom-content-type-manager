@@ -5,7 +5,7 @@ Tags: cms, content management, custom post types, custom content types, custom f
 Requires at least: 3.3.0
 Tested up to: 3.8.1
 Stable tag: 0.9.7.13
-Version: 0.9.7.13
+Version: 0.9.8.0
 
 Break out of your blog!  Create custom fields for dropdowns, images, and more!  This plugin gives Wordpress true CMS functionality.
 
@@ -27,7 +27,7 @@ Please use the following links for support and discussion:
 
 * Please sign up for the CCTM [Mailing List](http://eepurl.com/dlfHg)
 * Participate in the [Forum](http://wordpress.org/tags/custom-content-type-manager?forum_id=10)
-* File [Bug reports](http://code.google.com/p/wordpress-custom-content-type-manager/issues/list) or make feature requests.
+* File [Bug reports or Feature Requests](https://github.com/craftsmancoding/custom-content-type-manager/issues).
 * Read the [Official documentation](http://code.google.com/p/wordpress-custom-content-type-manager/)
 
 = Requirements =
@@ -77,13 +77,20 @@ Please see the online [FAQ](http://code.google.com/p/wordpress-custom-content-ty
 
 == Changelog ==
 
-You can always checkout the most recent version of the code at 
+As of May 2015, this plugin has been shifted over to [Github](https://github.com/craftsmancoding/custom-content-type-manager) due to the shutdown of Google Code.  Active development will occur in Github; SVN will be updated when there is a new tagged version.
 
-	http://downloads.wordpress.org/plugin/custom-content-type-manager.zip
-	
-or by going to your wp-content/plugins directory and executing the following command from the command-line:
+The most recent SVN version of the code is located at:
 
-	svn checkout http://plugins.svn.wordpress.org/custom-content-type-manager/trunk custom-content-type-manager 
+	https://downloads.wordpress.org/plugin/custom-content-type-manager.zip
+
+The most recent Git version of the code is located at:
+
+	https://github.com/craftsmancoding/custom-content-type-manager
+
+
+= 0.9.7.14 =
+
+* Security fix for code execution in Metaboxes (https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=511)
 
 = 0.9.7.13 =
 
@@ -437,22 +444,22 @@ These requirements are tested during WordPress initialization; the plugin will n
 
 == About ==
 
-This plugin was written in part for the book [WordPress 3 Plugin Development Essentials](http://www.packtpub.com/wordpress-3-plugin-development-essentials/book) published by Packt. It was inspired by the [Custom-Post Type UI](http://wordpress.org/extend/plugins/custom-post-type-ui/) plugin written by Brad Williams. The Custom-Post Type UI plugin offers some of the same features, but I felt that its architecture was flawed: it stores data as taxonomical terms, which is conceptually awkward at a development level, and more importantly, it limits the each custom field to 200 characters of data, making it impossible to store certain types of custom content.
-
-On the surface, this plugin is similar, but this plugin "correctly" stores custom field data as post meta data, which allows allows for different input types (e.g. checkboxes, dropdowns, and images) and the custom fields offered by this plugin can support data of virtually unlimited size. For example, you could define a WYSIWYG custom field for your custom content type and it could hold many pages of data.
-
-The architecture for this plugin was also inspired by [MODX](http://modx.com/). WordPress is making progress as a viable content management system, but even after the thousands of lines of code in this plugin, it still does not support all the features in a system like MODx. WordPress templates are particularly limited by comparison. WordPress is great system for many scenarios, but if you're feeling that WordPress is starting to tear apart at the seams when it comes to custom content, it may be worth a look at another plugin or some of the other available systems.
+This plugin was written in part for the book [WordPress 3 Plugin Development Essentials](http://www.packtpub.com/wordpress-3-plugin-development-essentials/book) published by Packt. The architecture for this plugin was inspired by [MODX](http://modx.com/).  You can compare the 2 systems side by side in my book [MODX and WordPress](https://leanpub.com/modx-vs-wordpress)
 
 == Future TO-DO == 
 
-Please see the [Issues page](http://code.google.com/p/wordpress-custom-content-type-manager/issues/list) for the most current list of on-going feature development.
+Please see the [Issues page](https://github.com/craftsmancoding/custom-content-type-manager/issues) for active development.  See also the [depcrecated page](http://code.google.com/p/wordpress-custom-content-type-manager/issues/list) at Google Code.  All Google Code projects will become read-only on [August 24, 2015](http://google-opensource.blogspot.com/2015/03/farewell-to-google-code.html).
 
-If you are eager to see a particular feature implemented in a future release, please share your feedback at the official [Issues page](http://code.google.com/p/wordpress-custom-content-type-manager/issues/list)
+If you are eager to see a particular feature implemented in a future release, please share your feedback at the official [Issues page](https://github.com/craftsmancoding/custom-content-type-manager/issues)
 
-And if you REALLY want some of these features implemented, you can hire me to complete portions of your project or make a [donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=355ULXBFXYL8N).  Many of the surges in development in this plugin were instigated by projects that required this plugin's use.
+
 
 
 == Upgrade Notice ==
+
+= 0.9.7.14 =
+
+* All users should update: this contains a security fix and various improvements.  This is the last free version of this plugin; software development is a full-time job.
 
 = 0.9.7.13 =
 

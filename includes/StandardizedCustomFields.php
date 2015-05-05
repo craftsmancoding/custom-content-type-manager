@@ -109,9 +109,17 @@ class StandardizedCustomFields {
 				// See https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=511
                 // Check if the user has specified PHP conditions to control the visibility of the metabox
                 if ( isset($m['visibility_control']) && !empty($m['visibility_control']) ) {
-                    if ( eval($m['visibility_control'].';') !== true ) {
-                        continue; // Skip this metabox if the code doesn't eval to true.
+                    if (strpos($m['visibility_control'],',') !== false) {
+                        $templates = array_map('trim', explode(',', $m['visibility_control']));
                     }
+                    else {
+                        $templates = array(trim($m['visibility_control']));
+                    }
+
+                    if (!in_array(basename(get_page_template()), $templates)) {
+                        continue; // Skip this metabox if the page template isn't listed here.
+                    }
+
                 }				
 				add_meta_box($m['id'],$m['title'],$callback,$post_type,$m['context'],$m['priority'],$callback_args);
 			}
@@ -126,7 +134,7 @@ class StandardizedCustomFields {
 	}
 
 	//------------------------------------------------------------------------------
-	/**
+	/*
 	 * WP only allows users to select PUBLISHED pages of the same post_type in their hierarchical
 	 * menus.  And there are no filters for this whole thing save at the end to filter the generated 
 	 * HTML before it is sent to the browser. Arrgh... this is grossly inefficient!!

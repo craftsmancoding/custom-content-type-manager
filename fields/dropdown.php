@@ -394,7 +394,7 @@ class CCTM_dropdown extends CCTM_FormElement
 			<label class="cctm_label cctm_textarea_label" id="advanced_label">'
 			. __('Alternate Input', CCTM_TXTDOMAIN) .
 			'</label>
-			<span>'.__('Use this input if you want to options in bulk. 
+			<span>'.__('Use this input if you want to define options in bulk, one option per line.
 				Separate options and values using double-pipes "||" with the visible option on the left, the corresponding value
 				to be stored on the right (if present).  You may also enter a valid MySQL query. This field overrides 
 				other inputs!', CCTM_TXTDOMAIN).'</span><br/>
