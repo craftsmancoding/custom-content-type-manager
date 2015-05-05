@@ -28,16 +28,19 @@ $data['name_class'] = ''; // 'cctm_validation_error';
 if ($desired_field_type) {
     $elements = CCTM::get_available_helper_classes('fields');
     foreach ( $elements as $field_type => $file ) {
-        $classname = 'CCTM\\Fields\\'.$field_type;
-    	$FieldObj = new $classname();
-        $is_selected = '';
-        if ($desired_field_type == $field_type) {
-           $is_selected = ' selected="selected"';    
-        }
-        $data['field_types'] .= '<option value="'.$field_type.'"'.$is_selected.'>'.$FieldObj->get_name().'</option>';		
+    	if ($FieldObj = CCTM::load_object($field_type,'fields') ) {
+    	   $is_selected = '';
+    	   if ($desired_field_type == $field_type) {
+        	   $is_selected = ' selected="selected"';    
+    	   }
+            $data['field_types'] .= '<option value="'.$field_type.'"'.$is_selected.'>'.$FieldObj->get_name().'</option>';		
+    	}
+    	else {
+            // Form element not found.  Did someone move a custom class file?
+    	}
     }
     
-    print CCTM\Load::view('tr_bulk.php', $data);
+    print CCTM::load_view('tr_bulk.php', $data);
 }
 // 2. User wants to query the database
 elseif ($post_type || $post_ids) {

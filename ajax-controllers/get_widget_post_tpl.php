@@ -22,7 +22,7 @@ $target_id = CCTM::get_value($_POST, 'target_id');
 // Will be either the single or the multi, depending.
 $tpl = '';
 
-$tpl = CCTM\Load::tpl('widgets/post_item.tpl');
+$tpl = CCTM::load_tpl('widgets/post_item.tpl');
 
 // Just in case...
 if (empty($tpl)) {

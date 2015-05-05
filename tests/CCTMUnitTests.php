@@ -96,7 +96,7 @@ class CCTMUnitTests extends UnitTestCase {
 	//!Test Validators
 	//------------------------------------------------------------------------------
 	function testEmail() {
-		$V = CCTM\Load::object('emailaddress','validators');
+		$V = CCTM::load_object('emailaddress','validators');
 		
 		$email = 'notan-emailaddress.';
 		
@@ -105,7 +105,7 @@ class CCTMUnitTests extends UnitTestCase {
 	}
 
 	function testEmail2() {
-		$V = CCTM\Load::object('emailaddress','validators');
+		$V = CCTM::load_object('emailaddress','validators');
 		$email = 'someone@yahoo.com';
 		$V->validate($email);
 
@@ -113,7 +113,7 @@ class CCTMUnitTests extends UnitTestCase {
 	}
 
 	function testEmail3() {
-		$V = CCTM\Load::object('emailaddress','validators');
+		$V = CCTM::load_object('emailaddress','validators');
 		$email = 'payer@player-hater.com';
 		$V->validate($email);
 		$this->assertTrue(empty($V->error_msg));
@@ -121,7 +121,7 @@ class CCTMUnitTests extends UnitTestCase {
 
 	//------------------------------------------------------------------------------
 	function testNumber() {
-		$V = CCTM\Load::object('number','validators');
+		$V = CCTM::load_object('number','validators');
 		$number = 'asdf';
 		$V->validate($number);
 		$this->assertFalse(empty($V->error_msg));
@@ -129,14 +129,14 @@ class CCTMUnitTests extends UnitTestCase {
 
 
 	function testNumber3() {
-		$V = CCTM\Load::object('number','validators');
+		$V = CCTM::load_object('number','validators');
 		$number = '123';
 		$V->validate($number);
 		$this->assertTrue(empty($V->error_msg));
 	}
 
 	function testNumber4() {
-		$V = CCTM\Load::object('number','validators');
+		$V = CCTM::load_object('number','validators');
 		$V->min = 4;
 		$V->max = 6;
 		$number = '10';
@@ -145,7 +145,7 @@ class CCTMUnitTests extends UnitTestCase {
 	}
 
 	function testNumber5() {
-		$V = CCTM\Load::object('number','validators');
+		$V = CCTM::load_object('number','validators');
 		$V->min = 4;
 		$V->max = 6;
 		$number = '5';
@@ -154,7 +154,7 @@ class CCTMUnitTests extends UnitTestCase {
 	}
 
 	function testNumber6() {
-		$V = CCTM\Load::object('number','validators');
+		$V = CCTM::load_object('number','validators');
 		$V->allow_negative = 1;
 		$V->max = 6;
 		$number = '-5';
@@ -163,7 +163,7 @@ class CCTMUnitTests extends UnitTestCase {
 	}
 
 	function testNumber7() {
-		$V = CCTM\Load::object('number','validators');
+		$V = CCTM::load_object('number','validators');
 		$V->allow_negative = 0;
 		$V->max = 6;
 		$number = '-5';
@@ -465,7 +465,7 @@ class CCTMUnitTests extends UnitTestCase {
 	}
 	// Test bogus PHP file in one of the dirs... the turd in the punchbowl
 	function testBogusValidator() {
-		$V = CCTM\Load::object('bogus','validators');
+		$V = CCTM::load_object('bogus','validators');
 		$this->assertFalse($V);
 	}
 

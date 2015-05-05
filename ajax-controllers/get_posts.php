@@ -15,6 +15,10 @@ if (isset($GLOBALS['wp_post_types'][$post_type]->cap->edit_posts)) {
 	$cap = $GLOBALS['wp_post_types'][$post_type]->cap->edit_posts; 
 }
 if (!current_user_can($cap)) die('<pre>You do not have permission to do that.</pre>');
+require_once CCTM_PATH.'/includes/CCTM_FormElement.php';
+require_once CCTM_PATH.'/includes/SummarizePosts.php';
+require_once CCTM_PATH.'/includes/GetPostsQuery.php';
+require_once CCTM_PATH.'/includes/GetPostsForm.php';
 
 //print '<pre>'.print_r($_POST,true).'</pre>'; exit;
 // Template Variables Initialization
@@ -47,7 +51,7 @@ if (empty($raw_fieldname) && empty($d['fieldtype'])) {
 // More Template Variables
 $d['fieldname'] = $raw_fieldname;
 
-$fieldname = preg_replace('/^'. CCTM\FormElement::css_id_prefix . '/', '', $raw_fieldname);
+$fieldname = preg_replace('/^'. CCTM_FormElement::css_id_prefix . '/', '', $raw_fieldname);
 
 $def = CCTM::get_value(CCTM::$data['custom_field_defs'], $fieldname);
 //print '<pre>'.print_r($def, true).'</pre>';
@@ -68,7 +72,7 @@ $possible_configs[] = '/config/post_selector/_relation.php'; 		// default
 //print '<pre>'.print_r($possible_configs,true).'</pre>'; exit;
 CCTM::$post_selector = array();
 CCTM::$search_by = true; // all options available if the tpl passes them
-if (!CCTM\Load::file($possible_configs)) {
+if (!CCTM::load_file($possible_configs)) {
 	print '<p>'.__('Post Selector configuration file not found.', CCTM_TXTDOMAIN) .'</p>';	
 }
 
@@ -156,7 +160,7 @@ $Q->set_tpls($tpls);
 //print '<pre>'.print_r(CCTM::$search_by, true) . '</pre>';
 $results = $Q->get_posts($args);
 //print '<pre>'.$Q->debug().'</pre>';
-$search_form_tpl = CCTM\Load::tpl(
+$search_form_tpl = CCTM::load_tpl(
 	array('post_selector/search_forms/'.$fieldname.'.tpl'
 		, 'post_selector/search_forms/_'.$def['type'].'.tpl'
 		, 'post_selector/search_forms/_default.tpl'
@@ -175,13 +179,13 @@ $wrapper_tpl = '';
 // Multi Field (contains an array of values.
 if (isset($def['is_repeatable']) && $def['is_repeatable'] == 1) {
 
-	$item_tpl = CCTM\Load::tpl(
+	$item_tpl = CCTM::load_tpl(
 		array('post_selector/items/'.$fieldname.'.tpl'
 			, 'post_selector/items/_'.$def['type'].'_multi.tpl'
 			, 'post_selector/items/_relation_multi.tpl'
 		)
 	);
-	$wrapper_tpl = CCTM\Load::tpl(
+	$wrapper_tpl = CCTM::load_tpl(
 		array('post_selector/wrappers/'.$fieldname.'.tpl'
 			, 'post_selector/wrappers/_'.$def['type'].'_multi.tpl'
 			, 'post_selector/wrappers/_relation_multi.tpl'
@@ -190,13 +194,13 @@ if (isset($def['is_repeatable']) && $def['is_repeatable'] == 1) {
 }
 // Simple field (contains single value)
 else {	
-	$item_tpl = CCTM\Load::tpl(
+	$item_tpl = CCTM::load_tpl(
 		array('post_selector/items/'.$fieldname.'.tpl'
 			, 'post_selector/items/_'.$def['type'].'.tpl'
 			, 'post_selector/items/_default.tpl'
 		)
 	);
-	$wrapper_tpl = CCTM\Load::tpl(
+	$wrapper_tpl = CCTM::load_tpl(
 		array('post_selector/wrappers/'.$fieldname.'.tpl'
 			, 'post_selector/wrappers/_'.$def['type'].'.tpl'
 			, 'post_selector/wrappers/_default.tpl'
@@ -242,10 +246,10 @@ $d['content'] .= CCTM::parse($wrapper_tpl,$hash);
 $d['content'] .= '<div class="cctm_pagination_links">'.$Q->get_pagination_links().'</div>';
 
 if (isset($_POST['wrap_thickbox'])){
-	print CCTM\Load::view('templates/thickbox.php', $d);
+	print CCTM::load_view('templates/thickbox.php', $d);
 }
 else {
-	//print CCTM\Load::view('templates/thickbox_inner.php', $d);
+	//print CCTM::load_view('templates/thickbox_inner.php', $d);
 	print $d['content'];
 }
 

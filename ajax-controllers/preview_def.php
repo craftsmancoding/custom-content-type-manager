@@ -55,6 +55,6 @@ if (isset($data['export_info']['_charset']) && $data['export_info']['_charset'] 
 
 print CCTM::format_errors(); // but do NOT exit.  It's only a warning, so we continue.
 
-print CCTM\Load::view('preview_def.php', $data);
+print CCTM::load_view('preview_def.php', $data);
 
 /*EOF*/

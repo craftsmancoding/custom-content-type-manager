@@ -14,7 +14,7 @@ if (isset($GLOBALS['wp_post_types'][$post_type]->cap->edit_posts)) {
 }
 if (!current_user_can($cap)) die('<pre>You do not have permission to do that.</pre>');
 
-//require_once(CCTM_PATH.'/includes/CCTM_FormElement.php');
+require_once(CCTM_PATH.'/includes/CCTM_FormElement.php');
 
 $d = array(); // <-- Template Variables
 
@@ -39,7 +39,7 @@ $tpl = '';
 
 // Use multi - tpls
 if (CCTM::get_value($def,'is_repeatable')) {
-	$tpl = CCTM\Load::tpl(
+	$tpl = CCTM::load_tpl(
 		array('fields/elements/'.$def['name'].'.tpl'
 			, 'fields/elements/_'.$def['type'].'_multi.tpl'
 		)
@@ -47,7 +47,7 @@ if (CCTM::get_value($def,'is_repeatable')) {
 }
 // use normal tpls
 else {
-	$tpl = CCTM\Load::tpl(
+	$tpl = CCTM::load_tpl(
 		array('fields/elements/'.$def['name'].'.tpl'
 			, 'fields/elements/_'.$def['type'].'.tpl'
 		)
@@ -61,9 +61,10 @@ if (empty($tpl)) {
 
 }
 
-$classname = 'CCTM\\Fields\\'.$def['type'];
-$FieldObj = new $classname();
-
+$FieldObj = CCTM::load_object($def['type'], 'fields');
+if (!$FieldObj) {
+	return;
+}
 $def['id'] = $fieldname;
 $def['i'] = $instance;
 $FieldObj->set_props($def);

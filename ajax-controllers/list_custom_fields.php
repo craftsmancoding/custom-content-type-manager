@@ -59,5 +59,5 @@ foreach($custom_fields as $cf) {
 $d['content'] .= '</ul>';
 
 
-print CCTM\Load::view('templates/tinymce.php', $d);
+print CCTM::load_view('templates/tinymce.php', $d);
 /*EOF*/

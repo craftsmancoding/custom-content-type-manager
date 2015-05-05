@@ -126,20 +126,9 @@ div.cctm_def_preview {
 
 .custom_field_info {
 	padding: 5px;
-	background: #fff;
-	border: 1px solid #e5e5e5;
-	width: 100%;
+	background: #f0f0f0;
+	border: dashed;
 }
-
-.custom_field_info h3 {
-	font-size: 14px;
-	padding: 8px 12px;
-	margin: -5px 0px 10px;
-	line-height: 1.4;
-	background: #fff;
-	border-bottom: 1px solid #e5e5e5;
-}
-
 span.custom_field_description {
 	padding-left: 10px;
 	padding-right: 10px;
@@ -152,7 +141,7 @@ span.custom_field_icon {
 
 
 .cctm_header_text {
-	color: #8f8f8f;
+	color: #cecece;
 	font-size: 23px;
 	line-height: 29px;
 	font-family: HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', sans-serif;
@@ -187,25 +176,25 @@ span.custom_field_icon {
 	margin-top: -21px;
 	margin-bottom: 10px;
 	padding-left: 200px;
-	line-height: 215%;
+	line-height: 200%;
 }
 
 #cctm_mainmenu a {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 5px;
-	padding-top: 5px;
+	padding-top: 3px;
 	text-decoration: none;
 }
 
 a.cctm_tab {
 	border: 1px solid gray;
-	background-color: #e1e1e1;
+	background-color: #ededed;
 }
 
 a.cctm_active {
-	border-bottom: 1px solid #f1f1f1;
-	background-color: #f1f1f1;
+	border-bottom: 1px solid white;
+	background-color: white;
 }
 
 /* Formats rows of data, e.g. in the import definition */
@@ -307,8 +296,4 @@ span.cctm_close_rollover:hover {
 
 .cctm_taxonomy_column td {
 	background-color: #C2DDEA;
-}
-
-#cctm-warning {
-	margin-top: 20px;
 }

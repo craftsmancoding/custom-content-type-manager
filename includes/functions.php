@@ -73,7 +73,6 @@ function get_custom_field($raw_fieldname, $options=null) {
 			$input_array[] = CCTM::$data['custom_field_defs'][$fieldname]['output_filter'];
 		}
 	}
-
 	// Raw value from the db
 	$value = get_post_meta($post_id, $fieldname, true);
 
@@ -97,11 +96,6 @@ function get_custom_field($raw_fieldname, $options=null) {
 
 		$i++;
 	}
-	// Sigh... this is obnoxious: it's impossible to tell if output filters are operating on a "repeatable" field
-	// so sometimes they return an empty string.
-    if (empty($value) && CCTM::$data['custom_field_defs'][$fieldname]['is_repeatable']) {
-        $value = array();
-    }
 	// Store in the request cache
 	CCTM::$cache[$cache_key] = $value;
 	

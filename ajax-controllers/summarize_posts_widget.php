@@ -31,11 +31,11 @@ $Form = new GetPostsForm();
 $possible_configs = array();
 $possible_configs[] = '/config/search_parameters/_widget.php';
 
-if (!CCTM\Load::file($possible_configs)) {
+if (!CCTM::load_file($possible_configs)) {
 	print '<p>'.__('Search parameter configuration file not found.', CCTM_TXTDOMAIN) .'</p>';	
 }
 
-$form_tpl = CCTM\Load::tpl('summarize_posts/widget.tpl');
+$form_tpl = CCTM::load_tpl('summarize_posts/widget.tpl');
 
 $Form->set_name_prefix('');
 $Form->set_id_prefix('');

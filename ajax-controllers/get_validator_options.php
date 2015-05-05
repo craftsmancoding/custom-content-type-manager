@@ -4,15 +4,15 @@ Load up the validator and return the validator's options.
 
 @param	string	validator
 ------------------------------------------------------------------------------*/
+$validator = CCTM::get_value($_POST,'validator');
 
-$classname = 'CCTM\\Validators\\'.CCTM::get_value($_POST,'validator');
+$V = CCTM::load_object($validator,'validators');
 
-try {
-    $V = new $classname();
+if ($V){
 	print $V->draw_options();
 }
-catch(Exception $e) {
-	 print '<pre>'.__('Error loading validator', CCTM_TXTDOMAIN).' '.$validator.'</pre>';
+else {
+	 print '<pre>'.__('Error loading validator.', CCTM_TXTDOMAIN).'</pre>';
 }
 
 /*EOF*/
