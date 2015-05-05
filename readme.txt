@@ -77,7 +77,7 @@ Please see the online [FAQ](http://code.google.com/p/wordpress-custom-content-ty
 
 == Changelog ==
 
-As of May 2015, this plugin has been shifted over to [Github](https://github.com/craftsmancoding/custom-content-type-manager) due to the shutdown of Google Code.  Active development will occur in Github; SVN will be updated when there is a new tagged version.
+As of May 2015, this plugin has been shifted over to [Github](https://github.com/craftsmancoding/custom-content-type-manager) due to the shutdown of Google Code.  Active development will occur in Github; the SVN repo will be only updated perfunctorily per WordPress requirements when there is a new tagged version.
 
 The most recent SVN version of the code is located at:
 
@@ -88,7 +88,7 @@ The most recent Git version of the code is located at:
 	https://github.com/craftsmancoding/custom-content-type-manager
 
 
-= 0.9.7.14 =
+= 0.9.8 =
 
 * Security fix for code execution in Metaboxes (https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=511)
 
