@@ -1,0 +1,27 @@
+/*
+Source file: wp-content/plugins/custom-content-type-manager/css/validation.css
+
+This CSS is for highlighting validation errors (e.g. required fields).
+We put this stuff in this file and we slurp it via file_get_contents()
+because putting it in the main manager.css file doesn't work because
+WordPress overrides CSS rules heavy-handedly (?).
+
+*/
+
+/*
+label.cctm_validation_error {
+	color:red;
+	border: 1px solid red;
+}
+*/
+input.cctm_validation_error {
+	background-color:#ff8a96;
+}
+
+textarea.cctm_validation_error {
+	background-color:#ff8a96;
+}
+
+span.cctm_validation_error {
+	color: red;
+}

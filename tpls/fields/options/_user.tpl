@@ -1,0 +1,1 @@
+<option value="[+value+]" [+is_selected+]>[+user_login+]</option>

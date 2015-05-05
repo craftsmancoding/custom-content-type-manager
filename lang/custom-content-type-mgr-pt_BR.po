@@ -1,0 +1,5285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Content Type Manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-24 22:55-0300\n"
+"PO-Revision-Date: 2013-06-24 23:02-0300\n"
+"Last-Translator: Aluízio Leye Larangeira <contato@aluizioll.com.br>\n"
+"Language-Team: Aluizio Leye Larangeira\n"
+"Language: Português\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: ../index.php:75
+msgid "Function"
+msgstr "Função"
+
+#: ../index.php:84 ../fields/colorselector.php:87 ../fields/image.php:95
+#: ../fields/media.php:94 ../fields/relation.php:99
+#: ../fields/relationmeta.php:119 ../includes/CCTM_FormElement.php:356
+msgid "Class"
+msgstr "Classe"
+
+#: ../index.php:93
+msgid "Constant"
+msgstr "Constante"
+
+#: ../ajax-controllers/get_posts.php:50 ../ajax-controllers/get_posts.php:64
+#: ../ajax-controllers/get_selected_posts.php:41
+#: ../ajax-controllers/get_selected_posts.php:48
+#: ../ajax-controllers/get_tpl.php:24 ../ajax-controllers/get_tpl.php:31
+#, php-format
+msgid "Invalid fieldname: %s"
+msgstr "Nome do campo inválido: %s"
+
+#: ../ajax-controllers/get_posts.php:77
+#: ../ajax-controllers/post_content_widget.php:81
+msgid "Post Selector configuration file not found."
+msgstr "Arquivo de configuração Post Selector não encontrado."
+
+#: ../ajax-controllers/get_posts.php:208
+#: ../ajax-controllers/post_content_widget.php:154 ../includes/CCTM.php:550
+#: ../includes/CCTM_PostTypeDef.php:22 ../includes/CCTM_Post_Widget.php:109
+#: ../includes/SummarizePosts_Widget.php:59 ../views/export.php:14
+#: ../views/list_metaboxes.php:4 ../views/metabox.php:39
+#: ../views/post_type.php:339 ../views/widgets/post_content_form.php:24
+msgid "Title"
+msgstr "Título"
+
+#: ../ajax-controllers/get_posts.php:209
+#: ../ajax-controllers/post_content_widget.php:155 ../fields/date.php:300
+#: ../includes/CCTM_PostTypeDef.php:25
+msgid "Date"
+msgstr "Data"
+
+#: ../ajax-controllers/get_posts.php:210
+#: ../ajax-controllers/post_content_widget.php:156 ../views/info.php:35
+#: ../views/purge.php:35
+msgid "Status"
+msgstr "Status"
+
+#: ../ajax-controllers/get_posts.php:211
+#: ../ajax-controllers/post_content_widget.php:157
+msgid "Parent"
+msgstr "Mãe"
+
+#: ../ajax-controllers/get_posts.php:212
+#: ../ajax-controllers/post_content_widget.php:158 ../views/info.php:17
+#: ../views/purge.php:17
+msgid "Post Type"
+msgstr "Tipo de Post"
+
+#: ../ajax-controllers/get_posts.php:213 ../includes/CCTM_FormElement.php:142
+msgid "Add to Post"
+msgstr "Adicionar ao Post"
+
+#: ../ajax-controllers/get_posts.php:214 ../includes/CCTM_FormElement.php:143
+msgid "Add to Post and Close"
+msgstr "Adicionar ao Post e fechar"
+
+#: ../ajax-controllers/get_posts.php:226
+#: ../ajax-controllers/post_content_widget.php:169 ../includes/CCTM.php:1512
+#: ../includes/CCTM.php:1540 ../includes/CCTM_FormElement.php:144
+#: ../views/import.php:69 ../views/import.php:111
+msgid "Preview"
+msgstr "Pré visualizar"
+
+#: ../ajax-controllers/get_posts.php:227
+#: ../ajax-controllers/post_content_widget.php:170
+msgid "Select"
+msgstr "Selecionar"
+
+#: ../ajax-controllers/get_search_form.php:28
+msgid "fieldname or fieldtype required."
+msgstr "nome do campo (fieldname) ou tipo de campo (fieldtype) necessário."
+
+#: ../ajax-controllers/get_search_form.php:65
+#, php-format
+msgid ""
+"Search parameter configuration file not found. Check config/"
+"search_parameters/ for a valid configuration file for the %s field or the %s "
+"field-type."
+msgstr ""
+
+#: ../ajax-controllers/get_search_form.php:68
+msgid ""
+"This form will determine which posts will be selectable when users create or "
+"edit a post that uses this field. WARNING: supplying incorrect or overly "
+"restrictive criteria will result in an empty list!"
+msgstr ""
+
+#: ../ajax-controllers/get_search_form.php:69
+#: ../controllers/change_field_type.php:25
+#: ../controllers/duplicate_custom_field.php:25
+#: ../controllers/duplicate_post_type.php:58
+#: ../controllers/edit_custom_field.php:25
+#: ../controllers/edit_post_type.php:49 ../controllers/export_def.php:15
+#: ../controllers/list_field_associations.php:21
+#: ../controllers/settings.php:19 ../controllers/themes.php:13
+#: ../controllers/tools.php:14 ../views/custom_field.php:51
+#: ../views/metabox.php:104 ../views/metaboxes.php:103
+#: ../views/sortable-list.php:12 ../views/sortable-list.php:46
+msgid "Save"
+msgstr "Salvar"
+
+#: ../ajax-controllers/get_search_form.php:70
+#: ../ajax-controllers/summarize_posts_form.php:44
+#: ../ajax-controllers/summarize_posts_widget.php:65
+#: ../controllers/change_field_type.php:24
+#: ../controllers/create_custom_field.php:15
+#: ../controllers/create_metabox.php:16 ../controllers/create_post_type.php:13
+#: ../controllers/duplicate_custom_field.php:24
+#: ../controllers/duplicate_post_type.php:54
+#: ../controllers/edit_custom_field.php:24 ../controllers/edit_metabox.php:33
+#: ../controllers/edit_post_type.php:45
+#: ../controllers/merge_custom_fields.php:16 ../views/basic_form.php:31
+#: ../views/custom_field.php:55 ../views/metabox.php:108
+#: ../views/metaboxes.php:105 ../views/purge.php:76
+#: ../views/sortable-list.php:13 ../views/sortable-list.php:47
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../ajax-controllers/get_selected_posts.php:69
+msgid "Post ID or guid required."
+msgstr "ID do post ou GUID necessários."
+
+#: ../ajax-controllers/get_selected_posts.php:95
+#: ../ajax-controllers/get_tpl.php:59
+#: ../ajax-controllers/get_widget_post_tpl.php:29
+msgid "Formatting template not found!"
+msgstr "Modelo de formatação não encontrado!"
+
+#: ../ajax-controllers/get_validator_options.php:15
+msgid "Error loading validator."
+msgstr "Erro ao carregar validador."
+
+#: ../ajax-controllers/get_widget_post_tpl.php:36
+#: ../includes/CCTM_Post_Widget.php:52
+msgid "Edit Selected Post"
+msgstr "Editar Post selecionado"
+
+#: ../ajax-controllers/list_custom_fields.php:13
+msgid "No post-type detected. Cannot display custom fields."
+msgstr ""
+"Nenhum Tipo de Post detectado. Não é possível exibir Campos Personalizados."
+
+#: ../ajax-controllers/list_custom_fields.php:18
+msgid ""
+"The custom fields for this post-type are not standardized. You can manually "
+"type in the shortcode to print the custom field value from another post "
+"using the following format:  <code>[custom_field name=\"name_of_field\" "
+"filter=\"optional_output_filter\" post_id=\"123\"]</code>"
+msgstr ""
+"Os campos personalizados para esse tipo de Post não são padronizados. Você "
+"pode digitar manualmente o shortcode para imprimir o valor do campo "
+"personalizado de um outro post com o seguinte formato: <code>[custom_field "
+"name=\"name_of_field\" filter=\"optional_output_filter\" post_id=\"123\"]</"
+"code>"
+
+#: ../ajax-controllers/list_custom_fields.php:25
+#: ../config/menus/admin_menu.php:32 ../config/menus/admin_menu.php:74
+#: ../config/menus/admin_menu.php:75 ../controllers/settings.php:114
+#: ../includes/CCTM_Metabox.php:19 ../views/preview_def.php:52
+#: ../views/templates/default.php:51
+msgid "Custom Fields"
+msgstr "Campos Personalizados"
+
+#: ../ajax-controllers/list_custom_fields.php:36
+msgid "This post-type does not have any custom fields associated with it."
+msgstr "Este Tipo de Post não possui Campos Personalizados associados a ele."
+
+#: ../ajax-controllers/preview_def.php:24
+msgid "Definition file not specified."
+msgstr "Arquivo de definição não especificado."
+
+#: ../ajax-controllers/preview_def.php:30
+msgid ""
+"Invalid filename: the definition filename should not contain spaces and "
+"should use an extension of <code>.cctm.json</code>."
+msgstr ""
+"Nome de arquivo inválido: o nome do arquivo de definição não deve conter "
+"espaços e deve usar uma extensão do <code>.cctm.json</code>."
+
+#: ../ajax-controllers/preview_def.php:52
+#, php-format
+msgid ""
+"Your site's encoding differs from the encoding used to create this "
+"definition file.  This may create problems if the post-type and field "
+"definitions use foreign characters.  Adding the following to your wp-config."
+"php file may alleviate problems with character encoding: <code>define"
+"('DB_CHARSET', '%s');</code>"
+msgstr ""
+"A codificação do seu site difere da codificação usada para criar este "
+"arquivo de definição. Isso pode criar problemas se o Tipo de Post e "
+"definições de campo usarem caracteres estrangeiros. Ao adicionar o seguinte "
+"ao seu arquivo wp-config.php pode aliviar problemas com a codificação de "
+"caracteres: <code>define('DB_CHARSET', '%s');</code>"
+
+#: ../ajax-controllers/summarize_posts_form.php:21
+#: ../ajax-controllers/summarize_posts_widget.php:35
+msgid "Search parameter configuration file not found."
+msgstr "Arquivo de configuração de parâmetro de pesquisa não encontrado."
+
+#: ../ajax-controllers/summarize_posts_form.php:39
+#: ../ajax-controllers/summarize_posts_widget.php:60
+msgid "Dynamically list posts according to the criteria below."
+msgstr "Listar dinamicamente as mensagens de acordo com os critérios abaixo."
+
+#: ../ajax-controllers/summarize_posts_form.php:40
+#: ../ajax-controllers/summarize_posts_widget.php:61
+#: ../includes/GetPostsForm.php:921
+msgid "Post Title"
+msgstr "Título do Post"
+
+#: ../ajax-controllers/summarize_posts_form.php:41
+#: ../ajax-controllers/summarize_posts_widget.php:62
+msgid "Author ID"
+msgstr "ID do Autor"
+
+#: ../ajax-controllers/summarize_posts_form.php:42
+#: ../ajax-controllers/summarize_posts_widget.php:63
+msgid "Add Filter"
+msgstr "Adicionar Filtro"
+
+#: ../ajax-controllers/summarize_posts_form.php:43
+msgid "Generate Shortcode"
+msgstr "Gerar Shortcode"
+
+#: ../ajax-controllers/summarize_posts_widget.php:64
+msgid "Save Criteria"
+msgstr "Salvar Critérios"
+
+#: ../ajax-controllers/upload_image.php:18
+msgid "From Computer"
+msgstr "Do Computador"
+
+#: ../config/menus/admin_menu.php:20
+msgid "Manage Custom Content Types"
+msgstr "Gerenciar tipos de conteúdo Personalizado"
+
+#: ../config/menus/admin_menu.php:21
+msgid "Custom Content Types"
+msgstr "Tipos de Conteúdo Personalizado"
+
+#: ../config/menus/admin_menu.php:31
+msgid "CCTM Custom Fields"
+msgstr "CCTM Campos Personalizados"
+
+#: ../config/menus/admin_menu.php:40
+msgid "CCTM Global Settings"
+msgstr "CCTM Configurações Globais"
+
+#: ../config/menus/admin_menu.php:41 ../views/templates/default.php:52
+msgid "Global Settings"
+msgstr "Configurações Globais"
+
+#: ../config/menus/admin_menu.php:49
+msgid "CCTM Tools"
+msgstr "Ferramentas CCTM"
+
+#: ../config/menus/admin_menu.php:50 ../controllers/tools.php:8
+#: ../views/templates/default.php:54
+msgid "Tools"
+msgstr "Ferramentas"
+
+#: ../config/menus/admin_menu.php:58
+msgid "CCTM Clear Cache"
+msgstr "Limpar Cache do CCTM"
+
+#: ../config/menus/admin_menu.php:59 ../controllers/clear_cache.php:9
+#: ../controllers/clear_cache.php:15 ../views/tools.php:17
+msgid "Clear Cache"
+msgstr "Limpar Cache"
+
+#: ../config/menus/admin_menu.php:92 ../config/menus/admin_menu.php:93
+#: ../controllers/settings.php:13 ../includes/CCTM.php:517
+msgid "Settings"
+msgstr "Configurações"
+
+#: ../config/menus/admin_menu.php:106
+msgid "Posts"
+msgstr "Posts"
+
+#: ../config/menus/admin_menu.php:109
+msgid "Pages"
+msgstr "Páginas"
+
+#: ../config/menus/admin_menu.php:112
+msgid "Links"
+msgstr "Links"
+
+#: ../config/menus/admin_menu.php:115 ../includes/CCTM_PostTypeDef.php:24
+msgid "Comments"
+msgstr "Comentários"
+
+#: ../controllers/activate_post_type.php:28
+#, php-format
+msgid "The %s post_type has been activated."
+msgstr "O post_type %s foi ativado."
+
+#: ../controllers/bug_report.php:9 ../views/templates/default.php:84
+msgid "Report a Bug"
+msgstr "Reportar um Bug"
+
+#: ../controllers/bug_report.php:11
+msgid "Launch Bug Tracker"
+msgstr "Executar Bug Tracker"
+
+#: ../controllers/change_field_type.php:21
+#, php-format
+msgid "Change Field Type: %s"
+msgstr "Alterar Tipo de Campo: %s"
+
+#: ../controllers/change_field_type.php:33 ../controllers/clear_warnings.php:9
+#: ../controllers/duplicate_custom_field.php:31
+#: ../controllers/edit_custom_field.php:31 ../controllers/edit_metabox.php:14
+#: ../controllers/edit_metabox.php:24
+msgid "Invalid request."
+msgstr "Requisição Inválida."
+
+#: ../controllers/change_field_type.php:50
+#, php-format
+msgid "The %s custom field has been converted to a %s field."
+msgstr "O Campo Personalizado %s foi convertido em campo %s."
+
+#: ../controllers/change_field_type.php:57
+msgid "There was a problem converting the field type."
+msgstr "Houve um problema ao converter o tipo de campo."
+
+#: ../controllers/change_field_type.php:70
+#, php-format
+msgid "Change the %s field from a %s field into the following type of field:"
+msgstr "Altere o campo %s de um campo %s para o seguinte tipo de campo:"
+
+#: ../controllers/change_field_type.php:84
+#: ../controllers/list_custom_field_types.php:39
+#, php-format
+msgid "Form element not found: %s"
+msgstr "Elemento do formulário não encontrado: %s"
+
+#: ../controllers/change_field_type.php:91
+msgid ""
+"WARNING: different fields have different attributes. The conversion process "
+"may cause some attributes in your field definition to be lost.  Export a "
+"copy of your field definitions before continuing."
+msgstr ""
+"AVISO: campos têm diferentes atributos. O processo de conversão pode causar "
+"perda de alguns atributos na sua definição de campo. Exporte uma cópia de "
+"suas definições de campo antes de continuar."
+
+#: ../controllers/change_field_type.php:93
+msgid "Export a copy of your field definitions before continuing."
+msgstr "Exporte uma cópia de suas definições de campo antes de continuar."
+
+#: ../controllers/clear_cache.php:38
+msgid "Cache has been cleared"
+msgstr "Cache foi limpo"
+
+#: ../controllers/clear_cache.php:47
+#, php-format
+msgid ""
+"Unable to clear the cache!  Please adjust the permissions on the %s "
+"directory or manually delete its contents."
+msgstr ""
+"Não é possível limpar o cache! Por favor ajuste as permissões no diretório "
+"%s ou exclua manualmente o seu conteúdo."
+
+#: ../controllers/clear_cache.php:57
+msgid ""
+"This clears out any cached directory scans and any cached formatting "
+"templates (.tpls)."
+msgstr ""
+
+#: ../controllers/clear_cache.php:59
+#, php-format
+msgid ""
+"Clearing the cache will delete all files and directories from the CCTM cache "
+"directory: %s."
+msgstr ""
+"Limpar o cache irá apagar todos os arquivos e diretórios do diretório de "
+"cache do CCTM: %s."
+
+#: ../controllers/clear_warnings.php:20
+msgid "All warnings have been dismissed."
+msgstr "Todos os avisos foram indeferidos."
+
+#: ../controllers/create_custom_field.php:12
+#: ../controllers/list_custom_fields.php:15
+msgid "Create Custom Field"
+msgstr "Criar Campo Personalizado"
+
+#: ../controllers/create_custom_field.php:24
+msgid "Invalid field type."
+msgstr "Tipo de campo inválido."
+
+#: ../controllers/create_custom_field.php:92
+#: ../controllers/duplicate_custom_field.php:104
+#, php-format
+msgid "A %s custom field has been created."
+msgstr "Um Campo Personalizado %s foi criado."
+
+#: ../controllers/create_custom_field.php:99
+#, php-format
+msgid "A %s custom field has been created for the %s post-type."
+msgstr "Um Campo Personalizado %s foi criado para o tipo de Post %s."
+
+#: ../controllers/create_custom_field.php:160
+#: ../controllers/create_custom_field.php:196
+#: ../controllers/create_metabox.php:97 ../controllers/create_metabox.php:133
+#: ../controllers/duplicate_custom_field.php:141
+#: ../controllers/duplicate_custom_field.php:177
+#: ../controllers/edit_custom_field.php:183
+#: ../controllers/edit_custom_field.php:219
+#: ../controllers/edit_metabox.php:118 ../controllers/edit_metabox.php:154
+#: ../controllers/list_field_associations.php:148
+#: ../controllers/list_post_types.php:53
+msgid "Manage Custom Fields for this content type"
+msgstr "Gerenciar Campos Personalizados para este tipo de conteúdo"
+
+#: ../controllers/create_custom_field.php:161
+#: ../controllers/create_custom_field.php:197
+#: ../controllers/create_metabox.php:98 ../controllers/create_metabox.php:134
+#: ../controllers/duplicate_custom_field.php:142
+#: ../controllers/duplicate_custom_field.php:178
+#: ../controllers/edit_custom_field.php:184
+#: ../controllers/edit_custom_field.php:220
+#: ../controllers/edit_metabox.php:119 ../controllers/edit_metabox.php:155
+#: ../controllers/list_custom_fields.php:12
+#: ../controllers/list_field_associations.php:149
+#: ../controllers/list_post_types.php:54
+msgid "Manage Custom Fields"
+msgstr "Gerenciar Campos Personalizados"
+
+#: ../controllers/create_custom_field.php:169
+#: ../controllers/create_metabox.php:106
+#: ../controllers/duplicate_custom_field.php:150
+#: ../controllers/edit_custom_field.php:192
+#: ../controllers/edit_metabox.php:127
+msgid "Built-in post-type."
+msgstr "Tipos de Post nativo do WordPress."
+
+#: ../controllers/create_custom_field.php:190
+#: ../controllers/create_metabox.php:127
+#: ../controllers/duplicate_custom_field.php:171
+#: ../controllers/edit_custom_field.php:213
+#: ../controllers/edit_metabox.php:148
+msgid "Foreign post-type."
+msgstr "Tipo de post internos estrangeiros."
+
+#: ../controllers/create_metabox.php:11 ../controllers/edit_metabox.php:28
+#: ../controllers/list_metaboxes.php:13
+#: ../controllers/list_pt_associations.php:20
+msgid "Create Metabox"
+msgstr "Criar Metabox"
+
+#: ../controllers/create_metabox.php:47
+msgid "Metabox created."
+msgstr "Metabox Criada"
+
+#: ../controllers/create_metabox.php:60 ../controllers/edit_metabox.php:81
+msgid "Please correct the following problems."
+msgstr "Por favor, corrija os seguintes problemas."
+
+#: ../controllers/create_post_type.php:10
+msgid "Create Custom Content Type"
+msgstr "Criar Tipo de Conteúdo Personalizado "
+
+#: ../controllers/create_post_type.php:22
+msgid "Create New Content Type"
+msgstr "Criar Novo Tipo de Conteúdo"
+
+#: ../controllers/create_post_type.php:42
+#: ../controllers/duplicate_post_type.php:80
+#, php-format
+msgid "The content type %s has been created"
+msgstr "O Tipo de Conteúdo %s foi criado"
+
+#: ../controllers/deactivate_post_type.php:21
+#, php-format
+msgid "Deactivate Content Type %s"
+msgstr "Desativar Tipo de Conteúdo %s"
+
+#: ../controllers/deactivate_post_type.php:30
+#: ../controllers/list_post_types.php:34
+msgid "Deactivate"
+msgstr "Desativar"
+
+#: ../controllers/deactivate_post_type.php:48
+#, php-format
+msgid "The %s content type has been deactivated."
+msgstr "O tipo de conteúdo %s foi desativado."
+
+#: ../controllers/deactivate_post_type.php:66
+#, php-format
+msgid "You are about to deactivate the %s post type."
+msgstr "Você está prestes a desativar tipo post %s."
+
+#: ../controllers/deactivate_post_type.php:72
+#, php-format
+msgid ""
+"Deactivation does not delete anything, but it does make %s posts unavailable "
+"to the outside world. %s will be removed from the administration menus and "
+"you will no longer be able to edit them using the WordPress manager."
+msgstr ""
+"Desativação não exclui nada, mas faz %s Posts serem indisponível(eis) para o "
+"mundo exterior. %s será removido dos menus de administração e você não será "
+"mais capaz de editá-los usando o gerenciador WordPress."
+
+#: ../controllers/deactivate_post_type.php:76
+#: ../controllers/delete_post_type.php:68
+#, php-format
+msgid "This would affect %1$s published %2$s posts."
+msgstr "Isso afetaria %1$s Posts publicados em %2$s ."
+
+#: ../controllers/deactivate_post_type.php:83
+msgid ""
+"Deactivation does not delete anything, but it does turn off the "
+"standardization of the custom fields.  By default WordPress only supports "
+"simple text fields and you can easily misspell field names."
+msgstr ""
+"Desativação não exclui nada, mas desligar a padronização dos campos "
+"personalizados. Por padrão o WordPress suporta apenas campos de texto "
+"simples e você pode facilmente grafada nomes de campo."
+
+#: ../controllers/deactivate_post_type.php:89
+#: ../controllers/delete_custom_field.php:69
+#: ../controllers/delete_custom_field.php:82
+#: ../controllers/delete_post_type.php:80
+#: ../controllers/delete_post_type.php:91
+#: ../controllers/reset_custom_fields.php:42
+msgid "Are you sure you want to do this?"
+msgstr "Você tem certeza que quer fazer isso?"
+
+#: ../controllers/delete_custom_field.php:10
+#, php-format
+msgid "Delete Custom Field: %s"
+msgstr "Excluir Campo Personalizado: %s"
+
+#: ../controllers/delete_custom_field.php:15
+#: ../controllers/delete_post_type.php:18
+#: ../controllers/list_custom_fields.php:62
+#: ../controllers/list_custom_fields.php:83
+#: ../controllers/list_post_types.php:132 ../controllers/purge.php:16
+#: ../fields/dropdown.php:303 ../fields/dropdown.php:362
+#: ../fields/multiselect.php:296 ../fields/multiselect.php:355
+msgid "Delete"
+msgstr "Excluir"
+
+#: ../controllers/delete_custom_field.php:53
+#, php-format
+msgid "The custom field %s has been deleted"
+msgstr "O Campo Personalizado %s foi excluído"
+
+#: ../controllers/delete_custom_field.php:67
+#, php-format
+msgid ""
+"You are about to delete the %s custom field and delete all of its values "
+"from the database. This cannot be undone!"
+msgstr ""
+"Você está prestes a excluir o Campo Personalizado %s e excluir todos os seus "
+"valores do banco de dados. Isso não pode ser desfeito!"
+
+#: ../controllers/delete_custom_field.php:80
+#, php-format
+msgid ""
+"You are about to delete the %s custom field. This will remove all of its "
+"settings from the database, but this will NOT delete any data from the "
+"wp_postmeta table. However, without a definition for this field, it will be "
+"mostly invisible to WordPress."
+msgstr ""
+"Você está prestes a excluir o Campo Personalizado %s. Isto irá remover todas "
+"as configurações do banco de dados, mas isso não vai apagar todos os dados "
+"da tabela wp_postmeta. No entanto, sem uma definição para este campo, será "
+"quase invisível ao WordPress."
+
+#: ../controllers/delete_post_type.php:12
+#, php-format
+msgid "Delete Content Type: %s"
+msgstr "Excluir Tipo de Conteúdo: %s"
+
+#: ../controllers/delete_post_type.php:58
+#, php-format
+msgid "The post type %s has been deleted"
+msgstr "O Tipo de Post %s foi excluído"
+
+#: ../controllers/delete_post_type.php:77
+#, php-format
+msgid ""
+"You are about to delete the %s post type and delete all of its posts from "
+"the database. This cannot be undone!"
+msgstr ""
+"Você está prestes a excluir Tipo de Post %s e apagar todas os seus Posts do "
+"banco de dados. Isso não pode ser desfeito!"
+
+#: ../controllers/delete_post_type.php:88
+#, php-format
+msgid ""
+"You are about to delete the %s post type. This will remove all of its "
+"settings from the database, but this will NOT delete any rows from the posts "
+"table. However, without a custom post type defined for those rows, they will "
+"be essentially invisible to WordPress."
+msgstr ""
+"Você está prestes a excluir o Tipo de Post %s. Isto irá remover todas as "
+"configurações do banco de dados, mas isso não vai apagar todas as linhas da "
+"tabela de Posts. No entanto, sem um Tipo de Post  personalizado definido "
+"para essas linhas, elas serão essencialmente invisível para WordPress."
+
+#: ../controllers/duplicate_custom_field.php:21
+#, php-format
+msgid "Duplicate Custom Field: %s"
+msgstr "Duplicar Campo Personalizado: %s"
+
+#: ../controllers/duplicate_post_type.php:38
+msgid "Unrecognized post_type."
+msgstr "Post_type não reconhecido."
+
+#: ../controllers/duplicate_post_type.php:39
+msgid "Unrecognized post-type"
+msgstr "Post_type não reconhecido."
+
+#: ../controllers/duplicate_post_type.php:41
+#: ../controllers/edit_post_type.php:30 ../controllers/error.php:14
+#: ../controllers/error.php:22 ../controllers/error.php:26
+#: ../controllers/export_def.php:10 ../controllers/import_def.php:12
+#: ../controllers/list_custom_field_types.php:13
+#: ../controllers/list_custom_field_types.php:19
+#: ../controllers/settings_cf.php:11 ../controllers/template_single.php:24
+msgid "Back"
+msgstr "Voltar"
+
+#: ../controllers/duplicate_post_type.php:50
+msgid "Duplicate Content Type: "
+msgstr "Duplicar tipo de conteúdo:"
+
+#: ../controllers/edit_custom_field.php:21
+#, php-format
+msgid "Edit Custom Field: %s"
+msgstr "Editar Campo Personalizado: %s"
+
+#: ../controllers/edit_custom_field.php:47
+msgid "Change Field Type"
+msgstr "Alterar tipo de campo"
+
+#: ../controllers/edit_custom_field.php:138
+#, php-format
+msgid "The %s custom field has been edited."
+msgstr "O Campo Personalizado %s foi editado."
+
+#: ../controllers/edit_metabox.php:54
+msgid "Metabox updated."
+msgstr "Metabox atualizada."
+
+#: ../controllers/edit_post_type.php:27
+msgid "Invalid post_type."
+msgstr "post_type Inválido."
+
+#: ../controllers/edit_post_type.php:28
+msgid "Unrecognized Content type"
+msgstr "Tipo de Conteúdo não reconhecido"
+
+#: ../controllers/edit_post_type.php:38
+msgid ""
+"WARNING: changing this value is not recommended.  Changing the post-type "
+"name may break permalinks, alter search criteria, and you may have to rename "
+"your template files."
+msgstr ""
+"AVISO: alterar este valor não é recomendado. Alterar o nome de tipo de Post "
+"pode quebrar permalinks, alterar os critérios de pesquisa, e você pode ter "
+"que mudar o nome dos arquivos dos seus templates."
+
+#: ../controllers/edit_post_type.php:41
+msgid "Edit Content Type: "
+msgstr "Editar Tipo de Conteúdo:"
+
+#: ../controllers/edit_post_type.php:95
+#, php-format
+msgid ""
+"You have changed the name of your post_type, so you must also rename your "
+"template file! Rename %s to %s."
+msgstr ""
+"Você mudou o nome do seu post_type, então você deve também mudar o nome do "
+"arquivo de modelo! Renomeie %s para %s."
+
+#: ../controllers/edit_post_type.php:108
+#, php-format
+msgid "Settings for %s have been updated."
+msgstr "Configuraçõs para %s foram atualizadas."
+
+#: ../controllers/error.php:13
+msgid "Invalid field name."
+msgstr "Nome do campo inválido."
+
+#: ../controllers/error.php:17
+msgid ""
+"There is no definition that is ready for importing, or the definition that "
+"you are trying to import is empty."
+msgstr ""
+"Não existe uma definição que esteja pronta para importação, ou a definição "
+"que você está tentando importar está vazia."
+
+#: ../controllers/error.php:18 ../controllers/import_def.php:10
+#: ../views/tools.php:5
+msgid "Import Definition"
+msgstr "Importar Definição"
+
+#: ../controllers/error.php:21
+msgid "Invalid warning."
+msgstr "Aviso Inválido."
+
+#: ../controllers/error.php:25
+msgid "Invalid post type."
+msgstr "Tipo de Post inválido."
+
+#: ../controllers/export_def.php:8 ../views/tools.php:11
+msgid "Export Definition"
+msgstr "Exportar Definição"
+
+#: ../controllers/export_def.php:11
+msgid "Import"
+msgstr "Importar"
+
+#: ../controllers/export_def.php:38
+#, php-format
+msgid ""
+"Your Custom Content Type definition %s should begin downloading shortly.  If "
+"there is a problem downloading, you can copy the text below into a text "
+"editor and save it with a <code>.cctm.json</code> extension."
+msgstr ""
+"Sua definição de Tipo de Conteúdo Personalizado %s deve começar a baixar em "
+"breve. Se houver um problema no download, você pode copiar o texto abaixo em "
+"um editor de texto e salvá-lo com um extensão <code>.cctm.json</code>."
+
+#: ../controllers/export_def.php:58
+msgid ""
+"Your Custom Content Type definition has been saved to your library. <a href="
+"\"?page=cctm_tools&a=import_def\">Click here</a> to view your library."
+msgstr ""
+"Sua definição de Tipo de Conteúdo Personalizado foi salva em sua biblioteca. "
+"<a href=\"?page=cctm_tools&a=import_def\">Clique aqui</a> para vizualizar "
+"sua biblioteca."
+
+#: ../controllers/help.php:7 ../filters/help.php:117
+#: ../views/templates/default.php:80
+msgid "Help"
+msgstr "Ajudar"
+
+#: ../controllers/help.php:9
+msgid "Documentation"
+msgstr "Documentação"
+
+#: ../controllers/help.php:11
+msgid ""
+"You can click the information icon at the top right corner of any page to "
+"pull up a relevant help page from the wiki:"
+msgstr ""
+"Você pode clicar no ícone de informações no canto superior direito de "
+"qualquer página para chamar a página de ajuda relevante do wiki:"
+
+#: ../controllers/help.php:17 ../views/bug_report.php:5
+msgid ""
+"If you require immediate help for this plugin, you can contract me at the "
+"following email address for a reasonable hourly rate:"
+msgstr ""
+"Se você precisar de ajuda imediata para este plugin, você pode me contratar "
+"para o seguinte endereço de e-mail a uma taxa horária razoável:"
+
+#: ../controllers/help.php:23
+msgid ""
+"This plugin is open source software freely available to WordPress users."
+msgstr ""
+"Este plug-in é um software open source disponível gratuitamente para "
+"usuários do WordPress."
+
+#: ../controllers/help.php:24
+msgid ""
+"Use the following links to get more information about how to use this plugin."
+msgstr ""
+"Use os links a seguir para obter mais informações sobre como usar este "
+"plugin."
+
+#: ../controllers/help.php:26
+#, fuzzy
+msgid ""
+"<a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/"
+"\">Official Documentation</a> -- available on the project's Wiki page."
+msgstr ""
+"<a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/"
+"\">Documentação oficial</a> -- disponível na página Wiki de projetos."
+
+#: ../controllers/help.php:27
+#, fuzzy
+msgid ""
+"<a href=\"http://wordpress.org/tags/custom-content-type-manager?"
+"forum_id=10\">Plugin Forum</a> -- General questions can be asked in the "
+"forum."
+msgstr ""
+"<a href=\"http://wordpress.org/tags/custom-content-type-manager."
+"forum_id=10\">Fórum do plugin</a> -- Dúvidas gerais podem ser feitas no "
+"fórum."
+
+#: ../controllers/help.php:28
+msgid "<a href=\"http://wpcctm.com/\">Official Site</a>."
+msgstr "<a href=\"http://wpcctm.com/\">Site Oficial</a>."
+
+#: ../controllers/import_def.php:13
+msgid "Export"
+msgstr "Exportar"
+
+#: ../controllers/import_def.php:31
+#, php-format
+msgid ""
+"Failed to create the CCTM base storage directory: <code>%s</code></p>\n"
+"\t\t<p><a href=\"http://code.google.com/p/wordpress-custom-content-type-"
+"manager/wiki/Permissions\" target=\"_blank\">Click here</a> for more "
+"information about correcting permissions errors on your server.</p>"
+msgstr ""
+"Failed to create the CCTM base storage directory: <code>%s</code></p>\n"
+"\t\t<p><a href=\"http://code.google.com/p/wordpress-custom-content-type-"
+"manager/wiki/Permissions\" target=\"_blank\">Click here</a> for more "
+"information about correcting permissions errors on your server.</p>"
+
+#: ../controllers/import_def.php:55
+msgid "No file selected"
+msgstr "Nenhum arquivo selecionado"
+
+#: ../controllers/import_def.php:66
+#, php-format
+msgid "The definition filesize must not exceed %s bytes."
+msgstr "O tamanho do arquivo de definição não deve exceder %s bytes."
+
+#: ../controllers/import_def.php:81
+msgid "The uploaded file is not in the correct format."
+msgstr "O arquivo enviado não está no formato correto."
+
+#: ../controllers/import_def.php:100
+msgid ""
+"We could not upload the definition file to your library. This may be due to "
+"permissions errors or some other server configuration.  Use FTP to upload "
+"your file to %"
+msgstr ""
+"Não foi possível fazer o upload do arquivo de definição para a sua "
+"biblioteca. Isto pode ser devido a erros de permissão ou alguma outra "
+"configuração do servidor. Utilize o FTP para enviar seu arquivo para %s"
+
+#: ../controllers/import_def.php:119
+msgid "Files have been removed from your library."
+msgstr "Arquivos foram removidos da sua biblioteca."
+
+#: ../controllers/import_def.php:134
+msgid "The definition was imported successfully!"
+msgstr "A definição foi importada com sucesso!"
+
+#: ../controllers/import_def.php:146
+msgid "Invalid submission."
+msgstr "Evio Inválido."
+
+#: ../controllers/info.php:13
+msgid "Information"
+msgstr "Informações"
+
+#: ../controllers/list_custom_fields.php:29
+msgid ""
+"There are no custom fields defined. Click the button below to add a custom "
+"field."
+msgstr ""
+"Não existem Campos Personalizados definidos. Clique no botão abaixo para "
+"adicionar um Campo Personalizado."
+
+#: ../controllers/list_custom_fields.php:57
+#: ../controllers/list_custom_fields.php:67
+#: ../controllers/list_pt_associations.php:142
+#: ../controllers/list_pt_associations.php:202
+msgid "Edit this custom field"
+msgstr "Editar este Campo Personalizado"
+
+#: ../controllers/list_custom_fields.php:61
+#: ../controllers/list_custom_fields.php:68
+#: ../controllers/list_post_types.php:40
+#: ../controllers/list_pt_associations.php:143
+#: ../controllers/list_pt_associations.php:203
+#: ../includes/CCTM_Columns.php:151 ../includes/CCTM_FormElement.php:145
+#: ../includes/CCTM_PostTypeDef.php:504 ../views/metabox-holder.php:8
+msgid "Edit"
+msgstr "Editar"
+
+#: ../controllers/list_custom_fields.php:75
+msgid "Duplicate this custom field"
+msgstr "Duplicar esse Campo Personalizado"
+
+#: ../controllers/list_custom_fields.php:76
+#: ../controllers/list_post_types.php:47
+msgid "Duplicate"
+msgstr "Duplicar"
+
+#: ../controllers/list_custom_fields.php:82
+msgid "Delete this custom field"
+msgstr "Excluir este Campo Personalizado"
+
+#: ../controllers/list_custom_fields.php:104
+msgid "Unassigned"
+msgstr "Não Atribuído"
+
+#: ../controllers/list_custom_field_types.php:10
+msgid "Add Field: Choose Type of Custom Field"
+msgstr "Adicionar Campo: Escolha Tipo de Campo Personalizado"
+
+#: ../controllers/list_custom_field_types.php:20
+#, php-format
+msgid "Create a custom field for the %s post_type"
+msgstr "Criar um Campo Personalizado para o Tipo de Post %s"
+
+#: ../controllers/list_field_associations.php:15
+#, php-format
+msgid "Content Types using Custom Field %s"
+msgstr "Tipos de Conteúdo usando o Campo Personalizado %s"
+
+#: ../controllers/list_field_associations.php:24
+#, php-format
+msgid "The following content types are using the %s custom field"
+msgstr "Os seguintes tipos de conteúdo estão usando o Campo Personalizado %s"
+
+#: ../controllers/list_field_associations.php:104
+#, php-format
+msgid "The associations for the %s custom field have been updated"
+msgstr "As associações de Campo Personalizado de %s foram atualizadas"
+
+#: ../controllers/list_field_associations.php:121
+#: ../controllers/list_post_types.php:72 ../views/preview_def.php:25
+msgid "Built-in post type."
+msgstr "Tipo de Post nativos do WP."
+
+#: ../controllers/list_metaboxes.php:10
+msgid "List Metaboxes"
+msgstr "Listar Metaboxes"
+
+#: ../controllers/list_metaboxes.php:28
+#, fuzzy
+msgid ""
+"There are no custom metaboxes defined. Click the button below to add a "
+"custom metabox."
+msgstr ""
+"Não existem Campos Personalizados definidos. Clique no botão abaixo para "
+"adicionar um Campo Personalizado."
+
+#: ../controllers/list_post_types.php:14
+msgid "List Content Types"
+msgstr "Listar Tipos de Conteúdo"
+
+#: ../controllers/list_post_types.php:15
+msgid "Create Content Type"
+msgstr "Criar Tipo de Conteúdo"
+
+#: ../controllers/list_post_types.php:33
+msgid "Deactivate this content type"
+msgstr "Desativar este Tipo de Conteúdo"
+
+#: ../controllers/list_post_types.php:39
+msgid "Edit this content type"
+msgstr "Editar este Tipo de Conteúdo"
+
+#: ../controllers/list_post_types.php:46
+msgid "Duplicate this content type"
+msgstr "Duplicar este Tipo de Conteúdo"
+
+#: ../controllers/list_post_types.php:58
+msgid "View Sample Templates for this content type"
+msgstr "Ver Templates de exemplo para este Tipo de Conteúdo"
+
+#: ../controllers/list_post_types.php:59
+msgid "View Sample Templates"
+msgstr "Ver Templates de Exemplo"
+
+#: ../controllers/list_post_types.php:69 ../controllers/list_post_types.php:91
+#: ../controllers/list_post_types.php:165
+msgid "Stop standardizing custom fields this content type"
+msgstr "Parar comm a padronização Campos Personalizados este Tipo de Conteúdo"
+
+#: ../controllers/list_post_types.php:70 ../controllers/list_post_types.php:92
+#: ../controllers/list_post_types.php:166
+msgid "Release Custom Fields"
+msgstr "Liberar Campos Personalizados"
+
+#: ../controllers/list_post_types.php:81
+#: ../controllers/list_post_types.php:155
+msgid "Standardize Custom Fields for this content type"
+msgstr "Padronizar os Campos Personalizados para este tipo de conteúdo"
+
+#: ../controllers/list_post_types.php:82
+#: ../controllers/list_post_types.php:156
+msgid "Standardize Custom Fields"
+msgstr "Padronizar Campos Personalizados"
+
+#: ../controllers/list_post_types.php:125
+msgid "Activate this content type"
+msgstr "Ative este tipo de conteúdo"
+
+#: ../controllers/list_post_types.php:126
+msgid "Activate"
+msgstr "Ativar"
+
+#: ../controllers/list_post_types.php:131
+msgid "Delete this content type"
+msgstr "Excluir este tipo de conteúdo"
+
+#: ../controllers/list_post_types.php:146
+msgid ""
+"Foreign post-type.  This post type has been registered by another plugin."
+msgstr ""
+"Tipo de Post Estrangeiro. Esse tipo de Post foi registrado por outro plugin."
+
+#: ../controllers/list_pt_associations.php:18
+#, php-format
+msgid "Custom Fields for %s"
+msgstr "Campos personalizados para %s"
+
+#: ../controllers/list_pt_associations.php:62
+#, php-format
+msgid "Custom fields for %s have been updated."
+msgstr "Os Campos Personalizados de %s foram atualizados."
+
+#: ../controllers/list_pt_associations.php:87
+msgid "There are no custom fields defined yet."
+msgstr "Não há Campos Personalizados definidos ainda."
+
+#: ../controllers/list_pt_associations.php:89
+msgid "Define custom fields"
+msgstr "Definir Campos Personalizados"
+
+#: ../controllers/list_pt_associations.php:94
+#, fuzzy, php-format
+msgid "The %s post type does not have any custom fields yet."
+msgstr "Este Tipo de Post não possui Campos Personalizados associados a ele."
+
+#: ../controllers/merge_custom_fields.php:13
+msgid "Merge Custom Field"
+msgstr "Mesclar Campo Personalizado"
+
+#: ../controllers/merge_custom_fields.php:20
+msgid "Merge"
+msgstr "Fundir"
+
+#: ../controllers/merge_custom_fields.php:30
+msgid "You must select a target to merge the field into."
+msgstr "Você deve selecionar um alvo para fundir os campos."
+
+#: ../controllers/merge_custom_fields.php:73
+#, php-format
+msgid "The %s field has been merged into the %s field."
+msgstr "O campo %s foi fundido no campo %s."
+
+#: ../controllers/merge_custom_fields.php:88
+msgid ""
+"Merging causes a field to be renamed in the database and the old definition "
+"to be deleted. For example, if you merge \"cats\" into \"dogs\", all "
+"instances of \"cats\" in the database will be renamed to \"dogs\" and the "
+"field definition for \"cats\" will be removed."
+msgstr ""
+"A fusão faz com que um campo seja renomeado no banco de dados e a definição "
+"antiga ser excluída. Por exemplo, se você mesclar \"gatos\" com  \"cães\", "
+"todas as ocorrências de \"gatos\" no banco de dados serão renomeadas para "
+"\"cães\" e a definição de campo de  \"gatos\" será removida."
+
+#: ../controllers/merge_custom_fields.php:90
+msgid ""
+"Be careful about merging a field into a field of a different type! You may "
+"encounter unpredictable results!"
+msgstr ""
+"Tenha cuidado ao fundir um campo a outro de um tipo diferente! Você pode "
+"encontrar resultados imprevisíveis!"
+
+#: ../controllers/merge_custom_fields.php:92
+#, php-format
+msgid ""
+"Choose a custom field below that will absorb the values for the %s field."
+msgstr ""
+"Escolha um Campo Personalizado abaixo que irá absorver os valores para o "
+"campo %s."
+
+#: ../controllers/merge_custom_fields.php:97
+msgid "Choose target"
+msgstr "Escolha alvo"
+
+#: ../controllers/preview_def.php:12
+#, php-format
+msgid "Bad filename: %s. No special characters or spaces allowed."
+msgstr ""
+"Nome de arquivo ruim: %s. Caracteres especiais ou espaços não são permitidos."
+
+#: ../controllers/preview_def.php:28
+#, fuzzy, php-format
+msgid "%s contained an incompatible data structure."
+msgstr " %s contém uma estrutura de dados incompatível."
+
+#: ../controllers/purge.php:10 ../views/tools.php:23
+msgid "Purge Posts"
+msgstr "Apagar Posts"
+
+#: ../controllers/purge.php:56 ../controllers/purge.php:107
+msgid ""
+"Your database is clean: there are no inactive post-types that need to be "
+"purged."
+msgstr ""
+"Seu banco de dados está limpo: não há tipos de post inativos que precisem "
+"ser eliminados."
+
+#: ../controllers/purge.php:93
+#, php-format
+msgid "The database has been purged from the following post-types: %s"
+msgstr "O banco de dados foi limpo dos seguintes tipos de post: %s"
+
+#: ../controllers/purge.php:110
+msgid ""
+"The following post-types are inactive and can be purged from your database:"
+msgstr ""
+"Os seguintes tipos de post estão inativos e podem ser removidos da base de "
+"dados:"
+
+#: ../controllers/purge.php:117
+msgid "Deleting these from your database cannot be undone!"
+msgstr "Excluindo estes a partir de seu banco de dados não pode ser desfeita!"
+
+#: ../controllers/reset_custom_fields.php:18
+msgid "Reset custom field definitions"
+msgstr "Repor as definições de Campos Personalizados"
+
+#: ../controllers/reset_custom_fields.php:22
+msgid "Reset"
+msgstr "Restabelecer"
+
+#: ../controllers/reset_custom_fields.php:30
+#, php-format
+msgid "All custom field definitions for the %s post type have been deleted"
+msgstr ""
+"Todas as definições de Campos Personalizados para o tipo de post %s ter sido "
+"excluído"
+
+#: ../controllers/reset_custom_fields.php:40
+#, php-format
+msgid ""
+"You are about to delete all custom field definitions for the %s post type. "
+"This will not delete any data from the wp_postmeta table, but it will make "
+"any custom fields invisible to WordPress users on the front and back end."
+msgstr ""
+"Você está prestes a apagar todas as definições de Campos Personalizados para "
+"o tipo de post %s. Isso não vai apagar todos os dados da tabela wp_postmeta, "
+"mas ele vai fazer todos os Campos Personalizados invisíveis para os usuários "
+"do WordPress na front e back-end."
+
+#: ../controllers/settings.php:49
+msgid "Settings have been updated."
+msgstr "As configurações foram atualizadas."
+
+#: ../controllers/settings.php:106
+msgid "Edit Settings"
+msgstr "Editar Configurações"
+
+#: ../controllers/settings_cf.php:10 ../controllers/settings_cf.php:15
+#, php-format
+msgid "Settings for Custom Field %s"
+msgstr "Definições para Campos Personalizados %s"
+
+#: ../controllers/show_sources.php:23 ../views/tools.php:30
+msgid "Show Sources"
+msgstr "Mostrar Fontes"
+
+#: ../controllers/template_single.php:22
+#, php-format
+msgid "Sample Themes for %s"
+msgstr "Temas de amostra para %s"
+
+#: ../controllers/template_single.php:25
+msgid "Create Custom Field for this Post Type"
+msgstr "Criar Campo Personalizado para este post Tipo"
+
+#: ../controllers/template_single.php:43
+#, fuzzy, php-format
+msgid ""
+"WordPress supports a custom theme file for each registered post-type "
+"(content-type). Copy the text below into a file named <strong>%s</strong> "
+"and save it into your active theme."
+msgstr ""
+"WordPress supports a custom theme file for each registered post-type "
+"(content-type). Copy the text below into a file named <strong> %s</strong> "
+"and save it into your active theme."
+
+#: ../controllers/template_single.php:46
+#, php-format
+msgid ""
+"You are currently using the %1$s theme. Save the file into the %2$s "
+"directory."
+msgstr ""
+"You are currently using the %1$s theme. Save the file into the %2$s "
+"directory."
+
+#: ../controllers/template_single.php:163
+msgid ""
+"You have not associated any custom fields with this post-type. Be sure to "
+"add any desired custom fields to this post-type by clicking on the \"Manage "
+"Custom Fields\" link under the Custom Content Type menu and checking the "
+"fields that you want."
+msgstr ""
+"You have not associated any custom fields with this post-type. Be sure to "
+"add any desired custom fields to this post-type by clicking on the \"Manage "
+"Custom Fields\" link under the Custom Content Type menu and checking the "
+"fields that you want."
+
+#: ../controllers/themes.php:8 ../views/templates/default.php:53
+msgid "Themes"
+msgstr "Temas"
+
+#: ../fields/checkbox.php:38
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#: ../fields/checkbox.php:51
+#, fuzzy
+msgid ""
+"Checkbox fields implement the standard <input=\"checkbox\"> element.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"alt\" can be specified in the definition."
+msgstr ""
+"Checkbox fields implement the standard <input=\"checkbox\"> element. \"Extra"
+"\" parameters, e.g. \"alt\" can be specified in the definition."
+
+#: ../fields/checkbox.php:146 ../fields/date.php:282
+#: ../fields/directory.php:215 ../fields/dropdown.php:278
+#: ../fields/dropdown.php:304 ../fields/image.php:302 ../fields/media.php:306
+#: ../fields/multiselect.php:273 ../fields/multiselect.php:297
+#: ../fields/relation.php:305 ../fields/relationmeta.php:343
+#: ../views/list_custom_fields.php:7 ../views/list_custom_fields.php:17
+msgid "Options"
+msgstr "Opções"
+
+#: ../fields/checkbox.php:151
+msgid "Value when checked"
+msgstr "Valor quando verificado"
+
+#: ../fields/checkbox.php:160
+msgid "Value when Unchecked"
+msgstr "Valor quando desmarcada"
+
+#: ../fields/checkbox.php:168
+msgid "Checked by default?"
+msgstr "Marcada por padrão?"
+
+#: ../fields/checkbox.php:194 ../fields/checkbox.php:197
+#: ../fields/colorselector.php:240 ../fields/date.php:348
+#: ../fields/text.php:167 ../includes/CCTM_FormElement.php:704
+msgid "default"
+msgstr "padrão"
+
+#: ../fields/checkbox.php:199
+msgid "Checked"
+msgstr "Marcado"
+
+#: ../fields/checkbox.php:200
+msgid "Unchecked"
+msgstr "Desmarcada"
+
+#: ../fields/colorselector.php:47 ../fields/image.php:55
+#: ../fields/media.php:54 ../fields/relation.php:59
+#: ../fields/relationmeta.php:79 ../includes/CCTM_FormElement.php:316
+msgid "Standard Fields"
+msgstr "Campos padrão"
+
+#: ../fields/colorselector.php:53 ../fields/image.php:61
+#: ../fields/media.php:60 ../fields/relation.php:65
+#: ../fields/relationmeta.php:85 ../includes/CCTM_FormElement.php:322
+msgid "Label"
+msgstr "Rótulo"
+
+#: ../fields/colorselector.php:60 ../fields/image.php:68
+#: ../fields/media.php:67 ../fields/relation.php:72
+#: ../fields/relationmeta.php:92 ../includes/CCTM_FormElement.php:329
+msgid "Name"
+msgstr "Nome"
+
+#: ../fields/colorselector.php:69 ../fields/image.php:77
+#: ../fields/image.php:311 ../fields/media.php:76 ../fields/media.php:315
+#: ../fields/relation.php:81 ../fields/relation.php:314
+#: ../fields/relationmeta.php:101 ../fields/relationmeta.php:352
+#: ../includes/CCTM_FormElement.php:338
+msgid "Default Value"
+msgstr "Valor padrão"
+
+#: ../fields/colorselector.php:78 ../fields/image.php:86
+#: ../fields/media.php:85 ../fields/relation.php:90
+#: ../fields/relationmeta.php:110 ../includes/CCTM_FormElement.php:347
+msgid "Extra"
+msgstr "Extra"
+
+#: ../fields/colorselector.php:97 ../fields/image.php:105
+#: ../fields/media.php:104 ../fields/relation.php:109
+#: ../fields/relationmeta.php:129 ../includes/CCTM_FormElement.php:366
+msgid "Is Repeatable?"
+msgstr "É repetível?"
+
+#: ../fields/colorselector.php:107 ../fields/image.php:115
+#: ../fields/media.php:114 ../fields/relation.php:119
+#: ../fields/relationmeta.php:139 ../includes/CCTM_FormElement.php:376
+#: ../views/export.php:27 ../views/list_custom_fields.php:8
+#: ../views/list_custom_fields.php:18 ../views/list_post_types.php:5
+#: ../views/list_post_types.php:12 ../views/post_type.php:168
+#: ../views/post_type.php:475 ../views/post_type.php:484
+#: ../views/sortable-list.php:25 ../views/sortable-list.php:34
+msgid "Description"
+msgstr "Descrição"
+
+#: ../fields/colorselector.php:126
+msgid "Color Picker"
+msgstr "Color Picker"
+
+#: ../fields/colorselector.php:137
+msgid ""
+"Color Picker fields implement a <input type=\"color\"> element with a "
+"special Javascript color selection popup."
+msgstr ""
+"Color Picker fields implement a <input type=\"color\"> element with a "
+"special Javascript color selection popup."
+
+#: ../fields/colorselector.php:210 ../fields/date.php:184
+#: ../fields/text.php:125 ../fields/textarea.php:125 ../fields/wysiwyg.php:91
+msgid "Add"
+msgstr "Adicionar"
+
+#: ../fields/date.php:58
+msgid "Date and Time"
+msgstr "Data e Hora"
+
+#: ../fields/date.php:71
+msgid "Use these fields to store dates and times."
+msgstr "Use estes campos para armazenar datas e horas."
+
+#: ../fields/date.php:288
+msgid ""
+"Use PHP eval to calculate the default value? (Omit the php tags, e.g. "
+"<code>date('Y-m-d')</code>)."
+msgstr ""
+"Utilizar eval do PHP para calcular o valor padrão. (Omitir as tags php, por "
+"exemplo <code>date(Y-m-d)</code>)."
+
+#: ../fields/date.php:298 ../fields/date.php:345 ../filters/datef.php:61
+#: ../includes/GetPostsForm.php:401
+msgid "Date Format"
+msgstr "Formato de data"
+
+#: ../fields/date.php:301 ../includes/CCTM_PostTypeDef.php:160
+#: ../views/metabox.php:64
+msgid "Default"
+msgstr "Padrão"
+
+#: ../fields/date.php:303
+msgid "Short"
+msgstr "Curto"
+
+#: ../fields/date.php:304
+msgid "Medium"
+msgstr "Médio"
+
+#: ../fields/date.php:305 ../fields/date.php:310 ../fields/date.php:311
+msgid "Full"
+msgstr "Completo"
+
+#: ../fields/date.php:306
+msgid "With text - 'day' d 'of' MM 'in the year' yy"
+msgstr "Com texto - dia d de MM no ano yy"
+
+#: ../fields/date.php:308
+msgid "Date + Time"
+msgstr "Data + Hora"
+
+#: ../fields/date.php:309 ../fields/date.php:310 ../fields/date.php:314
+#: ../fields/date.php:315 ../fields/date.php:316
+msgid "24 hour"
+msgstr "24 horas"
+
+#: ../fields/date.php:313
+msgid "Time"
+msgstr "Hora"
+
+#: ../fields/date.php:314 ../fields/date.php:317
+msgid "10 minute intervals"
+msgstr "Intervalos de 10 minutos"
+
+#: ../fields/date.php:315 ../fields/date.php:318
+msgid "15 minute intervals"
+msgstr "Intervalos de 15 minutos"
+
+#: ../fields/date.php:316 ../fields/date.php:319
+msgid "30 minute intervals"
+msgstr "Intervalos de 30 minutos"
+
+#: ../fields/date.php:322
+msgid ""
+"If you need to sort your dates, it is recommended to use the MySQL date "
+"formats. Change how the date displays using Output Filters in your template "
+"files. Custom formatting options can be used by customizing the Javascript "
+"constructors in the .tpl files."
+msgstr ""
+"Se você precisa classificar as datas, é recomendado usar os formatos de data "
+"do MySQL. Altera a forma como a data é exibida usando Filtros de Saída em "
+"seus arquivos de template. Opções de formatação personalizadas podem ser "
+"utilizadas personalizando os construtores Javascript nos arquivos .tpl."
+
+#: ../fields/directory.php:35
+msgid "Directory"
+msgstr "Diretório"
+
+#: ../fields/directory.php:48
+msgid ""
+"Lists the contents of a directory (an optionally all sub-dirs) for selection "
+"in a dropdown. Output is relative to the defined source directory."
+msgstr ""
+
+#: ../fields/directory.php:220 ../fields/directory.php:262
+msgid "Source Directory"
+msgstr "Diretório de Origem"
+
+#: ../fields/directory.php:223
+msgid ""
+"Full path to a directory without the trailing slash, e.g. <code>/home/"
+"my_user/dir</code>. Use <code>[+ABSPATH+]</code> as a placeholder for your "
+"WordPress root directory."
+msgstr ""
+
+#: ../fields/directory.php:229 ../fields/directory.php:263
+msgid "Extensions"
+msgstr "Extensões"
+
+#: ../fields/directory.php:232
+msgid ""
+"File extensions you want returned. Use comas to separate possible matches, e."
+"g. <code>.jpg,.jpeg</code>.  The case does not matter."
+msgstr ""
+
+#: ../fields/directory.php:237 ../fields/directory.php:268
+msgid "Traverse Directories?"
+msgstr "Percorrer Diretórios?"
+
+#: ../fields/directory.php:240
+msgid "When checked, the contents of sub-directories will also be listed."
+msgstr ""
+
+#: ../fields/dropdown.php:45 ../fields/dropdown.php:382
+msgid "Dropdown"
+msgstr "Menu Suspenso (dropdown)"
+
+#: ../fields/dropdown.php:58
+msgid ""
+"Dropdown fields implement a <select> element which lets you select a single "
+"item. \"Extra\" parameters, e.g. \"alt\" can be specified in the definition."
+msgstr ""
+"Campos dropdown implementam um elemento <select> que permite selecionar um "
+"único item. Parâmetros \"Extra\", por exemplo \"alt\", podem ser "
+"especificados na definição."
+
+#: ../fields/dropdown.php:133 ../fields/multiselect.php:198
+msgid "Custom Content Error"
+msgstr "Erro de Conteúdo Personalizado"
+
+#: ../fields/dropdown.php:134 ../fields/multiselect.php:199
+msgid "No options supplied for the following custom field: "
+msgstr "Sem opções fornecidas para o seguinte Campo Personalizado:"
+
+#: ../fields/dropdown.php:153 ../fields/multiselect.php:135
+msgid "Alternate input must not be empty if SQL box is checked."
+msgstr ""
+
+#: ../fields/dropdown.php:287 ../fields/multiselect.php:281
+msgid "Distinct options/values?"
+msgstr "Opções/valores distintos?"
+
+#: ../fields/dropdown.php:305 ../fields/multiselect.php:298
+msgid "Stored Values"
+msgstr "Valores armazenados"
+
+#: ../fields/dropdown.php:306 ../fields/multiselect.php:299
+msgid "Add Option"
+msgstr "Adicionar Opção"
+
+#: ../fields/dropdown.php:307 ../fields/dropdown.php:364
+#: ../fields/multiselect.php:300 ../fields/multiselect.php:357
+msgid "Set as Default"
+msgstr "Definir como padrão"
+
+#: ../fields/dropdown.php:377
+msgid "How should the field display?"
+msgstr "Como deve ser a exibição do campo."
+
+#: ../fields/dropdown.php:386
+msgid "Radio Button"
+msgstr "Radio Button"
+
+#: ../fields/dropdown.php:393 ../fields/multiselect.php:390
+msgid "Alternate Input"
+msgstr "Entrada Alternativa"
+
+#: ../fields/dropdown.php:395 ../fields/multiselect.php:392
+msgid ""
+"Use this input if you want to options in bulk. \n"
+"\t\t\t\tSeparate options and values using double-pipes \"||\" with the "
+"visible option on the left, the corresponding value\n"
+"\t\t\t\tto be stored on the right (if present).  You may also enter a valid "
+"MySQL query. This field overrides \n"
+"\t\t\t\tother inputs!"
+msgstr ""
+"Use esta entrada se você quiser opções em massa. \n"
+"\t\t\t\t opções Separe e valores, utilizando-pipes duplos \"| |\" com a "
+"opção visível no lado esquerdo, o valor correspondente \n"
+"\t\t\t\t a ser armazenado à direita (se houver). Você também pode inserir "
+"uma consulta MySQL válida. Este campo substitui \n"
+"\t\t\t\t outras entradas!"
+
+#: ../fields/dropdown.php:407 ../fields/multiselect.php:404
+msgid "Execute as a MySQL query?"
+msgstr "Executar com uma consulta de MySQL?"
+
+#: ../fields/dropdown.php:407 ../fields/multiselect.php:404
+msgid ""
+"Select up to 2 columns: the 1st column will be the visible label and the 2nd "
+"column (if present) will represent the value stored in the database.\n"
+"\t\t\t\t \tUse [+table_prefix+] instead of hard-coding your WordPress "
+"database table prefix."
+msgstr ""
+
+#: ../fields/dropdown.php:457 ../fields/multiselect.php:453
+msgid "At least one option or alternate input is required."
+msgstr "Pelo menos um opção ou entrada alternativa é necessária."
+
+#: ../fields/hidden.php:43
+msgid "Hidden"
+msgstr "Oculto"
+
+#: ../fields/hidden.php:56
+msgid ""
+"Hidden fields implement the standard <input=\"hidden\"> element. They can be "
+"used to store data programmatically, out of view from users."
+msgstr ""
+"Campos ocultos implementam o elemento padrão <input=\"hidden\">. Eles podem "
+"ser usados para armazenar os dados úteis, sem que no entanto os usuários os "
+"vejam."
+
+#: ../fields/hidden.php:172
+msgid "Special"
+msgstr "Especial"
+
+#: ../fields/hidden.php:176
+msgid ""
+"EXPERIMENTAL USE ONLY. Use PHP eval to calculate values? (Omit the php tags "
+"and return a value, e.g. <code>return date('Y-m-d');</code> )."
+msgstr ""
+"USO APENAS EXPERIMENTAL. Utilizar eval do PHP para calcular os valores? "
+"(Omitir as tags PHP e retornar um valor, por exemplo <code>date(Y-m-d)</"
+"code>)."
+
+#: ../fields/hidden.php:180
+msgid ""
+"Evaluate \"OnCreate\". This happens when the form for a new post is drawn."
+msgstr ""
+"Avaliar \"OnCreate\". Isso acontece quando o formulário para um novo post é "
+"elaborado."
+
+#: ../fields/hidden.php:183
+msgid ""
+"Evaluate \"OnEdit\".  This happens when the form for an existing post is "
+"drawn."
+msgstr ""
+"Avaliar \"OnEdit\". Isso acontece quando um form de um post existente é "
+"elaborado."
+
+#: ../fields/hidden.php:185
+msgid "Evaluate \"OnSave\". This happens when the post form is submitted."
+msgstr ""
+"Avaliar \"OnSave\". Isso acontece quando o formulário do post é enviado."
+
+#: ../fields/hidden.php:189
+msgid "OnCreate"
+msgstr "AoCriar"
+
+#: ../fields/hidden.php:192
+msgid "OnEdit"
+msgstr "AoEditar"
+
+#: ../fields/hidden.php:194
+msgid "OnSave"
+msgstr "AoSalvar"
+
+#: ../fields/image.php:135
+msgid "Image"
+msgstr "Imagem"
+
+#: ../fields/image.php:148
+msgid ""
+"Image fields are used to store references to any image that has been "
+"uploaded via the WordPress media uploader."
+msgstr ""
+"Campos de imagem são usados ââpara armazenar as referências a qualquer "
+"imagem que foi enviado via o uploader de mídia WordPress."
+
+#: ../fields/image.php:214 ../fields/image.php:255
+#, php-format
+msgid "Image %s not found."
+msgstr "Imagem %s não foi encontrado."
+
+#: ../fields/image.php:270 ../fields/image.php:310 ../fields/media.php:314
+msgid "Choose Image"
+msgstr "Escolha Imagem"
+
+#: ../fields/image.php:312 ../fields/media.php:316 ../fields/relation.php:315
+#: ../fields/relationmeta.php:353 ../includes/CCTM.php:1513
+msgid "Remove"
+msgstr "Remover"
+
+#: ../fields/image.php:332 ../fields/media.php:336 ../fields/relation.php:335
+#: ../fields/relationmeta.php:373
+msgid "Button Label"
+msgstr "Rótulo do Botão"
+
+#: ../fields/image.php:346 ../fields/media.php:350 ../fields/relation.php:351
+#: ../fields/relationmeta.php:389
+msgid "Search Parameters"
+msgstr "Parâmetros de Pesquisa"
+
+#: ../fields/image.php:348 ../fields/media.php:352 ../fields/relation.php:353
+#: ../fields/relationmeta.php:391
+msgid ""
+"Define which posts are available for selection by narrowing your search "
+"parameters."
+msgstr ""
+"Definir quais mensagens estão disponíveis para seleção, estreitando seus "
+"parâmetros de busca."
+
+#: ../fields/image.php:350 ../fields/media.php:354 ../fields/relation.php:355
+#: ../fields/relationmeta.php:393
+msgid "Set Search Parameters"
+msgstr "Definir parâmetros de pesquisa"
+
+#: ../fields/media.php:134
+msgid "Media"
+msgstr "Mídia"
+
+#: ../fields/media.php:147
+msgid ""
+"Media fields are used to store references to any type of media file that has "
+"been uploaded via the WordPress media uploader, e.g. images, videos, mp3s."
+msgstr ""
+"Campos de mídia são usados ââpara armazenar referências a qualquer tipo de "
+"arquivo de mídia que foi enviado via o uploader de mídia do WordPress, por "
+"exemplo, imagens, vídeos, MP3."
+
+#: ../fields/media.php:217 ../fields/media.php:258
+#, php-format
+msgid "Attachment %s not found."
+msgstr "Anexo %s não foi encontrado."
+
+#: ../fields/media.php:273
+msgid "Choose Media"
+msgstr "Escolha Mídia"
+
+#: ../fields/multiselect.php:44 ../fields/multiselect.php:382
+msgid "Multi-select"
+msgstr "Seleção-múltipla"
+
+#: ../fields/multiselect.php:55
+msgid ""
+"Multi-select fields implement a <select> element which lets you select "
+"mutliple items. \"Extra\" parameters, e.g. \"size\" can be specified in the "
+"definition."
+msgstr ""
+"Campos de seleção-múltipla implementam um elemento <select> que permite "
+"selecionar vários itens. Parâmetros \"Extra\", por exemplo \"tamanho\", "
+"podem ser especificados na definição."
+
+#: ../fields/multiselect.php:378 ../views/post_type.php:473
+msgid "Display"
+msgstr "Exibir"
+
+#: ../fields/multiselect.php:381
+msgid "Checkboxes"
+msgstr "Caixas"
+
+#: ../fields/multiselect.php:384
+msgid ""
+"Multiple options can be selected either as a series of checkboxes or as a "
+"multi-select field."
+msgstr ""
+"Várias opções podem ser selecionadas tanto como uma série de caixas de "
+"seleção ou como um campo seleção-múltipla."
+
+#: ../fields/relation.php:139
+msgid "Relation"
+msgstr "Relação"
+
+#: ../fields/relation.php:152
+msgid ""
+"Relation fields are used to store a reference to another post, including "
+"media posts. For example you can use a relation to link to a parent post or "
+"to an image or attachment."
+msgstr ""
+"Campos de relação são usados para armazenar uma referência a outro post, "
+"incluindo as mensagens de mídia. Por exemplo, você pode usar uma relação de "
+"ligação para um posto de pai ou de uma imagem ou um anexo."
+
+#: ../fields/relation.php:187 ../fields/relation.php:273
+#: ../fields/relation.php:313 ../fields/relationmeta.php:207
+#: ../fields/relationmeta.php:303 ../fields/relationmeta.php:351
+msgid "Choose Relation"
+msgstr "Escolha Relação"
+
+#: ../fields/relation.php:221 ../fields/relation.php:258
+#: ../fields/relationmeta.php:261
+#, php-format
+msgid "Post %s not found."
+msgstr "Post %s não foi encontrado."
+
+#: ../fields/relationmeta.php:159
+msgid "Relation-Meta (EXPERIMENTAL)"
+msgstr "Meta-Relação (EXPERIMENTAL)"
+
+#: ../fields/relationmeta.php:172
+msgid ""
+"Relation-Meta fields are advanced fields that allow you to add meta data to "
+"a selected relation, allowing you to create complex data models.  You can "
+"select a related page, for example, and then add a page-rank to that "
+"relation."
+msgstr ""
+"Campos de Meta-Relação são campos avançados que permitem que você adicione "
+"metadados para uma relação selecionada, permitindo que você crie modelos de "
+"dados complexos. Você pode selecionar uma página relacionada, por exemplo, e "
+"em seguida, adicione um pagerank para essa relação."
+
+#: ../fields/relationmeta.php:416
+msgid "Meta Fields"
+msgstr "Campos de Meta-dados"
+
+#: ../fields/relationmeta.php:418
+msgid "Select which fields should appear as meta data for this relation."
+msgstr ""
+
+#: ../fields/text.php:36
+msgid "Text"
+msgstr "Texto"
+
+#: ../fields/text.php:49
+msgid ""
+"Text fields implement the standard <input=\"text\"> element. \"Extra\" "
+"parameters, e.g. \"size\" can be specified in the definition."
+msgstr ""
+"Os campos de texto implementam o elemento <input=\"text\"> padrão. "
+"Parâmetros \"Extra\", por exemplo \"tamanho\", podem ser especificados na "
+"definição."
+
+#: ../fields/text.php:164
+msgid "Required"
+msgstr "Obrigatório"
+
+#: ../fields/textarea.php:34
+msgid "Textarea"
+msgstr "Textarea"
+
+#: ../fields/textarea.php:47
+msgid ""
+"Textarea fields implement the standard <textarea> element. \"Extra\" "
+"parameters, e.g. \"cols\" can be specified in the definition."
+msgstr ""
+"Campos textarea implementam o elemento <textarea> padrão. Parâmetros \"Extra"
+"\", por exemplo \"colunas\", podem ser especificados na definição."
+
+#: ../fields/user.php:43 ../filters/userinfo.php:100
+msgid "User"
+msgstr "Usuário"
+
+#: ../fields/user.php:56
+msgid "User fields let you select a local user from the site."
+msgstr "Campos de usuário permite que você selecione um usuário local do site."
+
+#: ../fields/wysiwyg.php:33
+msgid "WYSIWYG"
+msgstr "WYSIWYG"
+
+#: ../fields/wysiwyg.php:46
+msgid ""
+"What-you-see-is-what-you-get (WYSIWYG) fields implement a <textarea> element "
+"with formatting controls. \"Extra\" parameters, e.g. \"cols\" can be "
+"specified in the definition, however a minimum size is required to make room "
+"for the formatting controls."
+msgstr ""
+"Campos what-you-see-is-what-you-get (WYSIWYG) implementam um elemento "
+"<textarea> com controles de formatação. Parâmetros \"Extra\", por exemplo "
+"\"colunas\", podem ser especificados na definição, no entanto, um tamanho "
+"mínimo é necessário para abrir espaço para os controles de formatação."
+
+#: ../fields/wysiwyg.php:128
+msgid ""
+"Due to WordPress limitations, WYSIWYG fields can contain ONLY lowercase "
+"letters."
+msgstr ""
+"Devido às limitações do WordPress, campos visuais podem conter apenas letras "
+"minúsculas."
+
+#: ../filters/datef.php:43
+msgid "The <em>datef</em> formats strings as dates."
+msgstr ""
+
+#: ../filters/datef.php:68
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"money_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"money_OutputFilter"
+
+#: ../filters/default.php:47
+msgid ""
+"The <em>default</em> filter kicks in only if the input is empty: whatever "
+"you specify as an option will be returned only if the input is empty.  This "
+"is one way to establish default values for your fields."
+msgstr ""
+"O padrão chutes de filtro em apenas se a entrada está vazio: o que você "
+"especificar como uma opção será devolvido somente se a entrada está vazia. "
+"Esta é uma maneira de estabelecer valores padrão para os campos."
+
+#: ../filters/default.php:65
+msgid "Set Default Value"
+msgstr "Valor padrão definido"
+
+#: ../filters/default.php:72
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"default_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"default_OutputFilter"
+
+#: ../filters/do_shortcode.php:56
+msgid ""
+"The <em>do_shortcode</em> filter parses any shortcodes in the input. By "
+"default, WordPress will only parse shortcodes in the main content block, not "
+"in custom fields, so it is important to use this filter on WYSIWYG fields if "
+"you use any shortcodes."
+msgstr ""
+"O filtro <em>do_shortcode</em> analisa os shortcodes na entrada. Por padrão, "
+"o WordPress só irá analisar shortcodes no bloco de conteúdo principal, não "
+"em campos personalizados, por isso é importante usar este filtro em campos "
+"WYSIWYG se você usar quaisquer shortcodes."
+
+#: ../filters/do_shortcode.php:74
+msgid "Do Shortcode"
+msgstr "Faça Shortcode"
+
+#: ../filters/do_shortcode.php:81
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"do_shortcode_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"do_shortcode_OutputFilter"
+
+#: ../filters/email.php:46
+msgid ""
+"The <em>email</em> filter obscures an email address so it is still readable "
+"by a human, but more difficult for it to be harvested by a spam-bot."
+msgstr ""
+"O e-mail filtro obscurece um endereço de e-mail, por isso é ainda legível "
+"por um ser humano, mas mais difícil para que possa ser colhido por um spam "
+"bot."
+
+#: ../filters/email.php:64 ../validators/emailaddress.php:22
+msgid "Email"
+msgstr "Email"
+
+#: ../filters/email.php:71
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"email_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"email_OutputFilter"
+
+#: ../filters/excerpt.php:72
+msgid ""
+"The <em>excerpt</em> takes a long string and returns a shorter excerpt of "
+"it, either chopping the input on the separator string or limiting it to a "
+"given number of words."
+msgstr ""
+"O trecho tem uma longa seqÃ¼ência e retorna um trecho mais curto do mesmo, "
+"ou cortar a entrada na cadeia de separador ou limitá-lo a um determinado "
+"número de palavras."
+
+#: ../filters/excerpt.php:90 ../includes/CCTM.php:552
+#: ../views/post_type.php:359
+msgid "Excerpt"
+msgstr "Excerto"
+
+#: ../filters/excerpt.php:97
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"excerpt_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"excerpt_OutputFilter"
+
+#: ../filters/formatted_list.php:67
+msgid "Options array in incorrect format!"
+msgstr ""
+
+#: ../filters/formatted_list.php:99
+msgid ""
+"The <em>formatted_list</em> filter converts a JSON array into a formatted "
+"string such as an HTML list. See the info page for formatting options."
+msgstr ""
+"O formatted_list filtro converte uma matriz JSON em uma string formatada "
+"como uma lista HTML. Veja a página de informações para as opções de "
+"formatação."
+
+#: ../filters/formatted_list.php:120
+msgid "Formatted List"
+msgstr "Lista formatado"
+
+#: ../filters/formatted_list.php:130
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"formatted_list_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"formatted_list_OutputFilter"
+
+#: ../filters/gallery.php:22
+#, php-format
+msgid "Missing required function %s"
+msgstr "A função %s exigida está ausente"
+
+#: ../filters/gallery.php:83
+msgid ""
+"The <em>gallery</em> filter converts a single or an array of image IDs into "
+"HTML img tags."
+msgstr ""
+"filtro da galeria converte um único ou uma matriz de IDs de imagem em HTML "
+"tags img."
+
+#: ../filters/gallery.php:101
+msgid "Gallery"
+msgstr "Galeria"
+
+#: ../filters/gallery.php:108
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"gallery_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"gallery_OutputFilter"
+
+#: ../filters/get_post.php:67
+msgid ""
+"The <em>get_post</em> retrieves a post by its ID.  Unlike WordPress's "
+"get_post() function, this filter appends all custom field data."
+msgstr ""
+"O <em>get_post</ em> obtém um post pelo seu ID. Diferente da função get_post"
+"() WordPresss, este filtro anexa todos os dados do campo personalizado."
+
+#: ../filters/get_post.php:90
+msgid "Get Post"
+msgstr "Obter Post"
+
+#: ../filters/get_post.php:97
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"get_post_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"get_post_OutputFilter"
+
+#: ../filters/help.php:54
+msgid "Output Filter Help"
+msgstr "Filtro de Ajuda saída"
+
+#: ../filters/help.php:55
+msgid ""
+"This help page was generated by <a href=\"http://code.google.com/p/wordpress-"
+"custom-content-type-manager/wiki/OutputFilters\">Custom Content Type "
+"Manager</a> to demonstrate the use of the available Output Filters. For "
+"samples of template files, see the CCTM menus in the WordPress manager."
+msgstr ""
+"This help page was generated by <a href=\"http://code.google.com/p/wordpress-"
+"custom-content-type-manager/wiki/OutputFilters\">Custom Content Type "
+"Manager</a> to demonstrate the use of the available Output Filters. For "
+"samples of template files, see the CCTM menus in the WordPress manager."
+
+#: ../filters/help.php:78
+msgid "More info"
+msgstr "Mais informações"
+
+#: ../filters/help.php:79
+msgid "Example"
+msgstr "Exemplo"
+
+#: ../filters/help.php:84
+#, php-format
+msgid "File not found for %s output filter: %s"
+msgstr "Arquivo não encontrado para filtros de saída %s: %s"
+
+#: ../filters/help.php:99
+msgid ""
+"The <em>help</em> filter will display all available Output Filters as an aid "
+"to the developer or designer."
+msgstr ""
+"A ajuda filtro irá exibir todos os Filtros de saída disponíveis, como uma "
+"ajuda para o desenvolvedor ou designer."
+
+#: ../filters/help.php:124
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"help_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"help_OutputFilter"
+
+#: ../filters/number.php:59
+msgid ""
+"The <em>number</em> formats numbers in a readable way, e.g. for currency."
+msgstr ""
+
+#: ../filters/number.php:77
+msgid "Money"
+msgstr "Dinheiro"
+
+#: ../filters/number.php:84
+msgid ""
+"https://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"number_OutputFilter"
+msgstr ""
+"https://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"number_OutputFilter"
+
+#: ../filters/raw.php:33
+msgid ""
+"The <em>raw</em> filter simply outputs the input: it does not change the "
+"value. You can use it to override the default Output Filter for any custom "
+"field."
+msgstr ""
+"O crua filtro simplesmente produz o input: não alterar o valor. Você pode "
+"usá-lo para substituir o filtro de saída padrão para qualquer campo "
+"personalizado."
+
+#: ../filters/raw.php:61 ../includes/CCTM_FormElement.php:431
+msgid "None"
+msgstr "Nenhum"
+
+#: ../filters/raw.php:68
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"raw_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"raw_OutputFilter"
+
+#: ../filters/to_array.php:34
+msgid ""
+"The <em>to_array</em> filter converts a JSON encoded string to a PHP array. "
+"It should be used on any multi-select field or any other field that stores "
+"multiple values."
+msgstr ""
+"O filtro <em>to_array</em>converte uma string codificada JSON para um array "
+"PHP. Ele deve ser usado em qualquer campo de seleção-múltipla ou qualquer "
+"outro campo que armazene vários valores."
+
+#: ../filters/to_array.php:57
+msgid "Array"
+msgstr "Ordem"
+
+#: ../filters/to_array.php:64
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_array_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_array_OutputFilter"
+
+#: ../filters/to_image_array.php:36
+msgid ""
+"The <em>to_image_array</em> breaks down a referenced image into an array of "
+"its component parts: src, width, height."
+msgstr ""
+"O to_image_array quebra uma imagem de referência para uma série de suas "
+"partes componentes: src, largura e altura."
+
+#: ../filters/to_image_array.php:70
+msgid "Array of image src, width, height"
+msgstr "Matriz de imagem src, largura, altura"
+
+#: ../filters/to_image_array.php:77
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_array_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_array_OutputFilter"
+
+#: ../filters/to_image_src.php:27 ../filters/to_image_src.php:41
+#: ../filters/to_link.php:42 ../filters/to_link.php:58
+#: ../filters/to_link_href.php:25 ../filters/to_link_href.php:34
+#, php-format
+msgid "Invalid input. %s operates on post IDs only."
+msgstr ""
+
+#: ../filters/to_image_src.php:62
+msgid ""
+"The <em>to_image_src</em> filter converts a JSON encoded string to a PHP "
+"array. It should be used on any multi-select field or any other field that "
+"stores multiple values. You can optionally supply a default image src that "
+"will be used if there is no valid input."
+msgstr ""
+"O to_image_src filtro converte uma string codificada JSON para um array PHP. "
+"Ele deve ser usado em qualquer campo seleção-múltipla ou qualquer outro "
+"campo que armazena vários valores. Você pode, opcionalmente, fornecer um src "
+"imagem padrão que será utilizada se não houver uma entrada válida."
+
+#: ../filters/to_image_src.php:89
+msgid "Image src"
+msgstr "Imagem src"
+
+#: ../filters/to_image_src.php:96
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_src_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_src_OutputFilter"
+
+#: ../filters/to_image_tag.php:35
+msgid ""
+"The <em>to_image_tag</em> returns a full image tag for your image field. "
+"This is the default output filter for image fields starting with version "
+"0.8.9. You can supply an option of \"thumbnail\", \"medium\", \"large\", "
+"\"full\" or a 2-item array representing width and height in pixels, e.g. "
+"array(32,32)"
+msgstr ""
+"The <em>to_image_tag</em> returns a full image tag for your image field. "
+"This is the default output filter for image fields starting with version "
+"0.8.9. You can supply an option of \"thumbnail\", \"medium\", \"large\", "
+"\"full\" or a 2-item array representing width and height in pixels, e.g. "
+"array(32,32)"
+
+#: ../filters/to_image_tag.php:53
+msgid "Full &lt;img&gt; tag"
+msgstr "Completa < p > tag"
+
+#: ../filters/to_image_tag.php:60
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_tag_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_tag_OutputFilter"
+
+#: ../filters/to_link.php:47 ../filters/to_link.php:62
+msgid "Referenced post not found."
+msgstr "Post de referência não encontrado."
+
+#: ../filters/to_link.php:74
+msgid ""
+"The <em>to_link</em> filter takes a post ID and converts it into a full "
+"anchor tag. Be default, the post title will be used as the clickable text, "
+"but you can supply your own text."
+msgstr ""
+"O filtro <em>to_link</em> pega o ID de um post e o converte em uma tag de "
+"link completa. Por padrão, o título do post será usado como o texto "
+"clicável, mas você pode fornecer seu próprio texto."
+
+#: ../filters/to_link.php:92
+msgid "Full link &lt;a&gt; tag"
+msgstr "Completa ligação"
+
+#: ../filters/to_link.php:99
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_link_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_link_OutputFilter"
+
+#: ../filters/to_link_href.php:45
+msgid ""
+"The <em>to_link_href</em> filter takes a post ID and converts a post ID into "
+"the link href to that post. Optionally, you can supply the href to a page "
+"that will be used if no valid input is detected."
+msgstr ""
+"O to_link_href filtro tem um posto de identificação e converte um post ID "
+"para o link href para esse post. Opcionalmente, você pode fornecer o href "
+"para uma página que será usada se não for detectada nenhuma entrada válida."
+
+#: ../filters/to_link_href.php:73
+msgid "Link href only"
+msgstr "Ligação href só"
+
+#: ../filters/to_link_href.php:80
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_link_href_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_link_href_OutputFilter"
+
+#: ../filters/userinfo.php:82
+msgid ""
+"The <em>userinfo</em> retrieves a user object by its user ID. It accepts an "
+"optional a formatting template to format the user information."
+msgstr ""
+"O userinfo recupera um objeto de usuário pelo seu ID de usuário. Ele aceita "
+"uma formatação de um modelo opcional para formatar as informações do usuário."
+
+#: ../filters/userinfo.php:107
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"userinfo_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"userinfo_OutputFilter"
+
+#: ../filters/wrapper.php:54
+msgid ""
+"The <em>wrapper</em> filter will wrap non-empty input. This allows you add "
+"extra markup to non-empty values and let empty values pass through. Pass "
+"this filter either a formatting string that uses the &#91;+content+&#93; "
+"placeholder, or supply a 2 element array that specifies text that will "
+"appear before and after the input text."
+msgstr ""
+"The <em>wrapper</em> filter will wrap non-empty input. This allows you add "
+"extra markup to non-empty values and let empty values pass through. Pass "
+"this filter either a formatting string that uses the &#91;+content+&#93; "
+"placeholder, or supply a 2 element array that specifies text that will "
+"appear before and after the input text."
+
+#: ../filters/wrapper.php:72
+msgid "Wrapper"
+msgstr "Invólucro"
+
+#: ../filters/wrapper.php:79
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"wrapper_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"wrapper_OutputFilter"
+
+#: ../includes/CCTM.php:310
+#, php-format
+msgid "Could not create the cache directory at %s."
+msgstr "Não foi possível criar o diretório de cache em %s."
+
+#: ../includes/CCTM.php:328
+#, php-format
+msgid "Could not create cached image: %s."
+msgstr "Não foi possível criar imagens em cache: %s."
+
+#: ../includes/CCTM.php:551 ../views/post_type.php:347
+msgid "Content"
+msgstr "Conteúdo"
+
+#: ../includes/CCTM.php:579
+msgid "cctm_post_form shortcode requires the \"post_type\" parameter."
+msgstr "O shortcode cctm_post_form requer o parâmetro nome \"post_type\"."
+
+#: ../includes/CCTM.php:583
+#, php-format
+msgid "cctm_post_form shortcode does not support that post_type: %s"
+msgstr ""
+
+#: ../includes/CCTM.php:588
+#, php-format
+msgid "cctm_post_form shortcode post_type not found: %s"
+msgstr ""
+
+#: ../includes/CCTM.php:625
+msgid "This form has validation errors."
+msgstr ""
+
+#: ../includes/CCTM.php:765
+msgid "Submit"
+msgstr "Enviar"
+
+#: ../includes/CCTM.php:935 ../updates/0.9.4.php:64
+msgid "This site was created in part using the Custom Content Type Manager"
+msgstr ""
+"Este site foi criado, em parte, usando o conteúdo personalizado Type Manager"
+
+#: ../includes/CCTM.php:971
+msgid "custom_field shortcode requires the \"name\" parameter."
+msgstr "custom_field shortcode requires the \"name\" parameter."
+
+#: ../includes/CCTM.php:1147
+msgid "Please correct the following errors:"
+msgstr "Por favor, corrija os seguintes erros:"
+
+#: ../includes/CCTM.php:1246 ../includes/CCTM_ImportExport.php:39
+#: ../includes/CCTM_ImportExport.php:110 ../includes/CCTM_ImportExport.php:183
+#: ../includes/CCTM_ImportExport.php:229
+msgid "WordPress issued the following error: "
+msgstr "WordPress emitiu o seguinte erro:"
+
+#: ../includes/CCTM.php:1879
+#, php-format
+msgid "Invaid file name! %s  No directory traversing allowed!"
+msgstr "Nome de arquivo inválido! %s Não travessia diretório permitido!"
+
+#: ../includes/CCTM.php:1883
+#, php-format
+msgid "Invaid file name! %s  Name must end with .php!"
+msgstr "Nome de arquivo inválido! %s Nome deve terminar com. Php!"
+
+#: ../includes/CCTM.php:1982
+#, php-format
+msgid "Incorrect class name in %s. Expected class name: %s"
+msgstr "Nome da classe incorreto em %s. Nome da classe esperado: %s"
+
+#: ../includes/CCTM.php:2032
+#, php-format
+msgid "Invaid tpl name! %s  No directory traversing allowed!"
+msgstr "Nome inválido tpl! %s Não travessia diretório permitido!"
+
+#: ../includes/CCTM.php:2036
+#, php-format
+msgid "Invaid tpl name! %s  Name must end with .tpl!"
+msgstr "Nome inválido tpl! %s Nome deve terminar com. Tpl!"
+
+#: ../includes/CCTM.php:2143
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Você não tem permissões suficientes para acessar esta página."
+
+#: ../includes/CCTM.php:2333 ../includes/SummarizePosts.php:461
+#: ../tests/CCTMtests.php:109
+#, php-format
+msgid "The %s plugin encountered errors! It cannot load!"
+msgstr "O plug-in %s encontrou erros! Ele não pode carregar!"
+
+#: ../includes/CCTM.php:2363
+msgid "Dismiss all warnings"
+msgstr "Demitir todos os avisos"
+
+#: ../includes/CCTM.php:2364
+msgid "Dismiss Warnings"
+msgstr "Dispensar Avisos"
+
+#: ../includes/CCTM.php:2375
+msgid "The Custom Content Type Manager encountered the following warnings:"
+msgstr "The Custom Content Type Manager encontrou as seguintes advertências:"
+
+#: ../includes/CCTM_Ajax.php:55 ../includes/CCTM_Ajax.php:56
+#, php-format
+msgid "Invalid Ajax controller: %s"
+msgstr "Inválido controlador Ajax: %s"
+
+#: ../includes/CCTM_Ajax.php:61 ../includes/CCTM_Ajax.php:62
+#, php-format
+msgid "Invalid nonce for %s"
+msgstr "Nonce inválido para %s"
+
+#: ../includes/CCTM_Columns.php:76 ../includes/CCTM_PostTypeDef.php:23
+#: ../includes/GetPostsForm.php:352 ../views/export.php:17
+#: ../views/post_type.php:353 ../views/preview_def.php:12
+msgid "Author"
+msgstr "Autor"
+
+#: ../includes/CCTM_Columns.php:152
+msgid "Quick Edit"
+msgstr "Edição Rápida"
+
+#: ../includes/CCTM_Columns.php:152
+msgid "Trash"
+msgstr "Lixo"
+
+#: ../includes/CCTM_Columns.php:152 ../includes/CCTM_PostTypeDef.php:510
+msgid "View"
+msgstr "Ver"
+
+#: ../includes/CCTM_FormElement.php:148
+msgid ""
+"How should the button be labeled? (Users will click this button to select "
+"the image, media, or relation)."
+msgstr ""
+"Como o botão deve ser rotulado. (Os usuários irão clicar nesse botão para "
+"selecionar a imagem, mídia ou relação)."
+
+#: ../includes/CCTM_FormElement.php:149
+msgid ""
+"Add a CSS class to instances of this field. Use this to customize styling in "
+"the WP manager."
+msgstr ""
+"Adicione uma classe CSS para instâncias desse campo. Use-o para personalizar "
+"styling no gerenciador de WP."
+
+#: ../includes/CCTM_FormElement.php:150
+msgid "Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
+msgstr ""
+"Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
+
+#: ../includes/CCTM_FormElement.php:151
+msgid ""
+"The default option will appear selected. Make sure it matches a defined "
+"option."
+msgstr ""
+"A opção padrão aparecerá selecionado. Certifique-se que corresponde a uma "
+"opção definida."
+
+#: ../includes/CCTM_FormElement.php:152
+msgid "The default value is presented to users when a new post is created."
+msgstr ""
+"O valor padrão é apresentado aos usuários quando uma nova post é criado."
+
+#: ../includes/CCTM_FormElement.php:153
+msgid ""
+"The description is visible when you view all custom fields or when you use "
+"the <code>get_custom_field_meta()</code> function."
+msgstr ""
+"The description is visible when you view all custom fields or when you use "
+"the <code>get_custom_field_meta()</code> function."
+
+#: ../includes/CCTM_FormElement.php:154
+msgid "The following html tags are allowed:"
+msgstr "As seguintes tags HTML são permitidas:"
+
+#: ../includes/CCTM_FormElement.php:156
+msgid ""
+"You can check this box if you want to enter a bit of PHP code into the "
+"default value field."
+msgstr ""
+"Você pode verificar esta caixa se você quiser entrar com um pouco de código "
+"PHP no campo valor padrão."
+
+#: ../includes/CCTM_FormElement.php:158
+msgid ""
+"The label is displayed when users create or edit posts that use this custom "
+"field."
+msgstr ""
+"O rótulo é exibido quando os usuários criarem ou editarem posts que utilizem "
+"este Campo Personalizado."
+
+#: ../includes/CCTM_FormElement.php:159
+msgid ""
+"The name identifies the meta_key in the wp_postmeta database table. The name "
+"should contain only letters, numbers, and underscores. You will use this "
+"name in your template functions to identify this custom field."
+msgstr ""
+"O nome identifica o meta_key na tabela do banco de dados do wp_postmeta. O "
+"nome deve conter apenas letras, números e sublinhados. Você vai usar esse "
+"nome em suas funções de modelo para identificar este Campo Personalizado."
+
+#: ../includes/CCTM_FormElement.php:161
+msgid ""
+"WARNING: if you change the field name, you will have to update any functions "
+"that reference this field by name, e.g. <code>get_custom_field()</code>, "
+"<code>print_custom_field()</code>,  or any search criteria."
+msgstr ""
+"WARNING: if you change the field name, you will have to update any functions "
+"that reference this field by name, e.g. <code>get_custom_field()</code>, "
+"<code>print_custom_field()</code>,  or any search criteria."
+
+#: ../includes/CCTM_FormElement.php:163
+msgid ""
+"If selected, the user will be able to enter multiple instances of this "
+"field, e.g. multiple images. Your templates will need to handle formatting "
+"an array of values, e.g. via the \"to_array\" or other output filters, even "
+"if you only use one instance of the field."
+msgstr ""
+"Se selecionado, o usuário será capaz de inserir várias instâncias desse "
+"campo, por exemplo, várias imagens. Armazenar vários valores infere em "
+"armazenar uma array de valores, assim você terá que usar o filtro de saída "
+"\"to_array \", mesmo que você use somente uma instância do campo."
+
+#: ../includes/CCTM_FormElement.php:164
+msgid ""
+"If checked, users must add a value to this field before the page can be "
+"published."
+msgstr ""
+"Se marcada, os usuários devem adicionar um valor para esse campo antes que a "
+"página possa ser publicado."
+
+#: ../includes/CCTM_FormElement.php:165
+msgid ""
+"What value should be stored in the database when this checkbox is checked?"
+msgstr ""
+"Que valor deve ser armazenado no banco de dados quando esta opção for "
+"assinalada?"
+
+#: ../includes/CCTM_FormElement.php:166
+msgid ""
+"What value should be stored in the database when this checkbox is unchecked?"
+msgstr ""
+"Que valor deve ser armazenado no banco de dados quando esta opção está "
+"desmarcada?"
+
+#: ../includes/CCTM_FormElement.php:167
+msgid "Should this field be checked by default?"
+msgstr "Este campo deve estar marcada por padrão?"
+
+#: ../includes/CCTM_FormElement.php:168
+msgid "How should values be displayed in your theme files?"
+msgstr "Como devem ser exibidos os valores em seus arquivos de tema?"
+
+#: ../includes/CCTM_FormElement.php:169
+msgid ""
+"Check this to make the stored values distinct from the options displayed to "
+"the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
+msgstr ""
+"Check this to make the stored values distinct from the options displayed to "
+"the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
+
+#: ../includes/CCTM_FormElement.php:260
+msgid "Output Filter"
+msgstr "Filtro de saída"
+
+#: ../includes/CCTM_FormElement.php:264
+msgid "Default Output Filter"
+msgstr "Filtro de saída padrão"
+
+#: ../includes/CCTM_FormElement.php:269
+msgid "None (raw)"
+msgstr "None (raw)"
+
+#: ../includes/CCTM_FormElement.php:426
+msgid "Validation Rule"
+msgstr "Regra de Validação"
+
+#: ../includes/CCTM_FormElement.php:428
+msgid ""
+"A validation rule can ensure that any data entered into this field meets a "
+"specific criteria."
+msgstr ""
+"Uma regra de validação pode garantir que todos os dados inseridos neste "
+"campo atende um critério específico."
+
+#: ../includes/CCTM_FormElement.php:441
+msgid "Validation"
+msgstr "Validação"
+
+#: ../includes/CCTM_FormElement.php:450
+msgid "Required?"
+msgstr "Obrigatório?"
+
+#: ../includes/CCTM_FormElement.php:663
+msgid "There were errors in your custom field definition."
+msgstr "Houve erros em sua definição de Campo Personalizado."
+
+#: ../includes/CCTM_FormElement.php:820 ../includes/CCTM_PostTypeDef.php:292
+msgid "Name is required."
+msgstr "Nome é obrigatório."
+
+#: ../includes/CCTM_FormElement.php:826
+#, php-format
+msgid ""
+"%s contains invalid characters. The name may only contain letters, numbers, "
+"and underscores, and it must begin with a letter."
+msgstr ""
+" %s contém caracteres inválidos. O nome pode conter apenas letras, números e "
+"sublinhados, e deve começar com uma letra."
+
+#: ../includes/CCTM_FormElement.php:833
+msgid "The name is too long. Names must not exceed 255 characters."
+msgstr "O nome é muito longo. Os nomes não devem exceder 255 caracteres."
+
+#: ../includes/CCTM_FormElement.php:838 ../includes/CCTM_PostTypeDef.php:324
+#, php-format
+msgid "%s is a reserved name."
+msgstr " %s é um nome reservado."
+
+#: ../includes/CCTM_FormElement.php:849 ../includes/CCTM_FormElement.php:858
+#, php-format
+msgid "The name %s is already in use. Please choose another name."
+msgstr "O nome %s já está em uso. Por favor, escolha outro nome."
+
+#: ../includes/CCTM_FormElement.php:900
+msgid "Improper input to the set_prop() function."
+msgstr "Entrada imprópria para a função set_props()."
+
+#: ../includes/CCTM_FormElement.php:911
+msgid "Improper input to the set_props() function."
+msgstr "Improper input to the set_props() function."
+
+#: ../includes/CCTM_ImportExport.php:104
+msgid "Please specify at least one definition."
+msgstr "Especifique pelo menos uma definição."
+
+#: ../includes/CCTM_ImportExport.php:122
+msgid "Directory traversing not allowed."
+msgstr "Diretório de atravessar não é permitido."
+
+#: ../includes/CCTM_ImportExport.php:128
+#, php-format
+msgid "Could not delete file: %s"
+msgstr "Não foi possível excluir o arquivo: %s"
+
+#: ../includes/CCTM_ImportExport.php:133
+#, php-format
+msgid "File does not exist: %s"
+msgstr "O arquivo não existe: %s"
+
+#: ../includes/CCTM_ImportExport.php:165
+msgid "There was a problem exporting your CCTM definition."
+msgstr "Houve um problema ao exportar sua definição CCTM."
+
+#: ../includes/CCTM_ImportExport.php:191
+#, php-format
+msgid ""
+"A file named %s already exists in the definition library.  Please choose "
+"another title."
+msgstr ""
+"Um arquivo chamado %s já existe na biblioteca definição. Por favor escolha "
+"outro título."
+
+#: ../includes/CCTM_ImportExport.php:205
+#, php-format
+msgid ""
+"An error was encountered while trying to write to the definition library "
+"directory (%s). Please check the file permissions on your server."
+msgstr ""
+"Foi encontrado um erro ao tentar escrever no diretório da biblioteca de "
+"definição (%s). Por favor verifique as permissões do arquivo em seu servidor."
+
+#: ../includes/CCTM_ImportExport.php:495
+#, php-format
+msgid "The definition file could not be found: %s"
+msgstr "O arquivo de definição não poderia ser encontrado: %s"
+
+#: ../includes/CCTM_ImportExport.php:501
+#, php-format
+msgid "There was a problem with the JSON decoding of the definition file: %s"
+msgstr "Houve um problema com a decodificação JSON do arquivo de definição: %s"
+
+#: ../includes/CCTM_ImportExport.php:507
+#, php-format
+msgid ""
+"The data structure in the file was not in the correct format: %s. This could "
+"be because the file is from an older version of the CCTM plugin.  See the <a "
+"href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"Import\" target=\"_new\">Wiki</a> for more information."
+msgstr ""
+"The data structure in the file was not in the correct format: %s. This could "
+"be because the file is from an older version of the CCTM plugin.  See the <a "
+"href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"Import\" target=\"_new\">Wiki</a> for more information."
+
+#: ../includes/CCTM_ImportExport.php:598
+msgid "Title is required."
+msgstr "O título é obrigatório."
+
+#: ../includes/CCTM_ImportExport.php:601
+msgid "Only basic text characters are allowed for the title."
+msgstr "Apenas os caracteres de texto básicas são permitidas para o título."
+
+#: ../includes/CCTM_ImportExport.php:604
+msgid "The title cannot exceed 64 characters."
+msgstr "O título não pode exceder 64 caracteres."
+
+#: ../includes/CCTM_ImportExport.php:609
+msgid "Author is required."
+msgstr "Autor é necessária."
+
+#: ../includes/CCTM_ImportExport.php:612
+msgid "Only basic characters are allowed for the author field."
+msgstr "Somente caracteres básicos são permitidos para o campo autor."
+
+#: ../includes/CCTM_ImportExport.php:615
+msgid "The author name cannot exceed 32 characters."
+msgstr "O nome do autor não pode exceder 32 caracteres."
+
+#: ../includes/CCTM_ImportExport.php:623
+msgid "The URL must be in a standard format, e.g. http://yoursite.com."
+msgstr ""
+"O URL deve estar em um formato padrão, por exemplo, http://yoursite.com."
+
+#: ../includes/CCTM_ImportExport.php:626
+msgid "The URL cannot exceed 255 characters."
+msgstr "O URL não pode exceder 255 caracteres."
+
+#: ../includes/CCTM_ImportExport.php:634
+msgid ""
+"The template URL must be in a standard format, e.g. http://themeforest.com."
+msgstr ""
+"A URL modelo deve estar em um formato padrão, por exemplo, http://"
+"themeforest.com."
+
+#: ../includes/CCTM_ImportExport.php:637
+msgid "The template URL cannot exceed 255 characters."
+msgstr "A URL modelo não pode exceder 255 caracteres."
+
+#: ../includes/CCTM_ImportExport.php:642
+msgid "Description is required."
+msgstr "Descrição é necessária."
+
+#: ../includes/CCTM_ImportExport.php:645
+msgid "The description cannot exceed 1024 characters."
+msgstr "A descrição não pode exceder 1024 caracteres."
+
+#: ../includes/CCTM_Metabox.php:38
+msgid "ID is a required field."
+msgstr "ID é um campo obrigatório."
+
+#: ../includes/CCTM_Metabox.php:45 ../includes/CCTM_Metabox.php:53
+msgid "That ID is already taken. Please choose another."
+msgstr "Este ID já está em uso. Por favor, escolha outro."
+
+#: ../includes/CCTM_Metabox.php:48 ../includes/CCTM_Metabox.php:56
+msgid "ID contains invalid characters."
+msgstr "O ID contém caracteres inválidos."
+
+#: ../includes/CCTM_Metabox.php:61
+msgid "Title is a required field."
+msgstr "Este é um campo obrigatório."
+
+#: ../includes/CCTM_Metabox.php:67
+msgid "You cannot use a CCTM function as your callback."
+msgstr ""
+
+#: ../includes/CCTM_Metabox.php:71
+msgid "The callback function does not exist."
+msgstr ""
+
+#: ../includes/CCTM_PostTypeDef.php:51 ../includes/CCTM_PostTypeDef.php:90
+msgid "Built-in WordPress column."
+msgstr "Coluna nativa do WordPress."
+
+#: ../includes/CCTM_PostTypeDef.php:59 ../includes/CCTM_PostTypeDef.php:126
+msgid "WordPress Taxonomy"
+msgstr "WordPress Taxonomia"
+
+#: ../includes/CCTM_PostTypeDef.php:296
+msgid "Menu Name is required."
+msgstr "Nome do menu é necessária."
+
+#: ../includes/CCTM_PostTypeDef.php:301
+#, php-format
+msgid ""
+"The post type name cannot begin with %s because that is a reserved prefix."
+msgstr ""
+"O nome post tipo não pode começar com %s porque isso é um prefixo reservado."
+
+#: ../includes/CCTM_PostTypeDef.php:322 ../includes/CCTM_PostTypeDef.php:330
+msgid "Please choose another name."
+msgstr "Por favor, escolha outro nome."
+
+#: ../includes/CCTM_PostTypeDef.php:332
+#, php-format
+msgid "%s is already in use as a registered taxonomy name."
+msgstr " %s já está em uso como um nome de taxonomia já registado."
+
+#: ../includes/CCTM_PostTypeDef.php:342
+#, php-format
+msgid "The name %s is already in use."
+msgstr "O nome %s já está em uso."
+
+#: ../includes/CCTM_PostTypeDef.php:346
+#, php-format
+msgid "The name %s has been registered by some other plugin."
+msgstr "O nome %s foi registrado por algum outro plugin."
+
+#: ../includes/CCTM_PostTypeDef.php:498 ../includes/CCTM_PostTypeDef.php:501
+#: ../views/post_type.php:223
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+#: ../includes/CCTM_PostTypeDef.php:507
+msgid "New"
+msgstr "Novo"
+
+#: ../includes/CCTM_PostTypeDef.php:513 ../includes/GetPostsForm.php:213
+msgid "Search"
+msgstr "Pesquisar"
+
+#: ../includes/CCTM_PostTypeDef.php:516
+#, php-format
+msgid "No %s found"
+msgstr "No %s encontrado"
+
+#: ../includes/CCTM_PostTypeDef.php:519
+#, php-format
+msgid "No %s found in trash"
+msgstr "No %s encontrado no lixo"
+
+#: ../includes/CCTM_PostTypeDef.php:522
+msgid "Parent Page"
+msgstr "Página Mãe"
+
+#: ../includes/CCTM_Post_Widget.php:16
+msgid "Post Content"
+msgstr "Publicar conteúdo"
+
+#: ../includes/CCTM_Post_Widget.php:17
+msgid "Show a post's content inside of a widget."
+msgstr "Mostrar o conteúdo de um Post dentro de um widget."
+
+#: ../includes/CCTM_Post_Widget.php:98
+#: ../views/widgets/post_content_form.php:12
+msgid "Choose Post"
+msgstr "Escolha Publicar"
+
+#: ../includes/CCTM_Post_Widget.php:108
+msgid "Override Post Title"
+msgstr "Substituir o Título do Post"
+
+#: ../includes/CCTM_Post_Widget.php:113
+#: ../includes/SummarizePosts_Widget.php:73
+#: ../views/widgets/post_content_form.php:28
+msgid "Formatting String"
+msgstr "Formatação de Cordas"
+
+#: ../includes/CCTM_Validator.php:85
+msgid "No configurable options."
+msgstr "Sem opções configuráveis."
+
+#: ../includes/CCTM_Validator.php:119
+msgid "Validation Configuration"
+msgstr "Configuração de Validação"
+
+#: ../includes/constants.php:26
+msgid "CCTM could not read the WordPress upload directory path!"
+msgstr "CCTM não conseguia ler o carregamento caminho do diretório WordPress!"
+
+#: ../includes/functions.php:62
+#, php-format
+msgid "The %s field is not defined as a custom field."
+msgstr "O nome %s já está em uso."
+
+#: ../includes/functions.php:126
+#, php-format
+msgid "Invalid field name: %s"
+msgstr "Nome de campo inválido: %s"
+
+#: ../includes/GetPostsForm.php:193
+#, php-format
+msgid "Retrieve posts with this exact %s."
+msgstr "Recuperar mensagens com este exato %s."
+
+#: ../includes/GetPostsForm.php:210
+msgid "Sorry, no results matched your search criteria."
+msgstr "Desculpe, nenhum resultado para sua busca."
+
+#: ../includes/GetPostsForm.php:214
+msgid "Filter"
+msgstr "Filtre"
+
+#: ../includes/GetPostsForm.php:215
+msgid "Show All"
+msgstr "Mostrar todos"
+
+#: ../includes/GetPostsForm.php:216
+msgid "Show all dates"
+msgstr "Mostrar todas as datas"
+
+#: ../includes/GetPostsForm.php:217
+msgid "Show all post-types"
+msgstr "Mostrar todos os tipos de post"
+
+#: ../includes/GetPostsForm.php:255
+msgid "Invalid parameter:"
+msgstr "Parâmetro inválido:"
+
+#: ../includes/GetPostsForm.php:316
+msgid "Append"
+msgstr "Anexar"
+
+#: ../includes/GetPostsForm.php:317
+msgid ""
+"List posts by their ID that you wish to include on every search. Comma-"
+"separate multiple values."
+msgstr ""
+"Lista de mensagens de seu ID que você deseja incluir em cada pesquisa. "
+"Vários valores separados por vírgulas."
+
+#: ../includes/GetPostsForm.php:338
+msgid "All Authors"
+msgstr "Todos os Autores"
+
+#: ../includes/GetPostsForm.php:353
+msgid "Select an author whose posts you want to see."
+msgstr "Selecione um autor cujo mensagens que você quer ver."
+
+#: ../includes/GetPostsForm.php:374
+msgid "Date Columns"
+msgstr "Data Columns"
+
+#: ../includes/GetPostsForm.php:375
+msgid ""
+"Which column should be used for date comparisons? Select one, or write in a "
+"custom field."
+msgstr ""
+"Qual coluna que deve ser utilizada para comparações de datas? Escolha uma, "
+"ou escreva em um Campo Personalizado."
+
+#: ../includes/GetPostsForm.php:402
+msgid ""
+"How do you want the dates in the results formatted? Use one of the "
+"shortcuts, or supply a use any value valid for the <a href=\"http://php.net/"
+"manual/en/function.date-format.php\">date_format()</a>"
+msgstr ""
+"Como você deseja formatadas as datas nos resultados. Use um dos atalhos, ou "
+"forneça um uso de qualquer valor válido para <a href=\"http://php.net/manual/"
+"en/function.date-format.php\">date_format()</a>"
+
+#: ../includes/GetPostsForm.php:429
+msgid "Date Maximum"
+msgstr "Data máxima"
+
+#: ../includes/GetPostsForm.php:430
+msgid "Only results from this date or before will be returned"
+msgstr "Somente os resultados a partir desta data ou antes será devolvido"
+
+#: ../includes/GetPostsForm.php:458
+msgid "Date Minimum"
+msgstr "Data mínima"
+
+#: ../includes/GetPostsForm.php:459
+msgid "Only results from this date or after will be returned."
+msgstr "Somente os resultados a partir desta data ou depois serão devolvidos."
+
+#: ../includes/GetPostsForm.php:488
+msgid "Exclude"
+msgstr "Excluir"
+
+#: ../includes/GetPostsForm.php:489
+msgid ""
+"List posts by their ID that you wish to exclude from search results. Comma-"
+"separate multiple values."
+msgstr ""
+"Lista de mensagens de seu ID que você deseja excluir dos resultados de "
+"pesquisa. Vários valores separados por vírgulas."
+
+#: ../includes/GetPostsForm.php:509
+msgid "Include"
+msgstr "Incluir"
+
+#: ../includes/GetPostsForm.php:510
+msgid ""
+"List posts by their ID that you wish to return.  Usually this option is not "
+"used with any other search options. Comma-separate multiple values."
+msgstr ""
+"Lista de mensagens de seu ID que você deseja retornar. Normalmente, esta "
+"opção não for usada com outras opções de busca. Vários valores separados por "
+"vírgulas."
+
+#: ../includes/GetPostsForm.php:530
+msgid "Limit"
+msgstr "Limitar"
+
+#: ../includes/GetPostsForm.php:531
+msgid ""
+"Limit the number of results returned. If pagination is enabled, this number "
+"will be the number of results shown per page."
+msgstr ""
+"Limitar o número de resultados retornados. Se paginação está habilitado, "
+"este número será o número de resultados exibidos por página."
+
+#: ../includes/GetPostsForm.php:550
+msgid "Match Rule"
+msgstr "Regra de Coinscidência"
+
+#: ../includes/GetPostsForm.php:551
+msgid "Define how your search term should match."
+msgstr "Definir como o termo de pesquisa deve corresponder."
+
+#: ../includes/GetPostsForm.php:555
+msgid "Contains"
+msgstr "Contém"
+
+#: ../includes/GetPostsForm.php:556
+msgid "Starts with"
+msgstr "Começa com"
+
+#: ../includes/GetPostsForm.php:557
+msgid "Ends with"
+msgstr "Termina com"
+
+#: ../includes/GetPostsForm.php:583
+msgid "Meta Key"
+msgstr "Meta-chave"
+
+#: ../includes/GetPostsForm.php:584
+msgid ""
+"Name of a custom field, to be used in conjuncture with <em>meta_value</em>."
+msgstr ""
+"Nome de um domínio personalizado, para ser utilizado em conjunto com "
+"meta_value ."
+
+#: ../includes/GetPostsForm.php:603
+msgid "Meta Value"
+msgstr "Meta Valor"
+
+#: ../includes/GetPostsForm.php:604
+msgid ""
+"Value of a custom field, to be used in conjuncture with <em>meta_key</em>."
+msgstr ""
+"Valor de uma área personalizada, para ser usado em conjuntura de meta_key ."
+
+#: ../includes/GetPostsForm.php:623
+msgid "Offset"
+msgstr "Compensar"
+
+#: ../includes/GetPostsForm.php:624
+msgid ""
+"Number of results to skip.  Usually this is used only programmatically when "
+"pagination is enabled."
+msgstr ""
+"Número de resultados para pular. Geralmente isso é usado apenas "
+"programaticamente quando paginação está habilitado."
+
+#: ../includes/GetPostsForm.php:640
+msgid "Omit Post Types"
+msgstr "Omitir Tipos de Posts"
+
+#: ../includes/GetPostsForm.php:645
+msgid "Check which post-types you wish to omit from search results."
+msgstr ""
+"Verifique qual tipos de post que você deseja omitir a partir dos resultados "
+"de busca."
+
+#: ../includes/GetPostsForm.php:681
+msgid "Order"
+msgstr "Ordem"
+
+#: ../includes/GetPostsForm.php:682
+msgid ""
+"What order should search results be returned in? See also the <em>orderby</"
+"em> parameter."
+msgstr ""
+"Em que ordem os resultados de busca devem retornados? Veja também o "
+"parâmetro <em>ordenarpor</em>."
+
+#: ../includes/GetPostsForm.php:693
+msgid "Ascending"
+msgstr "Ascendente"
+
+#: ../includes/GetPostsForm.php:708
+msgid "Descending"
+msgstr "Descendente"
+
+#: ../includes/GetPostsForm.php:735 ../views/post_type.php:740
+msgid "Order By"
+msgstr "Ordenar por"
+
+#: ../includes/GetPostsForm.php:736
+msgid ""
+"Which column should results be sorted by. This can be any column from the "
+"wp_posts table or any custom field. Default: ID"
+msgstr ""
+"Qual coluna deve ser classificada por resultados. Isso pode ser qualquer "
+"coluna da tabela wp_posts ou qualquer Campo Personalizado. Padrão: ID"
+
+#: ../includes/GetPostsForm.php:755
+msgid "Paginate Results"
+msgstr "Resultados paginar"
+
+#: ../includes/GetPostsForm.php:760
+msgid "Pagination"
+msgstr "Paginação"
+
+#: ../includes/GetPostsForm.php:779
+msgid "Post Date"
+msgstr "Data de Publicação"
+
+#: ../includes/GetPostsForm.php:780
+msgid ""
+"Find posts from this date.  Use the <em>date_column</em> parameter to "
+"determine which column should be considered."
+msgstr ""
+"Encontre postos a partir desta data. Use o coluna_data parâmetro para "
+"determinar qual coluna deve ser considerada."
+
+#: ../includes/GetPostsForm.php:808
+msgid "Post MIME Type"
+msgstr "Publicar Tipo MIME"
+
+#: ../includes/GetPostsForm.php:809
+msgid ""
+"Specify either the full MIME type (e.g. image/jpeg) or just the beginning (e."
+"g. application, image, audio, video)."
+msgstr ""
+"Specify either the full MIME type (e.g. image/jpeg) or just the beginning (e."
+"g. application, image, audio, video)."
+
+#: ../includes/GetPostsForm.php:828
+msgid "Post Modified"
+msgstr "Publicar Modificado"
+
+#: ../includes/GetPostsForm.php:829
+msgid "Find posts modified on this date."
+msgstr "Encontre mensagens modificados nesta data."
+
+#: ../includes/GetPostsForm.php:860
+msgid "Post Parent"
+msgstr "Post Mãe"
+
+#: ../includes/GetPostsForm.php:861
+msgid ""
+"Retrieve all posts that are children of the post ID(s) specified. Comma-"
+"separate multiple values."
+msgstr ""
+"Retrieve all posts that are children of the post ID(s) specified. Comma-"
+"separate multiple values."
+
+#: ../includes/GetPostsForm.php:882
+msgid "Post Status"
+msgstr "Publicar Estado"
+
+#: ../includes/GetPostsForm.php:883
+msgid "Most searches will be for published posts."
+msgstr "Maioria das será para posts publicados."
+
+#: ../includes/GetPostsForm.php:922
+msgid "Retrieve posts with this exact title."
+msgstr "Recuperar mensagens com este título exata."
+
+#: ../includes/GetPostsForm.php:939 ../views/list_custom_fields.php:6
+#: ../views/list_custom_fields.php:16
+msgid "Post Types"
+msgstr "Publicar Tipos"
+
+#: ../includes/GetPostsForm.php:943
+msgid "Check which post-types you wish to search."
+msgstr "Verifique qual tipo de post que você deseja procurar."
+
+#: ../includes/GetPostsForm.php:952
+msgid "Select post-type"
+msgstr "Selecione tipo de post"
+
+#: ../includes/GetPostsForm.php:1003
+msgid "Search Columns"
+msgstr "Busca Colunas"
+
+#: ../includes/GetPostsForm.php:1004
+msgid ""
+"When searching by a <em>search_term</em>, which define columns should be "
+"searched. Comma-separate multiple values. You can specify custom-fields as "
+"column names."
+msgstr ""
+"Ao procurar por um SEARCH_TERM , que definem as colunas devem ser "
+"pesquisados. Vários valores separados por vírgulas. Você pode especificar-"
+"Campos Personalizados como nomes das colunas."
+
+#: ../includes/GetPostsForm.php:1023
+msgid "Search Term"
+msgstr "Termo de pesquisa"
+
+#: ../includes/GetPostsForm.php:1024
+msgid ""
+"Search posts for this term. Use the <em>search_columns</em> parameter to "
+"specify which columns are searched for the term."
+msgstr ""
+"Pesquisar mensagens para este termo. Use o parâmetro <em>search_columns</em> "
+"para especificar quais colunas são pesquisadas para o termo."
+
+#: ../includes/GetPostsForm.php:1045
+msgid "Select taxonomy"
+msgstr "Selecionar taxonomia"
+
+#: ../includes/GetPostsForm.php:1062
+msgid "Taxonomy"
+msgstr "Taxonomia"
+
+#: ../includes/GetPostsForm.php:1063
+msgid ""
+"Choose which taxonomy to search in. Used in conjunction with "
+"<em>taxonomy_term</em>."
+msgstr ""
+"Escolha qual taxonomia a ser pesquisada. Utilizado em conjunto com "
+"<em>taxonomy_term</em>."
+
+#: ../includes/GetPostsForm.php:1083
+msgid "Taxonomy Depth"
+msgstr "Profundidade taxonomia"
+
+#: ../includes/GetPostsForm.php:1084
+msgid ""
+"When doing a hierarchical taxonomical search (e.g. by sub-categories), "
+"increase this number to reflect how many levels down the hierarchical tree "
+"should be searched. For example, 1 = return posts classified with the given "
+"taxonomical term (e.g. mammals), 2 = return posts classified with the given "
+"term or with the sub-taxonomies (e.g. mammals or dogs). (default: 1)."
+msgstr ""
+"When doing a hierarchical taxonomical search (e.g. by sub-categories), "
+"increase this number to reflect how many levels down the hierarchical tree "
+"should be searched. For example, 1 = return posts classified with the given "
+"taxonomical term (e.g. mammals), 2 = return posts classified with the given "
+"term or with the sub-taxonomies (e.g. mammals or dogs). (default: 1)."
+
+#: ../includes/GetPostsForm.php:1107
+msgid "Taxonomy Slug"
+msgstr "Slug taxonomia"
+
+#: ../includes/GetPostsForm.php:1108
+msgid "The taxonomy slug is the URL-friendly taxonomy term."
+msgstr "O Slug da Taxonomia é o termo amigável utilizado na URL."
+
+#: ../includes/GetPostsForm.php:1131
+msgid "Taxonomy Term"
+msgstr "Termo de Taxonomia"
+
+#: ../includes/GetPostsForm.php:1132
+msgid ""
+"Set a specific category(ies) or tag(s) to include in search results. Comma-"
+"separate multiple values."
+msgstr ""
+"Set a specific category(ies) or tag(s) to include in search results. Comma-"
+"separate multiple values."
+
+#: ../includes/GetPostsForm.php:1175
+msgid "Month"
+msgstr "Mês"
+
+#: ../includes/GetPostsForm.php:1176
+msgid ""
+"Choose which month's posts you wish to view. This relies on the "
+"<em>date_column</em> parameter."
+msgstr ""
+"Escolha de qual mês são os posts que você deseja ver. Baseia-se no parâmetro "
+"<em>date_column</em>."
+
+#: ../includes/GetPostsForm.php:1210 ../includes/GetPostsQuery.php:2066
+#: ../includes/SP_Post.php:256
+msgid "There were no errors."
+msgstr "Não houve erros."
+
+#: ../includes/GetPostsForm.php:1265
+msgid "Possible invalid search_by parameter:"
+msgstr "Possível parâmetro search_by inválido :"
+
+#: ../includes/GetPostsForm.php:1382
+#, php-format
+msgid "CSS file not found %s"
+msgstr "Arquivo CSS não encontrado %s"
+
+#: ../includes/GetPostsForm.php:1403 ../includes/GetPostsForm.php:1421
+#: ../includes/GetPostsForm.php:1437 ../includes/GetPostsForm.php:1455
+#, php-format
+msgid "Invalid data type passed to %s function. Input must be a string."
+msgstr ""
+"Tipo de dado inválido passado para a função %s. A entrada deve ser uma "
+"string."
+
+#: ../includes/GetPostsForm.php:1483
+msgid "Invalid input to set_tpl() function. Input must be a string."
+msgstr "Invalid input to set_tpl() function. Input must be a string."
+
+#: ../includes/GetPostsForm.php:1487
+msgid "set_tpl(): Formatting string must not be empty!"
+msgstr "set_tpl(): Formatting string must not be empty!"
+
+#: ../includes/GetPostsQuery.php:431
+msgid "Invalid alpha input:"
+msgstr "Entrada inválida de alpha:"
+
+#: ../includes/GetPostsQuery.php:436
+msgid "Invalid post_type:"
+msgstr "Tipo de Post inválido:"
+
+#: ../includes/GetPostsQuery.php:442
+msgid "Invalid post_status:"
+msgstr "Status do Post (post_status) inválido:"
+
+#: ../includes/GetPostsQuery.php:448
+msgid ""
+"Invalid column name. Column names may only contain alphanumeric characters "
+"and underscores: "
+msgstr ""
+"Nome de coluna inválido. Os nomes das colunas só podem conter caracteres "
+"alfanuméricos e sublinhados:"
+
+#: ../includes/GetPostsQuery.php:679
+msgid "Invalid input argument.  Arrays not allowed as argument names."
+msgstr ""
+"Argumento de entrada inválido. Arrays não são permitidos como nomes de "
+"argumentos."
+
+#: ../includes/GetPostsQuery.php:684
+msgid "Empty input argument."
+msgstr "Argumento de entrada vazio."
+
+#: ../includes/GetPostsQuery.php:782
+#, php-format
+msgid "Empty input for %s. Using default parameters."
+msgstr "Entrada nula para  %s. Usando os parâmetros padrão."
+
+#: ../includes/GetPostsQuery.php:803
+#, php-format
+msgid "Invalid order: %s. Order may only be \"ASC\" or \"DESC\"."
+msgstr "Invalid order: %s. Order may only be \"ASC\" or \"DESC\"."
+
+#: ../includes/GetPostsQuery.php:815
+#, php-format
+msgid "orderby column not a default post column: %s"
+msgstr "ordem por coluna não uma coluna post default: %s"
+
+#: ../includes/GetPostsQuery.php:819
+#, php-format
+msgid "Invalid column name supplied for orderby: %s"
+msgstr "Nome de coluna inválido fornecido para orderby: %s"
+
+#: ../includes/GetPostsQuery.php:849
+#, php-format
+msgid "Invalid date argument: %s"
+msgstr "Argumento data inválida: %s"
+
+#: ../includes/GetPostsQuery.php:864
+#, php-format
+msgid "Invalid datetime argument: %s"
+msgstr "Invalid argument datetime: %s"
+
+#: ../includes/GetPostsQuery.php:920
+#, php-format
+msgid "Taxonomy does not exist: %s"
+msgstr "Taxonomia não existe: %s"
+
+#: ../includes/GetPostsQuery.php:945
+msgid "Invalid parameter for join_rule. join_rule must be \"AND\" or \"OR\""
+msgstr "Invalid parameter for join_rule. join_rule must be \"AND\" or \"OR\""
+
+#: ../includes/GetPostsQuery.php:963
+msgid ""
+"Invalid parameter for match_rule. match_rule may be \"contains\", "
+"\"starts_with\", or \"ends_with\""
+msgstr ""
+"Invalid parameter for match_rule. match_rule may be \"contains\", "
+"\"starts_with\", or \"ends_with\""
+
+#: ../includes/GetPostsQuery.php:975
+msgid "Invalid date column."
+msgstr "Coluna de data inválido."
+
+#: ../includes/GetPostsQuery.php:989
+msgid "post_mime_type contains illegal characters.  Input ignored."
+msgstr "post_mime_type contém caracteres ilegais. Entrada ignorada."
+
+#: ../includes/GetPostsQuery.php:1001
+#, php-format
+msgid "Invalid argument name %s.  Input ignored."
+msgstr "Nome do argumento %s inválido. Entrada ignorada."
+
+#: ../includes/GetPostsQuery.php:1014
+#, php-format
+msgid "Filtering on direct column/value: %s"
+msgstr "Filtragem direto na coluna/valor: %s"
+
+#: ../includes/GetPostsQuery.php:1557 ../includes/GetPostsQuery.php:1686
+#, php-format
+msgid "The %s operator cannot operate on an array of values."
+msgstr "O operador %s não pode operar em uma matriz de valores."
+
+#: ../includes/GetPostsQuery.php:1773
+msgid "Search parameters ignored: search_term and search_columns must be set."
+msgstr ""
+"Parâmetros de pesquisa ignorados: search_term e search_columns devem ser "
+"definido."
+
+#: ../includes/GetPostsQuery.php:1967
+msgid "Arguments"
+msgstr "Argumentos"
+
+#: ../includes/GetPostsQuery.php:1969
+msgid ""
+"For more information on how to use this function, see the documentation for "
+"the <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/"
+"get_posts\">GetPostsQuery::get_posts()</a> function."
+msgstr ""
+"For more information on how to use this function, see the documentation for "
+"the <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/"
+"get_posts\">GetPostsQuery::get_posts()</a> function."
+
+#: ../includes/GetPostsQuery.php:1970
+msgid "Raw Database Queries"
+msgstr "Consultas de banco de dados brutos"
+
+#: ../includes/GetPostsQuery.php:1974
+msgid "Comparable Shortcode"
+msgstr "Shortcode semelhante"
+
+#: ../includes/GetPostsQuery.php:1976
+msgid "Results"
+msgstr "Resultados"
+
+#: ../includes/GetPostsQuery.php:1990
+msgid "No arguments supplied."
+msgstr "Sem argumentos fornecidos."
+
+#: ../includes/GetPostsQuery.php:2042
+msgid "Execution Time"
+msgstr "Tempo de Execução"
+
+#: ../includes/GetPostsQuery.php:2043
+#, php-format
+msgid "%s seconds"
+msgstr "%s segundos"
+
+#: ../includes/GetPostsQuery.php:2069 ../includes/SP_Post.php:259
+msgid "Errors"
+msgstr "Erros"
+
+#: ../includes/GetPostsQuery.php:2103
+msgid "There were no notices."
+msgstr "Não houve notificações."
+
+#: ../includes/GetPostsQuery.php:2106
+msgid "Notices"
+msgstr "Notificações"
+
+#: ../includes/GetPostsQuery.php:2315
+msgid "There were no warnings."
+msgstr "Não houve avisos."
+
+#: ../includes/GetPostsQuery.php:2318
+msgid "Warnings"
+msgstr "Avisos"
+
+#: ../includes/SP_Post.php:359
+msgid "Update requires post ID."
+msgstr ""
+
+#: ../includes/SP_Post.php:363
+msgid "Invalid value for post ID. Cannot update post."
+msgstr ""
+
+#: ../includes/StandardizedCustomFields.php:237
+msgid ""
+"This post has validation errors.  The post will remain in draft status until "
+"they are corrected."
+msgstr ""
+"Este post tem erros de validação. O post permanecerá como rascunho até que "
+"sejam corrigidos."
+
+#: ../includes/StandardizedCustomFields.php:497
+#: ../includes/StandardizedCustomFields.php:500
+#, php-format
+msgid "The %s field is required."
+msgstr "O campo %s é necessário."
+
+#: ../includes/SummarizePosts.php:70
+#, php-format
+msgid ".tpl file does not exist %s"
+msgstr "Arquivo .tpl não existe %s"
+
+#: ../includes/SummarizePosts_Widget.php:11
+msgid "Summarize Posts"
+msgstr "Resumir Posts"
+
+#: ../includes/SummarizePosts_Widget.php:12
+msgid "List posts according to flexible search criteria."
+msgstr "Lista Posts de acordo com critérios de pesquisa flexíveis."
+
+#: ../includes/SummarizePosts_Widget.php:62
+msgid "Search Criteria"
+msgstr "Critérios da pesquisa"
+
+#: ../includes/SummarizePosts_Widget.php:62
+msgid "Define Search"
+msgstr "Definir Pesquisa"
+
+#: ../tests/CCTMtests.php:31
+#, php-format
+msgid ""
+"%1$s has detected that there are some active plugins that may be "
+"incompatible with it. We recommend disabling the following plugins:"
+msgstr ""
+"%1$s has detected that there are some active plugins that may be "
+"incompatible with it. We recommend disabling the following plugins:"
+
+#: ../tests/CCTMtests.php:38
+msgid ""
+"Continued use of these plugins may cause erratic behavior and certain "
+"functionality on your site may break entirely. See the <a href=\"http://code."
+"google.com/p/wordpress-custom-content-type-manager/wiki/IncompatiblePlugins"
+"\">wiki</a> for more information."
+msgstr ""
+"Continued use of these plugins may cause erratic behavior and certain "
+"functionality on your site may break entirely. See the <a href=\"http://code."
+"google.com/p/wordpress-custom-content-type-manager/wiki/IncompatiblePlugins"
+"\">wiki</a> for more information."
+
+#: ../tests/CCTMtests.php:58
+#, php-format
+msgid "%1$s requires MySQL %2$s or newer."
+msgstr "%1$s requer MySQL %2$s ou mais recente."
+
+#: ../tests/CCTMtests.php:61 ../tests/CCTMtests.php:87
+msgid "Talk to your system administrator about upgrading."
+msgstr "Converse com o administrador do sistema sobre atualização."
+
+#: ../tests/CCTMtests.php:72
+#, php-format
+msgid ""
+"%1$s requires WordPress %2$s or newer. <a href=\"http://codex.wordpress.org/"
+"Upgrading_WordPress\">Please update!</a>"
+msgstr ""
+"%1$s requer WordPress %2$s ou mais recente. <a href=\"http://codex.wordpress."
+"org/Upgrading_WordPress\">Por favor atualize!</a>"
+
+#: ../tests/CCTMtests.php:83
+#, php-format
+msgid "%1$s requires PHP %2$s or newer."
+msgstr "%1$s requer PHP %2$s ou mais recente."
+
+#: ../updates/0.9.4.php:144
+#, fuzzy, php-format
+msgid ""
+"You may have to change your template for the %s post_type! Any instances of "
+"get_custom_field('%s') or print_custom_field('%s') in the single-%s.php file "
+"should be replaced with get_custom_field('%s') or print_custom_field('%s').  "
+"You may also use the 'Custom Fields-->Merge' command to merge field "
+"definitions."
+msgstr ""
+"You may have to change your template for the %s post_type! Any instances of "
+"get_custom_field( %s) or print_custom_field( %s) in the single- %s.php file "
+"should be replaced with get_custom_field( %s) or print_custom_field( %s).  "
+"You may also use the Custom Fields-->Merge command to merge field "
+"definitions."
+
+#: ../validators/emailaddress.php:14
+msgid "Check for a valid email address."
+msgstr "Verifique um endereço de e-mail válido."
+
+#: ../validators/emailaddress.php:34
+#, php-format
+msgid "The %s field is not a valid email address."
+msgstr "O campo %s não é um endereço de e-mail válido."
+
+#: ../validators/number.php:22
+msgid ""
+"Input must be a number, i.e. something that you could use in arithmetic."
+msgstr ""
+
+#: ../validators/number.php:30
+msgid "Number"
+msgstr "Número"
+
+#: ../validators/number.php:70
+msgid "Min Value"
+msgstr "Valor Mín"
+
+#: ../validators/number.php:72
+msgid "Max Value"
+msgstr "Valor Máx"
+
+#: ../validators/number.php:75
+msgid "Allow Negative Numbers"
+msgstr "Permitir números negativos"
+
+#: ../validators/number.php:77
+msgid "Allow Decimals"
+msgstr "Permitir Decimais"
+
+#: ../validators/number.php:78
+msgid "Maximum Decimal Places"
+msgstr "Máximo de casas decimais"
+
+#: ../validators/number.php:81
+msgid "Decimal Separator"
+msgstr "Separador decimal"
+
+#: ../validators/number.php:83
+msgid "Period"
+msgstr "Período"
+
+#: ../validators/number.php:84
+msgid "Comma"
+msgstr "Vírgula"
+
+#: ../validators/number.php:102
+#, php-format
+msgid "The %s field must be numeric."
+msgstr "O campo %s deve ser numérico."
+
+#: ../validators/number.php:105
+#, php-format
+msgid "The %s field may not be negative."
+msgstr "O campo %s não pode ser negativo."
+
+#: ../validators/number.php:108
+#, php-format
+msgid "The %s field must be between %s and %s."
+msgstr "O campo %s deve estar entre %s e %s."
+
+#: ../validators/number.php:111
+#, php-format
+msgid "The %s field must be greater than %s."
+msgstr "O campo %s deve ser maior que %s."
+
+#: ../validators/number.php:114
+#, php-format
+msgid "The %s field must be less than %s."
+msgstr "O campo %s deve ser menor que %s."
+
+#: ../validators/number.php:118
+#, php-format
+msgid "The %s field must be a whole number (no decimals allowed)."
+msgstr ""
+"O campo %s deve ser um número inteiro (casas decimais não são permitidas)"
+
+#: ../validators/number.php:122
+#, php-format
+msgid "The %s field cannot contain more than %s decimal places."
+msgstr "O campo %s não pode conter mais do que %s casas decimais."
+
+#: ../validators/pattern.php:21
+msgid ""
+"Input must match a pattern of letters or numbers, useful for phone numbers, "
+"SKUs, etc. If simple patterns are used, the input must be the same length as "
+"the pattern. For more flexible control, use the preg_match option."
+msgstr ""
+
+#: ../validators/pattern.php:29 ../validators/pattern.php:46
+msgid "Pattern"
+msgstr "Modelo"
+
+#: ../validators/pattern.php:48
+msgid "For simple patterns, use the following symbols:"
+msgstr ""
+
+#: ../validators/pattern.php:49
+msgid "# : Any digit, 0-9"
+msgstr "# : Quaquer dígito, 0-9"
+
+#: ../validators/pattern.php:50
+msgid "* : Any letter A-Z"
+msgstr "* : Qualquer letra A-Z"
+
+#: ../validators/pattern.php:51
+msgid "? : Any character"
+msgstr "? : Qualquer caractere"
+
+#: ../validators/pattern.php:52
+msgid "All other characters must match verbatim."
+msgstr "Todos os outros caracteres devem corresponder na íntegra."
+
+#: ../validators/pattern.php:55
+msgid "Use preg_match"
+msgstr "Usar preg_match"
+
+#: ../validators/pattern.php:56
+msgid ""
+"For complex patterns, use preg_match and enter the entire pattern and its "
+"modifiers here, e.g. <code>/^xyz/</code>"
+msgstr ""
+"Para padrões complexos, use preg_match e digite todo o padrão e os seus "
+"modificadores aqui; por exemplo <code>/^xyz/</code>"
+
+#: ../validators/pattern.php:57
+msgid "Message"
+msgstr "Mensagem"
+
+#: ../validators/pattern.php:59
+#, php-format
+msgid ""
+"If the field fails validation, this message will be displayed. %s will be "
+"replaced by the field name."
+msgstr ""
+
+#: ../validators/pattern.php:80
+#, php-format
+msgid "Invalid preg_match() pattern defined for the %s field."
+msgstr ""
+
+#: ../validators/pattern.php:85 ../validators/pattern.php:127
+#, php-format
+msgid "The %s field must match"
+msgstr "O campo %s deve coincidir."
+
+#: ../validators/pattern.php:96
+#, php-format
+msgid "The %s field is longer than the defined pattern."
+msgstr "O campo %s é maior que o padrão definido."
+
+#: ../validators/pattern.php:99
+#, php-format
+msgid "The %s field is shorter than the defined pattern."
+msgstr "O campo %s é menor que o padrão definido."
+
+#: ../validators/url.php:14
+msgid "Check for a valid URL."
+msgstr "Verifique se URL é válida."
+
+#: ../validators/url.php:22
+msgid "URL"
+msgstr "URL"
+
+#: ../validators/url.php:41
+#, php-format
+msgid ""
+"The %s field is not a valid URL. The URL must include the protocol, e.g. "
+"http://wpcctm.com/"
+msgstr ""
+"O campo %s não é uma URL válida. A URL deve incluir o protocolo, por "
+"exemplo, http://wpcctm.com/"
+
+#: ../views/bug_report.php:1
+msgid ""
+"I am sorry that you are having trouble with this plugin, but thank you for "
+"taking the time to file a bug. It helps out everybody who uses this code. "
+"Your input is valuable! Click the link above to launch the bug tracker."
+msgstr ""
+"Lamento que você está tendo problemas com este plugin, mas obrigado por "
+"tomar tempo para apresentar um bug. Isso ajuda todo mundo que usa este "
+"código. A sua contribuição é valiosa! Clique no link acima para iniciar o "
+"bug tracker."
+
+#: ../views/bug_report.php:9
+msgid "System Info"
+msgstr "Informação do Sistema"
+
+#: ../views/bug_report.php:10
+msgid ""
+"Please paste the following text into your bug report so I can better "
+"diagnose the problem you are experiencing."
+msgstr ""
+"Por favor, cole o seguinte texto em seu relatório de bug para que eu possa "
+"melhor diagnosticar o problema que você está enfrentando."
+
+#: ../views/bug_report.php:50
+msgid "When reporting bugs, remember the following key points:"
+msgstr "Ao relatar bugs, lembre-se os seguintes pontos principais:"
+
+#: ../views/bug_report.php:53
+msgid ""
+"<strong>If the bug can't be reproduced, it can't be fixed.</strong> Provide "
+"<em>detailed</em> instructions so that someone else can make the plugin fail "
+"for themselves."
+msgstr ""
+"<strong>Se o bug não pode ser reproduzido, ele não pode ser corrigido.</"
+"strong> Forneça instruções <em>detalhadas</em> para que outra pessoa possa "
+"testar o plugin por si mesma."
+
+#: ../views/bug_report.php:54
+msgid ""
+"<strong>Be ready to provide extra information if the programmer needs it.</"
+"strong> If they didn't need it, they wouldn't be asking for it."
+msgstr ""
+"<strong>Esteja preparado para fornecer informações extra caso o programador "
+"precise.</strong> Se eles não precisassem, não estariam pedindo."
+
+#: ../views/bug_report.php:55
+msgid ""
+"<strong>Write clearly.</strong> Make sure what you write can't be "
+"misinterpreted. Avoid pronouns, and error on the side of providing too much "
+"information instead of too little."
+msgstr ""
+"<strong>Escreva de forma clara</strong>. Certifique-se de seu texto não será "
+"mal interpretado. Evite pronomes, e erro ao fornecer um excesso de "
+"informação em vez de muito pouca."
+
+#: ../views/bug_report.php:57
+msgid ""
+"Consider using <a href=\"http://www.techsmith.com/jing/free/\">Jing</a> to "
+"do a screencast of the problem!"
+msgstr ""
+"Considere usar o <a href=\"http://goo.gl/8hLSj\">Jing</a> para fazer um "
+"screencast do problema!"
+
+#: ../views/bug_report.php:58
+msgid ""
+"The gist of this was inspired by <a href=\"http://www.chiark.greenend.org.uk/"
+"~sgtatham/bugs.html\">How to Report Bugs Effectively</a> by Simon Tatham."
+msgstr ""
+"The gist of this was inspired by <a href=\"http://www.chiark.greenend.org.uk/"
+"~sgtatham/bugs.html\">How to Report Bugs Effectively</a> by Simon Tatham."
+
+#: ../views/custom_field.php:27
+msgid "More Information"
+msgstr "Mais Informações"
+
+#: ../views/custom_field.php:40
+msgid "Associations"
+msgstr "Associações"
+
+#: ../views/custom_field.php:42
+msgid "Which post-types should this field be attached to?"
+msgstr "Este campo deve ser anexado a quais Tipos de Post?"
+
+#: ../views/custom_field.php:53 ../views/metabox.php:106
+#: ../views/metaboxes.php:104
+msgid "Save and Continue Editing"
+msgstr ""
+
+#: ../views/custom_field_types.php:1
+msgid "Choose the type of field you want to create."
+msgstr ""
+
+#: ../views/custom_field_types.php:6 ../views/custom_field_types.php:13
+msgid "Field Type Description"
+msgstr "Descrição do Tipo de Campo"
+
+#: ../views/export.php:8
+msgid ""
+"Before exporting, please describe your current configuration. Your settings "
+"will be preserved."
+msgstr ""
+"Antes de exportar, descreva sua configuração atual. Suas configurações serão "
+"mantidas."
+
+#: ../views/export.php:20 ../views/preview_def.php:13
+msgid "Author URL"
+msgstr "URL do Autor"
+
+#: ../views/export.php:23 ../views/preview_def.php:14
+msgid "Template URL"
+msgstr "URL do Template"
+
+#: ../views/export.php:25
+msgid ""
+"If you have created a public theme that goes along with this content "
+"definition, paste the URL here."
+msgstr ""
+"Se você criou um tema público que vai junto com esta definição de conteúdo, "
+"cole a URL aqui."
+
+#: ../views/export.php:34
+msgid "Download"
+msgstr "Baixar"
+
+#: ../views/export.php:35
+msgid "Save to Library"
+msgstr "Salvar na Biblioteca"
+
+#: ../views/import.php:15
+msgid "Manage Library"
+msgstr "Gerenciar Biblioteca"
+
+#: ../views/import.php:28
+#, php-format
+msgid ""
+"You can import an existing %s definition file from your computer or choose "
+"one from your uploads directory: %s. You probably will only use this when "
+"you are first setting up your site."
+msgstr ""
+"Você pode importar um arquivo de definição existente %s do seu computador ou "
+"escolher um de seu diretório de uploads: %s. Você provavelmente só vai usar "
+"isso quando você configurar a primeira vez seu site."
+
+#: ../views/import.php:33
+msgid "Definitions on File"
+msgstr "Definições sobre Arquivo"
+
+#: ../views/import.php:76
+msgid "Library empty."
+msgstr "Biblioteca vazia."
+
+#: ../views/import.php:85
+msgid "Delete Selected"
+msgstr "Excluir Selecionado"
+
+#: ../views/import.php:92
+msgid "Upload Definitions"
+msgstr "Enviar Definições"
+
+#: ../views/import.php:100
+msgid "Upload New File"
+msgstr "Enviar Novo Arquivo"
+
+#: ../views/import.php:103
+msgid "Upload"
+msgstr "Carregar"
+
+#: ../views/info.php:18 ../views/purge.php:18
+msgid "Records"
+msgstr "Registros"
+
+#: ../views/info.php:29 ../views/purge.php:29
+msgid "Distribution of Posts"
+msgstr "Distribuição dos Posts"
+
+#: ../views/info.php:36 ../views/purge.php:36
+msgid "Count"
+msgstr "Contar"
+
+#: ../views/info.php:38 ../views/purge.php:38
+msgid "Number Active"
+msgstr "Número de Ativos"
+
+#: ../views/info.php:40 ../views/purge.php:40
+msgid "Number Inactive"
+msgstr "Número de Inativos"
+
+#: ../views/info.php:44 ../views/purge.php:44
+msgid "Active vs. Inactive Post Types"
+msgstr "Tipos de Posts: Ativos vs Inativos"
+
+#: ../views/list_custom_fields.php:4 ../views/list_custom_fields.php:14
+msgid "Type"
+msgstr "Tipo"
+
+#: ../views/list_custom_fields.php:5 ../views/list_custom_fields.php:15
+#: ../views/post_type.php:474 ../views/post_type.php:483
+#: ../views/sortable-list.php:24 ../views/sortable-list.php:33
+msgid "Field"
+msgstr "Campo"
+
+#: ../views/list_metaboxes.php:5 ../views/metabox.php:49
+msgid "Context"
+msgstr "Contexto"
+
+#: ../views/list_metaboxes.php:6 ../views/metabox.php:60
+msgid "Priority"
+msgstr "Prioridade"
+
+#: ../views/list_post_types.php:4 ../views/list_post_types.php:11
+msgid "Content Type"
+msgstr "Tipo de Conteúdo"
+
+#: ../views/metabox.php:23
+msgid "Metabox Definition"
+msgstr "Definição da Metabox"
+
+#: ../views/metabox.php:29
+msgid "ID"
+msgstr "ID"
+
+#: ../views/metabox.php:33
+msgid "Unique CSS ID for the metabox. No special characters allowed."
+msgstr "ID CSS único para a metabox. Caracteres especiais não são permitidos."
+
+#: ../views/metabox.php:43
+msgid "Title of the Metabox"
+msgstr "Título da Metabox"
+
+#: ../views/metabox.php:51
+msgid "Normal"
+msgstr "Normal"
+
+#: ../views/metabox.php:52 ../views/post_type.php:132
+#: ../views/settings.php:136
+msgid "Advanced"
+msgstr "Avançado"
+
+#: ../views/metabox.php:53
+msgid "Side"
+msgstr "Lateral"
+
+#: ../views/metabox.php:55
+msgid "The part of the page where the edit screen section should be shown."
+msgstr "A parte da página onde a seção da tela de edição deve ser mostrada."
+
+#: ../views/metabox.php:62
+msgid "High"
+msgstr "Alta"
+
+#: ../views/metabox.php:63
+msgid "Core"
+msgstr "Núcleo"
+
+#: ../views/metabox.php:65
+msgid "Low"
+msgstr "Baixa"
+
+#: ../views/metabox.php:67
+msgid "The priority within the context where the boxes should show."
+msgstr ""
+
+#: ../views/metabox.php:73
+msgid "Callback Function"
+msgstr "Função de Callback"
+
+#: ../views/metabox.php:77
+msgid "Use this only if you want to override the standard CCTM behavior."
+msgstr ""
+
+#: ../views/metabox.php:83
+msgid "Callback Arguments"
+msgstr "Argumentos de Callback "
+
+#: ../views/metabox.php:86
+msgid ""
+"Comma-separaated arguments to pass into your callback function. These are "
+"used only if you supply a callback function."
+msgstr ""
+
+#: ../views/metabox.php:95
+msgid "Manual Overrides"
+msgstr "Substituições Manuais"
+
+#: ../views/metabox.php:98
+msgid ""
+"Check a box to force the metabox to be drawn even if no custom fields are in "
+"it."
+msgstr ""
+
+#: ../views/metaboxes.php:52
+msgid ""
+"Drag unused fields from the left into the metabox where you want them to "
+"appear. You can also arrange them into the order you want."
+msgstr ""
+
+#: ../views/metaboxes.php:68
+msgid "Unused Fields"
+msgstr "Campos não utilizados"
+
+#: ../views/metaboxes.php:70
+msgid "These fields are not used for this post type."
+msgstr "Estes campos não são utilizados para este tipo de post."
+
+#: ../views/post_type.php:126
+msgid "Basic"
+msgstr "Básico"
+
+#: ../views/post_type.php:127
+msgid "Labels"
+msgstr "Labels"
+
+#: ../views/post_type.php:128
+msgid "Fields"
+msgstr "Campos"
+
+#: ../views/post_type.php:129
+msgid "Columns"
+msgstr "Colunas"
+
+#: ../views/post_type.php:130
+msgid "Menu"
+msgstr "Menu"
+
+#: ../views/post_type.php:131
+msgid "URLs"
+msgstr "URLs"
+
+#: ../views/post_type.php:133 ../views/post_type.php:765
+msgid "Taxonomies"
+msgstr "Taxonomias"
+
+#: ../views/post_type.php:146
+msgid "post_type"
+msgstr "post_type"
+
+#: ../views/post_type.php:148
+msgid ""
+"This name may show up in your URLs, e.g. ?movie=epic-movie. This will also "
+"make a new theme file available, starting with prefix named \"single-\", e."
+"g. <code>single-movie.php</code>."
+msgstr ""
+"Este nome pode aparecer na suas URLs, por exemplo, ?filme=filme-épico. Isso "
+"também fará com que um novo arquivo de tema esteja disponível, prefixado com "
+"\"single \"; por exemplo, <code>single-filme.php</code>."
+
+#: ../views/post_type.php:154
+msgid "Menu Name"
+msgstr "Nome do Menu"
+
+#: ../views/post_type.php:161
+msgid ""
+"The menu name text. This string is the name to give menu items. Defaults to "
+"value of name."
+msgstr ""
+"O menu de texto Nome. Esta string é o nome para dar os itens de menu. O "
+"padrão é o valor do nome."
+
+#: ../views/post_type.php:175
+msgid "Use Default Menu Icon"
+msgstr "Usar ícone de menu padrão"
+
+#: ../views/post_type.php:176
+msgid "Leave this checked to use the default posts icon."
+msgstr "Deixe isso marcado para usar o ícone padrão de Posts."
+
+#: ../views/post_type.php:182
+msgid "Menu Icon"
+msgstr "Ícone de Menu"
+
+#: ../views/post_type.php:191
+msgid ""
+"Choose an icon from the list below or paste a full URL to a 16x16 icon here."
+msgstr ""
+"Escolha um ícone a partir da lista abaixo ou cole a URL completa de um ícone "
+"de 16x16 aqui."
+
+#: ../views/post_type.php:207
+msgid "Singular"
+msgstr "Singular"
+
+#: ../views/post_type.php:209
+msgid "Human readable single instance of this content type, e.g. \"Post\""
+msgstr ""
+"Forma legível para instância singular deste tipo de conteúdo, ex. \"Post\""
+
+#: ../views/post_type.php:215
+msgid "Main Menu Label (Plural)"
+msgstr "Rótulo Menu Principal (Plural)"
+
+#: ../views/post_type.php:217
+msgid "Plural name used in the admin menu, e.g. \"Posts\""
+msgstr "Nome, no plural, usado no menu administrativo, ex. \"Posts\""
+
+#: ../views/post_type.php:229
+msgid ""
+"The add new text. The default is Add New for both hierarchical and non-"
+"hierarchical types."
+msgstr ""
+"O texto para adicionar novo item. O padrão é \"Adicionar Novo\" para ambos "
+"os tipos, hierárquicos e não-hierárquicos."
+
+#: ../views/post_type.php:235
+msgid "Add New Item"
+msgstr "Adicionar Novo Item"
+
+#: ../views/post_type.php:241
+msgid "The add new item text. Default is Add New Post/Add New Page"
+msgstr ""
+"O texto para \"Adicionar Novo Item\". O padrão é \"Adicionar Novo Post\" / "
+"\"Adicionar Nova Página\""
+
+#: ../views/post_type.php:247
+msgid "Edit Item"
+msgstr "Editar Item"
+
+#: ../views/post_type.php:253
+msgid "The edit item text. Default is Edit Post/Edit Page"
+msgstr ""
+"O texto de edição de item. O padrão é \"Editar Post\" / \"Editar Página\""
+
+#: ../views/post_type.php:259
+msgid "New Item"
+msgstr "Novo Item"
+
+#: ../views/post_type.php:265
+msgid "The new item text. Default is New Post/New Page"
+msgstr "O texto para novo item. O padrão é \"Novo Post\" / \"Nova Página\""
+
+#: ../views/post_type.php:273
+msgid "View Item"
+msgstr "Ver item"
+
+#: ../views/post_type.php:279
+msgid "The view item text. Default is View Post/View Page"
+msgstr "O texto de exibição de item. O padrão é Ver Post / Ver Página"
+
+#: ../views/post_type.php:286
+msgid "Search Items"
+msgstr "Buscar Items"
+
+#: ../views/post_type.php:293
+msgid "The search items text. Default is Search Posts/Search Pages"
+msgstr "O texto de busca de itens . O padrão é Procurar Posts/Procurar páginas"
+
+#: ../views/post_type.php:299
+msgid "Not Found"
+msgstr "Não encontrado"
+
+#: ../views/post_type.php:305
+msgid "The not found text. Default is No posts found/No pages found"
+msgstr ""
+"O texto não foi encontrado. O padrão é Sem posts encontrados/Nenhuma Página "
+"encontrada"
+
+#: ../views/post_type.php:312
+msgid "Not Found in Trash"
+msgstr "Não encontrado na Lixeira"
+
+#: ../views/post_type.php:318
+msgid ""
+"The not found in trash text. Default is No posts found in Trash/No pages "
+"found in Trash"
+msgstr ""
+"O texto de não foi encontrado na lixeira. O padrão é Sem posts encontrados "
+"na lixeira / Nenhuma página encontrada no lixeixa"
+
+#: ../views/post_type.php:325
+msgid "Parent Item Colon"
+msgstr "Item Mãe com pontuação, ex. \"Item Mãe:\""
+
+#: ../views/post_type.php:327
+msgid ""
+"The parent text (used only on hierarchical types). Default is <em>Parent "
+"Page</em>"
+msgstr ""
+"O texto do item Mãe (usado somente em tipos hierárquicos ). O padrão é "
+"<em>Página Pai</em>"
+
+#: ../views/post_type.php:334
+msgid ""
+"Your post type must have either the title or content boxes checked; "
+"otherwise WordPress will revert to the default behavior and include the "
+"title and the content fields."
+msgstr ""
+"Seu Post deve ter a caixa \"título\" ou \"conteúdo\" marcada; caso contrário "
+"WordPress irá reverter para o comportamento padrão e incluir o título e os "
+"campos de conteúdo."
+
+#: ../views/post_type.php:340
+msgid "Post Title."
+msgstr "Título do Post."
+
+#: ../views/post_type.php:340
+msgid "Unchecking this is not recommended."
+msgstr "Desmarcar isso não é recomendado."
+
+#: ../views/post_type.php:348
+msgid "Main content block."
+msgstr "Blqueio de conteúdo principal."
+
+#: ../views/post_type.php:354
+msgid "Track the author."
+msgstr "Acompanhe o autor."
+
+#: ../views/post_type.php:360
+msgid "Small summary field."
+msgstr "Campo de resumo pequeno."
+
+#: ../views/post_type.php:366
+msgid "Supports Custom Fields"
+msgstr "Suporta Campos Personalizados"
+
+#: ../views/post_type.php:367
+msgid ""
+"Currently, this functionality is overridden by any custom fields you have "
+"defined for this content type."
+msgstr ""
+"Atualmente, esta funcionalidade é substituída por todos os campos "
+"personalizados que você definiu para este tipo de conteúdo."
+
+#: ../views/post_type.php:372
+msgid "Post Formats"
+msgstr "Formatos de Post"
+
+#: ../views/post_type.php:373
+msgid ""
+"A Post Format is a piece of meta information that can be used by a theme to "
+"customize its presentation of a post."
+msgstr ""
+"Um Formato de Post é uma metainformação que pode ser usada por um temapara "
+"personalizar a apresentação de um post."
+
+#: ../views/post_type.php:385
+msgid "Page Attributes"
+msgstr "Atributos de Página"
+
+#: ../views/post_type.php:387
+msgid ""
+"When checked, the create/edit screens will include a meta box for menu "
+"position and other page attributes."
+msgstr ""
+"Quando marcado, as telas Criar/Editar irão incluir uma caixa para a "
+"posiçãodo menu e outros atributos de página."
+
+#: ../views/post_type.php:396
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: ../views/post_type.php:397
+msgid ""
+"Featured image. The active theme must also support post-thumbnails. Include "
+"a line like the following in your theme's functions.php file: <br/"
+"><code>add_theme_support( 'post-thumbnails', array"
+"( 'name_of_your_post_type_here' ) );</code>"
+msgstr ""
+"Imagem Destacada. O tema ativo também deve suportar miniaturas em Posts."
+"Inclua uma linha como a seguinte em seu arquivo functions.php: <br/><code> "
+"add_theme_support ( 'post-thumbnails', array"
+"( 'nome_do_seu_tipo_de_post_aqui') ); </code>"
+
+#: ../views/post_type.php:403
+msgid "Hierarchical"
+msgstr "Hierárquica"
+
+#: ../views/post_type.php:404
+msgid "Allows parent to be specified."
+msgstr "Permite especificar um Post Mãe."
+
+#: ../views/post_type.php:410
+msgid "Use Custom Hierarchy"
+msgstr "Usar Hierarquia Personalizada"
+
+#: ../views/post_type.php:411
+msgid "Allows custom hierarchies to be specified."
+msgstr "Permite especificar hierarquias personalizadas."
+
+#: ../views/post_type.php:412
+msgid "Hierarchical must be checked."
+msgstr "Hierarquia deve ser verificada."
+
+#: ../views/post_type.php:417
+msgid "Custom Hierarchies"
+msgstr "Hierarquias personalizados"
+
+#: ../views/post_type.php:418
+msgid ""
+"Warning: this feature is experimental. Implementing it deviates from "
+"standard WordPress behavior. See <a href=\"http://code.google.com/p/"
+"wordpress-custom-content-type-manager/issues/detail?id=9\" target=\"_blank"
+"\">Issue 9</a> in the bugtracker."
+msgstr ""
+"Aviso: este recurso é experimental. Esta implementação se desvia do "
+"comportamento padrão WordPress. Veja <a href=\"http://code.google.com/p/"
+"wordpress-custom-content-type-manager/issues/detail.id=9\" target=\"_blank"
+"\">Issue 9</a> no bugtracker."
+
+#: ../views/post_type.php:422
+msgid "Include Drafts?"
+msgstr "Incluir Rascunhos?"
+
+#: ../views/post_type.php:423
+msgid ""
+"By default, WordPress only allows you to use published pages in your "
+"hierarchy. Select this option to override that behavior."
+msgstr ""
+"Por padrão, o WordPress só permite que você use páginas publicadas na sua "
+"hierarquia. Selecione essa opção para substituir tal comportamento."
+
+#: ../views/post_type.php:426
+msgid "Parent Post Types"
+msgstr "Tipos de Post Mãe"
+
+#: ../views/post_type.php:427
+msgid ""
+"By default, WordPress only allows you to use posts of the same post-type in "
+"your hierarchy. Select which post types should be available as parents."
+msgstr ""
+"Por padrão, o WordPress só permite a utilização de mensagens do mesmo post-"
+"tipo em sua hierarquia. Selecione os tipos de post devem estar disponíveis "
+"como pais."
+
+#: ../views/post_type.php:464
+msgid "Customize Columns"
+msgstr "Personalizar Colunas"
+
+#: ../views/post_type.php:465
+msgid ""
+"You can customize the columns visible when you display a list of all posts "
+"in this post-type."
+msgstr ""
+"Você pode personalizar as colunas visíveis quando você exibir uma lista de "
+"todos os posts nesse Tipo de Post."
+
+#: ../views/post_type.php:465
+msgid ""
+"WARNING: you can only use custom columns if the post-type name does not "
+"contain hyphens; underscores are Ok."
+msgstr ""
+"ATENÇÃO: você só pode usar colunas personalizadas se o nome do Tipo de Post "
+"não contiver hífens; sublinhados \"_\" são permitidos."
+
+#: ../views/post_type.php:499
+msgid ""
+"These settings only apply if you have the <em>Show Admin User Interface</em> "
+"selected."
+msgstr ""
+"Essas configurações se aplicam somente se você tiver o Mostrar Administração "
+"Interface do usuário selecionado."
+
+#: ../views/post_type.php:503
+msgid "Show in Menus"
+msgstr "Mostrar em Menus"
+
+#: ../views/post_type.php:505
+msgid "Yes"
+msgstr "Sim"
+
+#: ../views/post_type.php:506
+msgid "No"
+msgstr "Não"
+
+#: ../views/post_type.php:507 ../views/post_type.php:566
+#: ../views/post_type.php:573
+msgid "Custom"
+msgstr "Personalizado"
+
+#: ../views/post_type.php:510
+msgid "Custom top-level Menu"
+msgstr "Menu principal personalizado"
+
+#: ../views/post_type.php:513
+msgid ""
+"Whether to show the post type in the admin menu. Change this to <em>Custom</"
+"em> to specify a top level page like <code>tools.php</code> or <code>edit."
+"php?post_type=page</code>"
+msgstr ""
+"Se é para mostrar o Tipo de Post no menu administrativo. Mude para "
+"<em>Personalizado</em> para especificar uma página de nível superior como "
+"<code>tools.php</code> ou <code>edit.php?post_type=page</code>"
+
+#: ../views/post_type.php:521
+msgid "Show in Admin Bar"
+msgstr "Mostrar na Barra de Ferramentas"
+
+#: ../views/post_type.php:522
+msgid "Whether to make this post type available in the WordPress admin bar."
+msgstr ""
+"Se deseja fazer esse tipo Post disponível na barra de ferramentas do "
+"WordPress."
+
+#: ../views/post_type.php:527
+msgid "Menu Position"
+msgstr "Posição do menu"
+
+#: ../views/post_type.php:529
+msgid ""
+"This setting determines where this post type should appear in the left-hand "
+"admin menu. Default: null (below Comments). E.g. \"21\" would cause this "
+"content type to display below Pages and above Comments."
+msgstr ""
+"Esta configuração determina onde este Tipo Post deve aparecer no menu de "
+"administração à esquerda. Padrão: null (abaixo de Comentários). Por exemplo "
+"\"21\" faria com que este tipo de conteúdo fosse exibido abaixo de Páginas e "
+"acima de Comentários."
+
+#: ../views/post_type.php:531
+msgid "below Posts"
+msgstr "Abaixo de Posts "
+
+#: ../views/post_type.php:532
+msgid "below Media"
+msgstr "Abaixo de Mídia"
+
+#: ../views/post_type.php:533
+msgid "below Links"
+msgstr "Abaixo de Links"
+
+#: ../views/post_type.php:534
+msgid "below Pages"
+msgstr "Abaixo de Páginas"
+
+#: ../views/post_type.php:535
+msgid "below Comments"
+msgstr "Abaixo de Comentários"
+
+#: ../views/post_type.php:536
+msgid "below first separator"
+msgstr "Abaixo do primeiro separador"
+
+#: ../views/post_type.php:537
+msgid "below Plugins"
+msgstr "Abaixo de Plugins"
+
+#: ../views/post_type.php:538
+msgid "below Users"
+msgstr "Abaixo de Usuários"
+
+#: ../views/post_type.php:539
+msgid "below Tools"
+msgstr "Abaixo de Ferramentas"
+
+#: ../views/post_type.php:540
+msgid "below Settings"
+msgstr "Abaixo de Configurações"
+
+#: ../views/post_type.php:541
+msgid "below second separator"
+msgstr "Abaixo do segundo separador"
+
+#: ../views/post_type.php:555
+msgid "Rewrite with Permalink Front"
+msgstr "Reescreva com Permalink do Plugin"
+
+#: ../views/post_type.php:556
+msgid "Allow permalinks to be prepended with front base - defaults to checked"
+msgstr "Permitir permalinks serem prefixados pelo plugin - o padrão é marcado"
+
+#: ../views/post_type.php:562
+msgid "Permalink Action"
+msgstr "Ação do Permalink"
+
+#: ../views/post_type.php:569
+msgid "Use permalink rewrites for this post_type? Default: Off"
+msgstr "Usar permalink reescreve este tipo de post? Padrão: Desativado"
+
+#: ../views/post_type.php:571
+msgid "Off"
+msgstr "Desativado"
+
+#: ../views/post_type.php:571
+msgid ""
+"URLs for custom post_types will always look like: http://site.com/?"
+"post_type=book&p=39 even if the rest of the site is using a different "
+"permalink structure."
+msgstr ""
+"URLs para post_types personalizados sempre serão como: http://site.com/?"
+"post_type=book&p=39 mesmo que o resto do site esteja usando uma estrutura de "
+"permalink diferente."
+
+#: ../views/post_type.php:572
+msgid ""
+"Currently, this is the only custom permalink structure that is supported. "
+"Other formats are not supported.  Your URLs will look like http://site.com/"
+"your_post_type/your-title/"
+msgstr ""
+"Atualmente, esta é a única estrutura permalink personalizada que é "
+"suportada. Outros formatos não são suportados. Suas URLs serão parecidas com "
+"http://site.com/seu_tipo_de_post/seu_titulo/"
+
+#: ../views/post_type.php:573
+msgid "Evaluate the contents of slug"
+msgstr "Avaliar os conteúdos da Slug"
+
+#: ../views/post_type.php:580
+msgid "Rewrite Slug"
+msgstr "Reescrer Slug"
+
+#: ../views/post_type.php:582
+msgid "Prepend posts with this slug - defaults to post type's name"
+msgstr "Prefixar Posts com esta Slug - o padrão é nome do tipo de post"
+
+#: ../views/post_type.php:590
+msgid "Query Variable"
+msgstr "Variável de consulta"
+
+#: ../views/post_type.php:592
+msgid ""
+"(optional) Name of the query var to use for this post type. E.g. \"my-var\" "
+"would make for URLs like http://site.com/?my-var=your-title. If blank, the "
+"default structure is http://site.com/?post_type=your_post_type&p=18"
+msgstr ""
+"opcional) Nome da variável de consulta para usar para este tipo post. Por "
+"exemplo \"my-var\" faria URLs como http://site.com/?my-var=your-title. Se em "
+"branco, a estrutura padrão é http://site.com/?post_type=your_post_type&p=18"
+
+#: ../views/post_type.php:606
+msgid "Check All"
+msgstr "Marcar Tudo"
+
+#: ../views/post_type.php:612
+msgid "Public"
+msgstr "Público"
+
+#: ../views/post_type.php:613
+msgid ""
+"Set the public attribute verbosely so WordPress behaves as you would expect "
+"it to. See <a href=\"http://code.google.com/p/wordpress-custom-content-type-"
+"manager/issues/detail?id=212\">Issue 212</a> in the bug tracker."
+msgstr ""
+"Definir o atributo público com detalhes para WordPress comporta-se como "
+"esperado. Veja <a href=\"http://code.google.com/p/wordpress-custom-content-"
+"type-manager/issues/detail?id=212\">Issue 212</a> no bug tracker."
+
+#: ../views/post_type.php:618
+msgid "Show Admin User Interface"
+msgstr "Mostrar  Interface de Administração"
+
+#: ../views/post_type.php:619
+msgid "Should this post type be visible on the back-end?"
+msgstr "Se este tipo de post deve ser visível no back-end."
+
+#: ../views/post_type.php:626
+msgid "Show in Nav Menus"
+msgstr "Mostrar no Menus de Navegação"
+
+#: ../views/post_type.php:627
+msgid ""
+"Whether post_type is available for selection in navigation menus (under "
+"<em>Appearance --> Menus</em>). Your theme must support menus for this "
+"option to have any effect. Default: value of public argument"
+msgstr ""
+"Se post_type está disponível para seleção em menus de navegação (na <em> "
+"Aparência --> Menus </em>). Seu tema deve suportar menus para essa opção "
+"para ter efeito. Padrão: valor de argumento público"
+
+#: ../views/post_type.php:635
+msgid "Publicly Queriable"
+msgstr "Pesquisável Publicamente"
+
+#: ../views/post_type.php:636
+msgid ""
+"Whether post_type queries can be performed from the front end. Usually this "
+"matches up with the <em>Public</em> setting."
+msgstr ""
+"Se as consultas post_type podem ser realizada a partir do front-end. "
+"Geralmente isso combina com a configuração <em>Public</em>."
+
+#: ../views/post_type.php:644
+msgid "Include in Search"
+msgstr "Incluir na Pesquisa"
+
+#: ../views/post_type.php:645
+msgid "Whether to include posts with this post type in search results."
+msgstr ""
+"Se deseja incluir posts com este tipo de cargo em resultados de pesquisa."
+
+#: ../views/post_type.php:653
+msgid "Include in RSS feed"
+msgstr "Inclua no feed RSS"
+
+#: ../views/post_type.php:654
+msgid "Should posts with this post type be included in the RSS feed?"
+msgstr "Posts com esse Tipo de Post devem serem incluídos no feed RSS?"
+
+#: ../views/post_type.php:663
+msgid "Capability Type"
+msgstr "Tipo de Privilégio"
+
+#: ../views/post_type.php:665
+msgid ""
+"The string to use to build the read, edit, and delete capabilities. May be "
+"passed a comma-separated string to allow for alternative plurals (e.g. "
+"\"child,children\"). Default: \"post\"."
+msgstr ""
+"A string (sequência de caracteres) a ser utilizada para criar os privilégios "
+"de leitura, edição e exclusão. Pode ser passada uma string separada por "
+"vírgulas para permitir plurais alternativos (por exemplo \"criança, crianças"
+"\"). Padrão: \"post\"."
+
+#: ../views/post_type.php:671
+msgid "Map Meta Cap"
+msgstr "Mapear Privilégios de Meta"
+
+#: ../views/post_type.php:672
+msgid ""
+"Whether to use the internal default meta capability handling. If checked, "
+"you must supply a valid mapping in the \"Capabilities\" field."
+msgstr ""
+"Se é para usar o padrão interno ao lidar com privilégios de meta dados. Se "
+"marcado, você deve fornecer um mapeamento válido no campo de \"Privilégios\"."
+
+#: ../views/post_type.php:677
+msgid "Capabilities"
+msgstr "Privilégios"
+
+#: ../views/post_type.php:679
+msgid ""
+"URL-style notation of the capabilities for this post type, e.g. "
+"<code>publish_posts=publish_events&edit_posts=edit_events</code>."
+msgstr ""
+
+#: ../views/post_type.php:680
+msgid "WARNING: improper key/value combinations can throw numerous errors!"
+msgstr ""
+
+#: ../views/post_type.php:685
+msgid "Meta Box Callback"
+msgstr "Callback da MetaBox"
+
+#: ../views/post_type.php:687
+msgid ""
+"Provide an optional callback function that will be called when setting up "
+"the meta boxes for the edit form."
+msgstr ""
+"Fornece uma função de Callback opcional que será chamada ao configurar as "
+"caixas de metadados para o formulário de edição."
+
+#: ../views/post_type.php:693
+msgid "Can Export"
+msgstr "Pode Exportar"
+
+#: ../views/post_type.php:694
+msgid "Can this post_type be exported."
+msgstr "Este post_type pode ser exportado."
+
+#: ../views/post_type.php:702
+msgid "Trackbacks"
+msgstr "Trackbacks"
+
+#: ../views/post_type.php:703
+msgid ""
+"Allows cross-blog notification. See <a href=\"http://codex.wordpress.org/"
+"Introduction_to_Blogging#Trackbacks\">official documentation</a>."
+msgstr ""
+"Permite a notificação cross-blog. Veja <a href=\"http://codex.wordpress.org/"
+"Introduction_to_Blogging#Trackbacks\">official documentation</a>."
+
+#: ../views/post_type.php:709
+msgid "Enable Comments"
+msgstr "Ativar Comentários"
+
+#: ../views/post_type.php:710
+msgid ""
+"If checked, your template will require the <code>comments_template();</code> "
+"function."
+msgstr ""
+"Se marcado, seu modelo exigirá a função <code>comments_template();</code>."
+
+#: ../views/post_type.php:716
+msgid "Store Revisions"
+msgstr "Gravar Revisões"
+
+#: ../views/post_type.php:717
+msgid ""
+"Revisions are useful if you ever need to go back to an older version of a "
+"document."
+msgstr ""
+"As revisões são úteis se você precisar voltar para uma versão anterior de um "
+"documento."
+
+#: ../views/post_type.php:717
+msgid ""
+"WARNING: revisions do not store custom field data!  This is a limitation of "
+"WordPress (see <a href=\"http://code.google.com/p/wordpress-custom-content-"
+"type-manager/issues/detail?id=266\">issue 266</a>)."
+msgstr ""
+"AVISO: revisões não armazenam dados de campo personalizado! Esta é uma "
+"limitação do WordPress (veja <a href=\"http://code.google.com/p/wordpress-"
+"custom-content-type-manager/issues/detail.id=266\">issue 266</a>)."
+
+#: ../views/post_type.php:723
+msgid "Enable Archives"
+msgstr "Ativar Arquivos"
+
+#: ../views/post_type.php:725
+msgid "If enabled, posts will be listed in archive lists (e.g. by month)."
+msgstr ""
+"Se ativado, as mensagens serão listadas em listas de arquivos (por exemplo, "
+"por mês)."
+
+#: ../views/post_type.php:733
+msgid "Show in Right Now Widget"
+msgstr "Mostrar no widget \"Agora\""
+
+#: ../views/post_type.php:734
+msgid ""
+"Should posts with this post type appear in the Dashboard \"Right Now\" "
+"widget? The global setting must be enabled."
+msgstr ""
+"Se os posts com este Tipo de Post devem aparecer no widget \"Agora\" do "
+"Painel. A configuração global deve estar habilitada."
+
+#: ../views/post_type.php:745
+msgid "How do you want your posts to sort?"
+msgstr "Como você quer que sejam classificados os Posts?"
+
+#: ../views/post_type.php:752
+msgid "Sort Order"
+msgstr "Ordem de Classificação"
+
+#: ../views/post_type.php:754
+msgid "ASC"
+msgstr "ASC"
+
+#: ../views/post_type.php:755
+msgid "DESC"
+msgstr "DESC"
+
+#: ../views/post_type.php:757
+msgid ""
+"If you specify a custom <code>Order By</code>, this setting will determine "
+"if your posts sort in ascending or descending order."
+msgstr ""
+"Se você especificar uma <code>Ordenar Por</code> personalizado, esta "
+"configuração irá determinar se sesu Posts serão classificados em ordem "
+"crescente ou decrescente."
+
+#: ../views/post_type.php:767
+msgid "Taxonomies offer ways to classify data as an aid to searching."
+msgstr ""
+"Taxonomias oferecem maneiras de classificar os dados como uma ajuda para "
+"pesquisa."
+
+#: ../views/post_type.php:768
+msgid ""
+"Currently, this plugin only allows you to use default taxonomies with your "
+"content types. We recommend using momo360modena's <a href='http://wordpress."
+"org/extend/plugins/simple-taxonomy/'>Simple Taxonomy</a> plugin to create "
+"custom taxonomies."
+msgstr ""
+"Atualmente, este plugin só permite a utilização de taxonomias padrão com "
+"seus tipos de conteúdo. Recomendamos o uso do plugin momo360modena's <a "
+"href='http://wordpress.org/extend/plugins/simple-taxonomy/'>Simple Taxonomy</"
+"a> para criar taxonomias personalizadas."
+
+#: ../views/post_type.php:772
+msgid "Enable Categories"
+msgstr "Ativar Categorias"
+
+#: ../views/post_type.php:773
+msgid "Hierarchical based classification."
+msgstr "Classificação baseada em hierarquia."
+
+#: ../views/post_type.php:779
+msgid "Enable Tags"
+msgstr "Ativar Tags"
+
+#: ../views/post_type.php:780
+msgid "Simple word associations."
+msgstr "Associações de palavras simples."
+
+#: ../views/preview_def.php:7
+msgid "Activate!"
+msgstr "Ativar!"
+
+#: ../views/preview_def.php:18 ../views/templates/default.php:50
+msgid "Content Types"
+msgstr "Tipos de Conteúdo"
+
+#: ../views/preview_def.php:29
+msgid "Foreign post-type"
+msgstr "Tipo de post Externo"
+
+#: ../views/preview_def.php:45
+msgid "Custom fields"
+msgstr "Campos Personalizados"
+
+#: ../views/preview_def.php:73
+msgid "Source file"
+msgstr "Arquivo de origem"
+
+#: ../views/preview_def.php:74
+msgid "Created in CCTM Version"
+msgstr "Criado no CCTM Versão"
+
+#: ../views/preview_def.php:75
+msgid "Database Encoding"
+msgstr "Codificação de banco de dados"
+
+#: ../views/preview_def.php:76
+msgid "Date Created"
+msgstr "Data de criação"
+
+#: ../views/sample_template.php:9
+msgid "CSS for Manager Pages"
+msgstr "CSS para Páginas Administrativas"
+
+#: ../views/sample_template.php:12
+msgid "HTML for Manager Pages"
+msgstr "HTML para Páginas Administrativas"
+
+#: ../views/settings.php:10
+msgid "Database"
+msgstr "Banco de dados"
+
+#: ../views/settings.php:15
+msgid "Delete Posts"
+msgstr "Excluir Posts"
+
+#: ../views/settings.php:17
+msgid ""
+"Check this option if you want to delete posts when you delete a post-type "
+"definition."
+msgstr ""
+"Marque esta opção se você deseja excluir Posts quando você excluir uma "
+"definição de Tipo de Post."
+
+#: ../views/settings.php:24
+msgid "Delete Custom Fields"
+msgstr "Excluir Campos Personalizados"
+
+#: ../views/settings.php:26
+msgid ""
+"Check this option if you want to delete custom fields from the database when "
+"you delete a custom field definition."
+msgstr ""
+"Marque esta opção se você deseja excluir os Campos Personalizados no banco "
+"de dados quando você excluir uma definição de Campo Personalizado."
+
+#: ../views/settings.php:33
+msgid "Save Empty Fields"
+msgstr "Salvar Campos Vazios"
+
+#: ../views/settings.php:35
+msgid ""
+"If checked, the CCTM will create a row in the postmeta table for the values "
+"for each post's custom fields. Uncheck this if you need to save some space "
+"in your database."
+msgstr ""
+"Se marcado, o CCTM vai criar uma linha na tabela postmeta para os valores de "
+"cada Campo Personalizado de Posts. Desmarque esta opção se você precisa "
+"poupar algum espaço em seu banco de dados."
+
+#: ../views/settings.php:38
+msgid "Menus"
+msgstr "Menus"
+
+#: ../views/settings.php:43
+msgid "Show Custom Fields Menu"
+msgstr "Mostrar Menu de Campos Personalizados"
+
+#: ../views/settings.php:45
+msgid ""
+"Check this option if you want a \"Custom Fields\" menu item to appear under "
+"each post-type."
+msgstr ""
+"Marque esta opção se você quiser que um item de menu de um\"Campo "
+"Personalizado\" apareça sobcada Tipo de Post."
+
+#: ../views/settings.php:52
+msgid "Show Settings Menu"
+msgstr "Mostrar menu de Configurações"
+
+#: ../views/settings.php:54
+msgid ""
+"Check this option if you want a \"Settings\" menu item to appear under each "
+"custom post-type."
+msgstr ""
+"Marque esta opção se você quiser que um item de menu \"Configurações\" "
+"apareça em cadaTipo de Post personalizado."
+
+#: ../views/settings.php:62
+msgid "Hide Posts Menu"
+msgstr "Esconder Menu Posts"
+
+#: ../views/settings.php:65
+msgid ""
+"Hide Posts from the primary WordPress admin menu. Do not do this if you have "
+"customized the fields for posts!"
+msgstr ""
+"Ocultar Posts a partir do menu de administração principal do WordPress. Não "
+"faça isso se você tiver personalizado os campos para posts!"
+
+#: ../views/settings.php:72
+msgid "Hide Pages Menu"
+msgstr "Ocultar Menu Páginas"
+
+#: ../views/settings.php:75
+msgid ""
+"Hide Pages from the primary WordPress admin menu. Do not do this if you have "
+"customized the fields for pages!"
+msgstr ""
+"Ocultar páginas no menu de administração principal do WordPress. Não faça "
+"isso se você tiver personalizado os campos para páginas!"
+
+#: ../views/settings.php:82
+msgid "Hide Links Menu"
+msgstr "Ocultar Menu Links"
+
+#: ../views/settings.php:85
+msgid "Hide Links from the primary WordPress admin menu."
+msgstr "Ocultar Links do menu de administração principal do WordPress."
+
+#: ../views/settings.php:92
+msgid "Hide Comments Menu"
+msgstr "Esconder Menu de Comentários"
+
+#: ../views/settings.php:95
+msgid "Hide Comments from the primary WordPress admin menu."
+msgstr "Ocultar Comentários no menu de administração principal do WordPress."
+
+#: ../views/settings.php:99
+msgid "Appearance"
+msgstr "Aparência"
+
+#: ../views/settings.php:104
+msgid "Display Foreign Post Types"
+msgstr "Mostrar Tipos de Posts Externos"
+
+#: ../views/settings.php:106
+msgid ""
+"Check this box if you want to display any post-types registered with some "
+"other plugin. You can add custom fields to them."
+msgstr ""
+"Marque esta caixa se você deseja exibir os Tipos de Post registrados com "
+"algum outro plugin. Você não será capaz de editá-los, mas você sabe que eles "
+"estão lá."
+
+#: ../views/settings.php:113
+msgid "Summarize Posts TinyMCE Button"
+msgstr "Botão TinyMCE de Resumir Posts"
+
+#: ../views/settings.php:115
+msgid ""
+"Provides a TinyMCE button for a graphically choosing search criteria and "
+"generating a Summarize Posts shortcode."
+msgstr ""
+"Fornece um botão TinyMCE para gerar um shortcode \"Resumir Mensagens\" ."
+
+#: ../views/settings.php:122
+msgid "Custom Fields TinyMCE Button"
+msgstr "Botão TinyMCE para Campos Personalizados"
+
+#: ../views/settings.php:124
+msgid ""
+"Provides a TinyMCE button for a graphically choosing a custom field whose "
+"value you wish to display in the main content block."
+msgstr ""
+"Fornece um botão TinyMCE para a escolha de um campo personalizado cujo valor "
+"você deseja exibir no bloco de conteúdo principal."
+
+#: ../views/settings.php:131
+msgid "Right Now Widget Support"
+msgstr "Suporte ao Widget \"Agora\""
+
+#: ../views/settings.php:133
+msgid ""
+"Should custom post-types appear in the Dashboard's Right Now widget? You can "
+"customize this for each post-type."
+msgstr ""
+"Se Tipos de Post personalizados devem aparecer nos painéis do widget \"Agora"
+"\". Você pode personalizar isso para cada Tipo de Post."
+
+#: ../views/settings.php:142
+msgid "Flush Permalink Rules"
+msgstr "Nivelar Regras Permalink "
+
+#: ../views/settings.php:144
+msgid ""
+"Usually, you need the CCTM to flush the WordPress permalink rules in order "
+"to support URL mappings to your custom posts.  Other plugins may also do "
+"this, so you can save on the overhead by disabling this."
+msgstr ""
+"Normalmente, você precisa que o CCTM nivele as regras de permalink WordPress "
+"a fim de apoiar os mapeamentos de URL para seus Posts personalizadas. Outros "
+"plugins também pode fazer isso, então você evitar sobrecarga desativando "
+"isso."
+
+#: ../views/settings.php:151
+msgid "Show Pages in RSS Feed"
+msgstr "Mostrar Páginas no Feed RSS"
+
+#: ../views/settings.php:154
+msgid "Should your pages show up in your RSS feed?"
+msgstr "Suas páginas devem aparecem em seu feed RSS?"
+
+#: ../views/settings.php:161
+msgid "Cache Thumbnail Images"
+msgstr "Cache de Miniaturas"
+
+#: ../views/settings.php:163
+msgid ""
+"Check this option to let CCTM generate low-quality, smaller images for use "
+"in the post-selector for relation, image, and media fields."
+msgstr ""
+"Marque esta opção para deixar o CCTM gerar imagens menores, de baixa "
+"qualidade,para uso no post-selector para os campos de relação, imagem e "
+"mídia."
+
+#: ../views/sortable-list.php:22
+msgid "Included"
+msgstr "Incluído"
+
+#: ../views/sources.php:1
+msgid ""
+"The CCTM gives precedence to user-created files inside of uploads/cctm/ over "
+"built-in files inside the plugin's directory. This page highlights which "
+"files have been overridden by local customizations."
+msgstr ""
+"O CCTM dá prioridade aos arquivos criados pelo usuário dentro de uploads/"
+"cctm/ sobre arquivos internos dentro do diretório do plugin. Esta página "
+"destaca quais arquivos foram substituídos por personalizações locais."
+
+#: ../views/tools.php:1
+msgid "The following tools implement additional functionality to this plugin."
+msgstr ""
+"As seguintes ferramentas implementam funcionalidade adicional para este "
+"plugin."
+
+#: ../views/tools.php:7
+msgid ""
+"Import a <code>.cctm.json</code> definition file to jump-start your site."
+msgstr ""
+"Importar um arquivo de definição <code>.cctm.json</code> para dar início ao "
+"seu site."
+
+#: ../views/tools.php:13
+msgid "Export your site's content-type and custom-field definitions."
+msgstr ""
+"Exportar as definições de Tipo de Conteúdo e Campos Personalizados do seu "
+"site."
+
+#: ../views/tools.php:19
+msgid "Clear any cached images or other files that have been generated."
+msgstr "Limpar todas as imagens em cache ou outros arquivos que foram gerados."
+
+#: ../views/tools.php:25
+msgid ""
+"Purge your database of orphaned posts that do not have a post-type defined "
+"for them.  Warning: this will permanently delete data!"
+msgstr ""
+"Limpar seu banco de dados de Posts órfãos que não tem um Tipo de Post "
+"definido para eles. Aviso: isto irá apagar permanentemente os dados!"
+
+#: ../views/tools.php:32
+msgid "See which CCTM files are being overridden by local customizations."
+msgstr ""
+"Veja quais arquivos do CCTM  estão sendo substituídos por personalizações "
+"locais."
+
+#: ../views/tools.php:35
+msgid "Detect Post Types"
+msgstr "Detectar Tipos de Post"
+
+#: ../views/tr_custom_field_type.php:13
+msgid "Create"
+msgstr "Criar"
+
+#: ../views/tr_custom_field_type.php:14
+msgid "More Info"
+msgstr "Mais informações"
+
+#: ../views/templates/default.php:55
+msgid "Info"
+msgstr "Informações"
+
+#: ../views/templates/default.php:76
+msgid "Support this Plugin"
+msgstr "Ajude este Plugin"
+
+#: ../views/templates/default.php:87
+msgid "Get eMail Updates"
+msgstr "Receba emails com atualizações"
+
+#: ../views/templates/default.php:91
+msgid "Forum"
+msgstr "Fórum"
+
+#: ../views/templates/tinymce.php:13
+msgid ""
+"You can place a shortcode in your content to print out custom field values."
+msgstr ""
+"Você pode colocar um shortcode em um conteúdo para exibir valores de Campos "
+"Personalizados."
+
+#~ msgid "Field Type"
+#~ msgstr "Tipo de campo"
+
+#~ msgid ""
+#~ "The %s post type does not have any custom fields yet. Check the fields "
+#~ "below to add custom fields."
+#~ msgstr ""
+#~ "O Tipo de Post %s não possui Campos Personalizados ainda. Verifique os "
+#~ "campos abaixo para adicionar Campos Personalizados."
+
+#~ msgid "Incorrect class name in %s Output Filter. Expected class name: %s"
+#~ msgstr ""
+#~ "Nome da classe incorreta em %s filtro de saída. Nome da classe esperado: "
+#~ "%s"
+
+#~ msgid "Output filter not found: %s"
+#~ msgstr "Filtro de saída não encontrado: %s"
+
+#~ msgid "Field type is empty."
+#~ msgstr "Tipo de campo está vazio."
+
+#, fuzzy
+#~ msgid ""
+#~ "The class file for %s fields could not be found. Did you move or delete "
+#~ "the file?"
+#~ msgstr ""
+#~ "O arquivo de classe para os campos %s não pÃ´de ser encontrado. Será que "
+#~ "você mover ou apagar o arquivo."
+
+#~ msgid "Could not locate file for %s field."
+#~ msgstr "Não foi possível localizar arquivo para o campo %s."
+
+#~ msgid "Validator not found: %s"
+#~ msgstr "Validador não encontrado: %s"
+
+#~ msgid "Ensure that the input is a number of the type you have configured."
+#~ msgstr ""
+#~ "Certifique-se de que a entrada é um número do tipo que você tiver "
+#~ "configurado."
+
+#, fuzzy
+#~ msgid ""
+#~ "The post type to use for checking read, edit, and delete capabilities. "
+#~ "Default: \"post\""
+#~ msgstr ""
+#~ "The post type to use for checking read, edit, and delete capabilities. "
+#~ "Default: \"Post\""
+
+#~ msgid "Add Custom Fields"
+#~ msgstr "Adicionar Campos Personalizados"
+
+#~ msgid ""
+#~ "Check this option if you want to force custom fields to be created in the "
+#~ "database when you associate custom field with a content type."
+#~ msgstr ""
+#~ "Marque esta opção se você deseja forçar Campos Personalizados a serem "
+#~ "criados no banco de dados quando você associar um Campo Personalizado a "
+#~ "um tipo de conteúdo."
+
+#~ msgid "Update Default Values"
+#~ msgstr "Atualizar Valores Padrão"
+
+#~ msgid ""
+#~ "Check this option if you want custom fields containing the old default "
+#~ "value to be updated when the default value is changed."
+#~ msgstr ""
+#~ "Marque esta opção se você quiser que Campos Personalizados contendo o "
+#~ "valor padrão antigo sejam atualizados quando o valor padrão for alterado."
+
+#~ msgid "Failed to create the CCTM base storage directory: <code>"
+#~ msgstr "Failed to create the CCTM base storage directory: <code>"
+
+#~ msgid "Remove This Field"
+#~ msgstr "Remover Este Campo"
+
+#~ msgid "%s is too long."
+#~ msgstr "%s is too long."
+
+#~ msgid "Names may contain the letters a-z and underscores only."
+#~ msgstr "Names may contain the letters a-z and underscores only."
+
+#~ msgid "You cannot name your field using any reserved name."
+#~ msgstr "You cannot name your field using any reserved name."
+
+#~ msgid ""
+#~ "This controls where this field will appear on the page. Fields with "
+#~ "smaller numbers will appear higher on the page."
+#~ msgstr ""
+#~ "This controls where this field will appear on the page. Fields with "
+#~ "smaller numbers will appear higher on the page."
+
+#~ msgid "Featured image (the activetheme must also support post-thumbnails)"
+#~ msgstr "Featured image (the activetheme must also support post-thumbnails)"
+
+#~ msgid "If checked, your post type will use the posts icon"
+#~ msgstr "If checked, your post type will use the posts icon"
+
+#~ msgid "Missing Class: %s"
+#~ msgstr "Missing Class: %s"
+
+#~ msgid "View Original"
+#~ msgstr "View Original"
+
+#~ msgid "Filename"
+#~ msgstr "Filename"
+
+#~ msgid "Sorry, no results found."
+#~ msgstr "Sorry, no results found."
+
+#~ msgid "Activate custom field management"
+#~ msgstr "Activate custom field management"
+
+#~ msgid "Custom fields can be added and configured using the %1$s %2$s"
+#~ msgstr "Custom fields can be added and configured using the %1$s %2$s"
+
+#~ msgid "Save Changes"
+#~ msgstr "Save Changes"
+
+#~ msgid "%1$s requires version %$2% of the %3$s plugin."
+#~ msgstr "%1$s requires version %$2% of the %3$s plugin."
+
+#, fuzzy
+#~ msgid "The %s field is not a valid URL."
+#~ msgstr "O campo %s não é um endereço de e-mail válido."
+
+#, fuzzy
+#~ msgid "You do not have permission to edit posts."
+#~ msgstr "Você não tem permissões suficientes para acessar esta página."
+
+#, fuzzy
+#~ msgid "Input Type"
+#~ msgstr "Tipo de Post"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unique singular name to identify this post type in the database, e.g. "
+#~ "\"movie\",\"book\". This may show up in your URLs, e.g. ?movie=star-wars. "
+#~ "This will also make a new theme file available, starting with prefix "
+#~ "named \"single-\", e.g. <strong>single-movie.php</strong>. The name "
+#~ "should be lowercase with only letters and underscores. This name cannot "
+#~ "be changed!"
+#~ msgstr ""
+#~ "Este nome pode aparecer na suas URLs, por exemplo, .filme=filme-épico. "
+#~ "Isso também fará com que um novo arquivo de tema esteja disponível, "
+#~ "começando com prefixo nomeado \"single \"; por exemplo, <code>single-"
+#~ "filme.php</code>."
+
+#, fuzzy
+#~ msgid "Should these posts be visible on the front-end?"
+#~ msgstr "Se este tipo de post deve ser visível no back-end."
+
+#, fuzzy
+#~ msgid "Menu icon URL."
+#~ msgstr "Ícone de Menu"
+
+#, fuzzy
+#~ msgid "Choose Reference"
+#~ msgstr "Escolha Relação"
+
+#, fuzzy
+#~ msgid "Settings Page"
+#~ msgstr "Configurações"
+
+#, fuzzy
+#~ msgid "%1$s requires the %2$s PHP extension."
+#~ msgstr "%1$s requer PHP %2$s ou mais recente."
+
+#, fuzzy
+#~ msgid "Talk to your system administrator about reconfiguring PHP."
+#~ msgstr "Converse com o administrador do sistema sobre atualização."
+
+#, fuzzy
+#~ msgid "%$1s is a reserved name."
+#~ msgstr " %s é um nome reservado."

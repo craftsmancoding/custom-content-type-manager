@@ -1,0 +1,5216 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Content Type Manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-27 00:04-0700\n"
+"PO-Revision-Date: 2013-07-24 15:29+0100\n"
+"Last-Translator: Everett Griffiths <everett@fireproofsocks.com>\n"
+"Language-Team: fireproofsocks <everett@fireproofsocks.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"Language: en_US\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+# @ custom-content-type-mgr
+#. translators: This refers to a PHP function e.g. my_function() { ... }
+#: index.php:75
+msgid "Function"
+msgstr "Funkcija"
+
+# @ custom-content-type-mgr
+#. translators: This refers to a PHP class e.g. class MyClass { ... }
+#: fields/colorselector.php:87 fields/image.php:95 fields/media.php:94
+#: fields/relation.php:96 includes/CCTM_FormElement.php:341 index.php:84
+msgid "Class"
+msgstr "Klasa"
+
+# @ custom-content-type-mgr
+#. translators: This refers to a PHP constant as defined by the define() function
+#: index.php:93
+msgid "Constant"
+msgstr "Konstanta"
+
+# @ custom-content-type-mgr
+#: controllers/create_post_type.php:10
+msgid "Create Custom Content Type"
+msgstr "Kreirati prilagođeni tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/create_post_type.php:22
+msgid "Create New Content Type"
+msgstr "Kreirati novi tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/create_post_type.php:42 controllers/duplicate_post_type.php:80
+#, php-format
+msgid "The content type %s has been created"
+msgstr "Tip sadržaja  %s  je kreiran"
+
+# @ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:21
+#, fuzzy, php-format
+msgid "Deactivate Content Type %s"
+msgstr "Deaktiviere Inhaltstype %s"
+
+# @ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:30 controllers/list_post_types.php:34
+msgid "Deactivate"
+msgstr "Deaktivirati"
+
+# @ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:89
+#: controllers/delete_custom_field.php:69
+#: controllers/delete_custom_field.php:82 controllers/delete_post_type.php:80
+#: controllers/delete_post_type.php:91 controllers/reset_custom_fields.php:42
+msgid "Are you sure you want to do this?"
+msgstr "Da li ste sigurni da želite to da uradite?"
+
+# @ custom-content-type-mgr
+#: controllers/delete_post_type.php:12
+#, fuzzy, php-format
+msgid "Delete Content Type: %s"
+msgstr "Lösche Inhaltstype %s"
+
+# @ custom-content-type-mgr
+# @ default
+#: controllers/delete_custom_field.php:15 controllers/delete_post_type.php:18
+#: controllers/list_custom_fields.php:54 controllers/list_custom_fields.php:74
+#: controllers/list_post_types.php:132 controllers/purge.php:16
+#: fields/dropdown.php:247 fields/dropdown.php:297 fields/multiselect.php:243
+#: fields/multiselect.php:293
+msgid "Delete"
+msgstr "Obrisati"
+
+# @ custom-content-type-mgr
+#: controllers/delete_post_type.php:58
+#, fuzzy, php-format
+msgid "The post type %s has been deleted"
+msgstr "Der Post type %s wurde gelöscht"
+
+# @ custom-content-type-mgr
+#: controllers/delete_post_type.php:88
+#, php-format
+msgid ""
+"You are about to delete the %s post type. This will remove all of its "
+"settings from the database, but this will NOT delete any rows from the "
+"wp_posts table. However, without a custom post type defined for those rows, "
+"they will be essentially invisible to WordPress."
+msgstr ""
+"Spremate se da obrišete  %s tip posta. Ovo će ukloniti sva njegova podešenja "
+"iz baze podataka, ali NEĆE obrisati ni jedan red iz wp_posts tabele. Ipak,"
+"bez prilagodjenog post tipa definisanog za te redove,oni ce u sustini biti "
+"nevidljivi za WordPress."
+
+# @ custom-content-type-mgr
+#: controllers/error.php:25
+msgid "Invalid post type."
+msgstr "Nevažeći tip posta."
+
+# @ default
+# @ custom-content-type-mgr
+#: controllers/duplicate_post_type.php:41 controllers/edit_post_type.php:30
+#: controllers/error.php:14 controllers/error.php:22 controllers/error.php:26
+#: controllers/export_def.php:10 controllers/import_def.php:12
+#: controllers/list_custom_field_types.php:13
+#: controllers/list_custom_field_types.php:19 controllers/settings_cf.php:11
+#: controllers/template_single.php:24
+msgid "Back"
+msgstr "Nazad"
+
+# @ default
+#: controllers/edit_post_type.php:41
+msgid "Edit Content Type: "
+msgstr "Urediti tip sadržaja:"
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:25
+#: controllers/duplicate_custom_field.php:25
+#: controllers/duplicate_post_type.php:58 controllers/edit_custom_field.php:25
+#: controllers/edit_post_type.php:49 controllers/export_def.php:15
+#: controllers/list_field_associations.php:21 controllers/settings.php:19
+#: controllers/themes.php:13 controllers/tools.php:14
+#: views/custom_field.php:59 views/sortable-list.php:12
+#: views/sortable-list.php:46
+msgid "Save"
+msgstr "Snimiti"
+
+# @ custom-content-type-mgr
+#: controllers/edit_post_type.php:96
+#, fuzzy, php-format
+msgid "Settings for %s have been updated."
+msgstr "Die Einstellungen für %s wurden aktualisiert"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:802 includes/CCTM_PostTypeDef.php:323
+#, php-format
+msgid "%s is a reserved name."
+msgstr "%s je rezervisano ime."
+
+# @ custom-content-type-mgr
+#: controllers/template_single.php:43
+#, php-format
+msgid ""
+"WordPress supports a custom theme file for each registered post-type "
+"(content-type). Copy the text below into a file named <strong>%s</strong> "
+"and save it into your active theme."
+msgstr ""
+"WordPress podržava fajl prilagođene teme za svaki registrovani tip posta "
+"(tip sadržaja). Kopirajte donji tekst u fajl nazvan  <strong>%s</strong> i "
+"snimite ga u vašu aktivnu temu."
+
+# @ custom-content-type-mgr
+#: controllers/template_single.php:46
+#, php-format
+msgid ""
+"You are currently using the %1$s theme. Save the file into the %2$s "
+"directory."
+msgstr "Trenutno koristite  %1$s temu. Snimite fajl u %2$s direktorijum."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:784 includes/CCTM_PostTypeDef.php:291
+msgid "Name is required."
+msgstr "Ime je potrebno."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:300
+#, php-format
+msgid ""
+"The post type name cannot begin with %s because that is a reserved prefix."
+msgstr ""
+"Ime tipa posta ne može da počinje sa  %s jer je to rezervisani prefiks."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:321 includes/CCTM_PostTypeDef.php:329
+msgid "Please choose another name."
+msgstr "Molim vas, odaberite drugo ime."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:331
+#, fuzzy, php-format
+msgid "%s is already in use as a registered taxonomy name."
+msgstr "%s ist bereits als Taxonomiename in Verwendung."
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:53 fields/image.php:61 fields/media.php:60
+#: fields/relation.php:62 includes/CCTM_FormElement.php:307
+msgid "Label"
+msgstr "Natpis"
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:60 fields/image.php:68 fields/media.php:67
+#: fields/relation.php:69 includes/CCTM_FormElement.php:314
+msgid "Name"
+msgstr "Ime"
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:107 fields/image.php:115 fields/media.php:114
+#: fields/relation.php:116 includes/CCTM_FormElement.php:361
+#: views/export.php:27 views/list_custom_fields.php:6
+#: views/list_custom_fields.php:14 views/post_type.php:474
+#: views/post_type.php:483 views/sortable-list.php:25
+#: views/sortable-list.php:34
+msgid "Description"
+msgstr "Opis"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:711
+msgid "Sort Order"
+msgstr "Redosled sortiranja"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:209
+msgid "Human readable single instance of this content type, e.g. \"Post\""
+msgstr "Čitljiva pojedinačna instanca ovog tipa sadržaja, npr. \"Post\""
+
+# @ custom-content-type-mgr
+#: views/post_type.php:217
+msgid "Plural name used in the admin menu, e.g. \"Posts\""
+msgstr ""
+"Množina imena koje se koristi u administratorskom meniju, npr. \"Postovi\""
+
+# @ custom-content-type-mgr
+#: views/post_type.php:608
+msgid "Show Admin User Interface"
+msgstr "Prikazati administratorski korisnički interfejs"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:609
+msgid "Should this post type be visible on the back-end?"
+msgstr "Da li ovaj tip posta treba da bude vidljiv sa administratorske strane?"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:652
+msgid "Capability Type"
+msgstr "Tip mogućnosti"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:654
+msgid ""
+"The post type to use for checking read, edit, and delete capabilities. "
+"Default: \"post\""
+msgstr ""
+"Tip posta koji se koristi za proveru mogućnosti čitanja, uređivanja i "
+"brisanja. Podrazumevani tip je: \"post\""
+
+# @ custom-content-type-mgr
+#: views/post_type.php:602
+msgid "Public"
+msgstr "Javno"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:403
+msgid "Hierarchical"
+msgstr "Hijerarhijski"
+
+# @ custom-content-type-mgr
+# @ default
+#: ajax-controllers/get_posts.php:191
+#: ajax-controllers/post_content_widget.php:146 includes/CCTM_Columns.php:34
+#: includes/CCTM_PostTypeDef.php:20 includes/CCTM_Post_Widget.php:110
+#: includes/SummarizePosts_Widget.php:59 views/export.php:14
+#: views/widgets/post_content_form.php:24
+msgid "Title"
+msgstr "Naslov"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:40
+#: ajax-controllers/summarize_posts_widget.php:61
+#: includes/GetPostsForm.php:874 views/post_type.php:340
+msgid "Post Title"
+msgstr "Naslov posta"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:347
+msgid "Content"
+msgstr "Sadržaj"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:348
+msgid "Main content block."
+msgstr "Glavni blok sadržaja."
+
+# @ default
+# @ custom-content-type-mgr
+#: includes/CCTM_Columns.php:35 includes/CCTM_PostTypeDef.php:21
+#: includes/GetPostsForm.php:340 views/export.php:17 views/post_type.php:353
+#: views/preview_def.php:12
+msgid "Author"
+msgstr "Autor"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:354
+msgid "Track the author."
+msgstr "Pratiti autora."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:396
+msgid "Thumbnail"
+msgstr "Sličica"
+
+# @ custom-content-type-mgr
+#: filters/excerpt.php:72 views/post_type.php:359
+msgid "Excerpt"
+msgstr "Izvod"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:360
+msgid "Small summary field."
+msgstr "Polje sa sažetkom."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:669
+msgid "Trackbacks"
+msgstr "Povratni linkovi"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:366
+msgid "Supports Custom Fields"
+msgstr "Podržava prilagođena polja"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:676
+msgid "Enable Comments"
+msgstr "Omogućiti komentare"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:683
+msgid "Store Revisions"
+msgstr "Sačuvati revizije"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:517
+msgid "Menu Position"
+msgstr "Pozicija menija"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:521
+msgid "below Posts"
+msgstr "ispod postova"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:522
+msgid "below Media"
+msgstr "ispod medija"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:524
+msgid "below Pages"
+msgstr "ispod stranica"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:526
+msgid "below first separator"
+msgstr "ispod prvog separatora"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:531
+msgid "below second separator"
+msgstr "ispod drugog separatora"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:570
+msgid "Rewrite Slug"
+msgstr "Prepraviti poveznicu (slug)"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:572
+msgid "Prepend posts with this slug - defaults to post type's name"
+msgstr ""
+"Ispred postova stavljati ovu poveznicu – podrazumevana vrednost je ime tipa "
+"posta"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:545
+msgid "Rewrite with Permalink Front"
+msgstr "Prepravlja sa prednjim delom permalinka"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:546
+msgid "Allow permalinks to be prepended with front base - defaults to checked"
+msgstr ""
+"Dozvoliti da se ispred permalinkova stavlja bazna adresa prve strane – "
+"podrazumevana vrednost je čekirano"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:552
+msgid "Permalink Action"
+msgstr "Permalink akcija"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:559
+msgid "Use permalink rewrites for this post_type? Default: Off"
+msgstr ""
+"Koristiti prepravljanje permalinkova za ovaj post_type (tip posta)?"
+"Podrazumevano: Isključeno"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:561
+msgid ""
+"URLs for custom post_types will always look like: http://site.com/?"
+"post_type=book&p=39 even if the rest of the site is using a different "
+"permalink structure."
+msgstr ""
+"URL -ovi za prilagođene post_types (tipove postova) će uvek izgledati kao: "
+"http://site.com/?post_type=book&p=39  čak i ako ostatak sajta koristi "
+"drugačiju permalink strukturu."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:580
+msgid "Query Variable"
+msgstr "Promenljiva upita"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:660
+msgid "Can Export"
+msgstr "Može da izvozi"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:661
+msgid "Can this post_type be exported."
+msgstr "Može li ovaj post_type (tip posta) da se izvozi."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:616
+msgid "Show in Nav Menus"
+msgstr "Prikazati u navigacionim menijima"
+
+# @ custom-content-type-mgr
+# @ default
+#: config/menus/admin_menu.php:83 config/menus/admin_menu.php:84
+#: controllers/settings.php:13 includes/CCTM.php:455
+msgid "Settings"
+msgstr "Podešavanja"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1966 includes/SummarizePosts.php:383
+#: tests/CCTMtests.php:188
+#, php-format
+msgid "The %s plugin encountered errors! It cannot load!"
+msgstr "Dodatak  %s   je naišao na greške! Ne može da se učita!"
+
+# @ default
+#: includes/CCTM.php:1860
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nemate dovoljno ovlašćenje da pristupite ovoj stranici."
+
+# @ custom-content-type-mgr
+#: fields/media.php:273
+msgid "Choose Media"
+msgstr "Odabrati medij"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:210
+#: ajax-controllers/post_content_widget.php:162
+msgid "Select"
+msgstr "Izabrati"
+
+# @ custom-content-type-mgr
+#: controllers/edit_post_type.php:27
+msgid "Invalid post_type."
+msgstr "Nevažeći post_type (tip posta)."
+
+# @ default
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:507 includes/GetPostsForm.php:203
+msgid "Search"
+msgstr "Pretraga"
+
+# @ custom-content-type-mgr
+#: controllers/reset_custom_fields.php:22
+msgid "Reset"
+msgstr "Resetovanje"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:33
+#, fuzzy
+msgid "Deactivate this content type"
+msgstr "Deaktiviere Inhaltstypen"
+
+# @ custom-content-type-mgr
+#: controllers/create_custom_field.php:163
+#: controllers/create_custom_field.php:199
+#: controllers/duplicate_custom_field.php:141
+#: controllers/duplicate_custom_field.php:177
+#: controllers/edit_custom_field.php:179 controllers/edit_custom_field.php:215
+#: controllers/list_custom_fields.php:12
+#: controllers/list_field_associations.php:149
+#: controllers/list_post_types.php:54
+#, fuzzy
+msgid "Manage Custom Fields"
+msgstr "Benutzerdefinierte Felder"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:126
+#, fuzzy
+msgid "Activate"
+msgstr "Aktivieren"
+
+# @ default
+# @ custom-content-type-mgr
+#: controllers/list_custom_fields.php:53 controllers/list_custom_fields.php:60
+#: controllers/list_post_types.php:40 controllers/list_pt_associations.php:110
+#: controllers/list_pt_associations.php:142 includes/CCTM_PostTypeDef.php:498
+msgid "Edit"
+msgstr "Urediti"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:125
+#, fuzzy
+msgid "Activate this content type"
+msgstr "Inhaltstyp aktivieren"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:131
+#, fuzzy
+msgid "Delete this content type"
+msgstr "Lösche diesen Inhaltstyp"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/list_custom_fields.php:25 config/menus/admin_menu.php:32
+#: config/menus/admin_menu.php:65 config/menus/admin_menu.php:66
+#: controllers/settings.php:107 includes/StandardizedCustomFields.php:190
+#: views/preview_def.php:52 views/templates/default.php:50
+msgid "Custom Fields"
+msgstr "Prilagođena polja"
+
+# @ custom-content-type-mgr
+# @ default
+#: ajax-controllers/summarize_posts_form.php:44
+#: ajax-controllers/summarize_posts_widget.php:65
+#: controllers/change_field_type.php:24 controllers/create_custom_field.php:15
+#: controllers/create_post_type.php:13
+#: controllers/duplicate_custom_field.php:24
+#: controllers/duplicate_post_type.php:54 controllers/edit_custom_field.php:24
+#: controllers/edit_post_type.php:45 controllers/merge_custom_fields.php:16
+#: views/basic_form.php:31 views/custom_field.php:61 views/purge.php:76
+#: views/sortable-list.php:13 views/sortable-list.php:47
+msgid "Cancel"
+msgstr "Otkazati"
+
+# @ default
+# @ custom-content-type-mgr
+#: fields/image.php:312 fields/media.php:316 fields/relation.php:312
+#: includes/CCTM.php:1193
+msgid "Remove"
+msgstr "Ukloniti"
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:250 fields/multiselect.php:246
+msgid "Add Option"
+msgstr "Dodati opciju"
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:57
+#, php-format
+msgid "%1$s requires MySQL %2$s or newer."
+msgstr "%1$s Zahteva MySQL %2$s ili noviji."
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:60 tests/CCTMtests.php:141
+msgid "Talk to your system administrator about upgrading."
+msgstr "Razgovarajte sa vašim sistem administratorom oko nadogradnje."
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:98 tests/CCTMtests.php:106
+#, php-format
+msgid "%1$s requires version %$2% of the %3$s plugin."
+msgstr "%1$s  Zahteva  %$2% verziju  %3$s  dodatka."
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:113
+#, php-format
+msgid "The %1$s plugin is not installed."
+msgstr "Dodatak  %1$s  nije instaliran."
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:126
+#, php-format
+msgid ""
+"%1$s requires WordPress %2$s or newer. <a href=\"http://codex.wordpress.org/"
+"Upgrading_WordPress\">Please update!</a>"
+msgstr ""
+"%1$s  Zahteva WordPress  %2$s ili noviji.<a href=\"http://codex.wordpress."
+"org/Upgrading_WordPress\"> Molim vas, ažurirajte!</a>"
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:162
+#, php-format
+msgid "%1$s requires the %2$s PHP extension."
+msgstr "%1$s  zahteva  %2$s PHP ekstenziju."
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:167
+msgid "Talk to your system administrator about reconfiguring PHP."
+msgstr ""
+"Razgovarajte sa vašim sistem administratorom o ponovnom konfigurisanju PHP-a."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:42 ajax-controllers/get_posts.php:56
+#: ajax-controllers/get_selected_posts.php:27
+#: ajax-controllers/get_selected_posts.php:34 ajax-controllers/get_tpl.php:17
+#: ajax-controllers/get_tpl.php:24
+#, php-format
+msgid "Invalid fieldname: %s"
+msgstr "Nevažeće ime polja: %s"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:91
+#: ajax-controllers/post_content_widget.php:73
+msgid "Post Selector configuration file not found."
+msgstr "Konfiguracioni fajl birača posta nije pronađen."
+
+# @ custom-content-type-mgr
+# @ default
+#: ajax-controllers/get_posts.php:192
+#: ajax-controllers/post_content_widget.php:147 fields/date.php:301
+#: includes/CCTM_Columns.php:37 includes/CCTM_PostTypeDef.php:23
+msgid "Date"
+msgstr "Datum"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:193
+#: ajax-controllers/post_content_widget.php:148 views/info.php:35
+#: views/purge.php:35
+msgid "Status"
+msgstr "Status"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:194
+#: ajax-controllers/post_content_widget.php:149
+msgid "Parent"
+msgstr "Roditelj"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:195
+#: ajax-controllers/post_content_widget.php:150 views/info.php:17
+#: views/purge.php:17
+msgid "Post Type"
+msgstr "Tip posta"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:196 includes/CCTM_FormElement.php:147
+msgid "Add to Post"
+msgstr "Dodati u post"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:197 includes/CCTM_FormElement.php:148
+msgid "Add to Post and Close"
+msgstr "Dodati u post i zatvoriti"
+
+# @ custom-content-type-mgr
+# @ default
+#: ajax-controllers/get_posts.php:209
+#: ajax-controllers/post_content_widget.php:161 includes/CCTM.php:1192
+#: includes/CCTM.php:1220 views/import.php:69 views/import.php:111
+msgid "Preview"
+msgstr "Pregled"
+
+# @ default
+#: ajax-controllers/get_posts.php:214
+#: ajax-controllers/get_selected_posts.php:115 filters/gallery.php:42
+#: includes/GetPostsQuery.php:2159
+msgid "post_title"
+msgstr "post_title (naslov posta)"
+
+# @ default
+#: ajax-controllers/get_posts.php:215
+#: ajax-controllers/get_selected_posts.php:116 filters/gallery.php:43
+#: includes/GetPostsQuery.php:2161
+msgid "post_content"
+msgstr "post_content (sadržaj posta)"
+
+# @ default
+#: ajax-controllers/get_posts.php:216
+#: ajax-controllers/get_selected_posts.php:117 filters/gallery.php:44
+#: includes/GetPostsQuery.php:2162
+msgid "post_excerpt"
+msgstr "post_excert (izvod iz sadržaja posta)"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_search_form.php:22
+msgid "fieldname or fieldtype required."
+msgstr "potreban je fieldname (naziv polja) ili fieldtype (tip polja)."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_search_form.php:58
+#: ajax-controllers/summarize_posts_form.php:21
+#: ajax-controllers/summarize_posts_widget.php:35
+msgid "Search parameter configuration file not found."
+msgstr "Konfiguracioni fajl parametra pretrage nije pronađen."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_selected_posts.php:55
+msgid "Post ID or guid required."
+msgstr "Potreban je ID posta ili guid."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_selected_posts.php:81 ajax-controllers/get_tpl.php:52
+#: ajax-controllers/get_widget_post_tpl.php:24
+msgid "Formatting template not found!"
+msgstr "Šablon za formatiranje nije pronađen!"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_validator_options.php:14 fields/checkbox.php:146
+#: fields/date.php:283 fields/dropdown.php:226 fields/dropdown.php:248
+#: fields/image.php:302 fields/media.php:306 fields/multiselect.php:222
+#: fields/multiselect.php:244 fields/relation.php:302
+#: includes/CCTM_FormElement.php:404
+msgid "Options"
+msgstr "Opcije"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_validator_options.php:17
+msgid "Error loading validator."
+msgstr "Greška pri učitavanju validatora."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/get_widget_post_tpl.php:31
+#: includes/CCTM_Post_Widget.php:56
+msgid "Edit Selected Post"
+msgstr "Urediti izabrani post"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/list_custom_fields.php:13
+msgid "No post-type detected. Cannot display custom fields."
+msgstr ""
+"Ni jedan tip posta nije pronađen. Nije moguće prikazati prilagođena polja."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/list_custom_fields.php:18
+msgid ""
+"The custom fields for this post-type are not standardized. You can manually "
+"type in the shortcode to print the custom field value from another post "
+"using the following format:  <code>[custom_field name=\"name_of_field\" "
+"filter=\"optional_output_filter\" post_id=\"123\"]</code>"
+msgstr ""
+"Prilagođena polja za ovaj tip posta nisu standardizovana. Možete ručno uneti "
+"kratki kod (shortcode) za ispisivanje vrednosti prilagođenog polja iz drugog "
+"posta, koristeći sledeći format: <code>[custom_field name=\"name_of_field\" "
+"filter=\"optional_output_filter\" post_id=\"123\"]</code>"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/list_custom_fields.php:36
+msgid "This post-type does not have any custom fields associated with it."
+msgstr "Ovaj tip posta nema ni jedno prilagođeno polje, pridruženo sa njim."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/preview_def.php:24
+msgid "Definition file not specified."
+msgstr "Fajl sa definicijom nije naveden."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/preview_def.php:30
+msgid ""
+"Invalid filename: the definition filename should not contain spaces and "
+"should use an extension of <code>.cctm.json</code>."
+msgstr ""
+"Nevažeće ime fajla: ime fajla sa definicijom ne treba da sadrži razmake i "
+"treba da ima ekstenziju <code>.cctm.json</code>."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/preview_def.php:51
+#, php-format
+msgid ""
+"Your site's encoding differs from the encoding used to create this "
+"definition file.  This may create problems if the post-type and field "
+"definitions use foreign characters.  Adding the following to your wp-config."
+"php file may alleviate problems with character encoding: <code>define"
+"('DB_CHARSET', '%s');</code>"
+msgstr ""
+"Kodni raspored vašeg sajta se razlikuje od kodnog rasporeda korišćenog pri "
+"pravljenju ovog fajla sa definicijom. Ovo može stvoriti probleme ako tip "
+"posta i definicije polja koriste strane karaktere. Dodavanje sledećeg koda u "
+"vaš wp-config.php fajl može ublažiti probleme sa kodnim rasporedima:"
+"<code>define('DB_CHARSET', '%s');</code>"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:39
+#: ajax-controllers/summarize_posts_widget.php:60
+msgid "Dynamically list posts according to the criteria below."
+msgstr "Dinamički ispisuje listu postova, prema donjem kriterijumu."
+
+# @ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:41
+#: ajax-controllers/summarize_posts_widget.php:62
+msgid "Author ID"
+msgstr "ID autora"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:42
+#: ajax-controllers/summarize_posts_widget.php:63
+msgid "Add Filter"
+msgstr "Dodati filter"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:43
+msgid "Generate Shortcode"
+msgstr "Generisati kratki kod (shortcode)"
+
+# @ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_widget.php:64
+msgid "Save Criteria"
+msgstr "Snimiti kriterijum"
+
+# @ default
+#: ajax-controllers/upload_image.php:18
+msgid "From Computer"
+msgstr "Od računara"
+
+# @ custom-content-type-mgr
+#: config/menus/admin_menu.php:20
+msgid "Manage Custom Content Types"
+msgstr "Upravljanje prilagođenim tipovima sadržaja"
+
+# @ custom-content-type-mgr
+#: config/menus/admin_menu.php:21
+msgid "Custom Content Types"
+msgstr "Prilagođeni tipovi sadržaja"
+
+# @ custom-content-type-mgr
+#: config/menus/admin_menu.php:31
+msgid "CCTM Custom Fields"
+msgstr "CCTM prilagođena polja"
+
+# @ custom-content-type-mgr
+#: config/menus/admin_menu.php:40
+msgid "CCTM Global Settings"
+msgstr "CCTM globalna podešenja"
+
+# @ custom-content-type-mgr
+#: config/menus/admin_menu.php:41 views/templates/default.php:51
+msgid "Global Settings"
+msgstr "Globalna podešenja"
+
+# @ custom-content-type-mgr
+#: config/menus/admin_menu.php:49
+msgid "CCTM Tools"
+msgstr "CCTM alati"
+
+# @ custom-content-type-mgr
+#: config/menus/admin_menu.php:50 controllers/tools.php:8
+#: views/templates/default.php:53
+msgid "Tools"
+msgstr "Alati"
+
+# @ custom-content-type-mgr
+#: controllers/activate_post_type.php:28
+#, php-format
+msgid "The %s post_type has been activated."
+msgstr "Post_type  %s (tip posta) je aktiviran."
+
+# @ custom-content-type-mgr
+#: controllers/bug_report.php:9 views/templates/default.php:83
+msgid "Report a Bug"
+msgstr "Prijaviti bag"
+
+# @ custom-content-type-mgr
+#: controllers/bug_report.php:11
+msgid "Launch Bug Tracker"
+msgstr "Pokrenuti praćenje bagova"
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:21
+#, php-format
+msgid "Change Field Type: %s"
+msgstr "Promeniti tip polja: %s"
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:33 controllers/clear_warnings.php:9
+#: controllers/duplicate_custom_field.php:31
+#: controllers/edit_custom_field.php:31
+msgid "Invalid request."
+msgstr "Nevažeći zahtev."
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:55
+#, php-format
+msgid "The %s custom field has been converted to a %s field."
+msgstr " %s Prilagođeno  polje je konvertovano u %s polje."
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:62
+msgid "There was a problem converting the field type."
+msgstr "Došlo je do problema pri konvertovanju tipa polja."
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:77
+#, php-format
+msgid "Change the %s field from a %s field into the following type of field:"
+msgstr "Promeniti  %s polje iz  %s polja u sledeći tip polja:"
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:95
+#: controllers/list_custom_field_types.php:43
+#, php-format
+msgid "Form element not found: %s"
+msgstr "Elemenat obrasca (forme) nije pronađen:%s"
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:102
+msgid ""
+"WARNING: different fields have different attributes. The conversion process "
+"may cause some attributes in your field definition to be lost.  Export a "
+"copy of your field definitions before continuing."
+msgstr ""
+"UPOZORENJE: različita polja imaju različite atribute. Proces konverzije može "
+"učiniti da se neki atributi u vašoj definiciji polja izgube. Izvezite kopiju "
+"vaših definicija polja pre nastavljanja."
+
+# @ custom-content-type-mgr
+#: controllers/change_field_type.php:104
+msgid "Export a copy of your field definitions before continuing."
+msgstr "Izvesti kopiju vaših definicija polja pre nastavljanja."
+
+# @ custom-content-type-mgr
+#: controllers/clear_cache.php:9 controllers/clear_cache.php:15
+#: views/tools.php:17
+msgid "Clear Cache"
+msgstr "Obrisati keš"
+
+# @ custom-content-type-mgr
+#: controllers/clear_cache.php:34
+msgid "Cache has been cleared"
+msgstr "Keš je obrisan"
+
+# @ custom-content-type-mgr
+#: controllers/clear_cache.php:43
+msgid ""
+"Unable to clear the cache!  Please adjust the permissions on that directory "
+"or manually delete its contents."
+msgstr ""
+"Nije moguće obrisati keš! Molim vas, podesite dozvole nad tim "
+"direktorijumom, ili manuelno obrišite njegov sadržaj."
+
+# @ custom-content-type-mgr
+#: controllers/clear_cache.php:54
+#, php-format
+msgid ""
+"Clearing the cache will delete all files and directories from the CCTM cache "
+"directory: %s."
+msgstr ""
+"Brisanjem keša će se obrisati svi fajlovi i direktorijumi iz CCTM keš "
+"direktorijuma  %s."
+
+# @ custom-content-type-mgr
+#: controllers/clear_warnings.php:20
+msgid "All warnings have been dismissed."
+msgstr "Sva upozorenja su odbačena."
+
+# @ custom-content-type-mgr
+#: controllers/create_custom_field.php:12
+#: controllers/list_custom_fields.php:15
+msgid "Create Custom Field"
+msgstr "Kreirati prilagođeno polje"
+
+# @ custom-content-type-mgr
+#: controllers/create_custom_field.php:93
+#: controllers/duplicate_custom_field.php:103
+#, php-format
+msgid "A %s custom field has been created."
+msgstr "A %s Prilagođeno polje je kreirano."
+
+# @ custom-content-type-mgr
+#: controllers/create_custom_field.php:100
+#, php-format
+msgid "A %s custom field has been created for the %s post-type."
+msgstr "A %s   Kreirano je prilagođeno polje za  %s  tip posta."
+
+# @ custom-content-type-mgr
+#: controllers/create_custom_field.php:162
+#: controllers/create_custom_field.php:198
+#: controllers/duplicate_custom_field.php:140
+#: controllers/duplicate_custom_field.php:176
+#: controllers/edit_custom_field.php:178 controllers/edit_custom_field.php:214
+#: controllers/list_field_associations.php:148
+#: controllers/list_post_types.php:53
+msgid "Manage Custom Fields for this content type"
+msgstr "Upravljanje prilagođenim poljima za ovaj tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/create_custom_field.php:171
+#: controllers/duplicate_custom_field.php:149
+#: controllers/edit_custom_field.php:187
+msgid "Built-in post-type."
+msgstr "Ugrađeni tip posta."
+
+# @ custom-content-type-mgr
+#: controllers/create_custom_field.php:192
+#: controllers/duplicate_custom_field.php:170
+#: controllers/edit_custom_field.php:208
+msgid "Foreign post-type."
+msgstr "Strani tip posta."
+
+# @ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:48
+#, php-format
+msgid "The %s content type has been deactivated."
+msgstr "Tip  %s sadržaja je deaktiviran."
+
+# @ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:66
+#, php-format
+msgid "You are about to deactivate the %s post type."
+msgstr "Spremate se da deaktivirate  %s tip posta."
+
+# @ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:72
+#, php-format
+msgid ""
+"Deactivation does not delete anything, but it does make %s posts unavailable "
+"to the outside world. %s will be removed from the administration menus and "
+"you will no longer be able to edit them using the WordPress manager."
+msgstr ""
+"Deaktivacija ništa ne briše, ali čini  %s  post nedostupnim za spoljni "
+"svet.  %s će biti uklonjeni iz administratorskih menija i više nećete moći "
+"da ih uređujete koristeći WordPress manager."
+
+# @ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:76 controllers/delete_post_type.php:68
+#, php-format
+msgid "This would affect %1$s published %2$s posts."
+msgstr "Ovo će uticati na %1$s  objavljene %2$s postove."
+
+# @ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:83
+msgid ""
+"Deactivation does not delete anything, but it does turn off the "
+"standardization of the custom fields.  By default WordPress only supports "
+"simple text fields and you can easily misspell field names."
+msgstr ""
+"Deaktivacija ništa ne briše, ali isključuje standardizaciju prilagođenih "
+"polja. Po definiciji, WordPress podržava samo jednostavna tekstualna polja i "
+"lako možete pogrešno napisati imena polja."
+
+# @ custom-content-type-mgr
+#: controllers/delete_custom_field.php:10
+#, php-format
+msgid "Delete Custom Field: %s"
+msgstr "Obrisati prilagođeno polje:%s"
+
+# @ custom-content-type-mgr
+#: controllers/delete_custom_field.php:53
+#, php-format
+msgid "The custom field %s has been deleted"
+msgstr "Prilagođeno polje  %s  je obrisano."
+
+# @ custom-content-type-mgr
+#: controllers/delete_custom_field.php:67
+#, php-format
+msgid ""
+"You are about to delete the %s custom field and delete all of its values "
+"from the database. This cannot be undone!"
+msgstr ""
+"Spremate se da obrišete  %s  prilagođeno polje i da iz baze podataka "
+"obrišete sve njegove vrednosti. Posle toga nije moguć povratak u prethodno "
+"stanje!"
+
+# @ custom-content-type-mgr
+#: controllers/delete_custom_field.php:80
+#, php-format
+msgid ""
+"You are about to delete the %s custom field. This will remove all of its "
+"settings from the database, but this will NOT delete any data from the "
+"wp_postmeta table. However, without a definition for this field, it will be "
+"mostly invisible to WordPress."
+msgstr ""
+"Spremate se da obrišete  %s prilagođeno polje. Ovo će ukloniti sva njegova "
+"podešenja iz baze podataka, ali NEĆE obrisati nikakve podatke iz tabele "
+"wp_postmeta. Međutim, bez definicije za ovo polje, ono će uglavnom biti "
+"nevidljivo za WordPress."
+
+# @ custom-content-type-mgr
+#: controllers/delete_post_type.php:77
+#, php-format
+msgid ""
+"You are about to delete the %s post type and delete all of its posts from "
+"the database. This cannot be undone!"
+msgstr ""
+"Spremate se da obrišete  %s tip posta i da obrišete sve njegove postove iz "
+"baze podataka. Posle toga nije moguć povratak u prethodno stanje!"
+
+# @ custom-content-type-mgr
+#: controllers/duplicate_custom_field.php:21
+#, php-format
+msgid "Duplicate Custom Field: %s"
+msgstr "Duplirati prilagođeno polje:%s"
+
+# @ custom-content-type-mgr
+#: controllers/duplicate_post_type.php:38
+msgid "Unrecognized post_type."
+msgstr "Neprepoznati post_type (tip posta)."
+
+# @ custom-content-type-mgr
+#: controllers/duplicate_post_type.php:39
+msgid "Unrecognized post-type"
+msgstr "Neprepoznati tip posta"
+
+# @ default
+#: controllers/duplicate_post_type.php:50
+msgid "Duplicate Content Type: "
+msgstr "Duplirati tip sadržaja:"
+
+# @ custom-content-type-mgr
+#: controllers/edit_custom_field.php:21
+#, php-format
+msgid "Edit Custom Field: %s"
+msgstr "Urediti prilagođeno polje: %s"
+
+# @ custom-content-type-mgr
+#: controllers/edit_custom_field.php:47
+msgid "Field Type"
+msgstr "Tip polja"
+
+# @ custom-content-type-mgr
+#: controllers/edit_custom_field.php:47
+msgid "Change Field Type"
+msgstr "Promeniti tip polja"
+
+# @ custom-content-type-mgr
+#: controllers/edit_custom_field.php:137
+#, php-format
+msgid "The %s custom field has been edited."
+msgstr "Prilagođeno %s polje je uređeno."
+
+# @ default
+#: controllers/edit_post_type.php:28
+msgid "Unrecognized Content type"
+msgstr "Neprepoznati tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/edit_post_type.php:38
+msgid ""
+"WARNING: changing this value is not recommended.  Changing the post-type "
+"name may break permalinks, alter search criteria, and you may have to rename "
+"your template files."
+msgstr ""
+"UPOZORENJE: menjanje ove vrednosti se ne preporučuje. Menjanje imena tipa "
+"posta može pokvariti permalinkove, izmeniti kriterijum pretrage, i možda "
+"ćete morati da preimenujete vaše šablon fajlove."
+
+# @ custom-content-type-mgr
+#: controllers/edit_post_type.php:83
+#, php-format
+msgid ""
+"You have changed the name of your post_type, so you must also rename your "
+"template file! Rename %s to %s."
+msgstr ""
+"Promenili ste ime vašeg post_type (tipa posta), tako da morate preimenovati "
+"i vaš šablon fajl! Preimenujte %s      takođe. %s."
+
+# @ custom-content-type-mgr
+#: controllers/error.php:13
+msgid "Invalid field name."
+msgstr "Nevažeće ime polja."
+
+# @ custom-content-type-mgr
+#: controllers/error.php:17
+msgid ""
+"There is no definition that is ready for importing, or the definition that "
+"you are trying to import is empty."
+msgstr ""
+"Nema ni jedne definicije koja je spremna za uvoženje, ili je definicija koju "
+"pokušavate da uvezete prazna."
+
+# @ custom-content-type-mgr
+#: controllers/error.php:18 controllers/import_def.php:10 views/tools.php:5
+msgid "Import Definition"
+msgstr "Uvesti definiciju"
+
+# @ custom-content-type-mgr
+#: controllers/error.php:21
+msgid "Invalid warning."
+msgstr "Nevažeće upozorenje."
+
+# @ custom-content-type-mgr
+#: controllers/export_def.php:8 views/tools.php:11
+msgid "Export Definition"
+msgstr "Izvesti definiciju"
+
+# @ default
+#: controllers/export_def.php:11
+msgid "Import"
+msgstr "Uvesti"
+
+# @ custom-content-type-mgr
+#: controllers/export_def.php:38
+#, php-format
+msgid ""
+"Your Custom Content Type definition %s should begin downloading shortly.  If "
+"there is a problem downloading, you can copy the text below into a text "
+"editor and save it with a <code>.cctm.json</code> extension."
+msgstr ""
+"Preuzimanje vaše definicije  %s prilagođenog tipa sadržaja treba uskoro da "
+"počne. Ako ima problema sa preuzimanjem, možete kopirati donji tekst u "
+"uređivač teksta i snimiti ga pod  <code>.cctm.json</code> ekstenzijom."
+
+# @ custom-content-type-mgr
+#: controllers/export_def.php:58
+msgid ""
+"Your Custom Content Type definition has been saved to your library. <a href="
+"\"?page=cctm_tools&a=import_def\">Click here</a> to view your library."
+msgstr ""
+"Vaša definicija prilagođenog tipa sadržaja je snimljena u vašu biblioteku. "
+"<a href=\"?page=cctm_tools&a=import_def\"> Kliknite ovde </a> da pogledate "
+"svoju biblioteku."
+
+# @ custom-content-type-mgr
+#: controllers/help.php:7 filters/help.php:112 views/templates/default.php:79
+msgid "Help"
+msgstr "Pomoć"
+
+# @ custom-content-type-mgr
+#: controllers/help.php:9
+msgid "Documentation"
+msgstr "Dokumentacija"
+
+# @ custom-content-type-mgr
+#: controllers/help.php:11
+msgid ""
+"You can click the information icon at the top right corner of any page to "
+"pull up a relevant help page from the wiki:"
+msgstr ""
+"Možete kliknuti na informacionu ikonu u gornjem desnom uglu bilo koje strane "
+"da izvučete relevantnu stranu za pomoć iz wiki -ja:"
+
+# @ default
+#: controllers/help.php:17 views/bug_report.php:5
+msgid ""
+"If you require immediate help for this plugin, you can contract me at the "
+"following email address for a reasonable hourly rate:"
+msgstr ""
+"Ako vam je potrebna hitna pomoć oko ovog dodatka, možete me kontaktirati na "
+"sledeću e-mail adresu, uz razumnu satnicu:"
+
+# @ custom-content-type-mgr
+#: controllers/help.php:23
+msgid ""
+"This plugin is open source software freely available to WordPress users."
+msgstr ""
+"Ovaj dodatak je softver otvorenog koda, besplatno dostupan WordPress "
+"korisnicima."
+
+# @ custom-content-type-mgr
+#: controllers/help.php:24
+msgid ""
+"Use the following links to get more information about how to use this plugin."
+msgstr ""
+"Upotrebite sledeće linkove da dobijete više informacija o tome kako da "
+"koristite ovaj dodatak."
+
+# @ custom-content-type-mgr
+#: controllers/help.php:26
+msgid ""
+"<a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/"
+"\">Official Documentation</a> -- available on the project's Wiki page."
+msgstr ""
+" <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/"
+"\">Zvanična dokumentacija</a> -- dostupna na Wiki stranici projekta."
+
+# @ custom-content-type-mgr
+#: controllers/help.php:27
+msgid ""
+"<a href=\"http://wordpress.org/tags/custom-content-type-manager?"
+"forum_id=10\">Plugin Forum</a> -- General questions can be asked in the "
+"forum."
+msgstr ""
+"<a href=\"http://wordpress.org/tags/custom-content-type-manager?"
+"forum_id=10\">Forum dodatka</a> -- Opšta pitanja se mogu postaviti na forumu."
+
+# @ custom-content-type-mgr
+#: controllers/help.php:28
+msgid "<a href=\"http://wpcctm.com/\">Official Site</a>."
+msgstr "<a href=\"http://wpcctm.com/\">Zvanični sajt</a>."
+
+# @ default
+#: controllers/import_def.php:13
+msgid "Export"
+msgstr "Izvesti"
+
+# @ default
+#: controllers/import_def.php:31
+msgid ""
+"Failed to create the CCTM base storage directory: <code></code></p>\n"
+"\t\t<p><a href=\"http://code.google.com/p/wordpress-custom-content-type-"
+"manager/wiki/Permissions\" target=\"_blank\">Click here</a> for more "
+"information about correcting permissions errors on your server.</p>"
+msgstr ""
+"Kreiranje CCTM osnovnog skladišnog direktorijuma nije uspelo:<code></code></"
+"p>\n"
+"\t\t<p><a href=\"http://code.google.com/p/wordpress-custom-content-type-"
+"manager/wiki/Permissions\" target=\"_blank\"> Kliknite ovde</a> za više "
+"informacija o ispravljanju grešaka u dozvolama na vašem serveru.</p>"
+
+# @ custom-content-type-mgr
+#: controllers/import_def.php:55
+msgid "No file selected"
+msgstr "Nije izabran ni jedan fajl"
+
+# @ custom-content-type-mgr
+#: controllers/import_def.php:66
+#, php-format
+msgid "The definition filesize must not exceed %s bytes."
+msgstr "Veličina fajla sa definicijom ne sme da prevaziđe  %s bajtova."
+
+# @ custom-content-type-mgr
+#: controllers/import_def.php:81
+msgid "The uploaded file is not in the correct format."
+msgstr "Otpremljeni fajl nije u ispravnom formatu."
+
+# @ custom-content-type-mgr
+#: controllers/import_def.php:100
+msgid ""
+"We could not upload the definition file to your library. This may be due to "
+"permissions errors or some other server configuration.  Use FTP to upload "
+"your file to %"
+msgstr ""
+"Nismo mogli da otpremimo fajl sa definicijom u vašu biblioteku. Ovo može "
+"biti zbog grešaka u dozvolama ili u nekom drugom konfiguracionom podešenju "
+"servera. Upotrebite FTP da otpremite fajl na  %"
+
+# @ custom-content-type-mgr
+#: controllers/import_def.php:119
+msgid "Files have been removed from your library."
+msgstr "Fajlovi su uklonjeni iz vaše biblioteke."
+
+# @ custom-content-type-mgr
+#: controllers/import_def.php:134
+msgid "The definition was imported successfully!"
+msgstr "Definicija je uspešno uvezena!"
+
+# @ custom-content-type-mgr
+#: controllers/import_def.php:146
+msgid "Invalid submission."
+msgstr "Nevažeći podnesak."
+
+# @ custom-content-type-mgr
+#: controllers/info.php:13
+msgid "Information"
+msgstr "informacija"
+
+# @ custom-content-type-mgr
+#: controllers/list_custom_field_types.php:10
+msgid "Add Field: Choose Type of Custom Field"
+msgstr "Dodati polje: Izaberite tip prilagođenog polja"
+
+# @ custom-content-type-mgr
+#: controllers/list_custom_field_types.php:20
+#, php-format
+msgid "Create a custom field for the %s post_type"
+msgstr "Kreirati prilagođeno polje za %s post_type (tip posta)"
+
+# @ custom-content-type-mgr
+#: controllers/list_custom_fields.php:24
+msgid ""
+"There are no custom fields defined. Click the button below to add a custom "
+"field."
+msgstr ""
+"Nema definisanih prilagođenih polja. Kliknite na donje dugme da dodate "
+"prilagođeno polje."
+
+# @ custom-content-type-mgr
+#: controllers/list_custom_fields.php:59
+#: controllers/list_pt_associations.php:109
+#: controllers/list_pt_associations.php:141
+msgid "Edit this custom field"
+msgstr "Urediti ovo prilagođeno polje"
+
+# @ custom-content-type-mgr
+#: controllers/list_custom_fields.php:66
+msgid "Duplicate this custom field"
+msgstr "Duplirati ovo prilagođeno polje"
+
+# @ custom-content-type-mgr
+#: controllers/list_custom_fields.php:67 controllers/list_post_types.php:47
+msgid "Duplicate"
+msgstr "Duplirati"
+
+# @ custom-content-type-mgr
+#: controllers/list_custom_fields.php:73
+msgid "Delete this custom field"
+msgstr "Obrisati ovo prilagođeno polje"
+
+# @ custom-content-type-mgr
+#: controllers/list_field_associations.php:15
+#, php-format
+msgid "Content Types using Custom Field %s"
+msgstr "Tipovi sadržaja koji koriste prilagođeno polje %s"
+
+# @ custom-content-type-mgr
+#: controllers/list_field_associations.php:24
+#, php-format
+msgid "The following content types are using the %s custom field"
+msgstr "Sledeći tipovi sadržaja koriste  %s prilagođeno polje"
+
+# @ custom-content-type-mgr
+#: controllers/list_field_associations.php:104
+#, php-format
+msgid "The associations for the %s custom field have been updated"
+msgstr "Pridruživanja (asocijacije) za %s  prilagođeno polje su ažurirana"
+
+# @ custom-content-type-mgr
+#: controllers/list_field_associations.php:121
+#: controllers/list_post_types.php:72 views/preview_def.php:25
+msgid "Built-in post type."
+msgstr "Ugrađeni tip posta."
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:14
+msgid "List Content Types"
+msgstr "Prikazati listu tipova sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:15
+msgid "Create Content Type"
+msgstr "Kreirati tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:39
+msgid "Edit this content type"
+msgstr "Urediti ovaj tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:46
+msgid "Duplicate this content type"
+msgstr "Duplirati ovaj tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:58
+msgid "View Sample Templates for this content type"
+msgstr "Pregledati primere šablona za ovaj tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:59
+msgid "View Sample Templates"
+msgstr "Pregledati primere šablona"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:69 controllers/list_post_types.php:91
+#: controllers/list_post_types.php:165
+msgid "Stop standardizing custom fields this content type"
+msgstr "Prestati sa standardizovanjem prilagođenih polja ovog tipa sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:70 controllers/list_post_types.php:92
+#: controllers/list_post_types.php:166
+msgid "Release Custom Fields"
+msgstr "Osloboditi prilagođena polja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:81 controllers/list_post_types.php:155
+msgid "Standardize Custom Fields for this content type"
+msgstr "Standardizovati prilagođena polja za ovaj tip sadržaja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:82 controllers/list_post_types.php:156
+msgid "Standardize Custom Fields"
+msgstr "Standardizovati prilagođena polja"
+
+# @ custom-content-type-mgr
+#: controllers/list_post_types.php:146
+msgid ""
+"Foreign post-type.  This post type has been registered by another plugin."
+msgstr ""
+"Strani tip posta. Ovaj tip posta je registrovan od strane drugog dodatka."
+
+# @ custom-content-type-mgr
+#: controllers/list_pt_associations.php:17
+#, php-format
+msgid "Custom Fields for %s"
+msgstr "Prilagođena polja za  %s"
+
+# @ custom-content-type-mgr
+#: controllers/list_pt_associations.php:47
+#, php-format
+msgid "Custom fields for %s have been updated."
+msgstr "Prilagođena polja za %s su ažurirana."
+
+# @ custom-content-type-mgr
+#: controllers/list_pt_associations.php:69
+msgid "There are no custom fields defined yet."
+msgstr "Još uvek nema definisanih prilagođenih polja."
+
+# @ custom-content-type-mgr
+#: controllers/list_pt_associations.php:71
+msgid "Define custom fields"
+msgstr "Definisati prilagođena polja"
+
+# @ custom-content-type-mgr
+#: controllers/list_pt_associations.php:76
+#, php-format
+msgid ""
+"The %s post type does not have any custom fields yet. Check the fields below "
+"to add custom fields."
+msgstr ""
+"Tip  %s posta još uvek nema ni jedno prilagođeno polje. Čekirajte polja "
+"ispod da dodate prilagođena polja."
+
+# @ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:13
+msgid "Merge Custom Field"
+msgstr "Spojiti prilagođeno polje"
+
+# @ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:20
+msgid "Merge"
+msgstr "Spojiti"
+
+# @ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:30
+msgid "You must select a target to merge the field into."
+msgstr "Morate odabrati ciljno polje sa kojim će se polje spojiti."
+
+# @ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:73
+#, php-format
+msgid "The %s field has been merged into the %s field."
+msgstr " %s  Polje je spojeno sa  %s poljem."
+
+# @ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:88
+msgid ""
+"Merging causes a field to be renamed in the database and the old definition "
+"to be deleted. For example, if you merge \"cats\" into \"dogs\", all "
+"instances of \"cats\" in the database will be renamed to \"dogs\" and the "
+"field definition for \"cats\" will be removed."
+msgstr ""
+"Spajanje čini da polje bude preimenovano u bazi podataka i da stara "
+"definicija bude obrisana. Na primer, ako spojite \"cats\" (mačke) sa \"dogs"
+"\" (psi), sve \"cats\" instance u bazi podataka će biti preimenovane u \"dogs"
+"\", a definicija polja za \"cats\" će biti uklonjena."
+
+# @ default
+#: controllers/merge_custom_fields.php:90
+msgid ""
+"Be careful about merging a field into a field of a different type! You may "
+"encounter unpredictable results!"
+msgstr ""
+"Budite oprezni oko spajanja polja sa poljem različitog tipa! Možete dobiti "
+"nepredvidive rezultate!"
+
+# @ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:92
+#, php-format
+msgid ""
+"Choose a custom field below that will absorb the values for the %s field."
+msgstr ""
+"Odaberite ispod prilagođeno polje koje će usvojiti vrednosti za  %s  polje."
+
+# @ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:97
+msgid "Choose target"
+msgstr "Odaberite cilj"
+
+# @ custom-content-type-mgr
+#: controllers/preview_def.php:12
+#, php-format
+msgid "Bad filename: %s. No special characters or spaces allowed."
+msgstr ""
+"Loše ime fajla:%s. Nije dozvoljeno korišćenje specijalnih znakova ili "
+"razmaka."
+
+# @ custom-content-type-mgr
+#: controllers/preview_def.php:28
+#, php-format
+msgid "%s contained an incompatible data structure."
+msgstr "%s je sadržalo nekompatibilnu strukturu podataka."
+
+# @ custom-content-type-mgr
+#: controllers/purge.php:10 views/tools.php:23
+msgid "Purge Posts"
+msgstr "Pročistiti postove"
+
+# @ custom-content-type-mgr
+#: controllers/purge.php:57 controllers/purge.php:109
+msgid ""
+"Your database is clean: there are no inactive post-types that need to be "
+"purged."
+msgstr ""
+"Vaša baza podataka je čista: nema neaktivnih tipova postova, koji treba da "
+"se očiste."
+
+# @ custom-content-type-mgr
+#: controllers/purge.php:95
+#, php-format
+msgid "The database has been purged from the following post-types: %s"
+msgstr "Baza podataka je očićena od sledećih tipova postova: %s"
+
+# @ custom-content-type-mgr
+#: controllers/purge.php:112
+msgid ""
+"The following post-types are inactive and can be purged from your database:"
+msgstr ""
+"Sledeći tipovi postova su neaktivni i mogu se očistiti iz vaše baze podataka:"
+
+# @ custom-content-type-mgr
+#: controllers/purge.php:119
+msgid "Deleting these from your database cannot be undone!"
+msgstr ""
+"Nakon brisanja ovoga iz vaše baze podataka ne može se vratiti na prethodno "
+"stanje!"
+
+# @ custom-content-type-mgr
+#: controllers/reset_custom_fields.php:18
+msgid "Reset custom field definitions"
+msgstr "Resetovati definicije prilagođenih polja"
+
+# @ custom-content-type-mgr
+#: controllers/reset_custom_fields.php:30
+#, php-format
+msgid "All custom field definitions for the %s post type have been deleted"
+msgstr "Sve definicije prilagođenih polja za tip  %s   posta su obrisane"
+
+# @ custom-content-type-mgr
+#: controllers/reset_custom_fields.php:40
+#, php-format
+msgid ""
+"You are about to delete all custom field definitions for the %s post type. "
+"This will not delete any data from the wp_postmeta table, but it will make "
+"any custom fields invisible to WordPress users on the front and back end."
+msgstr ""
+"Spremate se da obrišete sve definicije prilagođenih polja za %s tip posta. "
+"Ovo neće obrisati nikakve podatke iz tabele wp_postmeta, ali će sva "
+"prilagođena polja učiniti nevidljivim za WordPress korisnike sa strane "
+"posetilaca i sa administratorske strane."
+
+# @ custom-content-type-mgr
+#: controllers/settings.php:45
+msgid "Settings have been updated."
+msgstr "Podešenja su ažurirana."
+
+# @ custom-content-type-mgr
+#: controllers/settings.php:99
+msgid "Edit Settings"
+msgstr "Urediti podešenja"
+
+# @ custom-content-type-mgr
+#: controllers/settings_cf.php:10 controllers/settings_cf.php:23
+#, php-format
+msgid "Settings for Custom Field %s"
+msgstr "Podešenja za prilagođeno polje %s"
+
+# @ custom-content-type-mgr
+#: controllers/template_single.php:22
+#, php-format
+msgid "Sample Themes for %s"
+msgstr "Primeri tema za %s"
+
+# @ custom-content-type-mgr
+#: controllers/template_single.php:25
+msgid "Create Custom Field for this Post Type"
+msgstr "Kreirati prilagođeno polje za ovaj tip posta"
+
+# @ custom-content-type-mgr
+#: controllers/template_single.php:159
+msgid ""
+"You have not associated any custom fields with this post-type. Be sure to "
+"add any desired custom fields to this post-type by clicking on the \"Manage "
+"Custom Fields\" link under the Custom Content Type menu and checking the "
+"fields that you want."
+msgstr ""
+"Niste pridružili ni jedno prilagođeno polje ovom tipu posta. Proverite da li "
+"ste dodali sva željena prilagođena polja ovom tipu posta, kliknuvši na link "
+"\"Upravljanje prilagođenim poljima\" u meniju Prilagođeni tip sadržaja, i "
+"čekirajući polja koja želite."
+
+# @ custom-content-type-mgr
+#: controllers/themes.php:8 views/templates/default.php:52
+msgid "Themes"
+msgstr "Teme"
+
+# @ custom-content-type-mgr
+#: fields/checkbox.php:38
+msgid "Checkbox"
+msgstr "Polje za čekiranje"
+
+# @ custom-content-type-mgr
+#: fields/checkbox.php:51
+msgid ""
+"Checkbox fields implement the standard <input=\"checkbox\"> element.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"alt\" can be specified in the definition."
+msgstr ""
+"Polja za čekiranje implementiraju standardne element.\n"
+"\t\t\t\"Extra\" parametre, npr. \"alt\" se može navesti u definiciji."
+
+# @ custom-content-type-mgr
+#: fields/checkbox.php:151
+msgid "Value when checked"
+msgstr "Vrednost kada je čekirano"
+
+# @ custom-content-type-mgr
+#: fields/checkbox.php:160
+msgid "Value when Unchecked"
+msgstr "Vrednost kada nije čekirano"
+
+# @ custom-content-type-mgr
+#: fields/checkbox.php:168
+msgid "Checked by default?"
+msgstr "Čekirano po definiciji?"
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:47 fields/image.php:55 fields/media.php:54
+#: fields/relation.php:56 includes/CCTM_FormElement.php:301
+msgid "Standard Fields"
+msgstr "Standardna polja"
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:69 fields/image.php:77 fields/image.php:311
+#: fields/media.php:76 fields/media.php:315 fields/relation.php:78
+#: fields/relation.php:311 includes/CCTM_FormElement.php:323
+msgid "Default Value"
+msgstr "Podrazumevana vrednost"
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:78 fields/image.php:86 fields/media.php:85
+#: fields/relation.php:87 includes/CCTM_FormElement.php:332
+msgid "Extra"
+msgstr "Dodatno"
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:97 fields/image.php:105 fields/media.php:104
+#: fields/relation.php:106 includes/CCTM_FormElement.php:351
+msgid "Is Repeatable?"
+msgstr "Je ponovljivo?"
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:126
+msgid "Color Picker"
+msgstr "Birač boja"
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:137
+msgid ""
+"Color Picker fields implement a <input type=\"color\"> element with a "
+"special Javascript color selection popup."
+msgstr ""
+"Polja za biranje boja implementiraju<input type=\"color\"> elemenat sa "
+"posebnim Javascript iskačućim prozorom za odabir boje."
+
+# @ custom-content-type-mgr
+#: fields/colorselector.php:210 fields/date.php:185 fields/text.php:127
+#: fields/textarea.php:125 fields/wysiwyg.php:92
+msgid "Add"
+msgstr "Dodati"
+
+# @ custom-content-type-mgr
+#: fields/date.php:59
+msgid "Date and Time"
+msgstr "Datum i vreme"
+
+# @ custom-content-type-mgr
+#: fields/date.php:72
+msgid "Use these fields to store dates and times."
+msgstr "Upotrebite ova polja za čuvanje datuma i vremena."
+
+# @ custom-content-type-mgr
+#: fields/date.php:289
+msgid ""
+"Use PHP eval to calculate the default value? (Omit the php tags, e.g. "
+"<code>date('Y-m-d')</code>)."
+msgstr ""
+"Upotrebiti PHP eval za izračunavanje podrazumevane vrednosti? (Izostaviti "
+"php tagove, npr.<code>date('Y-m-d')</code>)."
+
+# @ custom-content-type-mgr
+#: fields/date.php:299 includes/GetPostsForm.php:387
+msgid "Date Format"
+msgstr "Format datuma"
+
+# @ custom-content-type-mgr
+#: fields/date.php:302 includes/CCTM_PostTypeDef.php:158
+msgid "Default"
+msgstr "Podrazumevano"
+
+# @ custom-content-type-mgr
+#: fields/date.php:304
+msgid "Short"
+msgstr "Kratko"
+
+# @ custom-content-type-mgr
+#: fields/date.php:305
+msgid "Medium"
+msgstr "Srednje"
+
+# @ custom-content-type-mgr
+#: fields/date.php:306 fields/date.php:311 fields/date.php:312
+msgid "Full"
+msgstr "Puno"
+
+# @ custom-content-type-mgr
+#: fields/date.php:307
+msgid "With text - 'day' d 'of' MM 'in the year' yy"
+msgstr "Sa tekstom 'dan' d 'u mesecu' MM 'godine' yy"
+
+# @ custom-content-type-mgr
+#: fields/date.php:309
+msgid "Date + Time"
+msgstr "Datum + vreme"
+
+# @ custom-content-type-mgr
+#: fields/date.php:310 fields/date.php:311 fields/date.php:315
+#: fields/date.php:316 fields/date.php:317
+msgid "24 hour"
+msgstr "24 časa"
+
+# @ custom-content-type-mgr
+#: fields/date.php:314
+msgid "Time"
+msgstr "Vreme"
+
+# @ custom-content-type-mgr
+#: fields/date.php:315 fields/date.php:318
+msgid "10 minute intervals"
+msgstr "10-minutni intervali"
+
+# @ custom-content-type-mgr
+#: fields/date.php:316 fields/date.php:319
+msgid "15 minute intervals"
+msgstr "15-minutni intervali"
+
+# @ custom-content-type-mgr
+#: fields/date.php:317 fields/date.php:320
+msgid "30 minute intervals"
+msgstr "30-minutni intervali"
+
+# @ custom-content-type-mgr
+#: fields/date.php:323
+msgid ""
+"If you need to sort your dates, it is recommended to use the MySQL date "
+"formats. Change how the date displays using Output Filters in your template "
+"files.\n"
+"\t\t\t\t\t\tCustom formatting options can be used by customizing the "
+"Javascript constructors in the .tpl files."
+msgstr ""
+"Ako treba da sortirate vaše datume, preporučljivo je da koristite MySQL "
+"format datuma. Promenite način prikazivanja datuma koristeći izlazne filtere "
+"u vašim šablon fajlovima. \n"
+"\t\t\t\t\t\t opcije prilagođenog formatiranja se mogu upotrebiti, "
+"prilagođavanjem Javascript konstruktora u .tpl fajlovima."
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:45 fields/dropdown.php:315
+msgid "Dropdown"
+msgstr "Padajuća polja"
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:58
+msgid ""
+"Dropdown fields implement a <select> element which lets you select a single "
+"item.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"alt\" can be specified in the definition."
+msgstr ""
+"Padajuća polja implementiraju<select> elemenat koji vam dozvoljava da "
+"odaberete pojedinačne item.\n"
+"\t\t\t\"Extra\" parametre, npr. \"alt\" se može navesti u definiciji."
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:134 fields/multiselect.php:151
+msgid "Custom Content Error"
+msgstr "Greška prilagođenog sadržaja"
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:135 fields/multiselect.php:152
+msgid "No options supplied for the following custom field: "
+msgstr "Nije data ni jedna opcija za sledeće prilagođeno polje:"
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:232 fields/multiselect.php:228
+msgid "Distinct options/values?"
+msgstr "Različite opcije/vrednosti?"
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:249 fields/multiselect.php:245
+msgid "Stored Values"
+msgstr "Sačuvane vrednosti"
+
+# @ custom-content-type-mgr
+# @ default
+#: fields/dropdown.php:251 fields/dropdown.php:299 fields/multiselect.php:247
+#: fields/multiselect.php:295
+msgid "Set as Default"
+msgstr "Podesiti kao podrazumevano"
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:310
+msgid "How should the field display?"
+msgstr "Kako ovo polje treba da se prikazuje?"
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:319
+msgid "Radio Button"
+msgstr "Radio dugme"
+
+# @ custom-content-type-mgr
+#: fields/dropdown.php:350 fields/multiselect.php:348
+msgid "At least one option is required."
+msgstr "Potrebna je najmanje jedna opcija."
+
+# @ custom-content-type-mgr
+#: fields/image.php:135
+msgid "Image"
+msgstr "Slika"
+
+# @ custom-content-type-mgr
+#: fields/image.php:148
+msgid ""
+"Image fields are used to store references to any image that has been "
+"uploaded via the WordPress media uploader."
+msgstr ""
+"Slikovna polja se koriste za čuvanje referenci ka svim slikama koje su "
+"otpremljene preko WordPress medijskog otpremača."
+
+# @ custom-content-type-mgr
+#: fields/image.php:214 fields/image.php:255
+#, php-format
+msgid "Image %s not found."
+msgstr "Slika  %s nije pronađena."
+
+# @ custom-content-type-mgr
+# @ default
+#: fields/image.php:270 fields/image.php:310 fields/media.php:314
+msgid "Choose Image"
+msgstr "Odaberite sliku"
+
+# @ custom-content-type-mgr
+#: fields/image.php:332 fields/media.php:336 fields/relation.php:332
+msgid "Button Label"
+msgstr "Natpis na dugmetu"
+
+# @ custom-content-type-mgr
+#: fields/image.php:346 fields/media.php:350 fields/relation.php:346
+msgid "Search Parameters"
+msgstr "Parametri pretrage"
+
+# @ custom-content-type-mgr
+#: fields/image.php:348 fields/media.php:352 fields/relation.php:348
+msgid ""
+"Define which posts are available for selection by narrowing your search "
+"parameters."
+msgstr ""
+"Definišite koji postovi su dostupni za odabir sužavanjem vaših parametara "
+"pretrage."
+
+# @ custom-content-type-mgr
+#: fields/image.php:350 fields/media.php:354 fields/relation.php:350
+msgid "Set Search Parameters"
+msgstr "Podesiti parametre pretrage"
+
+# @ custom-content-type-mgr
+#: fields/media.php:134
+msgid "Media"
+msgstr "Mediji"
+
+# @ custom-content-type-mgr
+#: fields/media.php:147
+msgid ""
+"Media fields are used to store references to any type of media file that has "
+"been uploaded via the WordPress media uploader, e.g. images, videos, mp3s."
+msgstr ""
+"Medijska polja se koriste za čuvanje referenci ka svim tipovima medijskih "
+"fajlova koji su otpremljeni preko WordPress medijskog otpremača, npr. slike, "
+"video fajlovi, mp3 fajlovi."
+
+# @ custom-content-type-mgr
+#: fields/media.php:217 fields/media.php:258
+#, php-format
+msgid "Attachment %s not found."
+msgstr "Prilog  %s  nije pronađen."
+
+# @ custom-content-type-mgr
+#: fields/multiselect.php:44 fields/multiselect.php:318
+msgid "Multi-select"
+msgstr "Višestruki odabir"
+
+# @ custom-content-type-mgr
+#: fields/multiselect.php:55
+msgid ""
+"Multi-select fields implement a <select> element which lets you select "
+"mutliple items.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"size\" can be specified in the definition."
+msgstr ""
+"Polja za višestruki odabir implementiraju <select> elemenat, koji vam "
+"omogućava da odaberete više items.\n"
+"\t\t\t\"Extra\" parametara, npr. \"size\" se može navesti u definiciji."
+
+# @ custom-content-type-mgr
+#: fields/multiselect.php:314 views/post_type.php:472
+msgid "Display"
+msgstr "Prikaz"
+
+# @ custom-content-type-mgr
+#: fields/multiselect.php:317
+msgid "Checkboxes"
+msgstr "Polja za čekiranje"
+
+# @ custom-content-type-mgr
+#: fields/multiselect.php:320
+msgid ""
+"Multiple options can be selected either as a series of checkboxes or as a "
+"multi-select field."
+msgstr ""
+"Višestruke opcije se mogu odabrati bilo preko niza polja za čekiranje, bilo "
+"preko polja za višestruki odabir."
+
+# @ custom-content-type-mgr
+#: fields/relation.php:136
+msgid "Relation"
+msgstr "Odnos"
+
+# @ custom-content-type-mgr
+#: fields/relation.php:149
+msgid ""
+"Relation fields are used to store a reference to another post, including "
+"media posts. For example you can use a relation to link to a parent post or "
+"to an image or attachment."
+msgstr ""
+"Odnosna polja se koriste za čuvanje reference ka drugom postu, uključujući "
+"medijske postove. Na primer, možete upotrebiti odnos (relaciju) za "
+"povezivanje sa roditeljskim postom, slikom, ili prilogom."
+
+# @ custom-content-type-mgr
+# @ default
+#: fields/relation.php:184 fields/relation.php:270 fields/relation.php:310
+msgid "Choose Relation"
+msgstr "Odaberite odnos"
+
+# @ custom-content-type-mgr
+#: fields/relation.php:218 fields/relation.php:255
+#, php-format
+msgid "Post %s not found."
+msgstr "Post %snije pronađen."
+
+# @ custom-content-type-mgr
+#: fields/text.php:36
+msgid "Text"
+msgstr "Tekst"
+
+# @ custom-content-type-mgr
+#: fields/text.php:49
+msgid ""
+"Text fields implement the standard <input=\"text\"> element.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"size\" can be specified in the definition."
+msgstr ""
+"Tekstualna polja implementiraju standardne element.\n"
+"\t\t\t\"Extra\" parametre, npr. \"size\" se može navesti u definiciji."
+
+# @ custom-content-type-mgr
+#: fields/textarea.php:34
+msgid "Textarea"
+msgstr "Tekstualna oblast (textarea)"
+
+# @ custom-content-type-mgr
+#: fields/textarea.php:47
+msgid ""
+"Textarea fields implement the standard <textarea> element.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"cols\" can be specified in the definition."
+msgstr ""
+"Polja tekstualnih oblasti implementiraju standardni <textarea> elemenat. \n"
+"\t\t\t\"Extra\" parametri, npr. \"cols\" mogu se navesti u definiciji."
+
+# @ custom-content-type-mgr
+#: fields/user.php:45 filters/userinfo.php:77
+msgid "User"
+msgstr "Korisnik"
+
+# @ custom-content-type-mgr
+#: fields/user.php:58
+msgid "User fields let you select a local user from the site."
+msgstr ""
+"Polja sa imenom korisnika vam omogućavaju da izaberete lokalnog korisnika sa "
+"sajta."
+
+# @ custom-content-type-mgr
+#: fields/wysiwyg.php:33
+msgid "WYSIWYG"
+msgstr "WYSIWYG"
+
+# @ custom-content-type-mgr
+#: fields/wysiwyg.php:46
+msgid ""
+"What-you-see-is-what-you-get (WYSIWYG) fields implement a <textarea> element "
+"with formatting controls.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"cols\" can be specified in the "
+"definition, however a minimum size is required to make room for the "
+"formatting controls."
+msgstr ""
+"WYSIWYG (What-you-see-is-what-you-get) – šta-vidite-to-dobijate polja "
+"implementiraju <textarea> elemenat sa kontrolama za formatiranje. \n"
+"\t\t\t\"Extra\" parametri, npr. \"cols\" se mogu navesti u definiciji, "
+"međutim, potrebna je minimalna veličina da bi se napravio prostor za "
+"kontrole za formatiranje."
+
+# @ custom-content-type-mgr
+#: fields/wysiwyg.php:129
+msgid ""
+"Due to WordPress limitations, WYSIWYG fields can contain ONLY lowercase "
+"letters."
+msgstr ""
+"Zbog WordPress ograničenja WYSIWYG polja mogu da sadrže SAMO mala slova."
+
+# @ custom-content-type-mgr
+#: filters/default.php:31
+msgid ""
+"The <em>default</em> filter kicks in only if the input is empty: whatever "
+"you specify as an option will be returned only if the input is empty.  This "
+"is one way to establish default values for your fields."
+msgstr ""
+"Osnovni<em> filter </em>se aktivira samo ako je unos prazan: šta god naveli "
+"kao opciju, biće vraćeno samo ako je unos prazan. Ovo je jedan način da "
+"uspostavite podrazumevane vrednosti za vaša polja."
+
+# @ custom-content-type-mgr
+#: filters/default.php:49
+msgid "Set Default Value"
+msgstr "Podesiti podrazumevanu vrednost"
+
+# @ custom-content-type-mgr
+#: filters/default.php:56
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"default_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"default_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/do_shortcode.php:34
+msgid ""
+"The <em>do_shortcode</em> filter parses any shortcodes in the input. By "
+"default, WordPress will only parse shortcodes in the main content block, not "
+"in custom fields, so it is important to use this filter on WYSIWYG fields if "
+"you use any shortcodes."
+msgstr ""
+"<em>do_shortcode</em> filter parsira sve kratke kodove u ulaznim podacima. "
+"Po definiciji, WordPress će parsirati samo kratke kodove u glavnom bloku "
+"sadržaja, a ne i u prilagođenim poljima, tako da je važno koristiti ovaj "
+"filter nad WYSIWIG poljima ako koristite bilo kakve kratke kodove."
+
+# @ custom-content-type-mgr
+#: filters/do_shortcode.php:52
+msgid "Do Shortcode"
+msgstr "Do Shortcode"
+
+# @ custom-content-type-mgr
+#: filters/do_shortcode.php:59
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"do_shortcode_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"do_shortcode_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/email.php:32
+msgid ""
+"The <em>email</em> filter obscures an email address so it is still readable "
+"by a human, but more difficult for it to be harvested by a spam-bot."
+msgstr ""
+"<em>E-mail</em> filter maskira e-mail adresu tako da je i dalje čitljiva za "
+"ljude, ali se teže prikuplja od strane spam-bota."
+
+# @ custom-content-type-mgr
+#: filters/email.php:50 validators/emailaddress.php:22
+msgid "Email"
+msgstr "E-mail"
+
+# @ custom-content-type-mgr
+#: filters/email.php:57
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"email_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"email_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/excerpt.php:54
+msgid ""
+"The <em>excerpt</em> takes a long string and returns a shorter excerpt of "
+"it, either chopping the input on the separator string or limiting it to a "
+"given number of words."
+msgstr ""
+"<em>Izvod</em> uzima dugačak string i vraća njegov kraći izvod, bilo "
+"presecanjem unosa na razdvajačkom stringu, bilo ograničavajući ga na dati "
+"broj reči."
+
+# @ custom-content-type-mgr
+#: filters/excerpt.php:79
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"excerpt_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"excerpt_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/formatted_list.php:113
+msgid ""
+"The <em>formatted_list</em> filter converts a JSON array into a formatted "
+"string such as an HTML list. See the info page for formatting options."
+msgstr ""
+"<em>Formatted_list</em> filter konvertuje JSON niz u formatirani string kao "
+"što je HTML lista. Pogledajte info stranicu za opcije formatiranja."
+
+# @ custom-content-type-mgr
+#: filters/formatted_list.php:134
+msgid "Formatted List"
+msgstr "Formatirana lista"
+
+# @ custom-content-type-mgr
+#: filters/formatted_list.php:144
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"formatted_list_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"formatted_list_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/gallery.php:75
+msgid ""
+"The <em>gallery</em> filter converts a single or an array of image IDs into "
+"HTML img tags."
+msgstr ""
+"<em>Gallery</em> filter konvertuje pojedinačni ID, ili niz ID –ova slika, u "
+"HTML img tagove."
+
+# @ custom-content-type-mgr
+#: filters/gallery.php:93
+msgid "Gallery"
+msgstr "Galerija"
+
+# @ custom-content-type-mgr
+#: filters/gallery.php:100
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"gallery_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"gallery_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/get_post.php:32
+msgid ""
+"The <em>get_post</em> retrieves a post by its ID.  Unlike WordPress's "
+"get_post() function, this filter appends all custom field data."
+msgstr ""
+"<em>Get_post</em> vraća post po njegovom ID –u. Za razliku od WordPress –ove "
+"get_post() funkcije, ovaj filter pridodaje sve podatke iz prilagođenih polja."
+
+# @ custom-content-type-mgr
+#: filters/get_post.php:55
+msgid "Get Post"
+msgstr "Get post"
+
+# @ custom-content-type-mgr
+#: filters/get_post.php:62
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"get_post_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"get_post_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/help.php:53
+msgid "Output Filter Help"
+msgstr "Pomoć u vezi sa izlaznim filterima"
+
+# @ custom-content-type-mgr
+#: filters/help.php:54
+msgid ""
+"This help page was generated by <a href=\"http://code.google.com/p/wordpress-"
+"custom-content-type-manager/wiki/OutputFilters\">Custom Content Type "
+"Manager</a> to demonstrate the use of the available Output Filters. For "
+"samples of template files, see the CCTM menus in the WordPress manager."
+msgstr ""
+"Ova stranica za pomoć je generisana pomoću<a href=\"http://code.google.com/p/"
+"wordpress-custom-content-type-manager/wiki/OutputFilters\"> Custom Content "
+"Type Manager -a</a>, da se demonstrira upotreba raspoloživih izlaznih "
+"filtera. Za primere šablon fajlova pogledajte CCTM menije u WordPress "
+"menadžeru."
+
+# @ custom-content-type-mgr
+#: filters/help.php:73
+msgid "More info"
+msgstr "Više informacija"
+
+# @ custom-content-type-mgr
+#: filters/help.php:74
+msgid "Example"
+msgstr "Primer"
+
+# @ custom-content-type-mgr
+#: filters/help.php:79
+#, php-format
+msgid "File not found for %s output filter: %s"
+msgstr "Fajl nije pronađen za %s  izlazni filter: %s"
+
+# @ custom-content-type-mgr
+#: filters/help.php:94
+msgid ""
+"The <em>help</em> filter will display all available Output Filters as an aid "
+"to the developer or designer."
+msgstr ""
+" <em>Pomoćni </em> filter će prikazati sve raspoložive izlazne filtere kao "
+"pomoć programeru ili dizajneru."
+
+# @ custom-content-type-mgr
+#: filters/help.php:119
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"help_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"help_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/raw.php:33
+msgid ""
+"The <em>raw</em> filter simply outputs the input: it does not change the "
+"value. You can use it to override the default Output Filter for any custom "
+"field."
+msgstr ""
+"<em>Sirovi (raw)</em> filter na izlazu daje ulazne podatke: on ne menja "
+"vrednost. Možete ga koristiti da preskočite podrazumevani izlazni filter za "
+"bilo koje prilagođeno polje."
+
+# @ custom-content-type-mgr
+#: filters/raw.php:51 includes/CCTM_FormElement.php:417
+msgid "None"
+msgstr "Ni jedno"
+
+# @ custom-content-type-mgr
+#: filters/raw.php:58
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"raw_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"raw_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/to_array.php:60
+msgid ""
+"The <em>to_array</em> filter converts a JSON encoded string to a PHP array. "
+"It should be used on any multi-select field or any other field that stores "
+"multiple values."
+msgstr ""
+" <em>to_array</em> filter konvertuje JSON kodirani string u PHP niz. Treba "
+"ga koristiti za polje sa višestrukim izborom, ili za bilo koje drugo polje "
+"koje čuva višestruke vrednosti."
+
+# @ custom-content-type-mgr
+#: filters/to_array.php:83
+msgid "Array"
+msgstr "Niz"
+
+# @ custom-content-type-mgr
+#: filters/to_array.php:90
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_array_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_array_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/to_image_array.php:27
+msgid ""
+"The <em>to_image_array</em> breaks down a referenced image into an array of "
+"its component parts: src, width, height."
+msgstr ""
+"<em>to_image_array</em> raščlanjuje referenciranu sliku na niz njenih "
+"sastavnih delova: src, width (širina), height (visina)."
+
+# @ custom-content-type-mgr
+#: filters/to_image_array.php:49
+msgid "Array of image src, width, height"
+msgstr "Niz slike src, width (širina), height (visina)"
+
+# @ custom-content-type-mgr
+#: filters/to_image_array.php:56
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_array_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_array_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/to_image_src.php:33
+msgid ""
+"The <em>to_image_src</em> filter converts a JSON encoded string to a PHP "
+"array. It should be used on any multi-select field or any other field that "
+"stores multiple values. You can optionally supply a default image src that "
+"will be used if there is no valid input."
+msgstr ""
+"<em>to_image_src</em> filter konvertuje JSON enkodirani string u PHP niz. "
+"Treba ga koristiti za polje sa višestrukim izborom, ili za bilo koje drugo "
+"polje koje čuva višestruke vrednosti. Opciono možete dati podrazumevani src "
+"slike koji će se koristiti kada nema važećeg unosa."
+
+# @ custom-content-type-mgr
+#: filters/to_image_src.php:51
+msgid "Image src"
+msgstr "Src slike"
+
+# @ custom-content-type-mgr
+#: filters/to_image_src.php:58
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_src_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_src_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/to_image_tag.php:31
+msgid ""
+"The <em>to_image_tag</em> returns a full image tag for your image field. "
+"This is the default output filter for image fields starting with version "
+"0.8.9. You can supply an option of \"thumbnail\", \"medium\", \"large\", "
+"\"full\" or a 2-item array representing width and height in pixels, e.g. "
+"array(32,32)"
+msgstr ""
+" <em>to_image_tag</em> vraća ceo slikovni tag za vaše slikovno polje. Ovo je "
+"podrazumevani izlazni filter za slikovna polja, počev od verzije 0.8.9. "
+"Možete dati neku od opcija \"thumbnail\", \"medium\", \"large\", \"full\" "
+"ili dvočlani niz koji predstavlja širinu i visinu u pikselima, npr. niz"
+"(32,32)"
+
+# @ custom-content-type-mgr
+#: filters/to_image_tag.php:49
+msgid "Full &lt;img&gt; tag"
+msgstr "Pun &lt;img&gt;  tag"
+
+# @ custom-content-type-mgr
+#: filters/to_image_tag.php:56
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_tag_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_image_tag_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/to_link.php:41
+msgid ""
+"The <em>to_link</em> filter takes a post ID and converts it into a full "
+"anchor tag. Be default, the post title will be used as the clickable text, "
+"but you can supply text to override this text."
+msgstr ""
+"<em>to_link</em> filter uzima ID posta i konvertuje ga u pun sidrini tag. Po "
+"definiciji će se naslov posta koristiti kao tekst na koji je moguće "
+"kliknuti, ali možete zadati tekst koji će ga zameniti."
+
+# @ custom-content-type-mgr
+#: filters/to_link.php:59
+msgid "Full link &lt;a&gt; tag"
+msgstr "Pun link &lt;a&gt;   tag"
+
+# @ custom-content-type-mgr
+#: filters/to_link.php:66
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_link_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_link_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/to_link_href.php:34
+msgid ""
+"The <em>to_link_href</em> filter takes a post ID and converts a post ID into "
+"the link href to that post. Optionally, you can supply the href to a page "
+"that will be used if no valid input is detected."
+msgstr ""
+" <em>to_link_href</em> uzima ID posta i konvertuje ID posta u href linka ka "
+"tom postu. Opciono možete dati href ka stranici koja će se koristiti ako se "
+"ne detektuje nikakav važeći unos."
+
+# @ custom-content-type-mgr
+#: filters/to_link_href.php:52
+msgid "Link href only"
+msgstr "Samo link href"
+
+# @ custom-content-type-mgr
+#: filters/to_link_href.php:59
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_link_href_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"to_link_href_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/userinfo.php:59
+msgid ""
+"The <em>userinfo</em> retrieves a user object by its user ID. It accepts an "
+"optional a formatting template to format the user information."
+msgstr ""
+"<em>userinfo</em> vraća objekat korisnik, po njegovom korisničkom ID –u. On "
+"prihvata opcioni šablon formatiranja, za formatiranje korisničkih "
+"informacija."
+
+# @ custom-content-type-mgr
+#: filters/userinfo.php:84
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"userinfo_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"userinfo_OutputFilter"
+
+# @ custom-content-type-mgr
+#: filters/wrapper.php:55
+msgid ""
+"The <em>wrapper</em> filter will wrap non-empty input. This allows you add "
+"extra markup to non-empty values and let empty values pass through. Pass "
+"this filter either a formatting string that uses the &#91;+content+&#93; "
+"placeholder, or supply a 2 element array that specifies text that will "
+"appear before and after the input text."
+msgstr ""
+"<em>wrapper</em> (omotač) filter će omotati unos koji  nije prazan. Ovo vam "
+"omogućava da dodate još jednu markup oznaku ne-praznim vrednostima, a "
+"propušta prazne vrednosti da prođu. Prosledite ovom filteru ili string za "
+"formatiranje, koji koristi &#91;+sadržaj+&#93; rezervisano mesto, ili dajte "
+"dvočlani niz u kome se navodi tekst koji će se pojaviti ispred i iza teksta "
+"unosa."
+
+# @ custom-content-type-mgr
+#: filters/wrapper.php:73
+msgid "Wrapper"
+msgstr "Omotač"
+
+# @ custom-content-type-mgr
+#: filters/wrapper.php:80
+msgid ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"wrapper_OutputFilter"
+msgstr ""
+"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"wrapper_OutputFilter"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:288
+#, php-format
+msgid "Could not create the cache directory at %s."
+msgstr "Nije mogao da se kreira keš direktorijum u %s."
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:311
+#, php-format
+msgid "Could not create cached image: %s."
+msgstr "Nije mogla da se kreira keširana slika: %s."
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:553 updates/0.9.4.php:64
+msgid "This site was created in part using the Custom Content Type Manager"
+msgstr ""
+"Ovaj sajt je delom kreiran uz korišćenje Custom Content Type Manager -a"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:589
+msgid "custom_field shortcode requires the \"name\" parameter."
+msgstr "custom_field kratki kod zahteva \"name\" parametar."
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:660
+#, php-format
+msgid "Incorrect class name in %s Output Filter. Expected class name: %s"
+msgstr "Nepravilno ime klase u  %s  izlaznom filteru. Očekivano ime klase: %s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:673
+#, php-format
+msgid "Output filter not found: %s"
+msgstr "Izlazni filter nije pronađen: %s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:729
+msgid "Please correct the following errors:"
+msgstr "Molim vas, ispravite sledeće greške:"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:821 includes/CCTM.php:885 includes/CCTM.php:934
+#: includes/CCTM_ImportExport.php:38 includes/CCTM_ImportExport.php:109
+#: includes/CCTM_ImportExport.php:182 includes/CCTM_ImportExport.php:228
+msgid "WordPress issued the following error: "
+msgstr "WordPress je naišao na sledeću grešku:"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1281
+msgid "Field type is empty."
+msgstr "Tip polja je prazan."
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1296
+#, php-format
+msgid "Incorrect class name in %s file. Expected class name: %s"
+msgstr "Nepravilno ime klase u  %s  fajlu. Očekivano ime klase:%s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1304
+#, php-format
+msgid ""
+"The class file for %s fields could not be found. Did you move or delete the "
+"file?"
+msgstr ""
+"Fajl sa klasama za %s polja ne može da se pronađe. Da li ste premestili ili "
+"obrisali fajl?"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1405
+#, php-format
+msgid "Could not locate file for %s field."
+msgstr "Fajl za polje nije mogao da se  %s locira."
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1614
+#, php-format
+msgid "Invaid file name! %s  No directory traversing allowed!"
+msgstr "Nevažeće ime fajla!  %s Nije dozvoljeno ukrštanje direktorijuma!"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1618
+#, php-format
+msgid "Invaid file name! %s  Name must end with .php!"
+msgstr "Nevažeće ime fajla! %s   Ime mora da završava sa .php!"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1739
+#, php-format
+msgid "Invaid tpl name! %s  No directory traversing allowed!"
+msgstr "Nevažeće tpl ime!%s Nije dozvoljeno ukrštanje direktorijuma!"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1743
+#, php-format
+msgid "Invaid tpl name! %s  Name must end with .tpl!"
+msgstr "Nevažeće tpl ime! %s Ime mora da završava sa .tpl!"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1783
+#, php-format
+msgid "Validator not found: %s"
+msgstr "Proverivač nije pronađen: %s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1996
+msgid "Dismiss all warnings"
+msgstr "Odbaciti sva upozorenja"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:1997
+msgid "Dismiss Warnings"
+msgstr "Odbaciti upozorenja"
+
+# @ custom-content-type-mgr
+#: includes/CCTM.php:2008
+msgid "The Custom Content Type Manager encountered the following warnings:"
+msgstr "Custom Content Type Manager je naišao na sledeća upozorenja:"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_Ajax.php:59 includes/CCTM_Ajax.php:62
+#, php-format
+msgid "Invalid Ajax controller: %s"
+msgstr "Nevažeći Ajax kontroler: %s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_Ajax.php:71 includes/CCTM_Ajax.php:74
+#, php-format
+msgid "Invalid nonce for %s"
+msgstr "Nevažeći jednokratni uzorak za %s"
+
+# @ default
+#: includes/CCTM_Columns.php:36 includes/CCTM_PostTypeDef.php:22
+msgid "Comments"
+msgstr "Komentari"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:153
+msgid ""
+"How should the button be labeled? (Users will click this button to select "
+"the image, media, or relation)."
+msgstr ""
+"Kako bi dugme trebalo da bude označeno? (korisnici će kliknuti na ovo dugme "
+"da biraju sliku, medijski fajl, ili odnos)."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:154
+msgid ""
+"Add a CSS class to instances of this field. Use this to customize styling in "
+"the WP manager."
+msgstr ""
+"Dodati CSS klasu instancama ovog polja. Upotrebite ovo da prilagodite stil u "
+"WP menadžeru."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:155
+msgid "Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
+msgstr ""
+"Bilo koji dodatni atributi za ovo tekstualno polje, npr. <code>size=\"10\"</"
+"code>"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:156
+msgid ""
+"The default option will appear selected. Make sure it matches a defined "
+"option."
+msgstr ""
+"Podrazumevana opcija će se pojaviti kao izabrana. Proverite da li sa poklapa "
+"sa definisanom opcijom."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:157
+msgid "The default value is presented to users when a new post is created."
+msgstr ""
+"Podrazumevana vrednost se prikazuje korisnicima kada se kreira novi post."
+
+# @ default
+#: includes/CCTM_FormElement.php:158
+msgid ""
+"The description is visible when you view all custom fields or when you use "
+"the <code>get_custom_field_meta()</code> function."
+msgstr ""
+"Opis je vidljiv kada pregledate sva prilagođena polja, ili kada koristite "
+"<code> get_custom_field_meta() </code> funkciju."
+
+# @ default
+#: includes/CCTM_FormElement.php:159
+msgid "The following html tags are allowed:"
+msgstr "Dozvoljeni su sledeći html tagovi:"
+
+# @ default
+#: includes/CCTM_FormElement.php:161
+msgid ""
+"You can check this box if you want to enter a bit of PHP code into the "
+"default value field."
+msgstr ""
+"Možete čekirati ovo polje ako želite da unesete nešto php koda u polje sa "
+"podrazumevanom vrednoću."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:162
+msgid ""
+"The label is displayed when users create or edit posts that use this custom "
+"field."
+msgstr ""
+"Natpis se prikazuje kada korisnici kreiraju ili uređuju postove koji koriste "
+"ovo prilagođeno polje."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:163
+msgid ""
+"The name identifies the meta_key in the wp_postmeta database table. The name "
+"should contain only letters, numbers, and underscores. You will use this "
+"name in your template functions to identify this custom field."
+msgstr ""
+"Ime identifikuje meta_key u wp_postmeta tabeli baze podataka. Ime treba da "
+"sadrži samo slova, brojeve i donje crte. Koristićete ovo ime u vašim šablon "
+"funkcijama da identifikujete prilagođeno polje."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:165
+msgid ""
+"WARNING: if you change the field name, you will have to update any functions "
+"that reference this field by name, e.g. <code>get_custom_field()</code>, "
+"<code>print_custom_field()</code>,  or any search criteria."
+msgstr ""
+"UPOZORENJE: ako promenite ime polja, moraćete da ažurirate sve funkcije koje "
+"referenciraju ovo polje po imenu, <code> npr. get_custom_field() </code>,"
+"<code>print_custom_field()</code>, odnosno sve kriterijume pretrage."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:167
+msgid ""
+"If selected, the user will be able to enter multiple instances of this "
+"field, e.g. multiple images. Storing multiple values infers storing an array "
+"of values, so you will have to use the \"to_array\" output filter, even if "
+"you only use one instance of the field."
+msgstr ""
+"Ako je ova opcija izabrana, korisnik će moći da unese više instanci ovog "
+"polja, npr. više slika. Čuvanje višestrukih vrednosti se izvodi preko "
+"čuvanja niza vrednosti, tako da ćete morati da koristite \"to_array\" "
+"izlazni filter, čak i kada koristite samo jednu instancu datog polja."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:168
+msgid ""
+"If checked, users must add a value to this field before the page can be "
+"published."
+msgstr ""
+"Ako je čekirano, korisnici moraju da dodaju vrednost ovom polju, pre nego "
+"što stranica može da se objavi."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:169
+msgid ""
+"What value should be stored in the database when this checkbox is checked?"
+msgstr ""
+"Koja vrednost treba da se skladišti u bazu podataka kada je ova kućica "
+"čekirana?"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:170
+msgid ""
+"What value should be stored in the database when this checkbox is unchecked?"
+msgstr ""
+"Koja vrednost treba da se skladišti u bazu podataka kada je ova kućica od-"
+"čekirana?"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:171
+msgid "Should this field be checked by default?"
+msgstr "Da li ovo polje po definiciji treba da bude čekirano?"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:172
+msgid "How should values be displayed in your theme files?"
+msgstr "Kako vrednosti treba da se prikazuju u fajlovima vaše teme?"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:173
+msgid ""
+"Check this to make the stored values distinct from the options displayed to "
+"the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
+msgstr ""
+"Čekirajte ovu opciju da razdvojite sačuvane vrednosti od opcija koje se "
+"prikazuju korisniku, npr. Opcija: \"Crveno\", Sačuvana vrednost:\"#ff0000;\""
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:247
+msgid "Output Filter"
+msgstr "Izlazni filter"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:251
+msgid "Default Output Filter"
+msgstr "Podrazumevani izlazni filter"
+
+# @ default
+#: includes/CCTM_FormElement.php:256
+msgid "None (raw)"
+msgstr "Ni jedan (neobrađeno)"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:412
+msgid "Validation Rule"
+msgstr "Validaciono pravilo"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:414
+msgid ""
+"A validation rule can ensure that any data entered into this field meets a "
+"specific criteria."
+msgstr ""
+"Validaciono pravilo može da osigura da svi podaci uneseni u ovo polje "
+"odgovaraju određenom kriterijumu."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:427
+msgid "Validation"
+msgstr "Validacija"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:436
+msgid "Required?"
+msgstr "Potrebno?"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:643
+msgid "There were errors in your custom field definition."
+msgstr "Bilo je grešaka u vašoj definiciji prilagođenog polja."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:790
+#, php-format
+msgid ""
+"%s contains invalid characters. The name may only contain letters, numbers, "
+"and underscores, and it must begin with a letter."
+msgstr ""
+"%s Sadrži nevažeće karaktere. Ime može da sadrži samo slova, brojeve i donje "
+"crte, i mora počinjati slovom."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:797
+msgid "The name is too long. Names must not exceed 255 characters."
+msgstr "Ime je predugačko. Imena ne smeju biti duža od 255 karaktera."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:812 includes/CCTM_FormElement.php:820
+#, php-format
+msgid "The name %s is already in use. Please choose another name."
+msgstr "Ime %s se već koristi. Molim vas, izaberite drugo ime."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:848
+msgid "Improper input to the set_props() function."
+msgstr "Neodgovarajući unos u set_props() funkciju."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:103
+msgid "Please specify at least one definition."
+msgstr "Molim vas, navedite bar jednu definiciju."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:121
+msgid "Directory traversing not allowed."
+msgstr "Ukrštanje direktorijuma nije dozvoljeno."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:127
+#, php-format
+msgid "Could not delete file: %s"
+msgstr "Fajl nije mogao biti obrisan:%s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:132
+#, php-format
+msgid "File does not exist: %s"
+msgstr "Polje ne postoji: %s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:164
+msgid "There was a problem exporting your CCTM definition."
+msgstr "Došlo je do problema pri izvoženju vaše CCTM definicije."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:190
+#, php-format
+msgid ""
+"A file named %s already exists in the definition library.  Please choose "
+"another title."
+msgstr ""
+"Fajl pod imenom %s već postoji u biblioteci definicija. Molim vas, odaberite "
+"drugi naslov."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:204
+#, php-format
+msgid ""
+"An error was encountered while trying to write to the definition library "
+"directory (%s). Please check the file permissions on your server."
+msgstr ""
+"Došlo je do greške pri pokušaju upisa u direktorijum biblioteke definicija "
+"(%s). Molim vas, proverite dozvole na vašem serveru."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:494
+#, php-format
+msgid "The definition file could not be found: %s"
+msgstr "Fajl sa definicijom nije mogao biti pronađen:%s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:500
+#, php-format
+msgid "There was a problem with the JSON decoding of the definition file: %s"
+msgstr "Došlo je do problema pri JSON dekodiranju fajla sa definicijom: %s"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:506
+#, php-format
+msgid ""
+"The data structure in the file was not in the correct format: %s. This could "
+"be because the file is from an older version of the CCTM plugin.  See the <a "
+"href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/"
+"Import\" target=\"_new\">Wiki</a> for more information."
+msgstr ""
+"Struktura podataka u fajlu nije u ispravnom formatu: %s. Ovo je možda zato "
+"što je fajl iz neke starije verzije CCTM dodatka. Pogledajte <a href="
+"\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/Import"
+"\" target=\"_new\"> Wiki</a> za više informacija."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:592
+msgid "Title is required."
+msgstr "Naslov je potreban"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:595
+msgid "Only basic text characters are allowed for the title."
+msgstr "U naslovu su dozvoljeni samo osnovni karakteri."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:598
+msgid "The title cannot exceed 64 characters."
+msgstr "Naslov ne sme biti duži od 64 karaktera."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:603
+msgid "Author is required."
+msgstr "Autor je potreban."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:606
+msgid "Only basic characters are allowed for the author field."
+msgstr "U polju sa imenom autora su dozvoljeni samo osnovni karakteri."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:609
+msgid "The author name cannot exceed 32 characters."
+msgstr "Ima autora ne sme biti duže od 32 karaktera."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:617
+msgid "The URL must be in a standard format, e.g. http://yoursite.com."
+msgstr "URL mora biti u standardnom formatu, npr. http://yoursite.com."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:620
+msgid "The URL cannot exceed 255 characters."
+msgstr "URL ne sme biti duži od 255 karaktera."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:628
+msgid ""
+"The template URL must be in a standard format, e.g. http://themeforest.com."
+msgstr ""
+"URL šablona mora biti u standardnom formatu, npr. http://themeforest.com."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:631
+msgid "The template URL cannot exceed 255 characters."
+msgstr "URL šablona ne sme biti duži od 255 karaktera."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:636
+msgid "Description is required."
+msgstr "Opis je potreban."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:639
+msgid "The description cannot exceed 1024 characters."
+msgstr "Opis ne sme biti duži od 1024 znaka."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:49 includes/CCTM_PostTypeDef.php:88
+msgid "Built-in WordPress column."
+msgstr "Ugrađena WordPress kolona."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:57 includes/CCTM_PostTypeDef.php:124
+msgid "WordPress Taxonomy"
+msgstr "WordPress taksonomija"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:295
+msgid "Menu Name is required."
+msgstr "Ime menija je potrebno."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:341
+#, php-format
+msgid "The name %s is already in use."
+msgstr "Ime  %s se već koristi."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:345
+#, php-format
+msgid "The name %s has been registered by some other plugin."
+msgstr "Ime  %s  je već registrovano od strane drugog dodatka."
+
+# @ default
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:492 includes/CCTM_PostTypeDef.php:495
+#: views/post_type.php:223
+msgid "Add New"
+msgstr "Dodati novo"
+
+# @ default
+#: includes/CCTM_PostTypeDef.php:501
+msgid "New"
+msgstr "Novo"
+
+# @ default
+#: includes/CCTM_PostTypeDef.php:504
+msgid "View"
+msgstr "Pregled"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:510
+#, php-format
+msgid "No %s found"
+msgstr "Nema  %s pronađenih"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:513
+#, php-format
+msgid "No %s found in trash"
+msgstr "Nema  %s  pronađenih u smeću"
+
+# @ default
+#: includes/CCTM_PostTypeDef.php:516
+msgid "Parent Page"
+msgstr "Roditeljska stranica"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:16
+msgid "Post Content"
+msgstr "Sadržaj posta"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:17
+msgid "Show a post's content inside of a widget."
+msgstr "Prikazati sadržaj posta unutar vidžeta."
+
+# @ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:99 views/widgets/post_content_form.php:12
+msgid "Choose Post"
+msgstr "Odabrati post"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:109
+msgid "Override Post Title"
+msgstr "Zameniti naslov posta"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:114 includes/SummarizePosts_Widget.php:73
+#: views/widgets/post_content_form.php:28
+msgid "Formatting String"
+msgstr "String za formatiranje"
+
+# @ custom-content-type-mgr
+#: includes/CCTM_Validator.php:85
+msgid "No configurable options."
+msgstr "Nema opcija koje se mogu konfigurisati."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:180
+#, php-format
+msgid "Retrieve posts with this exact %s."
+msgstr "Vratiti postove sa ovim tačnim  %s."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:200
+msgid "Sorry, no results matched your search criteria."
+msgstr "Žao mi je, nema rezultata koji odgovaraju kriterijumu vaše pretrage."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:204
+msgid "Filter"
+msgstr "Filter"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:205
+msgid "Show All"
+msgstr "Prikazati sve"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:206
+msgid "Show all dates"
+msgstr "Prikazati sve datume"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:207
+msgid "Show all post-types"
+msgstr "Prikazati sve tipove postova"
+
+# @ default
+#: includes/GetPostsForm.php:244
+msgid "Invalid parameter:"
+msgstr "Nevažeći parametar:"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:305
+msgid "Append"
+msgstr "Dodati"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:306
+msgid ""
+"List posts by their ID that you wish to include on every search. Comma-"
+"separate multiple values."
+msgstr ""
+"Navedite postove koje želite da uključite u svaku pretragu, po njihovom ID –"
+"u. Višestruke vrednosti razdvojite zapetom."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:326
+msgid "All Authors"
+msgstr "Svi autori"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:341
+msgid "Select an author whose posts you want to see."
+msgstr "Odaberite autora čije postove želite da vidite."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:361
+msgid "Date Columns"
+msgstr "Datumske kolone"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:362
+msgid ""
+"Which column should be used for date comparisons? Select one, or write in a "
+"custom field."
+msgstr ""
+"Koja kolona treba da se koristi za poređenje datuma? Izaberite jednu, ili "
+"upišite prilagođeno polje."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:388
+msgid ""
+"How do you want the dates in the results formatted? Use one of the "
+"shortcuts, or supply a use any value valid for the <a href=\"http://php.net/"
+"manual/en/function.date-format.php\">date_format()</a>"
+msgstr ""
+"Kako želite da budu formatirani datumi u rezultatima? Upotrebite jednu od "
+"prečica<a href=\"http://php.net/manual/en/function.date-format.php\"> "
+"date_format()</a>"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:414
+msgid "Date Maximum"
+msgstr "Maksimalan datum"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:415
+msgid "Only results from this date or before will be returned"
+msgstr "Biće vraćeni samo rezultati od ovog datuma, ili raniji"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:442
+msgid "Date Minimum"
+msgstr "Minimalan datum"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:443
+msgid "Only results from this date or after will be returned."
+msgstr "Biće vraćeni samo rezultati od ovog datuma, ili kasniji"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:470
+msgid "Exclude"
+msgstr "Isključiti"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:471
+msgid ""
+"List posts by their ID that you wish to exclude from search results. Comma-"
+"separate multiple values."
+msgstr ""
+"Navedite postove koje želite da isključite iz rezultata pretrage, po "
+"njihovim ID –u. Višestruke vrednosti razdvojite zapetom."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:488
+msgid "Include"
+msgstr "Uključiti"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:489
+msgid ""
+"List posts by their ID that you wish to return.  Usually this option is not "
+"used with any other search options. Comma-separate multiple values."
+msgstr ""
+"Navedite postove koje želite da vratite, po njihovom ID –u. Obično se ova "
+"opcija ne koristi ni sa jednom drugom opcijom pretrage. Višestruke vrednosti "
+"razdvojite zapetama."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:508
+msgid "Limit"
+msgstr "Ograničenje"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:509
+msgid ""
+"Limit the number of results returned. If pagination is enabled, this number "
+"will be the number of results shown per page."
+msgstr ""
+"Ograničite broj vraćenih rezultata. Ako je ostraničavanje uključeno, ovaj "
+"broj će biti broj prikazanih rezultata po strani."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:527
+msgid "Match Rule"
+msgstr "Pravilo upoređivanja"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:528
+msgid "Define how your search term should match."
+msgstr "Definišite kako vaš pojam za pretragu treba da se upoređuje"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:532
+msgid "Contains"
+msgstr "Sadrži"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:533
+msgid "Starts with"
+msgstr "Počinje sa"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:534
+msgid "Ends with"
+msgstr "Završava sa"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:558
+msgid "Meta Key"
+msgstr "Meta ključ"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:559
+msgid ""
+"Name of a custom field, to be used in conjuncture with <em>meta_value</em>."
+msgstr ""
+"Ime prilagođenog polja koje treba koristiti zajedno sa<em> meta_value</em>."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:576
+msgid "Meta Value"
+msgstr "Meta vrednost"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:577
+msgid ""
+"Value of a custom field, to be used in conjuncture with <em>meta_key</em>."
+msgstr ""
+"Vrednost prilagođenog polja, koju treba koristiti zajedno sa <em>meta_key</"
+"em>."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:594
+msgid "Offset"
+msgstr "Odstupanje"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:595
+msgid ""
+"Number of results to skip.  Usually this is used only programmatically when "
+"pagination is enabled."
+msgstr ""
+"Broj rezultata koje treba preskočiti. Obično se ovo koristi samo programski, "
+"kada je ostraničavanje uključeno."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:610
+msgid "Omit Post Types"
+msgstr "Izostaviti tipove postova"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:614
+msgid "Check which post-types you wish to omit from search results."
+msgstr ""
+"Označite koje tipove postova želite da isključite iz rezultata pretrage."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:649
+msgid "Order"
+msgstr "Redosled"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:650
+msgid ""
+"What order should search results be returned in? See also the <em>orderby</"
+"em> parameter."
+msgstr ""
+"Kojim redosledom treba da budu poređani vraćeni rezultati? Pogledajte takođe "
+"parametar poređati po <em>(order by)</em>."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:661
+msgid "Ascending"
+msgstr "Rastuće"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:676
+msgid "Descending"
+msgstr "Opadajuće"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:701 views/post_type.php:699
+msgid "Order By"
+msgstr "Poređati po"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:702
+msgid ""
+"Which column should results be sorted by. This can be any column from the "
+"wp_posts table or any custom field. Default: ID"
+msgstr ""
+"Po kojoj koloni treba da budu poređani rezultati. To može biti bilo koja "
+"kolona iz tabele wp_posts, ili bilo koje prilagođeno polje. Podrazumevano: ID"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:720
+msgid "Paginate Results"
+msgstr "Ostraničiti rezultate"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:725
+msgid "Pagination"
+msgstr "Ostraničavanje"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:742
+msgid "Post Date"
+msgstr "Datum posta"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:743
+msgid ""
+"Find posts from this date.  Use the <em>date_column</em> parameter to "
+"determine which column should be considered."
+msgstr ""
+"Pronađite postove od ovog datuma. Upotrebite <em> date_column</em> parametar "
+"da odredite koju kolonu treba razmotriti."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:769
+msgid "Post MIME Type"
+msgstr "MIME tip posta"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:770
+msgid ""
+"Specify either the full MIME type (e.g. image/jpeg) or just the beginning (e."
+"g. application, image, audio, video)."
+msgstr ""
+"Navedite ili ceo MIME tip (npr. slika/jpeg), ili samo početak (npr. "
+"aplikacija, slika, audio, video)."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:787
+msgid "Post Modified"
+msgstr "Post je izmenjen"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:788
+msgid "Find posts modified on this date."
+msgstr "Pronaći postove izmenjene na ovaj datum"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:817
+msgid "Post Parent"
+msgstr "Roditeljski post"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:818
+msgid ""
+"Retrieve all posts that are children of the post ID(s) specified. Comma-"
+"separate multiple values."
+msgstr ""
+"Vratiti sve postove koji su potomci posta čiji je ID naveden. Višestruke "
+"vrednosti razdvojiti zapetama."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:836
+msgid "Post Status"
+msgstr "Status posta"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:837
+msgid "Most searches will be for published posts."
+msgstr "Većina pretraga će biti za objavljene postove."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:875
+msgid "Retrieve posts with this exact title."
+msgstr "Vraćanje postova sa tačno ovim naslovom."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:891
+msgid "Post Types"
+msgstr "Tipovi postova"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:895
+msgid "Check which post-types you wish to search."
+msgstr "Označite koje tipove postova želite da pretražite."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:904
+msgid "Select post-type"
+msgstr "Biranje tipa posta"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:952
+msgid "Search Columns"
+msgstr "Kolone za pretraživanje"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:953
+msgid ""
+"When searching by a <em>search_term</em>, which define columns should be "
+"searched. Comma-separate multiple values. You can specify custom-fields as "
+"column names."
+msgstr ""
+"Kada se pretražuje po<em> search_term</em> koji definiše kolone koje treba "
+"pretražiti. Višestruke vrednosti razdvojiti zapetama. Možete navesti "
+"prilagođena polja kao imena kolona."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:970
+msgid "Search Term"
+msgstr "Pojam za pretraživanje"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:971
+msgid ""
+"Search posts for this term. Use the <em>search_columns</em> parameter to "
+"specify which columns are searched for the term."
+msgstr ""
+"Pretražiti postove po ovom pojmu. Upotrebite <em>search_columns </"
+"em>parametar da navedete koje kolone se pretražuju po pojmu."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:989
+msgid "Select taxonomy"
+msgstr "Biranje taksonomije"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1006
+msgid "Taxonomy"
+msgstr "Taksonomija"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1007
+msgid ""
+"Choose which taxonomy to search in. Used in conjunction with "
+"<em>taxonomy_term</em>."
+msgstr ""
+"Odabir taksonomije u kojoj će se vršiti pretraga. Koristi se zajedno sa<em> "
+"taxonomy_term</em>."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1026
+msgid "Taxonomy Depth"
+msgstr "Dubina taksonomije"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1027
+msgid ""
+"When doing a hierarchical taxonomical search (e.g. by sub-categories), "
+"increase this number to reflect how many levels down the hierarchical tree "
+"should be searched. For example, 1 = return posts classified with the given "
+"taxonomical term (e.g. mammals), 2 = return posts classified with the given "
+"term or with the sub-taxonomies (e.g. mammals or dogs). (default: 1)."
+msgstr ""
+"Kada radite hijerarhijsku taksonomsku pretragu (npr. po pod-kategorijama), "
+"povećajte ovaj broj da odredite koliko nivoa niz hijerarhijsko stablo treba "
+"pretraživati. Na primer, 1 = vraća postove klasifikovane sa datim "
+"taksonomskim pojmom (npr. sisari), 2 = vraća postove klasifikovane sa datim "
+"pojmom ili sa pod-taksonomijama (npr. sisari ili psi). (podrazumevano: 1)"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1045
+msgid "Taxonomy Slug"
+msgstr "Poveznica taksonomije"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1046
+msgid "The taxonomy slug is the URL-friendly taxonomy term."
+msgstr "Poveznica taksonomije je URL-pogodan taksonomski pojam."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1067
+msgid "Taxonomy Term"
+msgstr "Taksonomski pojam"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1068
+msgid ""
+"Set a specific category(ies) or tag(s) to include in search results. Comma-"
+"separate multiple values."
+msgstr ""
+"Zadajte određenu(e) kategoriju(e) ili oznaku(e) koje treba uključiti u "
+"rezultate pretrage. Višestruke vrednosti razdvojite zapetom."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1109
+msgid "Month"
+msgstr "Mesec"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1110
+msgid ""
+"Choose which month's posts you wish to view. This relies on the "
+"<em>date_column</em> parameter."
+msgstr ""
+"Odaberite iz kog meseca želite da vidite postove. Ovo se oslanja na "
+"<em>date_column</em> parametar."
+
+# @ default
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1137 includes/GetPostsQuery.php:1993
+#: includes/SP_Post.php:213
+msgid "There were no errors."
+msgstr "Nije bilo grešaka"
+
+# @ default
+#: includes/GetPostsForm.php:1184
+msgid "Possible invalid search_by parameter:"
+msgstr "Moguće je da search_by parametar nije važeći:"
+
+# @ default
+#: includes/GetPostsForm.php:1330
+#, php-format
+msgid "CSS file not found %s"
+msgstr "CSS fajl nije pronađen %s"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsForm.php:1351 includes/GetPostsForm.php:1369
+#: includes/GetPostsForm.php:1385 includes/GetPostsForm.php:1403
+#, php-format
+msgid "Invalid data type passed to %s function. Input must be a string."
+msgstr "Funkciji je prosleđen nevažeći %s tip podatka. Unos mora biti string."
+
+# @ default
+#: includes/GetPostsForm.php:1429
+msgid "Invalid input to set_tpl() function. Input must be a string."
+msgstr "Nevažeći unos u set_tpl() funkciju. Unos mora biti string."
+
+# @ default
+#: includes/GetPostsForm.php:1433
+msgid "set_tpl(): Formatting string must not be empty!"
+msgstr "set_tpl(): String za formatiranje ne sme biti prazan!"
+
+# @ default
+#: includes/GetPostsQuery.php:429
+msgid "Invalid alpha input:"
+msgstr "Nevažeći alpha unos:"
+
+# @ default
+#: includes/GetPostsQuery.php:434
+msgid "Invalid post_type:"
+msgstr "Nevažeći post_type:"
+
+# @ default
+#: includes/GetPostsQuery.php:440
+msgid "Invalid post_status:"
+msgstr "Nevažeći post_status:"
+
+# @ default
+#: includes/GetPostsQuery.php:446
+msgid ""
+"Invalid column name. Column names may only contain alphanumeric characters "
+"and underscores: "
+msgstr ""
+"Nevažeće ime kolone. Imena kolona mogu da sadrže samo alfanumeričke "
+"karaktere i donje crte:"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:677
+msgid "Invalid input argument.  Arrays not allowed as argument names."
+msgstr "Nevažeći ulazni argument. Nizovi nisu dozvoljeni kao imena argumenata."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:682
+msgid "Empty input argument."
+msgstr "Prazan ulazni argument."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:779
+#, php-format
+msgid "Empty input for %s. Using default parameters."
+msgstr "Prazan unos za %s. Koriste se podrazumevani parametri."
+
+# @ default
+#: includes/GetPostsQuery.php:800
+#, php-format
+msgid "Invalid order: %s. Order may only be \"ASC\" or \"DESC\"."
+msgstr "Nevažeći redosled: %s. Redosled može biti samo \"ASC\" ili \"DESC\"."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:812
+#, php-format
+msgid "orderby column not a default post column: %s"
+msgstr "kolona po kojoj se sortira nije podrazumevana kolona postova: %s"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:816
+#, php-format
+msgid "Invalid column name supplied for orderby: %s"
+msgstr "Navedeno je nevažeće ime za kolonu po kojoj se sortira:%s"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:841
+#, php-format
+msgid "Invalid date argument: %s"
+msgstr "Nevažeći argument datum: %s"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:853
+#, php-format
+msgid "Invalid datetime argument: %s"
+msgstr "Nevažeći argument datum vreme: %s"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:906
+#, php-format
+msgid "Taxonomy does not exist: %s"
+msgstr "Taksonomija ne postoji: %s"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:931
+msgid "Invalid parameter for join_rule. join_rule must be \"AND\" or \"OR\""
+msgstr ""
+"Nevažeći parametar za join_rule. join_rule mora biti \"AND\" (i) ili \"OR"
+"\" (ili)"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:942
+msgid ""
+"Invalid parameter for match_rule. match_rule may be \"contains\", "
+"\"starts_with\", or \"ends_with\""
+msgstr ""
+"Nevažeći parametar za match_rule. match_rule može biti \"contains"
+"\" (sadrži), \"starts_with\" (počinje sa), ili \"ends_with\" (završava sa)"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:954
+msgid "Invalid date column."
+msgstr "Nevažeća datumska kolona."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:968
+msgid "post_mime_type contains illegal characters.  Input ignored."
+msgstr "post_mime_type sadrži nedozvoljene karaktere. Unos je ignorisan."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:980
+#, php-format
+msgid "Invalid argument name %s.  Input ignored."
+msgstr "Nevažeće ime argumenta%s. Unos ignorisan."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:993
+#, php-format
+msgid "Filtering on direct column/value: %s"
+msgstr "Filtriranje po direktnoj koloni/vrednosti: %s"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1484 includes/GetPostsQuery.php:1613
+#, php-format
+msgid "The %s operator cannot operate on an array of values."
+msgstr "%s Operator ne može da izvodi operaciju nad nizom vrednosti."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1700
+msgid "Search parameters ignored: search_term and search_columns must be set."
+msgstr ""
+"Parametri pretrage su ignorisani: search_term i search_columns moraju da "
+"budu zadati."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1894
+msgid "Arguments"
+msgstr "Argumenti"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1896
+msgid ""
+"For more information on how to use this function, see the documentation for "
+"the <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/"
+"get_posts\">GetPostsQuery::get_posts()</a> function."
+msgstr ""
+"Za više informacija o tome kako da koristite ovu funkciju, pogledajte "
+"dokumentaciju za <a href=\"http://code.google.com/p/wordpress-summarize-"
+"posts/wiki/get_posts\">GetPostsQuery::get_posts()</a> funkciju."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1897
+msgid "Raw Database Queries"
+msgstr "Sirovi upiti baze podataka"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1901
+msgid "Comparable Shortcode"
+msgstr "Uporedni kratki kod"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1903
+msgid "Results"
+msgstr "Rezultati"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1917
+msgid "No arguments supplied."
+msgstr "Ni jedan argument nije dat."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1969
+msgid "Execution Time"
+msgstr "Vreme"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1970
+#, php-format
+msgid "%s seconds"
+msgstr "%s sekundi"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1996 includes/SP_Post.php:216
+msgid "Errors"
+msgstr "Greške"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:2029
+msgid "There were no notices."
+msgstr "Nije bilo napomena."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:2032
+msgid "Notices"
+msgstr "Napomene"
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:2270
+msgid "There were no warnings."
+msgstr "Nije bilo upozorenja."
+
+# @ custom-content-type-mgr
+#: includes/GetPostsQuery.php:2273
+msgid "Warnings"
+msgstr "Upozorenja"
+
+# @ custom-content-type-mgr
+#: includes/StandardizedCustomFields.php:113
+#, php-format
+msgid "The %s field is required."
+msgstr "%s Polje je potrebno."
+
+# @ custom-content-type-mgr
+#: includes/StandardizedCustomFields.php:146
+msgid ""
+"This post has validation errors.  The post will remain in draft status until "
+"they are corrected."
+msgstr ""
+"Ovaj post ima validacione greške. Post će ostati u statusu nacrta (draft) "
+"dok se one ne isprave."
+
+# @ custom-content-type-mgr
+#: includes/SummarizePosts_Widget.php:11
+msgid "Summarize Posts"
+msgstr "Sumirati postove"
+
+# @ custom-content-type-mgr
+#: includes/SummarizePosts_Widget.php:12
+msgid "List posts according to flexible search criteria."
+msgstr "Ispisati listu postova prema fleksibilnom kriterijumu pretrage."
+
+# @ custom-content-type-mgr
+#: includes/SummarizePosts_Widget.php:62
+msgid "Search Criteria"
+msgstr "Kriterijum pretrage"
+
+# @ custom-content-type-mgr
+#: includes/SummarizePosts_Widget.php:62
+msgid "Define Search"
+msgstr "Definisati pretragu"
+
+# @ custom-content-type-mgr
+#: includes/constants.php:26
+msgid "CCTM could not read the WordPress upload directory path!"
+msgstr "CCTM nije mogao da pročita putanju WordPress direktorijuma za otpremu!"
+
+# @ custom-content-type-mgr
+#: includes/functions.php:62
+#, php-format
+msgid "The %s field is not defined as a custom field."
+msgstr "%s Polje nije definisano kao prilagođeno polje."
+
+# @ custom-content-type-mgr
+#: includes/functions.php:120
+#, php-format
+msgid "Invalid field name: %s"
+msgstr "Nevažeće ime polja:%s"
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:30
+#, php-format
+msgid ""
+"%1$s has detected that there are some active plugins that may be "
+"incompatible with it. We recommend disabling the following plugins:"
+msgstr ""
+"%1$s je detektovao da postoje neki aktivni dodaci koji mogu biti "
+"nekompatibilni sa njim. Predlažemo isključivanje sledećih dodataka:"
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:37
+msgid ""
+"Continued use of these plugins may cause erratic behavior and certain "
+"functionality on your site may break entirely. See the <a href=\"http://code."
+"google.com/p/wordpress-custom-content-type-manager/wiki/IncompatiblePlugins"
+"\">wiki</a> for more information."
+msgstr ""
+"Neprekidna upotreba ovih dodataka može izazvati neregularno ponašanje i "
+"određene funkcionalnosti na vašem sajtu mogu u potpunosti otkazati."
+"Pogledajte <a href=\"http://code.google.com/p/wordpress-custom-content-type-"
+"manager/wiki/IncompatiblePlugins\"> wiki</a> za vise informacija"
+
+# @ custom-content-type-mgr
+#: tests/CCTMtests.php:137
+#, php-format
+msgid "%1$s requires PHP %2$s or newer."
+msgstr "%1$s zahteva PHP ili  %2$s  noviju verziju."
+
+# @ custom-content-type-mgr
+#: updates/0.9.4.php:144
+#, php-format
+msgid ""
+"You may have to change your template for the %s post_type! Any instances of "
+"get_custom_field('%s') or print_custom_field('%s') in the single-%s.php file "
+"should be replaced with get_custom_field('%s') or print_custom_field('%s').  "
+"You may also use the 'Custom Fields-->Merge' command to merge field "
+"definitions."
+msgstr ""
+"Možda ćete morati da promenite vaš šablon za %s  post_type! Sve instance "
+"get_custom_field('%s') ili print_custom_field('%s') u jednom-%s.php fajlu "
+"treba zameniti sa get_custom_field('%s') ili print_custom_field('%s'). "
+"Takođe možete upotrebiti komandu 'Prilagođena polja-->Spojiti' da spojite "
+"definicije polja."
+
+# @ custom-content-type-mgr
+#: upload_form_handler.php:27
+msgid ""
+"<p>There was a problem uploading. Did you select a file? If you continue to "
+"have problems, please try using WordPress' <a href='media-new.php'>built-in "
+"manager</a> to upload new media.</p>"
+msgstr ""
+"<p>Došlo je do problema pri otpremanju. Da li ste izabrali fajl? Ako i dalje "
+"budete imali problema, molim vas, pokušajte da upotrebite WordPress –ov <a "
+"href='media-new.php'>built-in manager</a>ugrađeni menadžer da otpremite nove "
+"medijske fajlove.</p>"
+
+# @ custom-content-type-mgr
+#: validators/emailaddress.php:14
+msgid "Check for a valid email address."
+msgstr "Proveriti da li je e-mail adresa važeća."
+
+# @ custom-content-type-mgr
+#: validators/emailaddress.php:34
+#, php-format
+msgid "The %s field is not a valid email address."
+msgstr " %s Polje nije važeća e-mail adresa."
+
+# @ custom-content-type-mgr
+#: validators/number.php:21
+msgid "Ensure that the input is a number of the type you have configured."
+msgstr "Proverite da li je unos broj tipa koji ste konfigurisali."
+
+# @ custom-content-type-mgr
+#: validators/number.php:29
+msgid "Number"
+msgstr "Broj"
+
+# @ custom-content-type-mgr
+#: validators/number.php:69
+msgid "Min Value"
+msgstr "Minimalna vrednost"
+
+# @ custom-content-type-mgr
+#: validators/number.php:71
+msgid "Max Value"
+msgstr "Maksimalna vrednost"
+
+# @ custom-content-type-mgr
+#: validators/number.php:74
+msgid "Allow Negative Numbers"
+msgstr "Dozvoliti negativne brojeve"
+
+# @ custom-content-type-mgr
+#: validators/number.php:76
+msgid "Allow Decimals"
+msgstr "Dozvoliti decimalne brojeve"
+
+# @ custom-content-type-mgr
+#: validators/number.php:77
+msgid "Maximum Decimal Places"
+msgstr "Maksimalan broj decimalnih mesta"
+
+# @ custom-content-type-mgr
+#: validators/number.php:80
+msgid "Decimal Separator"
+msgstr "Decimalni separator"
+
+# @ custom-content-type-mgr
+#: validators/number.php:82
+msgid "Period"
+msgstr "Tačka"
+
+# @ custom-content-type-mgr
+#: validators/number.php:83
+msgid "Comma"
+msgstr "Zapeta"
+
+# @ custom-content-type-mgr
+#: validators/number.php:101
+#, php-format
+msgid "The %s field must be numeric."
+msgstr "%s Polje mora biti numeričko."
+
+# @ custom-content-type-mgr
+#: validators/number.php:104
+#, php-format
+msgid "The %s field may not be negative."
+msgstr " %s  Polje ne može biti negativno."
+
+# @ custom-content-type-mgr
+#: validators/number.php:107
+#, php-format
+msgid "The %s field must be between %s and %s."
+msgstr "%s Polje mora biti između  %s i %s."
+
+# @ custom-content-type-mgr
+#: validators/number.php:110
+#, php-format
+msgid "The %s field must be greater than %s."
+msgstr "%s Polje mora biti veće od  %s."
+
+# @ custom-content-type-mgr
+#: validators/number.php:113
+#, php-format
+msgid "The %s field must be less than %s."
+msgstr " %s Polje mora biti manje od  %s."
+
+# @ custom-content-type-mgr
+#: validators/number.php:117
+#, php-format
+msgid "The %s field must be a whole number (no decimals allowed)."
+msgstr " %s  Polje mora biti ceo broj (nisu dozvoljeni decimalni brojevi)."
+
+# @ custom-content-type-mgr
+#: validators/number.php:121
+#, php-format
+msgid "The %s field cannot contain more than %s decimal places."
+msgstr " %s Polje ne može da sadrži više od  %s decimalnih mesta."
+
+# @ custom-content-type-mgr
+#: validators/url.php:14
+msgid "Check for a valid URL."
+msgstr "Proveriti da li je URL važeći."
+
+# @ custom-content-type-mgr
+#: validators/url.php:22
+msgid "URL"
+msgstr "URL"
+
+# @ custom-content-type-mgr
+#: validators/url.php:41
+#, php-format
+msgid "The %s field is not a valid URL."
+msgstr "%s Polje nije važeći URL."
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:1
+msgid ""
+"I am sorry that you are having trouble with this plugin, but thank you for "
+"taking the time to file a bug. It helps out everybody who uses this code. "
+"Your input is valuable! Click the link above to launch the bug tracker."
+msgstr ""
+"Žao mi je što imate problema sa ovim dodatkom, a hvala vam što odvajate "
+"vreme da prijavite bag. To pomaže svima koji koriste ovaj kod. Vaš unos je "
+"vredan! Kliknite na donji link da pokrenete tragač bagova."
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:9
+msgid "System Info"
+msgstr "Sistemske informacije"
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:10
+msgid ""
+"Please paste the following text into your bug report so I can better "
+"diagnose the problem you are experiencing."
+msgstr ""
+"Molim vas, prenesite ovaj tekst u vaš izveštaj o bagu, tako da mogu bolje da "
+"dijagnostifikujem problem sa kojim ste se suočili."
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:49
+msgid "When reporting bugs, remember the following key points:"
+msgstr "Kada prijavljujete bagove, imajte na umu sledeće ključne tačke:"
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:52
+msgid ""
+"<strong>If the bug can't be reproduced, it can't be fixed.</strong> Provide "
+"<em>detailed</em> instructions so that someone else can make the plugin fail "
+"for themselves."
+msgstr ""
+"<strong>Ako  bag nemoze da se reprodukuje, moze da se popravi.</strong> "
+"Pružite <em>detaljne </em>instrukcije tako da i neko drugi može izazvati da "
+"dodatak otkaže kod njega."
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:53
+msgid ""
+"<strong>Be ready to provide extra information if the programmer needs it.</"
+"strong> If they didn't need it, they wouldn't be asking for it."
+msgstr ""
+"<strong>Budite spremni da pružite dodatne informacije, ako su potrebne "
+"programeru.</strong>  Ako im nisu potrebne, oni ih neće ni tražiti."
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:54
+msgid ""
+"<strong>Write clearly.</strong> Make sure what you write can't be "
+"misinterpreted. Avoid pronouns, and error on the side of providing too much "
+"information instead of too little."
+msgstr ""
+"<strong>Pišite jasno.</strong> Postarajte se da ono što ste napisali ne može "
+"pogrešno da se shvati. Izbegavajte zamenice, i radije pružite previše "
+"informacija umesto premalo."
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:56
+msgid ""
+"Consider using <a href=\"http://www.techsmith.com/jing/free/\">Jing</a> to "
+"do a screencast of the problem!"
+msgstr ""
+"Razmislite o korišćenju<a href=\"http://www.techsmith.com/jing/free/\"> Jing "
+"–a </a> da napravite video snimak problema!"
+
+# @ custom-content-type-mgr
+#: views/bug_report.php:57
+msgid ""
+"The gist of this was inspired by <a href=\"http://www.chiark.greenend.org.uk/"
+"~sgtatham/bugs.html\">How to Report Bugs Effectively</a> by Simon Tatham."
+msgstr ""
+"Suština ovoga je inspirisana člankom<a href=\"http://www.chiark.greenend.org."
+"uk/~sgtatham/bugs.html\"> Kako efikasno prijaviti bagove (How to Report Bugs "
+"Effectively),</a> od Simon Tatham."
+
+# @ custom-content-type-mgr
+#: views/custom_field.php:39
+msgid "More Information"
+msgstr "Više informacija"
+
+# @ custom-content-type-mgr
+#: views/custom_field.php:50
+msgid "Associations"
+msgstr "Asocijacije (pridruživanja)"
+
+# @ custom-content-type-mgr
+#: views/custom_field.php:52
+msgid "Which post-types should this field be attached to?"
+msgstr "Kojim tipovima postova treba pridodati ovo polje?"
+
+# @ custom-content-type-mgr
+#: views/custom_field_types.php:5 views/custom_field_types.php:12
+msgid "Field Type Description"
+msgstr "Opis tipa polja"
+
+# @ custom-content-type-mgr
+#: views/export.php:8
+msgid ""
+"Before exporting, please describe your current configuration. Your settings "
+"will be preserved."
+msgstr ""
+"Pre izvoženja, molim vas da opišete vašu trenutnu konfiguraciju. Vaša "
+"podešenja će biti sačuvana."
+
+# @ custom-content-type-mgr
+#: views/export.php:20 views/preview_def.php:13
+msgid "Author URL"
+msgstr "URL autora"
+
+# @ custom-content-type-mgr
+#: views/export.php:23 views/preview_def.php:14
+msgid "Template URL"
+msgstr "URL šablona"
+
+# @ custom-content-type-mgr
+#: views/export.php:25
+msgid ""
+"If you have created a public theme that goes along with this content "
+"definition, paste the URL here."
+msgstr ""
+"Ako ste kreirali javnu temu, koja ide zajedno sa definicijom ovog tipa, "
+"unesite ovde URL."
+
+# @ default
+#: views/export.php:34
+msgid "Download"
+msgstr "Preuzimanje"
+
+# @ custom-content-type-mgr
+#: views/export.php:35
+msgid "Save to Library"
+msgstr "Snimiti u biblioteku"
+
+# @ custom-content-type-mgr
+#: views/import.php:15
+msgid "Manage Library"
+msgstr "Upravljanje bibliotekom"
+
+# @ custom-content-type-mgr
+#: views/import.php:28
+#, php-format
+msgid ""
+"You can import an existing %s definition file from your computer or choose "
+"one from your uploads directory: %s. You probably will only use this when "
+"you are first setting up your site."
+msgstr ""
+"Možete uvesti postojeći fajl %s sa definicijom sa vašeg računara, ili "
+"izabrati neki iz vašeg direktorijuma  %s sa otpremljenim fajlovima:. Ovo "
+"ćete verovatno koristiti samo kada prvi put postavljate svoj sajt."
+
+# @ custom-content-type-mgr
+#: views/import.php:33
+msgid "Definitions on File"
+msgstr "Definicije u fajlu"
+
+# @ custom-content-type-mgr
+#: views/import.php:76
+msgid "Library empty."
+msgstr "Biblioteka je prazna."
+
+# @ custom-content-type-mgr
+#: views/import.php:85
+msgid "Delete Selected"
+msgstr "Obrisati označeno"
+
+# @ custom-content-type-mgr
+#: views/import.php:92
+msgid "Upload Definitions"
+msgstr "Otpremiti definicije"
+
+# @ custom-content-type-mgr
+#: views/import.php:100
+msgid "Upload New File"
+msgstr "Otpremiti novi fajl"
+
+# @ default
+#: views/import.php:103
+msgid "Upload"
+msgstr "Otpremiti"
+
+# @ custom-content-type-mgr
+#: views/info.php:18 views/purge.php:18
+msgid "Records"
+msgstr "Zapisi"
+
+# @ custom-content-type-mgr
+#: views/info.php:29 views/purge.php:29
+msgid "Distribution of Posts"
+msgstr "Distribuiranje postova"
+
+# @ custom-content-type-mgr
+#: views/info.php:36 views/purge.php:36
+msgid "Count"
+msgstr "Broj"
+
+# @ custom-content-type-mgr
+#: views/info.php:38 views/purge.php:38
+msgid "Number Active"
+msgstr "Broj aktivnih"
+
+# @ custom-content-type-mgr
+#: views/info.php:40 views/purge.php:40
+msgid "Number Inactive"
+msgstr "Broj neaktivnih"
+
+# @ custom-content-type-mgr
+#: views/info.php:44 views/purge.php:44
+msgid "Active vs. Inactive Post Types"
+msgstr "Aktivni nasuprot neaktivnih tipova postova"
+
+# @ custom-content-type-mgr
+#: views/list_custom_fields.php:4 views/list_custom_fields.php:12
+msgid "Type"
+msgstr "Tip"
+
+# @ custom-content-type-mgr
+#: views/list_custom_fields.php:5 views/list_custom_fields.php:13
+#: views/post_type.php:473 views/post_type.php:482 views/sortable-list.php:24
+#: views/sortable-list.php:33
+msgid "Field"
+msgstr "Polje"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:126
+msgid "Basic"
+msgstr "Osnovno"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:127
+msgid "Labels"
+msgstr "Natpisi"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:128
+msgid "Fields"
+msgstr "Polja"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:129
+msgid "Columns"
+msgstr "Kolone"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:130
+msgid "Menu"
+msgstr "Meni"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:131
+msgid "URLs"
+msgstr "URL –ovi"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:132
+msgid "Advanced"
+msgstr "Napredno"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:133 views/post_type.php:724
+msgid "Taxonomies"
+msgstr "Taksonomije"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:148
+msgid ""
+"This name may show up in your URLs, e.g. ?movie=epic-movie. This will also "
+"make a new theme file available, starting with prefix named \"single-\", e."
+"g. <code>single-movie.php</code>."
+msgstr ""
+"Ovo ime se može pojaviti u vašim URL –ovima, npr. ?movie=epic-movie. Ovo će "
+"takođe učiniti dostupnim novi fajl teme, počevši od prefiksa nazvanog "
+"\"single-\", npr. <code>single-movie.php</code>."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:161
+msgid ""
+"The menu name text. This string is the name to give menu items. Defaults to "
+"value of name."
+msgstr ""
+"Tekst imena menija. Ovaj string je ime koje treba dati stavkama menija. "
+"Podrazumevana je vrednost imena."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:176
+msgid "Leave this checked to use the default posts icon."
+msgstr ""
+"Ostavite ovu opciju čekiranu da biste koristili podrazumevanu ikonu postova."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:191
+msgid ""
+"Choose an icon from the list below or paste a full URL to a 16x16 icon here."
+msgstr ""
+"Izaberite neki ikonu sa donje liste, ili ovde unesite ceo URL kao 16x16 "
+"ikoni."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:207
+msgid "Singular"
+msgstr "Jednina"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:215
+msgid "Main Menu Label (Plural)"
+msgstr "Natpis glavnog menija (množina)"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:229
+msgid ""
+"The add new text. The default is Add New for both hierarchical and non-"
+"hierarchical types."
+msgstr ""
+"Tekst za opciju dodavanje novog. Podrazumevani je Dodati novo i za "
+"hijerarhijske i za nehijerarhijske tipove."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:235
+msgid "Add New Item"
+msgstr "Dodati novu stavku"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:241
+msgid "The add new item text. Default is Add New Post/Add New Page"
+msgstr ""
+"Tekst opcije za dodavanje nove stavke. Podrazumevani je Dodati novi post/"
+"dodati novu stranu"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:247
+msgid "Edit Item"
+msgstr "Urediti stavku"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:253
+msgid "The edit item text. Default is Edit Post/Edit Page"
+msgstr ""
+"Tekst opcije za uređivanje stavke. Podrazumevani je Urediti post/urediti "
+"stranu"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:259
+msgid "New Item"
+msgstr "Nova stavka"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:265
+msgid "The new item text. Default is New Post/New Page"
+msgstr "Tekst opcije za novu stavku. Podrazumevani je Novi post/nova strana"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:273
+msgid "View Item"
+msgstr "Pregledati stavku"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:279
+msgid "The view item text. Default is View Post/View Page"
+msgstr ""
+"Tekst opcije za pregled stavke. Podrazumevani je Pregledati post/pregledati "
+"stranu"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:286
+msgid "Search Items"
+msgstr "Pretražiti stavke"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:293
+msgid "The search items text. Default is Search Posts/Search Pages"
+msgstr ""
+"Tekst opcije za pretragu stavki. Podrazumevani je Pretražiti postove/"
+"pretražiti strane"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:305
+msgid "The not found text. Default is No posts found/No pages found"
+msgstr ""
+"Tekst poruke kada se ništa ne pronađe. Podrazumevani je Nije pronađen ni "
+"jedan post/nije pronađena ni jedna strana"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:312
+msgid "Not Found in Trash"
+msgstr "Nije pronađeno u otpadu"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:318
+msgid ""
+"The not found in trash text. Default is No posts found in Trash/No pages "
+"found in Trash"
+msgstr ""
+"Tekst poruke kada se ništa ne pronađe u otpadu. Podrazumevani je Ni jedan "
+"post nije pronađen u otpadu/ni jedna strana nije pronađena u otpadu"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:325
+msgid "Parent Item Colon"
+msgstr "Dvotačka roditeljske stavke"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:327
+msgid ""
+"The parent text (used only on hierarchical types). Default is <em>Parent "
+"Page</em>"
+msgstr ""
+"Tekst opcije roditelj (koristi se samo za hijerarhijske tipove). "
+"Podrazumevani je<em> Roditeljska strana</em>"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:334
+msgid ""
+"Your post type must have either the title or content boxes checked; "
+"otherwise WordPress will revert to the default behavior and include the "
+"title and the content fields."
+msgstr ""
+"Vaš tip posta mora imati čekiranu kućicu, ili za naslov, ili za sadržaj; u "
+"suprotnom će se WordPress vratiti na podrazumevano ponašanje i uključiće "
+"polja sa naslovom i sadržajem."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:367
+msgid ""
+"Currently, this functionality is overridden by any custom fields you have "
+"defined for this content type."
+msgstr ""
+"Trenutno se ova funkcionalnost zamenjuje bilo kojim prilagođenim poljem koje "
+"ste definisali za ovaj tip sadržaja."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:373
+msgid ""
+"A Post Format is a piece of meta information that can be used by a theme to "
+"customize its presentation of a post."
+msgstr ""
+"Format posta je deo meta informacija koji se može koristiti od strane teme "
+"za prilagođavanje njenog predstavljanja posta."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:385
+msgid "Page Attributes"
+msgstr "Atributi stranice"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:387
+msgid ""
+"When checked, the create/edit screens will include a meta box for menu "
+"position and other page attributes."
+msgstr ""
+"Kada je ova opcija čekirana, ekrani kreirati/urediti će uključiti meta polje "
+"za poziciju menija i druge atribute strane."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:397
+msgid ""
+"Featured image. The active theme must also support post-thumbnails. Include "
+"a line like the following in your theme's functions.php file: <br/"
+"><code>add_theme_support( 'post-thumbnails', array"
+"( 'name_of_your_post_type_here' ) );</code>"
+msgstr ""
+"Svojstvena slika. Aktivna tema mora takođe podržavati sličice za postove. "
+"Uključite u functions.php fajl vaše teme liniju poput sledeće:  <br/"
+"><code>add_theme_support( 'post-thumbnails', array"
+"( 'name_of_your_post_type_here' ) );</code>"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:404
+msgid "Allows parent to be specified."
+msgstr "Dozvoljava se navođenje roditelja."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:410
+msgid "Use Custom Hierarchy"
+msgstr "Koristiti prilagođenu hijerarhiju"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:411
+msgid ""
+"Allows custom hierarchies to be specified. Hierarchical must be checked."
+msgstr ""
+"Dozvoljava se navođenje prilagođenih hijerarhija. Hijerarhijski mora biti "
+"čekiran."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:416
+msgid "Custom Hierarchies"
+msgstr "Prilagođene hijerarhije"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:417
+msgid ""
+"Warning: this feature is experimental. Implementing it deviates from "
+"standard WordPress behavior. See <a href=\"http://code.google.com/p/"
+"wordpress-custom-content-type-manager/issues/detail?id=9\" target=\"_blank"
+"\">Issue 9</a> in the bugtracker."
+msgstr ""
+"Upozorenje: ovo svojstvo je eksperimentalno. Njegovim implementiranjem se "
+"odstupa od standardnog WordPress ponašanja. Pogledajte <a href=\"http://code."
+"google.com/p/wordpress-custom-content-type-manager/issues/detail?id=9\" "
+"target=\"_blank\"> Problem 9</a> u tragaču bagova."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:421
+msgid "Include Drafts?"
+msgstr "Uključiti nacrte?"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:422
+msgid ""
+"By default, WordPress only allows you to use published pages in your "
+"hierarchy. Select this option to override that behavior."
+msgstr ""
+"Po definiciji vam WordPress dozvoljava da u vašoj hijerarhiji koristite samo "
+"objavljene strane. Izaberite ovu opciju da promenite to ponašanje."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:425
+msgid "Parent Post Types"
+msgstr "Tipovi roditeljskih postova"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:426
+msgid ""
+"By default, WordPress only allows you to use posts of the same post-type in "
+"your hierarchy. Select which post types should be available as parents."
+msgstr ""
+"Po definiciji vam WordPress dozvoljava da u vašoj hijerarhiji koristite samo "
+"postove istog tipa. Izaberite koji tipovi postova treba da budu raspoloživi "
+"kao roditelji."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:463
+msgid "Customize Columns"
+msgstr "Prilagoditi kolone"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:464
+msgid ""
+"You can customize the columns visible when you display a list of all posts "
+"in this post-type. WARNING: you can only use custom columns if the post-type "
+"name does not contain hyphens; underscores are Ok."
+msgstr ""
+"Možete prilagoditi kolone koje će se videti kada prikazujete listu svih "
+"postova ovog tipa. UPOZORENJE: možete koristiti samo prilagođene kolone ako "
+"ime tipa posta ne sadrži crtice; donje crte su u redu."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:498
+msgid ""
+"These settings only apply if you have the <em>Show Admin User Interface</em> "
+"selected."
+msgstr ""
+"Ova podešenja se primenjuju samo ako ste izabrali opciju<em> Prikazati "
+"administratorski korisnički interfejs.</em>"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:502
+msgid "Show in Menus"
+msgstr "Prikazati u menijima"
+
+# @ default
+#: views/post_type.php:504
+msgid "Yes"
+msgstr "Da"
+
+# @ default
+#: views/post_type.php:505
+msgid "No"
+msgstr "Ne"
+
+# @ default
+# @ custom-content-type-mgr
+#: views/post_type.php:506 views/post_type.php:556 views/post_type.php:563
+msgid "Custom"
+msgstr "Prilagođeno"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:509
+msgid "Custom top-level Menu"
+msgstr "Prilagođeni meni najvišeg nivoa"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:512
+msgid ""
+"Whether to show the post type in the admin menu. Change this to <em>Custom</"
+"em> to specify a top level page like <code>tools.php</code> or <code>edit."
+"php?post_type=page</code>"
+msgstr ""
+"Da li se tip posta prikazuje u administratorskom meniju. Promenite ovo u "
+"<em>prilagođeno</em> da navedete strane najvišeg nivoa, poput  <code>tools."
+"php</code> ili<code> edit.php?post_type=page</code>"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:519
+msgid ""
+"This setting determines where this post type should appear in the left-hand "
+"admin menu. Default: null (below Comments). E.g. \"21\" would cause this "
+"content type to display below Pages and above Comments."
+msgstr ""
+"Ovo podešenje određuje gde ovaj tip posta treba da se pojavi u "
+"administratorskom meniju sa leve strane. Podrazumevano: null (ispod "
+"komentara). Npr. \"21\" će učiniti da se ovaj tip sadržaja prikazuje ispod "
+"stranica i iznad komentara."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:523
+msgid "below Links"
+msgstr "ispod linkova"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:525
+msgid "below Comments"
+msgstr "ispod komentara"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:527
+msgid "below Plugins"
+msgstr "ispod dodataka"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:528
+msgid "below Users"
+msgstr "ispod korisnika"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:529
+msgid "below Tools"
+msgstr "ispod alata"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:530
+msgid "below Settings"
+msgstr "ispod podešenja"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:562
+msgid ""
+"Currently, this is the only custom permalink structure that is supported. "
+"Other formats are not supported.  Your URLs will look like http://site.com/"
+"your_post_type/your-title/"
+msgstr ""
+"Trenutno je ovo jedina podržana permalink struktura. Drugi formati nisu "
+"podržani. Vaši URL –ovi će izgledati poput http://site.com/your_post_type/"
+"your-title/"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:563
+msgid "Evaluate the contents of slug"
+msgstr "Oceniti sadržaje poveznice"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:582
+msgid ""
+"(optional) Name of the query var to use for this post type. E.g. \"my-var\" "
+"would make for URLs like http://site.com/?my-var=your-title. If blank, the "
+"default structure is http://site.com/?post_type=your_post_type&p=18"
+msgstr ""
+"(opciono) Ime promenljive upita koju treba koristiti za ovaj tip posta. Npr. "
+"\"my-var\" će odgovarati za URL –ove poput, podrazumevana struktura je"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:596
+msgid "Check All"
+msgstr "Proveriti sve"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:603
+msgid ""
+"Set the public attribute verbosely so WordPress behaves as you would expect "
+"it to. See <a href=\"http://code.google.com/p/wordpress-custom-content-type-"
+"manager/issues/detail?id=212\">Issue 212</a> in the bug tracker."
+msgstr ""
+"Podesiti javni atribut opširnije tako da se WordPress ponaša kao što "
+"očekujete. Pogledajte <a href=\"http://code.google.com/p/wordpress-custom-"
+"content-type-manager/issues/detail?id=212\">Issue 212</a> u tragaču bagova."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:617
+msgid ""
+"Whether post_type is available for selection in navigation menus (under "
+"<em>Appearance --> Menus</em>). Your theme must support menus for this "
+"option to have any effect. Default: value of public argument"
+msgstr ""
+"Da li je post_type dostupan za biranje u navigacionim menijima (pod<em> "
+"Izgled --> Meniji</em>). Vaša tema mora podržavati menije, da bi ova opcija "
+"imala bilo kakvog efekta. Podrazumevano: vrednost javnog argumenta"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:625
+msgid "Publicly Queriable"
+msgstr "Mogu se postavljati javni upiti"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:626
+msgid ""
+"Whether post_type queries can be performed from the front end. Usually this "
+"matches up with the <em>Public</em> setting."
+msgstr ""
+"Da li post_type upiti mogu da se izvode sa strane posetilaca sajta. Obično "
+"se ovo poklapa sa podešenjem <em>Javno.</em>"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:634
+msgid "Include in Search"
+msgstr "Uključiti u pretragu"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:635
+msgid "Whether to include posts with this post type in search results."
+msgstr ""
+"Da li treba uključiti postove sa ovim tipom posta u rezultate pretrage."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:643
+msgid "Include in RSS feed"
+msgstr "Uključiti u RSS tok"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:644
+msgid "Should posts with this post type be included in the RSS feed?"
+msgstr "Da li postove sa ovim tipom posta treba uključiti u RSS tok?"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:670
+msgid ""
+"Allows cross-blog notification. See <a href=\"http://codex.wordpress.org/"
+"Introduction_to_Blogging#Trackbacks\">official documentation</a>."
+msgstr ""
+"Omogućava napomene između blogova. Pogledajte <a href=\"http://codex."
+"wordpress.org/Introduction_to_Blogging#Trackbacks\"> zvaničnu dokumentaciju</"
+"a>."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:677
+msgid ""
+"If checked, your template will require the <code>comments_template();</code> "
+"function."
+msgstr ""
+"Ako je ova opcija čekirana, vaš šablon će zahtevati <code> comments_template"
+"();</code> funkciju."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:684
+msgid ""
+"Revisions are useful if you ever need to go back to an older version of a "
+"document. WARNING: revisions do not store custom field data!  This is a "
+"limitation of WordPress (see <a href=\"http://code.google.com/p/wordpress-"
+"custom-content-type-manager/issues/detail?id=266\">issue 266</a>)."
+msgstr ""
+"Revizije su korisne ako ikada treba da se vratite na starije verzije "
+"dokumenta. UPOZORENJE: revizije ne čuvaju podatke prilagođenih polja! Ovo je "
+"ograničenje WordPress –a (vidite  <a href=\"http://code.google.com/p/"
+"wordpress-custom-content-type-manager/issues/detail?id=266\">issue 266</a>)."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:690
+msgid "Enable Archives"
+msgstr "Uključiti arhive"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:692
+msgid ""
+"If enabled, posts will be listed in archive lists (e.g. by month). This also "
+"enables posts to show up in tag or category lists."
+msgstr ""
+"Ako je ova opcija uključena, postovi će biti prikazani u arhivskim listama "
+"(npr. po mesecima). Ovo takođe uključuje prikazivanje postova u listama "
+"oznaka (tagova) ili kategorija."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:704
+msgid "How do you want your posts to sort?"
+msgstr "Kako želite da sortirate vaše postove?"
+
+# @ default
+#: views/post_type.php:713
+msgid "ASC"
+msgstr "ASC"
+
+# @ default
+#: views/post_type.php:714
+msgid "DESC"
+msgstr "DESC"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:716
+msgid ""
+"If you specify a custom <code>Order By</code>, this setting will determine "
+"if your posts sort in ascending or descending order."
+msgstr ""
+"Ako navedete prilagođeni<code> redosled po</code>, ovo podešenje će odrediti "
+"da li će vaši postovi biti poređani po rastućem, ili po opadajućem redu."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:726
+msgid "Taxonomies offer ways to classify data as an aid to searching."
+msgstr ""
+"Taksonomije nude način klasifikacije podataka, kao pomoć pri pretraživanju."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:727
+msgid ""
+"Currently, this plugin only allows you to use default taxonomies with your "
+"content types. We recommend using momo360modena's <a href='http://wordpress."
+"org/extend/plugins/simple-taxonomy/'>Simple Taxonomy</a> plugin to create "
+"custom taxonomies."
+msgstr ""
+"Trenutno ovaj dodatak omogućava da sa vašim tipovima sadržaja koristite samo "
+"osnovne taksonomije. Preporučujemo korišćenje momo360modena -ovog < a "
+"href='http://wordpress.org/extend/plugins/simple-taxonomy/'>Simple Taxonomy "
+"</a>dodatka, za kreiranje prilagođenih taksonomija."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:731
+msgid "Enable Categories"
+msgstr "Uključiti kategorije"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:732
+msgid "Hierarchical based classification."
+msgstr "Hijerarhijski zasnovana klasifikacija."
+
+# @ custom-content-type-mgr
+#: views/post_type.php:738
+msgid "Enable Tags"
+msgstr "Uključiti oznake (tagove)"
+
+# @ custom-content-type-mgr
+#: views/post_type.php:739
+msgid "Simple word associations."
+msgstr "Jednostavne asocijacije reči."
+
+# @ custom-content-type-mgr
+#: views/preview_def.php:7
+msgid "Activate!"
+msgstr "Aktivirati!"
+
+# @ custom-content-type-mgr
+#: views/preview_def.php:18 views/templates/default.php:49
+msgid "Content Types"
+msgstr "Tipovi sadržaja"
+
+# @ custom-content-type-mgr
+#: views/preview_def.php:29
+msgid "Foreign post-type"
+msgstr "Strani tip posta"
+
+# @ custom-content-type-mgr
+#: views/preview_def.php:45
+msgid "Custom fields"
+msgstr "Prilagođena polja"
+
+# @ custom-content-type-mgr
+#: views/preview_def.php:73
+msgid "Source file"
+msgstr "Izvorni fajl"
+
+# @ custom-content-type-mgr
+#: views/preview_def.php:74
+msgid "Created in CCTM Version"
+msgstr "Kreirano u CCTM verziji"
+
+# @ custom-content-type-mgr
+#: views/preview_def.php:75
+msgid "Database Encoding"
+msgstr "Kodni raspored baze podataka"
+
+# @ custom-content-type-mgr
+#: views/preview_def.php:76
+msgid "Date Created"
+msgstr "Datum kreiranja"
+
+# @ custom-content-type-mgr
+#: views/sample_template.php:9
+msgid "CSS for Manager Pages"
+msgstr "CSS za stranice manager –a"
+
+# @ custom-content-type-mgr
+#: views/sample_template.php:12
+msgid "HTML for Manager Pages"
+msgstr "HTML za stranice manager -a"
+
+# @ custom-content-type-mgr
+#: views/settings.php:7
+msgid "Delete Posts"
+msgstr "Obrisati postove"
+
+# @ custom-content-type-mgr
+#: views/settings.php:9
+msgid ""
+"Check this option if you want to delete posts when you delete a post-type "
+"definition."
+msgstr ""
+"Čekirajte ovu opciju ako želite da obrišete postove kada brišete definiciju "
+"tipa posta."
+
+# @ custom-content-type-mgr
+#: views/settings.php:16
+msgid "Delete Custom Fields"
+msgstr "Obrisati prilagođena polja"
+
+# @ custom-content-type-mgr
+#: views/settings.php:18
+msgid ""
+"Check this option if you want to delete custom fields from the database when "
+"you delete a custom field definition."
+msgstr ""
+"Čekirajte ovu opciju ako želite da iz baze podataka obrišete prilagođena "
+"polja kada brišete definiciju prilagođenog polja."
+
+# @ custom-content-type-mgr
+#: views/settings.php:26
+msgid "Add Custom Fields"
+msgstr "Dodati prilagođena polja"
+
+# @ custom-content-type-mgr
+#: views/settings.php:28
+msgid ""
+"Check this option if you want to force custom fields to be created in the "
+"database when you associate custom field with a content type."
+msgstr ""
+"Čekirajte ovu opciju ako hoćete da forsirate da u bazi podataka budu "
+"kreirana prilagođena polja, onda kada pridružite prilagođeno polje tipu "
+"sadržaja."
+
+# @ custom-content-type-mgr
+#: views/settings.php:38
+msgid "Update Default Values"
+msgstr "Ažurirati podrazumevane vrednosti"
+
+# @ custom-content-type-mgr
+#: views/settings.php:40
+msgid ""
+"Check this option if you want custom fields containing the old default value "
+"to be updated when the default value is changed."
+msgstr ""
+"Čekirajte ovu opciju ako želite da se prilagođena polja koja sadrže stare "
+"podrazumevane vrednosti ažuriraju kada se podrazumevana vrednost promeni."
+
+# @ custom-content-type-mgr
+#: views/settings.php:47
+msgid "Show Custom Fields Menu"
+msgstr "Prikazati meni za prilagođena polja"
+
+# @ custom-content-type-mgr
+#: views/settings.php:49
+msgid ""
+"Check this option if you want a \"Custom Fields\" menu item to appear under "
+"each post-type."
+msgstr ""
+"Čekirajte ovu opciju ako želite da se pod svakim tipom posta u meniju "
+"pojavljuje stavka \"Prilagođena polja\""
+
+# @ custom-content-type-mgr
+#: views/settings.php:56
+msgid "Show Settings Menu"
+msgstr "Prikazati meni za podešavanja"
+
+# @ custom-content-type-mgr
+#: views/settings.php:58
+msgid ""
+"Check this option if you want a \"Settings\" menu item to appear under each "
+"custom post-type."
+msgstr ""
+"Čekirajte ovu opciju ako želite da se stavka menija \"Podešavanja\" "
+"pojavljuje pod svakim prilagođenim tipom posta."
+
+# @ custom-content-type-mgr
+#: views/settings.php:65
+msgid "Display Foreign Post Types"
+msgstr "Prikazati strane tipove postova"
+
+# @ custom-content-type-mgr
+#: views/settings.php:67
+msgid ""
+"Check this box if you want to display any post-types registered with some "
+"other plugin. You won't be able to edit them, but you'll know they are there."
+msgstr ""
+"Čekirajte ovu kućicu ako želite da prikažete sve tipove postova koji su "
+"registrovani sa nekim drugim dodatkom. Nećete moći da ih uređujete, ali ćete "
+"znati da su tu."
+
+# @ custom-content-type-mgr
+#: views/settings.php:74
+msgid "Cache Thumbnail Images"
+msgstr "Keširati sličice"
+
+# @ custom-content-type-mgr
+#: views/settings.php:76
+msgid ""
+"Check this option to let CCTM generate low-quality, smaller images for use "
+"in the post-selector for relation, image, and media fields."
+msgstr ""
+"Čekirajte ovu opciju da pustite CCTM da generiše manje slike, niskog "
+"kvaliteta, za korišćenje u biraču postova za polja odnos, slika i mediji."
+
+# @ custom-content-type-mgr
+#: views/settings.php:86
+msgid "Save Empty Fields"
+msgstr "Snimiti prazna polja"
+
+# @ custom-content-type-mgr
+#: views/settings.php:88
+msgid ""
+"If checked, the CCTM will create a row in the postmeta table for the values "
+"for each post's custom fields. Uncheck this if you need to save some space "
+"in your database."
+msgstr ""
+"Ako je ova opcija čekirana, CCTM će kreirati red u postmeta tabeli, za "
+"vrednosti, za svako prilagođeno polje posta. Odčekirajte ovo ako morate da "
+"sačuvate prostor u vašoj bazi podataka."
+
+# @ custom-content-type-mgr
+#: views/settings.php:95
+msgid "Summarize Posts TinyMCE Button"
+msgstr "TinyMCE dugme za sumiranje postova"
+
+# @ custom-content-type-mgr
+#: views/settings.php:97
+msgid ""
+"Provides a TinyMCE button for a graphically choosing search criteria and "
+"generating a Summarize Posts shortcode."
+msgstr ""
+"Obezbeđuje TinyMCE dugme za grafičko biranje kriterijuma pretrage i "
+"generisanje kratkog koda za sumiranje postova."
+
+# @ custom-content-type-mgr
+#: views/settings.php:104
+msgid "Custom Fields TinyMCE Button"
+msgstr "TinyMCE dugme za prilagođena polja"
+
+# @ custom-content-type-mgr
+#: views/settings.php:106
+msgid ""
+"Provides a TinyMCE button for a graphically choosing a custom field whose "
+"value you wish to display in the main content block."
+msgstr ""
+"Obezbeđuje TinyMCE dugme za grafičko biranje prilagođenog polja, čiju "
+"vrednost želite da prikažete u glavnom bloku sadržaja."
+
+# @ custom-content-type-mgr
+#: views/settings.php:113
+msgid "Flush Permalink Rules"
+msgstr "Očistiti pravila za permalinkove"
+
+# @ custom-content-type-mgr
+#: views/settings.php:115
+msgid ""
+"Usually, you need the CCTM to flush the WordPress permalink rules in order "
+"to support URL mappings to your custom posts.  Other plugins may also do "
+"this, so you can save on the overhead by disabling this."
+msgstr ""
+"Obično vam je potrebno da CCTM očisti WordPress pravila za permalinkove, da "
+"bi se podržala URL mapiranja ka vašim prilagođenim postovima. Drugi dodaci "
+"takođe mogu raditi ovo, tako da možete uštedeti na režijama isključujući ovu "
+"opciju."
+
+# @ custom-content-type-mgr
+#: views/settings.php:122
+msgid "Show Pages in RSS Feed"
+msgstr "Prikazati stranice u RSS toku"
+
+# @ custom-content-type-mgr
+#: views/settings.php:125
+msgid "Should your pages show up in your RSS feed?"
+msgstr "Da li vaše stranice treba da se pojave u vašem RSS toku?"
+
+# @ custom-content-type-mgr
+#: views/sortable-list.php:22
+msgid "Included"
+msgstr "Uključeno"
+
+# @ custom-content-type-mgr
+#: views/templates/default.php:54
+msgid "Info"
+msgstr "Informacije"
+
+# @ custom-content-type-mgr
+#: views/templates/default.php:75
+msgid "Support this Plugin"
+msgstr "Podržite ovaj dodatak"
+
+# @ custom-content-type-mgr
+#: views/templates/default.php:86
+msgid "Get eMail Updates"
+msgstr "Preuzmite e-mail dopune"
+
+# @ custom-content-type-mgr
+#: views/templates/default.php:90
+msgid "Forum"
+msgstr "Forum"
+
+# @ custom-content-type-mgr
+#: views/templates/tinymce.php:13
+msgid ""
+"You can place a shortcode in your content to print out custom field values."
+msgstr ""
+"U vaš sadržaj možete postaviti kratki kod za ispisivanje vrednosti "
+"prilagođenih polja."
+
+# @ custom-content-type-mgr
+#: views/tools.php:1
+msgid "The following tools implement additional functionality to this plugin."
+msgstr "Sledeći alati implementiraju dodatnu funkcionalnost u ovaj dodatak."
+
+# @ custom-content-type-mgr
+#: views/tools.php:7
+msgid ""
+"Import a <code>.cctm.json</code> definition file to jump-start your site."
+msgstr ""
+"Uvezite <code> .cctm.json</code> fajl sa definicijama da pokrenete vaš sajt."
+
+# @ custom-content-type-mgr
+#: views/tools.php:13
+msgid "Export your site's content-type and custom-field definitions."
+msgstr "Izvesti definicije tipova sadržaja i prilagođenih polja, vašeg sajta."
+
+# @ custom-content-type-mgr
+#: views/tools.php:19
+msgid "Clear any cached images or other files that have been generated."
+msgstr "Obrisati sve keširane slike, ili druge fajlove koji su generisani."
+
+# @ custom-content-type-mgr
+#: views/tools.php:25
+msgid ""
+"Purge your database of orphaned posts that do not have a post-type defined "
+"for them.  Warning: this will permanently delete data!"
+msgstr ""
+"Očistite svoju bazu podataka od napuštenih postova, koji nemaju tip posta - "
+"definisan za njih. Upozorenje: ovo će trajno obrisati podatke!"
+
+# @ custom-content-type-mgr
+#: views/tools.php:29
+msgid "Detect Post Types"
+msgstr "Detektovati tipove postova"
+
+# @ custom-content-type-mgr
+#: views/tr_custom_field_type.php:13
+msgid "Create"
+msgstr "Kreirati"
+
+# @ custom-content-type-mgr
+#: views/tr_custom_field_type.php:14
+msgid "More Info"
+msgstr "Više informacija"

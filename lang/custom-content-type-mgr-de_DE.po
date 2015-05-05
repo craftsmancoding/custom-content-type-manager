@@ -1,0 +1,4453 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Content Type Manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-27 00:04-0700\n"
+"PO-Revision-Date: 2013-03-21 07:18+0800\n"
+"Last-Translator: Everett Griffiths <everett@fireproofsocks.com>\n"
+"Language-Team: fireproofsocks <everett@fireproofsocks.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#@ custom-content-type-mgr
+#. translators: This refers to a PHP function e.g. my_function() { ... }
+#: index.php:75
+msgid "Function"
+msgstr "Funktion"
+
+#@ custom-content-type-mgr
+#. translators: This refers to a PHP class e.g. class MyClass { ... }
+#: fields/colorselector.php:87
+#: fields/image.php:95
+#: fields/media.php:94
+#: fields/relation.php:96
+#: includes/CCTM_FormElement.php:341
+#: index.php:84
+msgid "Class"
+msgstr "Klasse"
+
+#@ custom-content-type-mgr
+#. translators: This refers to a PHP constant as defined by the define() function
+#: index.php:93
+msgid "Constant"
+msgstr "Konstante"
+
+#@ custom-content-type-mgr
+#: controllers/create_post_type.php:10
+msgid "Create Custom Content Type"
+msgstr "Erzeuge benutzerdefinierten Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: controllers/create_post_type.php:22
+msgid "Create New Content Type"
+msgstr "Erzeuge neuen Inhaltstypen"
+
+#@ custom-content-type-mgr
+#: controllers/create_post_type.php:42
+#: controllers/duplicate_post_type.php:80
+#, php-format
+msgid "The content type %s has been created"
+msgstr "Der Inhaltstyp %s wurde erzeugt"
+
+#@ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:21
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+msgid "Deactivate Content Type %s"
+msgstr "Deaktiviere Inhaltstype %s"
+
+#@ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:30
+#: controllers/list_post_types.php:34
+msgid "Deactivate"
+msgstr "Deaktiviere"
+
+#@ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:89
+#: controllers/delete_custom_field.php:69
+#: controllers/delete_custom_field.php:82
+#: controllers/delete_post_type.php:80
+#: controllers/delete_post_type.php:91
+#: controllers/reset_custom_fields.php:42
+msgid "Are you sure you want to do this?"
+msgstr "Bist Du sicher, dass Du das tun willst?"
+
+#@ custom-content-type-mgr
+#: controllers/delete_post_type.php:12
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+msgid "Delete Content Type: %s"
+msgstr "Lösche Inhaltstype %s"
+
+#@ custom-content-type-mgr
+#@ default
+#: controllers/delete_custom_field.php:15
+#: controllers/delete_post_type.php:18
+#: controllers/list_custom_fields.php:54
+#: controllers/list_custom_fields.php:74
+#: controllers/list_post_types.php:132
+#: controllers/purge.php:16
+#: fields/dropdown.php:247
+#: fields/dropdown.php:297
+#: fields/multiselect.php:243
+#: fields/multiselect.php:293
+msgid "Delete"
+msgstr "Lösche"
+
+#@ custom-content-type-mgr
+#: controllers/delete_post_type.php:58
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+msgid "The post type %s has been deleted"
+msgstr "Der Post type %s wurde gelöscht"
+
+#@ custom-content-type-mgr
+#: controllers/delete_post_type.php:88
+#, php-format
+msgid "You are about to delete the %s post type. This will remove all of its settings from the database, but this will NOT delete any rows from the wp_posts table. However, without a custom post type defined for those rows, they will be essentially invisible to WordPress."
+msgstr "Du bist dabei, den Post Type %s zu löschen. Das wird alle Einstellungen aus der Datenbank löschen, aber KEINE Zeilen aus der wp_posts Tabelle. Allerdings werden sie ohne benutzerdefinierten Inhaltstypen für WordPress anschliessend unsichtbar bleiben."
+
+#@ custom-content-type-mgr
+#: controllers/error.php:25
+msgid "Invalid post type."
+msgstr "Ungültiger Post Type."
+
+#@ default
+#@ custom-content-type-mgr
+#: controllers/duplicate_post_type.php:41
+#: controllers/edit_post_type.php:30
+#: controllers/error.php:14
+#: controllers/error.php:22
+#: controllers/error.php:26
+#: controllers/export_def.php:10
+#: controllers/import_def.php:12
+#: controllers/list_custom_field_types.php:13
+#: controllers/list_custom_field_types.php:19
+#: controllers/settings_cf.php:11
+#: controllers/template_single.php:24
+msgid "Back"
+msgstr "Zurück"
+
+#@ default
+#: controllers/edit_post_type.php:41
+msgid "Edit Content Type: "
+msgstr "Edit Content Type: "
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:25
+#: controllers/duplicate_custom_field.php:25
+#: controllers/duplicate_post_type.php:58
+#: controllers/edit_custom_field.php:25
+#: controllers/edit_post_type.php:49
+#: controllers/export_def.php:15
+#: controllers/list_field_associations.php:21
+#: controllers/settings.php:19
+#: controllers/themes.php:13
+#: controllers/tools.php:14
+#: views/custom_field.php:59
+#: views/sortable-list.php:12
+#: views/sortable-list.php:46
+msgid "Save"
+msgstr "Speichern"
+
+#@ custom-content-type-mgr
+#: controllers/edit_post_type.php:96
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+msgid "Settings for %s have been updated."
+msgstr "Die Einstellungen für %s wurden aktualisiert"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:802
+#: includes/CCTM_PostTypeDef.php:323
+#, php-format
+msgid "%s is a reserved name."
+msgstr "%s ist ein reservierter Name."
+
+#@ custom-content-type-mgr
+#: controllers/template_single.php:43
+#, php-format
+msgid "WordPress supports a custom theme file for each registered post-type (content-type). Copy the text below into a file named <strong>%s</strong> and save it into your active theme."
+msgstr "WordPress unterstützt benutzerdefinierte Theme-Einstellungen für jeden registrierten Post Type. Kopieren Sie den Text unten in eine Datei namens <strong>%s</strong> und speichern Sie die Datei in Ihr aktives Theme."
+
+#@ custom-content-type-mgr
+#: controllers/template_single.php:46
+#, php-format
+msgid "You are currently using the %1$s theme. Save the file into the %2$s directory."
+msgstr "Sie benutzen aktuell das %1$s Theme. Speichern Sie die Datei in den %2$s Ordnerpfad."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:784
+#: includes/CCTM_PostTypeDef.php:291
+msgid "Name is required."
+msgstr "Name ist erforderlich."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:300
+#, php-format
+msgid "The post type name cannot begin with %s because that is a reserved prefix."
+msgstr "Der Post type Name kann nicht mit %s beginnen, da es ein reserviertes Präfix ist."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:321
+#: includes/CCTM_PostTypeDef.php:329
+msgid "Please choose another name."
+msgstr "Bitte wählen Sie einen anderen Namen."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:331
+#, fuzzy, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format, php-format
+msgid "%s is already in use as a registered taxonomy name."
+msgstr "%s ist bereits als Taxonomiename in Verwendung."
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:53
+#: fields/image.php:61
+#: fields/media.php:60
+#: fields/relation.php:62
+#: includes/CCTM_FormElement.php:307
+msgid "Label"
+msgstr "Beschriftung"
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:60
+#: fields/image.php:68
+#: fields/media.php:67
+#: fields/relation.php:69
+#: includes/CCTM_FormElement.php:314
+msgid "Name"
+msgstr "Name"
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:107
+#: fields/image.php:115
+#: fields/media.php:114
+#: fields/relation.php:116
+#: includes/CCTM_FormElement.php:361
+#: views/export.php:27
+#: views/list_custom_fields.php:6
+#: views/list_custom_fields.php:14
+#: views/post_type.php:474
+#: views/post_type.php:483
+#: views/sortable-list.php:25
+#: views/sortable-list.php:34
+msgid "Description"
+msgstr "Beschreibung"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:711
+msgid "Sort Order"
+msgstr "Sortierungsrichtung"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:209
+msgid "Human readable single instance of this content type, e.g. \"Post\""
+msgstr "Von Menschen lesbare, einfache Instanz für diesen Inhaltstypen. Zum Bsp. \"Post\""
+
+#@ custom-content-type-mgr
+#: views/post_type.php:217
+msgid "Plural name used in the admin menu, e.g. \"Posts\""
+msgstr "Name für Mehrzahl-Namen, die im Admin-Menu gebraucht werden. Zum Bsp. \"Posts\""
+
+#@ custom-content-type-mgr
+#: views/post_type.php:608
+msgid "Show Admin User Interface"
+msgstr "Zeige Admin-Benutzeroberfläche"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:609
+msgid "Should this post type be visible on the back-end?"
+msgstr "Soll dieser Post type im Backend sichtbar sein?"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:652
+msgid "Capability Type"
+msgstr "Fähigkeitsgrad"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:654
+msgid "The post type to use for checking read, edit, and delete capabilities. Default: \"post\""
+msgstr "Der Inhaltstyp zum Überprüfen der Lese-, Bearbeiten- und Löschen-Befähigung. Voreinstellung: \"post\""
+
+#@ custom-content-type-mgr
+#: views/post_type.php:602
+msgid "Public"
+msgstr "Öffentlich"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:403
+msgid "Hierarchical"
+msgstr "Hierarchisch"
+
+#@ custom-content-type-mgr
+#@ default
+#: ajax-controllers/get_posts.php:191
+#: ajax-controllers/post_content_widget.php:146
+#: includes/CCTM_Columns.php:34
+#: includes/CCTM_PostTypeDef.php:20
+#: includes/CCTM_Post_Widget.php:110
+#: includes/SummarizePosts_Widget.php:59
+#: views/export.php:14
+#: views/widgets/post_content_form.php:24
+msgid "Title"
+msgstr "Titel"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:40
+#: ajax-controllers/summarize_posts_widget.php:61
+#: includes/GetPostsForm.php:874
+#: views/post_type.php:340
+msgid "Post Title"
+msgstr "Inhaltstyp-Überschrift"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:347
+msgid "Content"
+msgstr "Inhalt"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:348
+msgid "Main content block."
+msgstr "Haupt-Inhaltsblock."
+
+#@ default
+#@ custom-content-type-mgr
+#: includes/CCTM_Columns.php:35
+#: includes/CCTM_PostTypeDef.php:21
+#: includes/GetPostsForm.php:340
+#: views/export.php:17
+#: views/post_type.php:353
+#: views/preview_def.php:12
+msgid "Author"
+msgstr "Autor"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:354
+msgid "Track the author."
+msgstr "Verfolge den Autor."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:396
+msgid "Thumbnail"
+msgstr "Vorschaubild"
+
+#@ custom-content-type-mgr
+#: filters/excerpt.php:72
+#: views/post_type.php:359
+msgid "Excerpt"
+msgstr "Auszug/Ausschnitt"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:360
+msgid "Small summary field."
+msgstr "Kleines Übersichtsfeld"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:669
+msgid "Trackbacks"
+msgstr "Trackbacks"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:366
+msgid "Supports Custom Fields"
+msgstr "Unterstützt benutzerdefinierte Felder"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:676
+msgid "Enable Comments"
+msgstr "Kommentare aktivieren"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:683
+msgid "Store Revisions"
+msgstr "Änderungsübersicht speichern"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:517
+msgid "Menu Position"
+msgstr "Menü-Position"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:521
+msgid "below Posts"
+msgstr "Unterhalb der Inhaltstypen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:522
+msgid "below Media"
+msgstr "Unterhalb der Medien"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:524
+msgid "below Pages"
+msgstr "Unterhalb der Seiten"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:526
+msgid "below first separator"
+msgstr "Unterhalb des ersten Separators"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:531
+msgid "below second separator"
+msgstr "Unterhalb des zweiten Separators"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:570
+msgid "Rewrite Slug"
+msgstr "Rohfassung erneut schreiben"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:572
+msgid "Prepend posts with this slug - defaults to post type's name"
+msgstr "Stelle die Rohfassung vor den Inhalt - Voreinstellung zum Namen des Inhaltstypen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:545
+msgid "Rewrite with Permalink Front"
+msgstr "Permalink-Front überschreiben"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:546
+msgid "Allow permalinks to be prepended with front base - defaults to checked"
+msgstr "Erlaube Permalinks der Frontbasis vorangestellt zu werden- standardmäßig überprüft"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:552
+msgid "Permalink Action"
+msgstr "Permalink Aktion"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:559
+msgid "Use permalink rewrites for this post_type? Default: Off"
+msgstr "Sollen Permalinks für diesen Inhaltstyp überschrieben werden? Voreingstellt: AUS"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:561
+msgid "URLs for custom post_types will always look like: http://site.com/?post_type=book&p=39 even if the rest of the site is using a different permalink structure."
+msgstr "URLs für benutzerdefinierte Inhaltstypen werden stets aussehen wie: http://site.com/?post_type=book&p=39, auch, wenn der Rest der Seite eine andere Permalinkstruktur aufweist."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:580
+msgid "Query Variable"
+msgstr "Fragen-Variable"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:660
+msgid "Can Export"
+msgstr "Kann exportieren"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:661
+msgid "Can this post_type be exported."
+msgstr "Kann dieser Inhaltstyp exportiert werden?"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:616
+msgid "Show in Nav Menus"
+msgstr "Zeige in Navigations-Menüs"
+
+#@ custom-content-type-mgr
+#@ default
+#: config/menus/admin_menu.php:83
+#: config/menus/admin_menu.php:84
+#: controllers/settings.php:13
+#: includes/CCTM.php:455
+msgid "Settings"
+msgstr "Einstellungen"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1966
+#: includes/SummarizePosts.php:383
+#: tests/CCTMtests.php:188
+#, php-format
+msgid "The %s plugin encountered errors! It cannot load!"
+msgstr "Das %s Plugin ist auf einen Fehler gestoßen! Es kann nicht geladen werden!"
+
+#@ default
+#: includes/CCTM.php:1860
+msgid "You do not have sufficient permissions to access this page."
+msgstr "You do not have sufficient permissions to access this page."
+
+#@ custom-content-type-mgr
+#: fields/media.php:273
+msgid "Choose Media"
+msgstr "Mediatypen auswählen"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:210
+#: ajax-controllers/post_content_widget.php:162
+msgid "Select"
+msgstr "Auswählen"
+
+#@ custom-content-type-mgr
+#: controllers/edit_post_type.php:27
+msgid "Invalid post_type."
+msgstr "Ungültiger Inhaltstyp"
+
+#@ default
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:507
+#: includes/GetPostsForm.php:203
+msgid "Search"
+msgstr "Suche"
+
+#@ custom-content-type-mgr
+#: controllers/reset_custom_fields.php:22
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:33
+#, fuzzy
+msgid "Deactivate this content type"
+msgstr "Deaktiviere Inhaltstypen"
+
+#@ custom-content-type-mgr
+#: controllers/create_custom_field.php:163
+#: controllers/create_custom_field.php:199
+#: controllers/duplicate_custom_field.php:141
+#: controllers/duplicate_custom_field.php:177
+#: controllers/edit_custom_field.php:179
+#: controllers/edit_custom_field.php:215
+#: controllers/list_custom_fields.php:12
+#: controllers/list_field_associations.php:149
+#: controllers/list_post_types.php:54
+#, fuzzy
+msgid "Manage Custom Fields"
+msgstr "Benutzerdefinierte Felder"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:126
+#, fuzzy
+msgid "Activate"
+msgstr "Aktivieren"
+
+#@ default
+#@ custom-content-type-mgr
+#: controllers/list_custom_fields.php:53
+#: controllers/list_custom_fields.php:60
+#: controllers/list_post_types.php:40
+#: controllers/list_pt_associations.php:110
+#: controllers/list_pt_associations.php:142
+#: includes/CCTM_PostTypeDef.php:498
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:125
+#, fuzzy
+msgid "Activate this content type"
+msgstr "Inhaltstyp aktivieren"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:131
+#, fuzzy
+msgid "Delete this content type"
+msgstr "Lösche diesen Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/list_custom_fields.php:25
+#: config/menus/admin_menu.php:32
+#: config/menus/admin_menu.php:65
+#: config/menus/admin_menu.php:66
+#: controllers/settings.php:107
+#: includes/StandardizedCustomFields.php:190
+#: views/preview_def.php:52
+#: views/templates/default.php:50
+msgid "Custom Fields"
+msgstr "Benutzerdefinierte  Felder"
+
+#@ custom-content-type-mgr
+#@ default
+#: ajax-controllers/summarize_posts_form.php:44
+#: ajax-controllers/summarize_posts_widget.php:65
+#: controllers/change_field_type.php:24
+#: controllers/create_custom_field.php:15
+#: controllers/create_post_type.php:13
+#: controllers/duplicate_custom_field.php:24
+#: controllers/duplicate_post_type.php:54
+#: controllers/edit_custom_field.php:24
+#: controllers/edit_post_type.php:45
+#: controllers/merge_custom_fields.php:16
+#: views/basic_form.php:31
+#: views/custom_field.php:61
+#: views/purge.php:76
+#: views/sortable-list.php:13
+#: views/sortable-list.php:47
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#@ default
+#@ custom-content-type-mgr
+#: fields/image.php:312
+#: fields/media.php:316
+#: fields/relation.php:312
+#: includes/CCTM.php:1193
+msgid "Remove"
+msgstr "Entfernen"
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:250
+#: fields/multiselect.php:246
+msgid "Add Option"
+msgstr "Option hinzufügen"
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:57
+#, php-format
+msgid "%1$s requires MySQL %2$s or newer."
+msgstr "%1$s erfordert MySQL %2$s oder eine neuere Version."
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:60
+#: tests/CCTMtests.php:141
+msgid "Talk to your system administrator about upgrading."
+msgstr "Bitte sprechen Sie bezüglich der Aktualisierung mit dem System-Admin."
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:98
+#: tests/CCTMtests.php:106
+#, php-format
+msgid "%1$s requires version %$2% of the %3$s plugin."
+msgstr "%1$s erfordert Version %$2% des %3$s Plugins."
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:113
+#, php-format
+msgid "The %1$s plugin is not installed."
+msgstr "Das %1$s Plugin ist nicht installiert."
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:126
+#, php-format
+msgid "%1$s requires WordPress %2$s or newer. <a href=\"http://codex.wordpress.org/Upgrading_WordPress\">Please update!</a>"
+msgstr "%1$s erfordert WordPress %2$s oder eine neurere version. <a href=\"http://codex.wordpress.org/Upgrading_WordPress\">Bitte aktualisieren Sie WordPress!</a>"
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:162
+#, php-format
+msgid "%1$s requires the %2$s PHP extension."
+msgstr "%1$s erfordert die %2$s PHP Erweiterung."
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:167
+msgid "Talk to your system administrator about reconfiguring PHP."
+msgstr "Sprechen Sie mit dem System-Admin über die Neueinstellung von PHP"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:42
+#: ajax-controllers/get_posts.php:56
+#: ajax-controllers/get_selected_posts.php:27
+#: ajax-controllers/get_selected_posts.php:34
+#: ajax-controllers/get_tpl.php:17
+#: ajax-controllers/get_tpl.php:24
+#, php-format
+msgid "Invalid fieldname: %s"
+msgstr "Ungültiger Feldname: %s"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:91
+#: ajax-controllers/post_content_widget.php:73
+msgid "Post Selector configuration file not found."
+msgstr "Inhaltstyp-Auswahl-Einstellung wurde nicht gefunden."
+
+#@ custom-content-type-mgr
+#@ default
+#: ajax-controllers/get_posts.php:192
+#: ajax-controllers/post_content_widget.php:147
+#: fields/date.php:301
+#: includes/CCTM_Columns.php:37
+#: includes/CCTM_PostTypeDef.php:23
+msgid "Date"
+msgstr "Datum"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:193
+#: ajax-controllers/post_content_widget.php:148
+#: views/info.php:35
+#: views/purge.php:35
+msgid "Status"
+msgstr "Status"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:194
+#: ajax-controllers/post_content_widget.php:149
+msgid "Parent"
+msgstr "Eltern"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:195
+#: ajax-controllers/post_content_widget.php:150
+#: views/info.php:17
+#: views/purge.php:17
+msgid "Post Type"
+msgstr "Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:196
+#: includes/CCTM_FormElement.php:147
+msgid "Add to Post"
+msgstr "Dem Inhalt hinzufügen"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_posts.php:197
+#: includes/CCTM_FormElement.php:148
+msgid "Add to Post and Close"
+msgstr "Dem Inhalt hinzufügen und schließen"
+
+#@ custom-content-type-mgr
+#@ default
+#: ajax-controllers/get_posts.php:209
+#: ajax-controllers/post_content_widget.php:161
+#: includes/CCTM.php:1192
+#: includes/CCTM.php:1220
+#: views/import.php:69
+#: views/import.php:111
+msgid "Preview"
+msgstr "Vorschau"
+
+#@ default
+#: ajax-controllers/get_posts.php:214
+#: ajax-controllers/get_selected_posts.php:115
+#: filters/gallery.php:42
+#: includes/GetPostsQuery.php:2159
+msgid "post_title"
+msgstr ""
+
+#@ default
+#: ajax-controllers/get_posts.php:215
+#: ajax-controllers/get_selected_posts.php:116
+#: filters/gallery.php:43
+#: includes/GetPostsQuery.php:2161
+msgid "post_content"
+msgstr ""
+
+#@ default
+#: ajax-controllers/get_posts.php:216
+#: ajax-controllers/get_selected_posts.php:117
+#: filters/gallery.php:44
+#: includes/GetPostsQuery.php:2162
+msgid "post_excerpt"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_search_form.php:22
+msgid "fieldname or fieldtype required."
+msgstr "Feldname oder Feldtype erforderlich"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_search_form.php:58
+#: ajax-controllers/summarize_posts_form.php:21
+#: ajax-controllers/summarize_posts_widget.php:35
+msgid "Search parameter configuration file not found."
+msgstr "Suchparameter-Einstellungsdatei nicht gefunden"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_selected_posts.php:55
+msgid "Post ID or guid required."
+msgstr "PostID oder GUID erforderlich"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_selected_posts.php:81
+#: ajax-controllers/get_tpl.php:52
+#: ajax-controllers/get_widget_post_tpl.php:24
+msgid "Formatting template not found!"
+msgstr "Formatvorlage nicht gefunden"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_validator_options.php:14
+#: fields/checkbox.php:146
+#: fields/date.php:283
+#: fields/dropdown.php:226
+#: fields/dropdown.php:248
+#: fields/image.php:302
+#: fields/media.php:306
+#: fields/multiselect.php:222
+#: fields/multiselect.php:244
+#: fields/relation.php:302
+#: includes/CCTM_FormElement.php:404
+msgid "Options"
+msgstr "Optionen"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_validator_options.php:17
+msgid "Error loading validator."
+msgstr "Fehler beim Laden des Validators."
+
+#@ custom-content-type-mgr
+#: ajax-controllers/get_widget_post_tpl.php:31
+#: includes/CCTM_Post_Widget.php:56
+msgid "Edit Selected Post"
+msgstr "Bearbeite den ausgewählten Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/list_custom_fields.php:13
+msgid "No post-type detected. Cannot display custom fields."
+msgstr "Kein Inhaltstyp gefunden. Darstellung von benutzerdefinierten Feldern nicht möglich."
+
+#@ custom-content-type-mgr
+#: ajax-controllers/list_custom_fields.php:18
+msgid "The custom fields for this post-type are not standardized. You can manually type in the shortcode to print the custom field value from another post using the following format:  <code>[custom_field name=\"name_of_field\" filter=\"optional_output_filter\" post_id=\"123\"]</code>"
+msgstr "Die selbst erstellten Felder für diesen Inhaltstyp sind nicht stadardisiert. Um die Werte benutzerdefinierter Felder anzuzeigen, können Sie folgende Befehle verwenden:  <code>[custom_field name=\"name_of_field\" filter=\"optional_output_filter\" post_id=\"123\"]</code>"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/list_custom_fields.php:36
+msgid "This post-type does not have any custom fields associated with it."
+msgstr "Mit diesem Inhaltstyp sind keine benutzerdefinierten Felder verknüpft."
+
+#@ custom-content-type-mgr
+#: ajax-controllers/preview_def.php:24
+msgid "Definition file not specified."
+msgstr "Die Definitionsdatei wurde nicht spezifiziert."
+
+#@ custom-content-type-mgr
+#: ajax-controllers/preview_def.php:30
+msgid "Invalid filename: the definition filename should not contain spaces and should use an extension of <code>.cctm.json</code>."
+msgstr "Ungültiger Feldname: Der Definitionsdatei-Name darf keine Leerfelder beinhalten und muss die Endung <code>.cctm.json</code> haben."
+
+#@ custom-content-type-mgr
+#: ajax-controllers/preview_def.php:51
+#, php-format
+msgid "Your site's encoding differs from the encoding used to create this definition file.  This may create problems if the post-type and field definitions use foreign characters.  Adding the following to your wp-config.php file may alleviate problems with character encoding: <code>define('DB_CHARSET', '%s');</code>"
+msgstr "Die Enkodierung dieser Webseite unterscheidet sich von der in der Definitionsdatei vorliegenden. Das könnte zu Problemen führen, wenn Inhaltstyp und Definitionsdatei fremde Charaktere beinhalten. Das hinzufügen des folgenden Codes zur Datei wp-config.php kann helfen, die Problembehebung zu erleichtern: <code>define('DB_CHARSET', '%s');</code>"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:39
+#: ajax-controllers/summarize_posts_widget.php:60
+msgid "Dynamically list posts according to the criteria below."
+msgstr "Dynamische Listen-Inhalte entsprechend der unten aufgeführten Kriterien."
+
+#@ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:41
+#: ajax-controllers/summarize_posts_widget.php:62
+msgid "Author ID"
+msgstr "Autoren-ID"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:42
+#: ajax-controllers/summarize_posts_widget.php:63
+msgid "Add Filter"
+msgstr "Filter hinzufügen"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_form.php:43
+msgid "Generate Shortcode"
+msgstr "Erzeuge Shortcode"
+
+#@ custom-content-type-mgr
+#: ajax-controllers/summarize_posts_widget.php:64
+msgid "Save Criteria"
+msgstr "Kriterien speichern"
+
+#@ default
+#: ajax-controllers/upload_image.php:18
+msgid "From Computer"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: config/menus/admin_menu.php:20
+msgid "Manage Custom Content Types"
+msgstr "Verwalte benutzerdefinierte Inhaltstypen"
+
+#@ custom-content-type-mgr
+#: config/menus/admin_menu.php:21
+msgid "Custom Content Types"
+msgstr "Benutzerdefinierte Inhaltstypen"
+
+#@ custom-content-type-mgr
+#: config/menus/admin_menu.php:31
+msgid "CCTM Custom Fields"
+msgstr "CCTM benutzerdefinierte Felder"
+
+#@ custom-content-type-mgr
+#: config/menus/admin_menu.php:40
+msgid "CCTM Global Settings"
+msgstr "CCTM Globale Einstellungen"
+
+#@ custom-content-type-mgr
+#: config/menus/admin_menu.php:41
+#: views/templates/default.php:51
+msgid "Global Settings"
+msgstr "Globale Einstellungen"
+
+#@ custom-content-type-mgr
+#: config/menus/admin_menu.php:49
+msgid "CCTM Tools"
+msgstr "CCTM Werkzeuge"
+
+#@ custom-content-type-mgr
+#: config/menus/admin_menu.php:50
+#: controllers/tools.php:8
+#: views/templates/default.php:53
+msgid "Tools"
+msgstr "Werkzeuge"
+
+#@ custom-content-type-mgr
+#: controllers/activate_post_type.php:28
+#, php-format
+msgid "The %s post_type has been activated."
+msgstr "Der %s Inhaltstyp wurde deaktiviert"
+
+#@ custom-content-type-mgr
+#: controllers/bug_report.php:9
+#: views/templates/default.php:83
+msgid "Report a Bug"
+msgstr "Bug melden."
+
+#@ custom-content-type-mgr
+#: controllers/bug_report.php:11
+msgid "Launch Bug Tracker"
+msgstr "Starte den Bug Tracker"
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:21
+#, php-format
+msgid "Change Field Type: %s"
+msgstr "Ersetze Feld-Typen: %s"
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:33
+#: controllers/clear_warnings.php:9
+#: controllers/duplicate_custom_field.php:31
+#: controllers/edit_custom_field.php:31
+msgid "Invalid request."
+msgstr "Ungültige Abfrage"
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:55
+#, php-format
+msgid "The %s custom field has been converted to a %s field."
+msgstr "Das benutzerdefinierte Feld %s wurde in ein %s-Feld umgewandelt."
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:62
+msgid "There was a problem converting the field type."
+msgstr "Ein Fehler beim Umwandeln des Feld-Typs ist aufgetreten."
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:77
+#, php-format
+msgid "Change the %s field from a %s field into the following type of field:"
+msgstr "Mache aus dem %s-Feld ein folgendes:"
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:95
+#: controllers/list_custom_field_types.php:43
+#, php-format
+msgid "Form element not found: %s"
+msgstr "Formular-Element nicht gefunden: %s"
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:102
+msgid "WARNING: different fields have different attributes. The conversion process may cause some attributes in your field definition to be lost.  Export a copy of your field definitions before continuing."
+msgstr "WARNUNG: Unterschiedliche Felder haben unterschiedliche Attribute. Die Umwandlung könnte zum Verlust einiger Attribute führen. Bitte exportieren Sie zunächst die Felddefinitionen, bevor Sie fortfahren."
+
+#@ custom-content-type-mgr
+#: controllers/change_field_type.php:104
+msgid "Export a copy of your field definitions before continuing."
+msgstr "Exportieren Sie die Feld-Definitionen, bevor Sie fortfahren."
+
+#@ custom-content-type-mgr
+#: controllers/clear_cache.php:9
+#: controllers/clear_cache.php:15
+#: views/tools.php:17
+msgid "Clear Cache"
+msgstr "Lösche Cache"
+
+#@ custom-content-type-mgr
+#: controllers/clear_cache.php:34
+msgid "Cache has been cleared"
+msgstr "Cache wurde gelöscht"
+
+#@ custom-content-type-mgr
+#: controllers/clear_cache.php:43
+msgid "Unable to clear the cache!  Please adjust the permissions on that directory or manually delete its contents."
+msgstr "Es war nicht möglich, den Cache zu löschen! Bitte ändern Sie zunächst die Einstellungen des Verzeichnisses oder löschen Sie dessen Inhalte."
+
+#@ custom-content-type-mgr
+#: controllers/clear_cache.php:54
+#, php-format
+msgid "Clearing the cache will delete all files and directories from the CCTM cache directory: %s."
+msgstr "Das Löschen des Cache löscht auch alle Dateien und Verzeichnisse im CCTM-Verzeichnis: %s."
+
+#@ custom-content-type-mgr
+#: controllers/clear_warnings.php:20
+msgid "All warnings have been dismissed."
+msgstr "Alle Warnungen wurden ignoriert!"
+
+#@ custom-content-type-mgr
+#: controllers/create_custom_field.php:12
+#: controllers/list_custom_fields.php:15
+msgid "Create Custom Field"
+msgstr "Erzeuge ein benutzerdefinierte Feld"
+
+#@ custom-content-type-mgr
+#: controllers/create_custom_field.php:93
+#: controllers/duplicate_custom_field.php:103
+#, php-format
+msgid "A %s custom field has been created."
+msgstr "Das benutzerdefinierte Feld %s wurde erstellt."
+
+#@ custom-content-type-mgr
+#: controllers/create_custom_field.php:100
+#, php-format
+msgid "A %s custom field has been created for the %s post-type."
+msgstr "Das benutzerdefinierte Feld %s für den Inhaltstyp %s wurde erstellt."
+
+#@ custom-content-type-mgr
+#: controllers/create_custom_field.php:162
+#: controllers/create_custom_field.php:198
+#: controllers/duplicate_custom_field.php:140
+#: controllers/duplicate_custom_field.php:176
+#: controllers/edit_custom_field.php:178
+#: controllers/edit_custom_field.php:214
+#: controllers/list_field_associations.php:148
+#: controllers/list_post_types.php:53
+msgid "Manage Custom Fields for this content type"
+msgstr "Verwalte benutzerdefinierte Felder für diesen Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: controllers/create_custom_field.php:171
+#: controllers/duplicate_custom_field.php:149
+#: controllers/edit_custom_field.php:187
+msgid "Built-in post-type."
+msgstr "Eingebauter Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: controllers/create_custom_field.php:192
+#: controllers/duplicate_custom_field.php:170
+#: controllers/edit_custom_field.php:208
+msgid "Foreign post-type."
+msgstr "Fremder Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:48
+#, php-format
+msgid "The %s content type has been deactivated."
+msgstr "Der Inhaltstyp %s wurde deaktiviert."
+
+#@ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:66
+#, php-format
+msgid "You are about to deactivate the %s post type."
+msgstr "Sie sind dabei, den Inhaltstyp %s zu deaktivieren."
+
+#@ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:72
+#, php-format
+msgid "Deactivation does not delete anything, but it does make %s posts unavailable to the outside world. %s will be removed from the administration menus and you will no longer be able to edit them using the WordPress manager."
+msgstr "Die Deaktvierung führt nicht zur Löschung von Inhalten, aber doch dazu, dass Inhalte vom Typ %s für Besucher nicht mehr sichtbar sind. %s-Inhalte werden aber aus dem Admin-Menu von WordPress entfernt und können anschliessend nicht mehr bearbeitet werden."
+
+#@ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:76
+#: controllers/delete_post_type.php:68
+#, php-format
+msgid "This would affect %1$s published %2$s posts."
+msgstr "This would affect %1$s published %2$s posts."
+
+#@ custom-content-type-mgr
+#: controllers/deactivate_post_type.php:83
+msgid "Deactivation does not delete anything, but it does turn off the standardization of the custom fields.  By default WordPress only supports simple text fields and you can easily misspell field names."
+msgstr "Die Deaktvierung führt nicht zur Löschung von Inhalten, sondern Inhalte von benutzerdefinierten Feldern %s werden ihre Vereinheitlichung verlieren. In der Grundeinstellung unterstützt WordPress lediglich einfache Textfelder. Dadurch könnten Feldnamen versehentlich falsch geschrieben werden."
+
+#@ custom-content-type-mgr
+#: controllers/delete_custom_field.php:10
+#, php-format
+msgid "Delete Custom Field: %s"
+msgstr "Lösche benutzerdefiniertes Feld: %s."
+
+#@ custom-content-type-mgr
+#: controllers/delete_custom_field.php:53
+#, php-format
+msgid "The custom field %s has been deleted"
+msgstr "Das benutzerdefiniertes Feld %s wurde gelöscht."
+
+#@ custom-content-type-mgr
+#: controllers/delete_custom_field.php:67
+#, php-format
+msgid "You are about to delete the %s custom field and delete all of its values from the database. This cannot be undone!"
+msgstr "Sie sind dabei, das benutzerdefinierte Feld %s mit allen seinen Einstellungen aus der Datenbank zu löschen! Dieser Vorgang kann NICHT rückgängig gemacht werden!"
+
+#@ custom-content-type-mgr
+#: controllers/delete_custom_field.php:80
+#, php-format
+msgid "You are about to delete the %s custom field. This will remove all of its settings from the database, but this will NOT delete any data from the wp_postmeta table. However, without a definition for this field, it will be mostly invisible to WordPress."
+msgstr "Sie sind dabei, das benutzerdefinierte Feld %s zu löschen. Dieser Vorgang wird alle Einstellungen aus der Datenbank löschen, aber es werden KEINE Daten aus der wp_postmeta-Tabelle gelöscht. Da das Feld anschliessend über keine Definitionen verfügt, wird es für WordPress weitestgehend unsichtbar sein."
+
+#@ custom-content-type-mgr
+#: controllers/delete_post_type.php:77
+#, php-format
+msgid "You are about to delete the %s post type and delete all of its posts from the database. This cannot be undone!"
+msgstr "WARNUNG! Sie sind dabei, den Inhaltstyp %s und alle seine Inhalte aus der Datenbank zu löschen. Dieser Vorgang kann nicht rückgängig gemacht werden!"
+
+#@ custom-content-type-mgr
+#: controllers/duplicate_custom_field.php:21
+#, php-format
+msgid "Duplicate Custom Field: %s"
+msgstr "Dupliziere benutzerdefiniertes Feld: %s."
+
+#@ custom-content-type-mgr
+#: controllers/duplicate_post_type.php:38
+msgid "Unrecognized post_type."
+msgstr "Nicht erkannter Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: controllers/duplicate_post_type.php:39
+msgid "Unrecognized post-type"
+msgstr "Nicht erkannter Inhaltstyp"
+
+#@ default
+#: controllers/duplicate_post_type.php:50
+msgid "Duplicate Content Type: "
+msgstr ""
+
+#@ custom-content-type-mgr
+#: controllers/edit_custom_field.php:21
+#, php-format
+msgid "Edit Custom Field: %s"
+msgstr "Bearbeite benutzerdefiniertes Feld: %s."
+
+#@ custom-content-type-mgr
+#: controllers/edit_custom_field.php:47
+msgid "Field Type"
+msgstr "Feldtyp"
+
+#@ custom-content-type-mgr
+#: controllers/edit_custom_field.php:47
+msgid "Change Field Type"
+msgstr "Ändere den Feld-Typ."
+
+#@ custom-content-type-mgr
+#: controllers/edit_custom_field.php:137
+#, php-format
+msgid "The %s custom field has been edited."
+msgstr "Das benutzerdefiniertes Feld %s wurde bearbeitet."
+
+#@ default
+#: controllers/edit_post_type.php:28
+msgid "Unrecognized Content type"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: controllers/edit_post_type.php:38
+msgid "WARNING: changing this value is not recommended.  Changing the post-type name may break permalinks, alter search criteria, and you may have to rename your template files."
+msgstr "WARNUNG! Von Veränderungen dieser Einstellung ist dringend abgeraten! Wenn Sie diese Einstellung ändern, könnten Permalinks und Suchkriterien nicht mehr funktionieren. Ausserdem kann es möglich sein, dass Sie den Template-Namen ändern müssen."
+
+#@ custom-content-type-mgr
+#: controllers/edit_post_type.php:83
+#, php-format
+msgid "You have changed the name of your post_type, so you must also rename your template file! Rename %s to %s."
+msgstr "Sie haben den Namen Ihres Inhaltstypen geändert. Dadurch ist es erforderlich, dass Sie den Namen des Templates ebenfalls ändern müssen, um seine Funktion zu gewährleisten. Ändern Sie %s in %s."
+
+#@ custom-content-type-mgr
+#: controllers/error.php:13
+msgid "Invalid field name."
+msgstr "Ungültiger Feldname"
+
+#@ custom-content-type-mgr
+#: controllers/error.php:17
+msgid "There is no definition that is ready for importing, or the definition that you are trying to import is empty."
+msgstr "Definition für den Import nicht vorhanden, oder, die Definition, die Sie importieren möchten, ist leer."
+
+#@ custom-content-type-mgr
+#: controllers/error.php:18
+#: controllers/import_def.php:10
+#: views/tools.php:5
+msgid "Import Definition"
+msgstr "Importiere Definition"
+
+#@ custom-content-type-mgr
+#: controllers/error.php:21
+msgid "Invalid warning."
+msgstr "Ungültige Warnung"
+
+#@ custom-content-type-mgr
+#: controllers/export_def.php:8
+#: views/tools.php:11
+msgid "Export Definition"
+msgstr "Exportiere Defininition"
+
+#@ default
+#: controllers/export_def.php:11
+msgid "Import"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: controllers/export_def.php:38
+#, php-format
+msgid "Your Custom Content Type definition %s should begin downloading shortly.  If there is a problem downloading, you can copy the text below into a text editor and save it with a <code>.cctm.json</code> extension."
+msgstr "Der Download ihrer benutzerdefinierten Inhaltstyp-Definition %s wird in Kürze starten. Sollte ein Problem beim Download auftreten, kopieren Sie bitte den unten stehenden Text in ein Texteditor-Programm und speichern Sie ihn mit einer <code>.cctm.json</code> Dateiendung."
+
+#@ custom-content-type-mgr
+#: controllers/export_def.php:58
+msgid "Your Custom Content Type definition has been saved to your library. <a href=\"?page=cctm_tools&a=import_def\">Click here</a> to view your library."
+msgstr "Ihr benutzerdefinierter Inhaltstyp wurde in Ihrer Bibliothek gespeichert. <a href=\"?page=cctm_tools&a=import_def\">Klicken Sie hier</a> um Ihre Bibliothek zu sehen."
+
+#@ custom-content-type-mgr
+#: controllers/help.php:7
+#: filters/help.php:112
+#: views/templates/default.php:79
+msgid "Help"
+msgstr "Hilfe"
+
+#@ custom-content-type-mgr
+#: controllers/help.php:9
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#@ custom-content-type-mgr
+#: controllers/help.php:11
+msgid "You can click the information icon at the top right corner of any page to pull up a relevant help page from the wiki:"
+msgstr "Klicke auf das Informations-Icon, um zu jederzeit das Hilfe-Menu aus dem Wiki aufzurufen"
+
+#@ default
+#: controllers/help.php:17
+#: views/bug_report.php:5
+msgid "If you require immediate help for this plugin, you can contract me at the following email address for a reasonable hourly rate:"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: controllers/help.php:23
+msgid "This plugin is open source software freely available to WordPress users."
+msgstr "Dieses PlugIn ist Open Source Software und frei erhältlich für WordPress-Benutzer."
+
+#@ custom-content-type-mgr
+#: controllers/help.php:24
+msgid "Use the following links to get more information about how to use this plugin."
+msgstr "Die folgenden Links helfen Ihnen um weitere Informationen zum Gebrauch dieses PlugIns zu erhalten."
+
+#@ custom-content-type-mgr
+#: controllers/help.php:26
+msgid "<a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/\">Official Documentation</a> -- available on the project's Wiki page."
+msgstr "<a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/\">Offizielle Dokumentation</a> -- auf der Wiki Projektseite erhältlich"
+
+#@ custom-content-type-mgr
+#: controllers/help.php:27
+msgid "<a href=\"http://wordpress.org/tags/custom-content-type-manager?forum_id=10\">Plugin Forum</a> -- General questions can be asked in the forum."
+msgstr "<a href=\"http://wordpress.org/tags/custom-content-type-manager?forum_id=10\">Plugin Forum</a> -- Generelle Fragen können hier gestellt werden."
+
+#@ custom-content-type-mgr
+#: controllers/help.php:28
+msgid "<a href=\"http://wpcctm.com/\">Official Site</a>."
+msgstr "<a href=\"http://wpcctm.com/\">Offizielle Seite</a>."
+
+#@ default
+#: controllers/import_def.php:13
+msgid "Export"
+msgstr ""
+
+#@ default
+#: controllers/import_def.php:31
+msgid ""
+"Failed to create the CCTM base storage directory: <code></code></p>\n"
+"\t\t<p><a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/Permissions\" target=\"_blank\">Click here</a> for more information about correcting permissions errors on your server.</p>"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: controllers/import_def.php:55
+msgid "No file selected"
+msgstr "Keine Datei ausgewählt."
+
+#@ custom-content-type-mgr
+#: controllers/import_def.php:66
+#, php-format
+msgid "The definition filesize must not exceed %s bytes."
+msgstr "Die Definitions-Dateigröße darf %s bytes nicht überschreiten."
+
+#@ custom-content-type-mgr
+#: controllers/import_def.php:81
+msgid "The uploaded file is not in the correct format."
+msgstr "Die hochgeladende Datei ist nicht im korrekten Format."
+
+#@ custom-content-type-mgr
+#: controllers/import_def.php:100
+msgid "We could not upload the definition file to your library. This may be due to permissions errors or some other server configuration.  Use FTP to upload your file to %"
+msgstr "Die Definitionsdatei konnte der Library nicht zugefügt werden. Das könnte an mangelnden Rechten oder anderen Servereinstellungen liegen. Gebrauche FTP, um die Daten zu % hoch zu laden."
+
+#@ custom-content-type-mgr
+#: controllers/import_def.php:119
+msgid "Files have been removed from your library."
+msgstr "Die Daten wurden aus der Library gelöscht."
+
+#@ custom-content-type-mgr
+#: controllers/import_def.php:134
+msgid "The definition was imported successfully!"
+msgstr "Die Definition wurde erfolgreich importiert."
+
+#@ custom-content-type-mgr
+#: controllers/import_def.php:146
+msgid "Invalid submission."
+msgstr "Ungültige Eingabe."
+
+#@ custom-content-type-mgr
+#: controllers/info.php:13
+msgid "Information"
+msgstr "Information"
+
+#@ custom-content-type-mgr
+#: controllers/list_custom_field_types.php:10
+msgid "Add Field: Choose Type of Custom Field"
+msgstr "Feld hizufügen: Wähle den Typ des Feldes aus."
+
+#@ custom-content-type-mgr
+#: controllers/list_custom_field_types.php:20
+#, php-format
+msgid "Create a custom field for the %s post_type"
+msgstr "Erzeuge ein benutzerdefiniertes Feld für den %s Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: controllers/list_custom_fields.php:24
+msgid "There are no custom fields defined. Click the button below to add a custom field."
+msgstr "Es sind keine benutzerdefinierten Felder definiert. Klicke die Schaltfläche um ein Feld zu erzeugen"
+
+#@ custom-content-type-mgr
+#: controllers/list_custom_fields.php:59
+#: controllers/list_pt_associations.php:109
+#: controllers/list_pt_associations.php:141
+msgid "Edit this custom field"
+msgstr "Dieses benutzerdefinierte Feld bearbeiten"
+
+#@ custom-content-type-mgr
+#: controllers/list_custom_fields.php:66
+msgid "Duplicate this custom field"
+msgstr "Dieses benutzerdefinierte Feld duplizieren"
+
+#@ custom-content-type-mgr
+#: controllers/list_custom_fields.php:67
+#: controllers/list_post_types.php:47
+msgid "Duplicate"
+msgstr "Duplizieren"
+
+#@ custom-content-type-mgr
+#: controllers/list_custom_fields.php:73
+msgid "Delete this custom field"
+msgstr "Dieses benutzerdefinierte Feld löschen"
+
+#@ custom-content-type-mgr
+#: controllers/list_field_associations.php:15
+#, php-format
+msgid "Content Types using Custom Field %s"
+msgstr "Content Types using Custom Field %s"
+
+#@ custom-content-type-mgr
+#: controllers/list_field_associations.php:24
+#, php-format
+msgid "The following content types are using the %s custom field"
+msgstr "Der folgende Inhaltstyp gebraucht das benutzerdefinierte Feld %s"
+
+#@ custom-content-type-mgr
+#: controllers/list_field_associations.php:104
+#, php-format
+msgid "The associations for the %s custom field have been updated"
+msgstr "Die Zuordnungen für das benutzerdefinierte Feld %s wurden aktualisiert."
+
+#@ custom-content-type-mgr
+#: controllers/list_field_associations.php:121
+#: controllers/list_post_types.php:72
+#: views/preview_def.php:25
+msgid "Built-in post type."
+msgstr "Eingebauter Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:14
+msgid "List Content Types"
+msgstr "Inhaltstypen auflisten"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:15
+msgid "Create Content Type"
+msgstr "Inhaltstypen erzeugen"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:39
+msgid "Edit this content type"
+msgstr "Diesen Inhaltstyp bearbeiten"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:46
+msgid "Duplicate this content type"
+msgstr "Diesen Inhaltstyp duplizieren"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:58
+msgid "View Sample Templates for this content type"
+msgstr "Beispielvorlagen dieses Inhaltstypen ansehen"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:59
+msgid "View Sample Templates"
+msgstr "Beispielvorlagen ansehen"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:69
+#: controllers/list_post_types.php:91
+#: controllers/list_post_types.php:165
+msgid "Stop standardizing custom fields this content type"
+msgstr "Stoppe die Vereinheitlichung der Felder dieses Inhaltsypen"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:70
+#: controllers/list_post_types.php:92
+#: controllers/list_post_types.php:166
+msgid "Release Custom Fields"
+msgstr "Veröffentliche benutzerdefinierte Felder."
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:81
+#: controllers/list_post_types.php:155
+msgid "Standardize Custom Fields for this content type"
+msgstr "Vereinheitliche die benutzerdefinierten Felder diesen Inhaltstypes"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:82
+#: controllers/list_post_types.php:156
+msgid "Standardize Custom Fields"
+msgstr "Vereinheitliche benutzerdefinierte Felder"
+
+#@ custom-content-type-mgr
+#: controllers/list_post_types.php:146
+msgid "Foreign post-type.  This post type has been registered by another plugin."
+msgstr "Fremder Inhaltstyp. Dieser Inhaltstyp wurde durch ein anderes PlugIn registriert."
+
+#@ custom-content-type-mgr
+#: controllers/list_pt_associations.php:17
+#, php-format
+msgid "Custom Fields for %s"
+msgstr "Benutzerdefiniertes Feld für %s."
+
+#@ custom-content-type-mgr
+#: controllers/list_pt_associations.php:47
+#, php-format
+msgid "Custom fields for %s have been updated."
+msgstr "Benutzerdefinierte Felder für %s wurden aktualisiert."
+
+#@ custom-content-type-mgr
+#: controllers/list_pt_associations.php:69
+msgid "There are no custom fields defined yet."
+msgstr "Es wurden keine benutzerdefinierten Felder definiert."
+
+#@ custom-content-type-mgr
+#: controllers/list_pt_associations.php:71
+msgid "Define custom fields"
+msgstr "Definiere benutzerdefinierte Felder."
+
+#@ custom-content-type-mgr
+#: controllers/list_pt_associations.php:76
+#, php-format
+msgid "The %s post type does not have any custom fields yet. Check the fields below to add custom fields."
+msgstr "Der %s Inhaltstyp verfügt bislang nicht über benutzerdefinierte Felder. Überprüfe die Felder, um solche anzulegen."
+
+#@ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:13
+msgid "Merge Custom Field"
+msgstr "Benutzerdefinierte Felder zusammenfügen."
+
+#@ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:20
+msgid "Merge"
+msgstr "Vermenge"
+
+#@ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:30
+msgid "You must select a target to merge the field into."
+msgstr "Sie müssen zunächst ein Ziel festlegen, um das Feld einzufügen."
+
+#@ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:73
+#, php-format
+msgid "The %s field has been merged into the %s field."
+msgstr "Das Feld %s wurde in das Feld %s eingefügt."
+
+#@ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:88
+msgid "Merging causes a field to be renamed in the database and the old definition to be deleted. For example, if you merge \"cats\" into \"dogs\", all instances of \"cats\" in the database will be renamed to \"dogs\" and the field definition for \"cats\" will be removed."
+msgstr "Wenn Sie ein Feld mit einem anderen zusammenfügen, wird es in der Datenbank umbenannt und die alte Version gelöscht. Beispiel: Wenn Sie \"Katzen\" in \"Hunde\" einfügen, werden alle Instanzen von \"Katzen\" in der Datenbank zu \"Hunde\\ umbenannt und die Felddefinituion für \"Katzen\" wird entfernt."
+
+#@ default
+#: controllers/merge_custom_fields.php:90
+msgid "Be careful about merging a field into a field of a different type! You may encounter unpredictable results!"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:92
+#, php-format
+msgid "Choose a custom field below that will absorb the values for the %s field."
+msgstr "Wähle unten ein benutzerdefinierte Feld , welches die Werte für das Feld %s übernimmt."
+
+#@ custom-content-type-mgr
+#: controllers/merge_custom_fields.php:97
+msgid "Choose target"
+msgstr "Ziel wählen"
+
+#@ custom-content-type-mgr
+#: controllers/preview_def.php:12
+#, php-format
+msgid "Bad filename: %s. No special characters or spaces allowed."
+msgstr "Falscher Dateiname: %s. Es sind keine Spezial-Charaktere oder Leerzeichen erlaubt."
+
+#@ custom-content-type-mgr
+#: controllers/preview_def.php:28
+#, php-format
+msgid "%s contained an incompatible data structure."
+msgstr "%s enthielt eine inkompatible Datenstruktur."
+
+#@ custom-content-type-mgr
+#: controllers/purge.php:10
+#: views/tools.php:23
+msgid "Purge Posts"
+msgstr "Bereinige Inhalte"
+
+#@ custom-content-type-mgr
+#: controllers/purge.php:57
+#: controllers/purge.php:109
+msgid "Your database is clean: there are no inactive post-types that need to be purged."
+msgstr "Ihre Datenbank ist sauber: In ihr gibt es keine inaktiven Inhaltstypen die bereinigt werden müssten."
+
+#@ custom-content-type-mgr
+#: controllers/purge.php:95
+#, php-format
+msgid "The database has been purged from the following post-types: %s"
+msgstr "Die Datenbank wurde von folgenden Inhaltstypen bereinigt: %s"
+
+#@ custom-content-type-mgr
+#: controllers/purge.php:112
+msgid "The following post-types are inactive and can be purged from your database:"
+msgstr "Die folgenden Inhaltstypen sind inaktiv und können aus der Datenbank entfernt werden:"
+
+#@ custom-content-type-mgr
+#: controllers/purge.php:119
+msgid "Deleting these from your database cannot be undone!"
+msgstr "Das Löschen dieser Inhalte aus der Datenbank kann nicht rückgängig gemacht werden!"
+
+#@ custom-content-type-mgr
+#: controllers/reset_custom_fields.php:18
+msgid "Reset custom field definitions"
+msgstr "Setze die Definitionen benutzerdefinierter Felder zurück."
+
+#@ custom-content-type-mgr
+#: controllers/reset_custom_fields.php:30
+#, php-format
+msgid "All custom field definitions for the %s post type have been deleted"
+msgstr "Alle Definitionen benutzerdefinierter Felder des Types %s wurden gelöscht."
+
+#@ custom-content-type-mgr
+#: controllers/reset_custom_fields.php:40
+#, php-format
+msgid "You are about to delete all custom field definitions for the %s post type. This will not delete any data from the wp_postmeta table, but it will make any custom fields invisible to WordPress users on the front and back end."
+msgstr "Sie sind dabei, alle benutzerdefinierten Feld-Definitionen des Types %s zu löschen. Dieser Vorgang wird keine Daten aus der wp_postmeta Tabelle löschen, aber alle benutzerdefinierten Felder im Front- und Backend Ihrer WordPress-Installation unsichtbar machen."
+
+#@ custom-content-type-mgr
+#: controllers/settings.php:45
+msgid "Settings have been updated."
+msgstr "Die Einstellungen wurden aktualisiert."
+
+#@ custom-content-type-mgr
+#: controllers/settings.php:99
+msgid "Edit Settings"
+msgstr "Bearbeite die Einstellungen"
+
+#@ custom-content-type-mgr
+#: controllers/settings_cf.php:10
+#: controllers/settings_cf.php:23
+#, php-format
+msgid "Settings for Custom Field %s"
+msgstr "Einstellungen für das anwnderspezifische Feld %s."
+
+#@ custom-content-type-mgr
+#: controllers/template_single.php:22
+#, php-format
+msgid "Sample Themes for %s"
+msgstr "Beispiel-Themes für %s."
+
+#@ custom-content-type-mgr
+#: controllers/template_single.php:25
+msgid "Create Custom Field for this Post Type"
+msgstr "Erzeuge benutzerdefiniertes Feld für diesen Inhaltstypen."
+
+#@ custom-content-type-mgr
+#: controllers/template_single.php:159
+msgid "You have not associated any custom fields with this post-type. Be sure to add any desired custom fields to this post-type by clicking on the \"Manage Custom Fields\" link under the Custom Content Type menu and checking the fields that you want."
+msgstr "Sie haben kein benutzerdefiniertes Feld mit diesem Inhaltstyp verknüpft. Stellen Sie sicher, dass jedes gewünschte benutzerdefiniertes Feld durch das Klicken auf den unten stehenen Link \"Manage Custom Fields\" hinzugefügt wird."
+
+#@ custom-content-type-mgr
+#: controllers/themes.php:8
+#: views/templates/default.php:52
+msgid "Themes"
+msgstr "Themes"
+
+#@ custom-content-type-mgr
+#: fields/checkbox.php:38
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#@ custom-content-type-mgr
+#: fields/checkbox.php:51
+msgid ""
+"Checkbox fields implement the standard <input=\"checkbox\"> element.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"alt\" can be specified in the definition."
+msgstr "Checkbox-Felder implementieren Standardelemente <input=\"checkbox\">. \"Extra\"-Parameter, wie \"alt\" können in der Definition spezifiziert werden."
+
+#@ custom-content-type-mgr
+#: fields/checkbox.php:151
+msgid "Value when checked"
+msgstr "Wert, wenn geprüft"
+
+#@ custom-content-type-mgr
+#: fields/checkbox.php:160
+msgid "Value when Unchecked"
+msgstr "Wert, wenn ungeprüft."
+
+#@ custom-content-type-mgr
+#: fields/checkbox.php:168
+msgid "Checked by default?"
+msgstr "Per standard markiert?"
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:47
+#: fields/image.php:55
+#: fields/media.php:54
+#: fields/relation.php:56
+#: includes/CCTM_FormElement.php:301
+msgid "Standard Fields"
+msgstr "Standard-Felder"
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:69
+#: fields/image.php:77
+#: fields/image.php:311
+#: fields/media.php:76
+#: fields/media.php:315
+#: fields/relation.php:78
+#: fields/relation.php:311
+#: includes/CCTM_FormElement.php:323
+msgid "Default Value"
+msgstr "Standard-Wert"
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:78
+#: fields/image.php:86
+#: fields/media.php:85
+#: fields/relation.php:87
+#: includes/CCTM_FormElement.php:332
+msgid "Extra"
+msgstr "Extra"
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:97
+#: fields/image.php:105
+#: fields/media.php:104
+#: fields/relation.php:106
+#: includes/CCTM_FormElement.php:351
+msgid "Is Repeatable?"
+msgstr "Ist das wiederholbar?"
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:126
+msgid "Color Picker"
+msgstr "Farb-Wähler"
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:137
+msgid "Color Picker fields implement a <input type=\"color\"> element with a special Javascript color selection popup."
+msgstr "Farb-Wahl-Felder implementieren ein <input type=\"color\"> Element mit einem speziellen Javascript Farb-Wahl-Popup."
+
+#@ custom-content-type-mgr
+#: fields/colorselector.php:210
+#: fields/date.php:185
+#: fields/text.php:127
+#: fields/textarea.php:125
+#: fields/wysiwyg.php:92
+msgid "Add"
+msgstr "Hinzufügen"
+
+#@ custom-content-type-mgr
+#: fields/date.php:59
+msgid "Date and Time"
+msgstr "Datum und Zeit"
+
+#@ custom-content-type-mgr
+#: fields/date.php:72
+msgid "Use these fields to store dates and times."
+msgstr "Gebrauche diese Felder, um Datum und Zeit zu speichern."
+
+#@ custom-content-type-mgr
+#: fields/date.php:289
+msgid "Use PHP eval to calculate the default value? (Omit the php tags, e.g. <code>date('Y-m-d')</code>)."
+msgstr "PHP Test zur Berechnung der Grundwerte gebrauchen? (Gibt PHP Tags aus, Z.B. <code>Datum('Y-m-d')</code>)."
+
+#@ custom-content-type-mgr
+#: fields/date.php:299
+#: includes/GetPostsForm.php:387
+msgid "Date Format"
+msgstr "Datumsformat"
+
+#@ custom-content-type-mgr
+#: fields/date.php:302
+#: includes/CCTM_PostTypeDef.php:158
+msgid "Default"
+msgstr "Standard"
+
+#@ custom-content-type-mgr
+#: fields/date.php:304
+msgid "Short"
+msgstr "Kurz"
+
+#@ custom-content-type-mgr
+#: fields/date.php:305
+msgid "Medium"
+msgstr "Mittel"
+
+#@ custom-content-type-mgr
+#: fields/date.php:306
+#: fields/date.php:311
+#: fields/date.php:312
+msgid "Full"
+msgstr "Vollständig"
+
+#@ custom-content-type-mgr
+#: fields/date.php:307
+msgid "With text - 'day' d 'of' MM 'in the year' yy"
+msgstr "MIt Text - 'Tag' d 'von' MM 'Im Jahr' yy"
+
+#@ custom-content-type-mgr
+#: fields/date.php:309
+msgid "Date + Time"
+msgstr "Datum + Zeit"
+
+#@ custom-content-type-mgr
+#: fields/date.php:310
+#: fields/date.php:311
+#: fields/date.php:315
+#: fields/date.php:316
+#: fields/date.php:317
+msgid "24 hour"
+msgstr "24 Stunden"
+
+#@ custom-content-type-mgr
+#: fields/date.php:314
+msgid "Time"
+msgstr "Zeit"
+
+#@ custom-content-type-mgr
+#: fields/date.php:315
+#: fields/date.php:318
+msgid "10 minute intervals"
+msgstr "10 Minuten-Intervalle"
+
+#@ custom-content-type-mgr
+#: fields/date.php:316
+#: fields/date.php:319
+msgid "15 minute intervals"
+msgstr "15 Minuten-Intervalle"
+
+#@ custom-content-type-mgr
+#: fields/date.php:317
+#: fields/date.php:320
+msgid "30 minute intervals"
+msgstr "30 Minuten-Intervalle"
+
+#@ custom-content-type-mgr
+#: fields/date.php:323
+msgid ""
+"If you need to sort your dates, it is recommended to use the MySQL date formats. Change how the date displays using Output Filters in your template files.\n"
+"\t\t\t\t\t\tCustom formatting options can be used by customizing the Javascript constructors in the .tpl files."
+msgstr ""
+"Wenn Sie Ihres Daten sortieren wollen, ist die Nutzung von MySQL-Daten_Formaten zu bevorzugen. Ändern Sie die Datums-Darstellungsfilter in Ihrer Template-Datei. \n"
+"\\\t\\\t\\\t\\\t\\\t\\\t benutzerdefinierte Formatierungs-Optionen können mit Hilfe des Java Konstruktors in der .tpl-Datei."
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:45
+#: fields/dropdown.php:315
+msgid "Dropdown"
+msgstr "Aufklappmenü"
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:58
+msgid ""
+"Dropdown fields implement a <select> element which lets you select a single item.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"alt\" can be specified in the definition."
+msgstr "Aufklappmenü-Felder beinhalten ein <select> Element, welches ermöglicht, ein einzelnes Datenwort auszuwählen. \"Extra\" Parameter, wie zB. \"alt\" können in der Definition spezifiziert werden."
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:134
+#: fields/multiselect.php:151
+msgid "Custom Content Error"
+msgstr "Benutzerdefinierter Inhalt-Fehler"
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:135
+#: fields/multiselect.php:152
+msgid "No options supplied for the following custom field: "
+msgstr "Keine Optionen für das folgende benutzerdefinierte Feld bereitgestellt."
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:232
+#: fields/multiselect.php:228
+msgid "Distinct options/values?"
+msgstr "Optionen/Werte unterscheiden?"
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:249
+#: fields/multiselect.php:245
+msgid "Stored Values"
+msgstr "Werte speichern"
+
+#@ custom-content-type-mgr
+#@ default
+#: fields/dropdown.php:251
+#: fields/dropdown.php:299
+#: fields/multiselect.php:247
+#: fields/multiselect.php:295
+msgid "Set as Default"
+msgstr "Als Standard festlegen"
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:310
+msgid "How should the field display?"
+msgstr "Wie soll das Feld angezeigt werden?"
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:319
+msgid "Radio Button"
+msgstr "Radio Button"
+
+#@ custom-content-type-mgr
+#: fields/dropdown.php:350
+#: fields/multiselect.php:348
+msgid "At least one option is required."
+msgstr "Wenigstens eine Option ist notwendig"
+
+#@ custom-content-type-mgr
+#: fields/image.php:135
+msgid "Image"
+msgstr "Bild"
+
+#@ custom-content-type-mgr
+#: fields/image.php:148
+msgid "Image fields are used to store references to any image that has been uploaded via the WordPress media uploader."
+msgstr "Bild-Felder werden gebraucht, um Referenzen zu jedem zu WordPress über den Media-Uploader hochgeladenen Bild zu speichern."
+
+#@ custom-content-type-mgr
+#: fields/image.php:214
+#: fields/image.php:255
+#, php-format
+msgid "Image %s not found."
+msgstr "Bild %s nicht grfunden."
+
+#@ custom-content-type-mgr
+#@ default
+#: fields/image.php:270
+#: fields/image.php:310
+#: fields/media.php:314
+msgid "Choose Image"
+msgstr "Wähle Bild aus."
+
+#@ custom-content-type-mgr
+#: fields/image.php:332
+#: fields/media.php:336
+#: fields/relation.php:332
+msgid "Button Label"
+msgstr "Button Label"
+
+#@ custom-content-type-mgr
+#: fields/image.php:346
+#: fields/media.php:350
+#: fields/relation.php:346
+msgid "Search Parameters"
+msgstr "Suche Parameter"
+
+#@ custom-content-type-mgr
+#: fields/image.php:348
+#: fields/media.php:352
+#: fields/relation.php:348
+msgid "Define which posts are available for selection by narrowing your search parameters."
+msgstr "Definiere, welche Inhalte zur Auswahl stehen, indem Sie die Suche verfeinern."
+
+#@ custom-content-type-mgr
+#: fields/image.php:350
+#: fields/media.php:354
+#: fields/relation.php:350
+msgid "Set Search Parameters"
+msgstr "Setze Suchparameter."
+
+#@ custom-content-type-mgr
+#: fields/media.php:134
+msgid "Media"
+msgstr "Media"
+
+#@ custom-content-type-mgr
+#: fields/media.php:147
+msgid "Media fields are used to store references to any type of media file that has been uploaded via the WordPress media uploader, e.g. images, videos, mp3s."
+msgstr "Medienfelder werden gebraucht, um die Referenzen zu jedem Media-Typ, welche über den Media-Uploader zu WordPress hochgeladen wurden, zu speichern. Bspw. Bilder, Videos, Mp3s"
+
+#@ custom-content-type-mgr
+#: fields/media.php:217
+#: fields/media.php:258
+#, php-format
+msgid "Attachment %s not found."
+msgstr "Anhang %s nicht gefunden"
+
+#@ custom-content-type-mgr
+#: fields/multiselect.php:44
+#: fields/multiselect.php:318
+msgid "Multi-select"
+msgstr "Mehfach_Auswahl"
+
+#@ custom-content-type-mgr
+#: fields/multiselect.php:55
+msgid ""
+"Multi-select fields implement a <select> element which lets you select mutliple items.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"size\" can be specified in the definition."
+msgstr ""
+"Multi-Auswahl-Felder beinhalten ein <select> Element, welches ermöglicht, ein einzelnes Datenwort auszuwählen. \n"
+"\\\t\\\t\\\t\"Extra\" Parameter, wie zB. \"size\" können in der Definition spezifiziert werden."
+
+#@ custom-content-type-mgr
+#: fields/multiselect.php:314
+#: views/post_type.php:472
+msgid "Display"
+msgstr "Anzeige"
+
+#@ custom-content-type-mgr
+#: fields/multiselect.php:317
+msgid "Checkboxes"
+msgstr "Auswahl-Boxen"
+
+#@ custom-content-type-mgr
+#: fields/multiselect.php:320
+msgid "Multiple options can be selected either as a series of checkboxes or as a multi-select field."
+msgstr "Multiple Optionen können entweder als eine Serie von Auswahl-Boxen oder als ein Multi-Auswahl-Feld ausgewählt werden."
+
+#@ custom-content-type-mgr
+#: fields/relation.php:136
+msgid "Relation"
+msgstr "Beziehung"
+
+#@ custom-content-type-mgr
+#: fields/relation.php:149
+msgid "Relation fields are used to store a reference to another post, including media posts. For example you can use a relation to link to a parent post or to an image or attachment."
+msgstr "Beziehungs-Felder enthalten eine Referenz zu einem anderen Inhalt, einschliesslich Media-Inhalten. Z.B. kann eine Beziehung genutzt werden, um zu einem Eltern-Inhalt, einem Bild oder Anhang zu verweisen."
+
+#@ custom-content-type-mgr
+#@ default
+#: fields/relation.php:184
+#: fields/relation.php:270
+#: fields/relation.php:310
+msgid "Choose Relation"
+msgstr "Wähle Beziehung"
+
+#@ custom-content-type-mgr
+#: fields/relation.php:218
+#: fields/relation.php:255
+#, php-format
+msgid "Post %s not found."
+msgstr "Inhalt %s nicht gefunden."
+
+#@ custom-content-type-mgr
+#: fields/text.php:36
+msgid "Text"
+msgstr "Text"
+
+#@ custom-content-type-mgr
+#: fields/text.php:49
+msgid ""
+"Text fields implement the standard <input=\"text\"> element.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"size\" can be specified in the definition."
+msgstr "Text-Felder beinhalten ein <input=\"text\"> Element. \"Extra\" Parameter, wie zB. \"size\" können in der Definition spezifiziert werden."
+
+#@ custom-content-type-mgr
+#: fields/textarea.php:34
+msgid "Textarea"
+msgstr "Text-Bereich."
+
+#@ custom-content-type-mgr
+#: fields/textarea.php:47
+msgid ""
+"Textarea fields implement the standard <textarea> element.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"cols\" can be specified in the definition."
+msgstr ""
+"Text-Bereich - Felder beinhalten ein <textarea> Element. \n"
+"\\\t\\\t\\\t\"Extra\" Parameter, wie zB. \"cols\" können in der Definition spezifiziert werden."
+
+#@ custom-content-type-mgr
+#: fields/user.php:45
+#: filters/userinfo.php:77
+msgid "User"
+msgstr "Anwender"
+
+#@ custom-content-type-mgr
+#: fields/user.php:58
+msgid "User fields let you select a local user from the site."
+msgstr "Anwender-Felder ermöglichen die Auswahl eines lokalen Anwenders."
+
+#@ custom-content-type-mgr
+#: fields/wysiwyg.php:33
+msgid "WYSIWYG"
+msgstr "WYSIWYG = What you see is what you get."
+
+#@ custom-content-type-mgr
+#: fields/wysiwyg.php:46
+msgid ""
+"What-you-see-is-what-you-get (WYSIWYG) fields implement a <textarea> element with formatting controls.\n"
+"\t\t\t\"Extra\" parameters, e.g. \"cols\" can be specified in the definition, however a minimum size is required to make room for the formatting controls."
+msgstr "What-you-see-is-what-you-get (WYSIWYG)-Felder enthalten ein <textarea>-Element mit Formatierungs-Einstellmöglichkeiten. \"Extra\" Parameter, wie zB. \"cols\" können in der Definition spezifiziert werden. In jedem Fall ist eine Mindestgröße für die Formatierung erforderlich."
+
+#@ custom-content-type-mgr
+#: fields/wysiwyg.php:129
+msgid "Due to WordPress limitations, WYSIWYG fields can contain ONLY lowercase letters."
+msgstr "Durch die Beschränkungen in WordPress können WYSIWYG-Felder AUSSCHLIESLICH Kleinbuchstaben beinhalten."
+
+#@ custom-content-type-mgr
+#: filters/default.php:31
+msgid "The <em>default</em> filter kicks in only if the input is empty: whatever you specify as an option will be returned only if the input is empty.  This is one way to establish default values for your fields."
+msgstr "Das <em>Standard</em> Filter wirkt ausschliesslich bei leerem Eingabefeld: Was immer Sie als Option spezifizieren, wird nur bei leerem Eingabefeld ausgegeben. Dies ist ein Weg, Standardwerte für Ihre Felder zu erstellen."
+
+#@ custom-content-type-mgr
+#: filters/default.php:49
+msgid "Set Default Value"
+msgstr "Als Standard festlegen"
+
+#@ custom-content-type-mgr
+#: filters/default.php:56
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/default_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/default_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/do_shortcode.php:34
+msgid "The <em>do_shortcode</em> filter parses any shortcodes in the input. By default, WordPress will only parse shortcodes in the main content block, not in custom fields, so it is important to use this filter on WYSIWYG fields if you use any shortcodes."
+msgstr "Das <em>do_shortcode</em> Filter analysiert beliebige shortcodes im Eingabefeld. Per Standard wird WordPress nur die Shortcodes analysieren, die sich im Haupt-Inhaltsblock befinden, nicht die in benutzerdefinierten Feldern, so, dass es wichtig ist, Filter auf WYSIWYG-Felder anzuwenden, wenn Sie Shortcode verwenden."
+
+#@ custom-content-type-mgr
+#: filters/do_shortcode.php:52
+msgid "Do Shortcode"
+msgstr "Erzeuge Shortcode"
+
+#@ custom-content-type-mgr
+#: filters/do_shortcode.php:59
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/do_shortcode_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/do_shortcode_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/email.php:32
+msgid "The <em>email</em> filter obscures an email address so it is still readable by a human, but more difficult for it to be harvested by a spam-bot."
+msgstr "Das <em>email</em> Filter verdeckt eine Email-Adresse so, dass sie zwar von Menschen noch gelesen werden kann, aber von Spam-Bots nicht geerntet werden kann."
+
+#@ custom-content-type-mgr
+#: filters/email.php:50
+#: validators/emailaddress.php:22
+msgid "Email"
+msgstr "Email"
+
+#@ custom-content-type-mgr
+#: filters/email.php:57
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/email_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/email_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/excerpt.php:54
+msgid "The <em>excerpt</em> takes a long string and returns a shorter excerpt of it, either chopping the input on the separator string or limiting it to a given number of words."
+msgstr "Das <em>excerpt</em> erzeugt einen kurzen Ausschnitt aus einem langem Stück Code. Entweder durch das Abschneiden am Separator oder durch Limitierung auf eine bestimmte Anzahl Wörter."
+
+#@ custom-content-type-mgr
+#: filters/excerpt.php:79
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/excerpt_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/excerpt_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/formatted_list.php:113
+msgid "The <em>formatted_list</em> filter converts a JSON array into a formatted string such as an HTML list. See the info page for formatting options."
+msgstr "Das <em>formatted_list</em> Filter konvertiert eine JSON Datenreihe in eine formatierte Kette, zB. als HTML-Liste. Für weitere Optionen bitte die Info-Seite aufrufen."
+
+#@ custom-content-type-mgr
+#: filters/formatted_list.php:134
+msgid "Formatted List"
+msgstr "Formatierte Liste"
+
+#@ custom-content-type-mgr
+#: filters/formatted_list.php:144
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/formatted_list_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/formatted_list_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/gallery.php:75
+msgid "The <em>gallery</em> filter converts a single or an array of image IDs into HTML img tags."
+msgstr "Das <em>gallery</em> filter konvertiert eine einzelne oder eine Anordnung IDs zu einem HTML img Tag."
+
+#@ custom-content-type-mgr
+#: filters/gallery.php:93
+msgid "Gallery"
+msgstr "Galerie"
+
+#@ custom-content-type-mgr
+#: filters/gallery.php:100
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/gallery_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/gallery_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/get_post.php:32
+msgid "The <em>get_post</em> retrieves a post by its ID.  Unlike WordPress's get_post() function, this filter appends all custom field data."
+msgstr "Das <em>get_post</em> Filter holt einen Inhalt anhand seiner ID. Anders als WordPress`s get_post()-Funktion hängt dieses Filter alle benutzerdefinierten Felder an."
+
+#@ custom-content-type-mgr
+#: filters/get_post.php:55
+msgid "Get Post"
+msgstr "Get Post"
+
+#@ custom-content-type-mgr
+#: filters/get_post.php:62
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/get_post_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/get_post_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/help.php:53
+msgid "Output Filter Help"
+msgstr "Hilfe zum Ausgabe-Filter"
+
+#@ custom-content-type-mgr
+#: filters/help.php:54
+msgid "This help page was generated by <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/OutputFilters\">Custom Content Type Manager</a> to demonstrate the use of the available Output Filters. For samples of template files, see the CCTM menus in the WordPress manager."
+msgstr "Diese Hilfe-Seite wurde durch den <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/OutputFilters\">Custom Content Type Manager</a> erzeugt, um die Funktionsweise der möglichen Ausgabefilter zu demonstrieren.  Um weitere Beispiele zu erhalten, sehen Sie bitte in den CCTM Menüs nach, die Sie im WordPress-Manager finden."
+
+#@ custom-content-type-mgr
+#: filters/help.php:73
+msgid "More info"
+msgstr "Weitere Informationen"
+
+#@ custom-content-type-mgr
+#: filters/help.php:74
+msgid "Example"
+msgstr "Beispiel"
+
+#@ custom-content-type-mgr
+#: filters/help.php:79
+#, php-format
+msgid "File not found for %s output filter: %s"
+msgstr "Datei für den %s Ausgabe-Filter nicht gefunden."
+
+#@ custom-content-type-mgr
+#: filters/help.php:94
+msgid "The <em>help</em> filter will display all available Output Filters as an aid to the developer or designer."
+msgstr "Das <em>help</em> Filter zeigt alle möglichen Ausgabe-Filter als eine Hilfe für Designer und Entwickler an."
+
+#@ custom-content-type-mgr
+#: filters/help.php:119
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/help_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/help_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/raw.php:33
+msgid "The <em>raw</em> filter simply outputs the input: it does not change the value. You can use it to override the default Output Filter for any custom field."
+msgstr "Das <em>raw</em> Filter gibt einfach die Eingabe aus: Es wird seine Werte nicht verändern. Sie können es zum Überschreiben des Standard-Ausgabe-Filters in beliebigen benutzerdefinierten Feldern verwenden."
+
+#@ custom-content-type-mgr
+#: filters/raw.php:51
+#: includes/CCTM_FormElement.php:417
+msgid "None"
+msgstr "Keine"
+
+#@ custom-content-type-mgr
+#: filters/raw.php:58
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/raw_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/raw_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/to_array.php:60
+msgid "The <em>to_array</em> filter converts a JSON encoded string to a PHP array. It should be used on any multi-select field or any other field that stores multiple values."
+msgstr "Das <em>to_array</em> Filter konvertiert eine JSON kodierte Zeichenfolge in eine PHP-Kette. Es sollte auf jedes Multi-Auswahl-Feld angewendet werden, welches Mehrfach-Werte enthält."
+
+#@ custom-content-type-mgr
+#: filters/to_array.php:83
+msgid "Array"
+msgstr "Array"
+
+#@ custom-content-type-mgr
+#: filters/to_array.php:90
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_array_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_array_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/to_image_array.php:27
+msgid "The <em>to_image_array</em> breaks down a referenced image into an array of its component parts: src, width, height."
+msgstr "Das <em>to_image_array</em> Filter bricht ein referenziertes Bild auf seine Komponenten wie \"src, width und height\" herunter"
+
+#@ custom-content-type-mgr
+#: filters/to_image_array.php:49
+msgid "Array of image src, width, height"
+msgstr "Datenreihe mit \"src, width und height\""
+
+#@ custom-content-type-mgr
+#: filters/to_image_array.php:56
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_image_array_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_image_array_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/to_image_src.php:33
+msgid "The <em>to_image_src</em> filter converts a JSON encoded string to a PHP array. It should be used on any multi-select field or any other field that stores multiple values. You can optionally supply a default image src that will be used if there is no valid input."
+msgstr "Das <em>to_image_src</em> Filter konvertiert eine JSON kodierte Zeichenfolge in eine PHP-Datenreihe. Es sollte auf jedes Multi-Auswahl-Feld angewendet werden, oder jedes andere, welches Mehrfach-Werte enthält. Optional kann auch eine standard-Bild-Quelle eingegeben werden, wenn keine gültige Eingabe vorhanden ist."
+
+#@ custom-content-type-mgr
+#: filters/to_image_src.php:51
+msgid "Image src"
+msgstr "Bild-Quelle"
+
+#@ custom-content-type-mgr
+#: filters/to_image_src.php:58
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_image_src_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_image_src_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/to_image_tag.php:31
+msgid "The <em>to_image_tag</em> returns a full image tag for your image field. This is the default output filter for image fields starting with version 0.8.9. You can supply an option of \"thumbnail\", \"medium\", \"large\", \"full\" or a 2-item array representing width and height in pixels, e.g. array(32,32)"
+msgstr "Das <em>to_image_tag</em> Filter gibt einen kompletten Bild-Tag für Ihr Bild-Feld aus. Dies ist das Standard-Ausgabe-Feld, das erstmals seit der version 0.8.9 eigesetzt wird. Sie können auch eine Option wie zB. \"thumbnail\", \"medium\", \"large\", \"full\" oder eine 2-Einheiten-Zeichenkette eingeben, welche die Höhe und die Breite in Pixel angibt. Beipiel: array(32,32)."
+
+#@ custom-content-type-mgr
+#: filters/to_image_tag.php:49
+msgid "Full &lt;img&gt; tag"
+msgstr "Vollständiges &lt;img&gt; Tag"
+
+#@ custom-content-type-mgr
+#: filters/to_image_tag.php:56
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_image_tag_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_image_tag_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/to_link.php:41
+msgid "The <em>to_link</em> filter takes a post ID and converts it into a full anchor tag. Be default, the post title will be used as the clickable text, but you can supply text to override this text."
+msgstr "Das <em>to_link</em> Filter nimmt eine Inhalts-ID und konvertiert es in einen vollständigen Anker-Tag. Per Standard wird der Inhalts-Titel als Klickbarer Text genutzt werden, aber Sie können ebenfalls Text bereitstellen, der diesen Text überschreibt."
+
+#@ custom-content-type-mgr
+#: filters/to_link.php:59
+msgid "Full link &lt;a&gt; tag"
+msgstr "Vollständiges Link &lt;a&gt; Tag"
+
+#@ custom-content-type-mgr
+#: filters/to_link.php:66
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_link_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_link_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/to_link_href.php:34
+msgid "The <em>to_link_href</em> filter takes a post ID and converts a post ID into the link href to that post. Optionally, you can supply the href to a page that will be used if no valid input is detected."
+msgstr "Das <em>to_link_href</em> Filter konvertiert eine Inhalts-ID in einen \"HREF Link\" für diesen Inhalt. Optional können Sie den \"HREF Link\" zu einer Seite, die genutzt wird, wenn keine gültige Eingabe erkannt wurde."
+
+#@ custom-content-type-mgr
+#: filters/to_link_href.php:52
+msgid "Link href only"
+msgstr "Verweise ausschliesslich auf HREF"
+
+#@ custom-content-type-mgr
+#: filters/to_link_href.php:59
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_link_href_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/to_link_href_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/userinfo.php:59
+msgid "The <em>userinfo</em> retrieves a user object by its user ID. It accepts an optional a formatting template to format the user information."
+msgstr "Das <em>userinfo</em> Filter erzeugt eine Abfrage nach einem User-Objekt anhand der User-ID. Es akzeptiert eine optionale Formatierungsvorlage zur Formatierung der User-Infos"
+
+#@ custom-content-type-mgr
+#: filters/userinfo.php:84
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/userinfo_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/userinfo_OutputFilter"
+
+#@ custom-content-type-mgr
+#: filters/wrapper.php:55
+msgid "The <em>wrapper</em> filter will wrap non-empty input. This allows you add extra markup to non-empty values and let empty values pass through. Pass this filter either a formatting string that uses the &#91;+content+&#93; placeholder, or supply a 2 element array that specifies text that will appear before and after the input text."
+msgstr "Das <em>wrapper</em> Filter behandelt \"nicht-leere-Eingaben\". Das erlaubt es, zusätzlichen Markup zu \"nicht-leeren\" Inhalten hinzu zu fügen und leere Inhalte durch zu lassen. Übergeben Sie diesem Filter entweder einen String, der die Formatierung des Platzhalters &#91;+content+&#93 verwendet , oder übergeben Sie ihm ein 2-Element-Array, das Text, der vor und nach der Eingabe von Text erscheint, angibt."
+
+#@ custom-content-type-mgr
+#: filters/wrapper.php:73
+msgid "Wrapper"
+msgstr "Wrapper"
+
+#@ custom-content-type-mgr
+#: filters/wrapper.php:80
+msgid "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/wrapper_OutputFilter"
+msgstr "http://code.google.com/p/wordpress-custom-content-type-manager/wiki/wrapper_OutputFilter"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:288
+#, php-format
+msgid "Could not create the cache directory at %s."
+msgstr "Konnte keinee Cache-Pfad erzeugen unter%s."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:311
+#, php-format
+msgid "Could not create cached image: %s."
+msgstr "Konnte kein Cached Image erzeugen unter %s."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:553
+#: updates/0.9.4.php:64
+msgid "This site was created in part using the Custom Content Type Manager"
+msgstr "Diese Site wurde teilweise mit dem Custom Content Type Manager eryeugt."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:589
+msgid "custom_field shortcode requires the \"name\" parameter."
+msgstr "custom_field shortcode ben;tigt den Parameter \"name\"."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:660
+#, php-format
+msgid "Incorrect class name in %s Output Filter. Expected class name: %s"
+msgstr "Unkorrekter Class Name in %s Ausgabe Filter. Erwarteter Class Name %s."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:673
+#, php-format
+msgid "Output filter not found: %s"
+msgstr "Ausgabe Filter nicht gefunden: %s."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:729
+msgid "Please correct the following errors:"
+msgstr "Bitte die folgenden Fehler korrigieren:"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:821
+#: includes/CCTM.php:885
+#: includes/CCTM.php:934
+#: includes/CCTM_ImportExport.php:38
+#: includes/CCTM_ImportExport.php:109
+#: includes/CCTM_ImportExport.php:182
+#: includes/CCTM_ImportExport.php:228
+msgid "WordPress issued the following error: "
+msgstr "WordPress stellte folgenden Fehler fest:"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1281
+msgid "Field type is empty."
+msgstr "Feld-Typ ist leer."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1296
+#, php-format
+msgid "Incorrect class name in %s file. Expected class name: %s"
+msgstr "Unkorrekter Class Name in Datei %s. Erwarteter Class Name: %s."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1304
+#, php-format
+msgid "The class file for %s fields could not be found. Did you move or delete the file?"
+msgstr "Die Class-Datei für %s Felder konnte nicht gefunden werden. Haben Sie es verschoben oder gelöscht?"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1405
+#, php-format
+msgid "Could not locate file for %s field."
+msgstr "Konnte Datei für das %s-Feld nicht finden."
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1614
+#, php-format
+msgid "Invaid file name! %s  No directory traversing allowed!"
+msgstr "Ungültiger Name! %s Das verschieben von Ordnern ist unzulässig!"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1618
+#, php-format
+msgid "Invaid file name! %s  Name must end with .php!"
+msgstr "Ungültigr Dateiname! %s Name muss mit .php enden!"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1739
+#, php-format
+msgid "Invaid tpl name! %s  No directory traversing allowed!"
+msgstr "Ungültiger tpl-Name! %s Das verschieben von Ordnern ist unzulässig!"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1743
+#, php-format
+msgid "Invaid tpl name! %s  Name must end with .tpl!"
+msgstr "Ungültiger tpl-Name! Name muss mit .tpl enden!"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1783
+#, php-format
+msgid "Validator not found: %s"
+msgstr "Validator nicht gefunden: %s"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1996
+msgid "Dismiss all warnings"
+msgstr "Alle Warnungen ignorieren"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:1997
+msgid "Dismiss Warnings"
+msgstr "Warnungen ignorieren"
+
+#@ custom-content-type-mgr
+#: includes/CCTM.php:2008
+msgid "The Custom Content Type Manager encountered the following warnings:"
+msgstr "Der Custom Content Type Manager stieß auf folgende Warnungen:"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_Ajax.php:59
+#: includes/CCTM_Ajax.php:62
+#, php-format
+msgid "Invalid Ajax controller: %s"
+msgstr "Ungültiger Ajax Controller: %s."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_Ajax.php:71
+#: includes/CCTM_Ajax.php:74
+#, php-format
+msgid "Invalid nonce for %s"
+msgstr "Vorübergehend ungültig %s"
+
+#@ default
+#: includes/CCTM_Columns.php:36
+#: includes/CCTM_PostTypeDef.php:22
+msgid "Comments"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:153
+msgid "How should the button be labeled? (Users will click this button to select the image, media, or relation)."
+msgstr "Wie soll der Button beschrifted werden? (User weden diesen Button klicken um Bilder, Medien oder Links, etc.)"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:154
+msgid "Add a CSS class to instances of this field. Use this to customize styling in the WP manager."
+msgstr "Fügen Sie den Instanzen dieses Feldes eine CSS-Class hinzu. Hiermit können Sie das Aussehen im WP Manager verändern."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:155
+msgid "Any extra attributes for this text field, e.g. <code>size=\"10\"</code>"
+msgstr "Beliebige extra Attribute für dieses Textfeld. Z.B. <code>size=\"10\"</code>"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:156
+msgid "The default option will appear selected. Make sure it matches a defined option."
+msgstr "Als Standard-Option wird als ausgewählt angezeigt. Stellen Sie sicher, dass es mit einer definierten Option übereinstimmt."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:157
+msgid "The default value is presented to users when a new post is created."
+msgstr "Der Standard-Wert wird Usern angezeigt, wenn ein neuer Inhalt erzeugt wurde."
+
+#@ default
+#: includes/CCTM_FormElement.php:158
+msgid "The description is visible when you view all custom fields or when you use the <code>get_custom_field_meta()</code> function."
+msgstr ""
+
+#@ default
+#: includes/CCTM_FormElement.php:159
+msgid "The following html tags are allowed:"
+msgstr ""
+
+#@ default
+#: includes/CCTM_FormElement.php:161
+msgid "You can check this box if you want to enter a bit of PHP code into the default value field."
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:162
+msgid "The label is displayed when users create or edit posts that use this custom field."
+msgstr "Die Beschriftung wird angezeigt, wenn ein User einen Inhalt erzeugt oder bearbeitet, welcher dieses benutzerdefinierte Feld gebraucht."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:163
+msgid "The name identifies the meta_key in the wp_postmeta database table. The name should contain only letters, numbers, and underscores. You will use this name in your template functions to identify this custom field."
+msgstr "Der Name identifiziert den meta_key in der wp_postmeta Datenbanktabelle. Der Name darf nur Buchstaben, Ziffern und Unterstriche beinhalten. Sie werden diesen Namen in den Vorlage-Funktionen verwenden, um das benutzerdefinierte Feld zu identifizieren."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:165
+msgid "WARNING: if you change the field name, you will have to update any functions that reference this field by name, e.g. <code>get_custom_field()</code>, <code>print_custom_field()</code>,  or any search criteria."
+msgstr "Warnung: Wenn Sie den Feldnamen ändern, müssen Sie alle Funktionen, die diesen Feldnamen referenzieren, aktualisieren. Z.B. <code>get_custom_field()</code>, <code>print_custom_field()</code>,  oder jedes andere Such-Kriterium."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:167
+msgid "If selected, the user will be able to enter multiple instances of this field, e.g. multiple images. Storing multiple values infers storing an array of values, so you will have to use the \"to_array\" output filter, even if you only use one instance of the field."
+msgstr "Wenn ausgewählt, wird der User die Möglichkeit haben, mehrere Instanzen dieses Feldes, z.B. mehrere Bilder, zu aktivieren. Das Speichern mehrerer Werte lässt auf eine Datenreihe schließen, so dass Sie den \"to_array\" Output Filter selbst dann benutzen müssen, wenn Sie lediglich eine Instanz des Feldes gebrauchen."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:168
+msgid "If checked, users must add a value to this field before the page can be published."
+msgstr "Wenn ausgewählt, müssen User diesem Feld einen Wert zufügen, bevor die Seite veröffentlicht werden kann."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:169
+msgid "What value should be stored in the database when this checkbox is checked?"
+msgstr "Welcher Wert soll in die Datenbank geschrieben werden, wenn diese Checkbox aktiviert wurde?"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:170
+msgid "What value should be stored in the database when this checkbox is unchecked?"
+msgstr "Welcher Wert soll in die Datenbank geschrieben werden, wenn diese Checkbox nicht aktiviert wurde?"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:171
+msgid "Should this field be checked by default?"
+msgstr "Soll dieses Feld per Standard aktiviert sein?"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:172
+msgid "How should values be displayed in your theme files?"
+msgstr "Wie sollen die Werte in Ihren Theme-Dateien dargestellt werden?"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:173
+msgid "Check this to make the stored values distinct from the options displayed to the user, e.g. Option:\"Red\", Stored Value:\"#ff0000;\""
+msgstr "Aktivieren, um die gepeicherten Werte von den Optionen, die den Usern angezeigt werden, zu unterscheiden. Z.B. Option: \"Red\", Stored Value:\"#ff0000;\""
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:247
+msgid "Output Filter"
+msgstr "Ausgabe-Filter"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:251
+msgid "Default Output Filter"
+msgstr "Standard Ausgabe-Filter"
+
+#@ default
+#: includes/CCTM_FormElement.php:256
+msgid "None (raw)"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:412
+msgid "Validation Rule"
+msgstr "Überprüfungs-Regel"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:414
+msgid "A validation rule can ensure that any data entered into this field meets a specific criteria."
+msgstr "Eine Überprüfungs-Regel kann sicherstellen, das beliebige Daten, die in dieses Feld eingegeben werden, bestimmten Kriterien entsprechen."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:427
+msgid "Validation"
+msgstr "Überprüfung"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:436
+msgid "Required?"
+msgstr "Erforderlich?"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:643
+msgid "There were errors in your custom field definition."
+msgstr "Es waren Fehler in Ihrer benutzerdefinierten Feld-Definiton."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:790
+#, php-format
+msgid "%s contains invalid characters. The name may only contain letters, numbers, and underscores, and it must begin with a letter."
+msgstr "%s enthält ungültige Charaktere. Der Name darf nur Buchstaben, Ziffern und Unterstriche beinhalten und muss mit einem Buchstaben beginnen."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:797
+msgid "The name is too long. Names must not exceed 255 characters."
+msgstr "Der Name ist zu lang. Namen dürfen eine Länge von 255 Zeichen nicht überschreiten."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:812
+#: includes/CCTM_FormElement.php:820
+#, php-format
+msgid "The name %s is already in use. Please choose another name."
+msgstr "Der Name %s ist bereits in benutzung. Bitte wählen Sie einen anderen Namen aus."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_FormElement.php:848
+msgid "Improper input to the set_props() function."
+msgstr "Ungeeignete Eingabe für die set_props()-Funktion."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:103
+msgid "Please specify at least one definition."
+msgstr "Bitte spezifizieren Sie mindestens eine Definition."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:121
+msgid "Directory traversing not allowed."
+msgstr "Datei-Pfad-Verschiebung ist nicht erlaubt."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:127
+#, php-format
+msgid "Could not delete file: %s"
+msgstr "Konnte die Datei %s nicht löschen."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:132
+#, php-format
+msgid "File does not exist: %s"
+msgstr "Datei %s existiert nicht."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:164
+msgid "There was a problem exporting your CCTM definition."
+msgstr "Es trat ein Problem beim Export Ihrer CCTM-Definition auf."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:190
+#, php-format
+msgid "A file named %s already exists in the definition library.  Please choose another title."
+msgstr "Eine datei namens %s existiert bereits in der Definitionstabelle. Bitte wählen Sie einen anderen Namen."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:204
+#, php-format
+msgid "An error was encountered while trying to write to the definition library directory (%s). Please check the file permissions on your server."
+msgstr "Es trat ein Fehler beim Versuch, die Definitionssammlung zu schreiben (%s). Bitte überprüfen Sie die Schreibrechte auf Ihrem Server."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:494
+#, php-format
+msgid "The definition file could not be found: %s"
+msgstr "Die Definitionsdatei wurde nicht gefunden: %s."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:500
+#, php-format
+msgid "There was a problem with the JSON decoding of the definition file: %s"
+msgstr "Es trat ein Problem bei der Dekodierung der JSON Definition-Datei %s auf."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:506
+#, php-format
+msgid "The data structure in the file was not in the correct format: %s. This could be because the file is from an older version of the CCTM plugin.  See the <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/Import\" target=\"_new\">Wiki</a> for more information."
+msgstr "Die Datenstruktur in der Datei %s war nicht im korrekten Format auf. Das könnte daran liegen, dass diese Datei von einer älteren Version des CCTM PlugIn stammt. Sehen Sie im <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/Import\" target=\"_new\">Wiki</a> nach weiteren Informationen nach."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:592
+msgid "Title is required."
+msgstr "Titel ist erforderlich."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:595
+msgid "Only basic text characters are allowed for the title."
+msgstr "Es sind ausschliesslich Buchstaben für den Titel erlaubt."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:598
+msgid "The title cannot exceed 64 characters."
+msgstr "Der Titel darf nicht länger als 64 Buchstaben sein."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:603
+msgid "Author is required."
+msgstr "Name des Autors ist erforderlich."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:606
+msgid "Only basic characters are allowed for the author field."
+msgstr "Für das \"Name des Autors-Feld\" sind ausschliesslich Buchstaben zugelassen."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:609
+msgid "The author name cannot exceed 32 characters."
+msgstr "Der Name des Autors darf 32 Zeichen nicht übersteigen."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:617
+msgid "The URL must be in a standard format, e.g. http://yoursite.com."
+msgstr "Der URL muss dem Standard-Format entsprechen. Z.B. http://meineseite.com."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:620
+msgid "The URL cannot exceed 255 characters."
+msgstr "Der URL darf 255 Zeichen nicht überschreiten."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:628
+msgid "The template URL must be in a standard format, e.g. http://themeforest.com."
+msgstr "Der Vorlagen-URL muss in einem Standard-Format vorliegen: Z.B. http://meineseite.com."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:631
+msgid "The template URL cannot exceed 255 characters."
+msgstr "Der Vorlagen-URL darf 255 Buchstaben nicht überschreiten."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:636
+msgid "Description is required."
+msgstr "Beschreibung ist erforderlich."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_ImportExport.php:639
+msgid "The description cannot exceed 1024 characters."
+msgstr "Die Beschreibung darf 1024 Buchstaben nicht überschreiten."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:49
+#: includes/CCTM_PostTypeDef.php:88
+msgid "Built-in WordPress column."
+msgstr "Eingabaute WordPress-Columne."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:57
+#: includes/CCTM_PostTypeDef.php:124
+msgid "WordPress Taxonomy"
+msgstr "WordPress Taxonomy"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:295
+msgid "Menu Name is required."
+msgstr "Menü-name ist erforderlich."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:341
+#, php-format
+msgid "The name %s is already in use."
+msgstr "Dieser Name ist bereits in Benutzung."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:345
+#, php-format
+msgid "The name %s has been registered by some other plugin."
+msgstr "Der Name %s wurde bereits von einem anderen PlugIn registriert."
+
+#@ default
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:492
+#: includes/CCTM_PostTypeDef.php:495
+#: views/post_type.php:223
+msgid "Add New"
+msgstr "Füge neue hinzu."
+
+#@ default
+#: includes/CCTM_PostTypeDef.php:501
+msgid "New"
+msgstr ""
+
+#@ default
+#: includes/CCTM_PostTypeDef.php:504
+msgid "View"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:510
+#, php-format
+msgid "No %s found"
+msgstr "Kein %s gefunden."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_PostTypeDef.php:513
+#, php-format
+msgid "No %s found in trash"
+msgstr "Kein %s im Papierkorb gefunden."
+
+#@ default
+#: includes/CCTM_PostTypeDef.php:516
+msgid "Parent Page"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:16
+msgid "Post Content"
+msgstr "Post Content"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:17
+msgid "Show a post's content inside of a widget."
+msgstr "Zeige den Inhalt eines Posts in einem Widget."
+
+#@ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:99
+#: views/widgets/post_content_form.php:12
+msgid "Choose Post"
+msgstr "Wähle Post"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:109
+msgid "Override Post Title"
+msgstr "Überschreibe Post Titel"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_Post_Widget.php:114
+#: includes/SummarizePosts_Widget.php:73
+#: views/widgets/post_content_form.php:28
+msgid "Formatting String"
+msgstr "Formatiere Zeichenkette"
+
+#@ custom-content-type-mgr
+#: includes/CCTM_Validator.php:85
+msgid "No configurable options."
+msgstr "Keine konfigurierbaren Optionen."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:180
+#, php-format
+msgid "Retrieve posts with this exact %s."
+msgstr "Frage Posts mit exakt diesem %s."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:200
+msgid "Sorry, no results matched your search criteria."
+msgstr "Leider keine Ergebnisse, die Ihren Suchkriterien entsprechen."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:204
+msgid "Filter"
+msgstr "Filter"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:205
+msgid "Show All"
+msgstr "Zeige alle"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:206
+msgid "Show all dates"
+msgstr "Zeige alle Termine."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:207
+msgid "Show all post-types"
+msgstr "Zeige alle Post-Typen."
+
+#@ default
+#: includes/GetPostsForm.php:244
+msgid "Invalid parameter:"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:305
+msgid "Append"
+msgstr "Anfügen"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:306
+msgid "List posts by their ID that you wish to include on every search. Comma-separate multiple values."
+msgstr "Liste Posts  nach ihrer ID auf, die Sie in jede Suche mit einbeziehen wollen. Komma-getrennte, mehrfache Werte möglich."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:326
+msgid "All Authors"
+msgstr "Alle Autoren."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:341
+msgid "Select an author whose posts you want to see."
+msgstr "Wählen Sie den Autor, dessen Posts Sie sehen möchten."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:361
+msgid "Date Columns"
+msgstr "Datums-Spalte"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:362
+msgid "Which column should be used for date comparisons? Select one, or write in a custom field."
+msgstr "Welche Spalte soll für den Datumsabgleich gebraucht werden? Wähle eine oder schreibe in ein benutzerdefiniertes Feld."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:388
+msgid "How do you want the dates in the results formatted? Use one of the shortcuts, or supply a use any value valid for the <a href=\"http://php.net/manual/en/function.date-format.php\">date_format()</a>"
+msgstr "Wie möchten Sie die Daten in den Ergebnissen formatiert haben? Gebrauchen Sie einen der Shortcuts oder geben Sie einen gültigen Wert für <a href=\"http://php.net/manual/en/function.date-format.php\">date_format()</a> ein."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:414
+msgid "Date Maximum"
+msgstr "Datums-Höchstwert."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:415
+msgid "Only results from this date or before will be returned"
+msgstr "Ausschliesslich Ergebnisse diesen Datums oder davor werden ausgegeben."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:442
+msgid "Date Minimum"
+msgstr "Datums-Minimum"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:443
+msgid "Only results from this date or after will be returned."
+msgstr "Ausschliesslich Ergebnisse diesen Datums oder danach werden ausgegeben."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:470
+msgid "Exclude"
+msgstr "Exkludiere"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:471
+msgid "List posts by their ID that you wish to exclude from search results. Comma-separate multiple values."
+msgstr "Liste Posts nach ihrer ID auf, die Sie bei Ihrer Suche ausschliessen wollen. Komma-getrennte, mehrfache Werte möglich."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:488
+msgid "Include"
+msgstr "Inkludiere"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:489
+msgid "List posts by their ID that you wish to return.  Usually this option is not used with any other search options. Comma-separate multiple values."
+msgstr "Liste Beiträge nach ihrer ID, ​​die Sie zurückgeben möchten. In der Regel wird diese Option nicht mit anderen Suchoptionen verwendet. Mehrere Werte durch Kommata getrennt."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:508
+msgid "Limit"
+msgstr "Limit"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:509
+msgid "Limit the number of results returned. If pagination is enabled, this number will be the number of results shown per page."
+msgstr "Limitiere die ausgegebenden Ergebnisse. Falls die Seitennummerierung eingeschaltet ist, werden die Ergebnisse Seitenweise angezeigt."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:527
+msgid "Match Rule"
+msgstr "Der Regel entsprechen"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:528
+msgid "Define how your search term should match."
+msgstr "Definiere, wie Ihre Suchergebnisse entsprechen."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:532
+msgid "Contains"
+msgstr "Enthält"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:533
+msgid "Starts with"
+msgstr "Beginnt mit"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:534
+msgid "Ends with"
+msgstr "Endet mit"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:558
+msgid "Meta Key"
+msgstr "Meta Key"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:559
+msgid "Name of a custom field, to be used in conjuncture with <em>meta_value</em>."
+msgstr "Namen eines benutzerdefinierten Feldes, in Konjunktur mit <em>meta_value</em> genutzt werden."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:576
+msgid "Meta Value"
+msgstr "Meta-Wert"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:577
+msgid "Value of a custom field, to be used in conjuncture with <em>meta_key</em>."
+msgstr "Namen eines benutzerdefinierten Feldes, in Konjunktur mit <em>meta_key</em> genutzt werden."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:594
+msgid "Offset"
+msgstr "Offset"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:595
+msgid "Number of results to skip.  Usually this is used only programmatically when pagination is enabled."
+msgstr "Anzahl der zu überspringenden Ergebnisse. Normalerweise ist diese Funktion nur programmatisch genutzt, wenn die Seitennummerierung eingeschaltet ist."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:610
+msgid "Omit Post Types"
+msgstr "Gib Post Typen aus."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:614
+msgid "Check which post-types you wish to omit from search results."
+msgstr "Überprüfe, welche Post-Typen Sie als Suchergebnisse ausgeben wollen."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:649
+msgid "Order"
+msgstr "Sortierung"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:650
+msgid "What order should search results be returned in? See also the <em>orderby</em> parameter."
+msgstr "In welcher Sortier-Reihenfolge sollen die Suchergebnisse ausgegeben werden? Siehe auch den <em>orderby</em> Parameter."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:661
+msgid "Ascending"
+msgstr "Aufsteigend"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:676
+msgid "Descending"
+msgstr "Absteigend"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:701
+#: views/post_type.php:699
+msgid "Order By"
+msgstr "Sortiere nach"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:702
+msgid "Which column should results be sorted by. This can be any column from the wp_posts table or any custom field. Default: ID"
+msgstr "Welcher Spalte nach die Ergebnisse sortiert werden. Das kann jede Spalte aus der wp_posts Tabelle oder jedes andere benutzerdefinierte Feld sein. Standard: ID"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:720
+msgid "Paginate Results"
+msgstr "Seitennummerierungs-Ergebnisse"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:725
+msgid "Pagination"
+msgstr "Seitennummerierung"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:742
+msgid "Post Date"
+msgstr "Post Datum"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:743
+msgid "Find posts from this date.  Use the <em>date_column</em> parameter to determine which column should be considered."
+msgstr "Finde Inhalte diesen Datums. Gebrauche das <em>date_column</em> Parameter, um zu entscheiden, welche Spalte ausgewählt wird."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:769
+msgid "Post MIME Type"
+msgstr "Post MIME Type"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:770
+msgid "Specify either the full MIME type (e.g. image/jpeg) or just the beginning (e.g. application, image, audio, video)."
+msgstr "Spezifiziere entweder den vollen MIME Type (z.B. Bild/jpeg) oder einfach den Beginn (z.B. Applikation, Bild, Audio, Video)."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:787
+msgid "Post Modified"
+msgstr "Post modifiziert"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:788
+msgid "Find posts modified on this date."
+msgstr "Finde Posts, die an diesem Datum modifiziert wurden."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:817
+msgid "Post Parent"
+msgstr "Eltern Post"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:818
+msgid "Retrieve all posts that are children of the post ID(s) specified. Comma-separate multiple values."
+msgstr "Abfrage aller Posts, die Kinder von den Post genannten IDs sind. Komma-separierter Mehrfach-Werte möglich."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:836
+msgid "Post Status"
+msgstr "Post Status"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:837
+msgid "Most searches will be for published posts."
+msgstr "Die meisten Suchanfragen werden für veröffentlichte Posts sein."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:875
+msgid "Retrieve posts with this exact title."
+msgstr "Frage Posts  mit exakt diesem Title ab."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:891
+msgid "Post Types"
+msgstr "Post Typen"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:895
+msgid "Check which post-types you wish to search."
+msgstr "Überprüfe, welche Post-Typen Sie zu suchen wünschen."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:904
+msgid "Select post-type"
+msgstr "Wähle Post-Typen"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:952
+msgid "Search Columns"
+msgstr "Durchsuche Spalten"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:953
+msgid "When searching by a <em>search_term</em>, which define columns should be searched. Comma-separate multiple values. You can specify custom-fields as column names."
+msgstr "Wenn Sie nach <em>search_term</em> suchen, die Spalten definieren gesucht werden soll. Durch Komma getrennte, mehrere Werte. Sie können benutzerdefinierte Felder als Spaltennamen angeben."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:970
+msgid "Search Term"
+msgstr "Suchbegriff"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:971
+msgid "Search posts for this term. Use the <em>search_columns</em> parameter to specify which columns are searched for the term."
+msgstr "Suche Posts mit diesem Begrif. Gebrauche den <em>search_columns</em>, um die Spalten zu spezifizieren, in denen gesucht werden soll."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:989
+msgid "Select taxonomy"
+msgstr "Wähle die Taxonomie"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1006
+msgid "Taxonomy"
+msgstr "Taxonomie"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1007
+msgid "Choose which taxonomy to search in. Used in conjunction with <em>taxonomy_term</em>."
+msgstr "Wählen Sie, in welcher Taxonomie Sie suchen möchten. Gebrauch in Verbindung mit <em>taxonomy_term</em>."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1026
+msgid "Taxonomy Depth"
+msgstr "Taxonomie-Tiefe"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1027
+msgid "When doing a hierarchical taxonomical search (e.g. by sub-categories), increase this number to reflect how many levels down the hierarchical tree should be searched. For example, 1 = return posts classified with the given taxonomical term (e.g. mammals), 2 = return posts classified with the given term or with the sub-taxonomies (e.g. mammals or dogs). (default: 1)."
+msgstr "Wenn Sie eine hirarchische, taxonomische Suche durchführen (z.B. in sub-categories), erhöhen Sie diese Zahl, um so die Tiefe der hierarchischen Suche zu definieren. Zum Beipiel: 1 = Gibt Posts aus, die den taxonomischen Begriff \"Säugetiere\" enthalten, 2 = Gibt sowohl Posts aus, die den Suchbegriff beinhalten, aber auch solche, die in der Sub-Kategorie enthalten sind. Also sowohl \"Säugetiere\" als auch \"Hunde\". Standard-Einstellung: 1"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1045
+msgid "Taxonomy Slug"
+msgstr "Taxonomie-Brocken"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1046
+msgid "The taxonomy slug is the URL-friendly taxonomy term."
+msgstr "Der Taxonomie-Brocken ist ein URL-freundlicher taxonomischer Begriff"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1067
+msgid "Taxonomy Term"
+msgstr "Taxonomixscher Begriff"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1068
+msgid "Set a specific category(ies) or tag(s) to include in search results. Comma-separate multiple values."
+msgstr "Bestimme (eine) spezifische Kategorie(n) oder Tag(s), um darin zu suchen. Komma-separierte Mehrfach-Werte möglich."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1109
+msgid "Month"
+msgstr "Monat"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1110
+msgid "Choose which month's posts you wish to view. This relies on the <em>date_column</em> parameter."
+msgstr "Wählen Sie die monatlichen Beiträge, die Sie anzeigen möchten. Dies beruht auf dem <em> date_column </em>-Parameter."
+
+#@ default
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1137
+#: includes/GetPostsQuery.php:1993
+#: includes/SP_Post.php:213
+msgid "There were no errors."
+msgstr "Es wurden keine Fehler festgestellt."
+
+#@ default
+#: includes/GetPostsForm.php:1184
+msgid "Possible invalid search_by parameter:"
+msgstr ""
+
+#@ default
+#: includes/GetPostsForm.php:1330
+#, php-format
+msgid "CSS file not found %s"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/GetPostsForm.php:1351
+#: includes/GetPostsForm.php:1369
+#: includes/GetPostsForm.php:1385
+#: includes/GetPostsForm.php:1403
+#, php-format
+msgid "Invalid data type passed to %s function. Input must be a string."
+msgstr "Ungültiger Datentyp %s an Funktion übergeben. Die Eingabe muss ein String sein."
+
+#@ default
+#: includes/GetPostsForm.php:1429
+msgid "Invalid input to set_tpl() function. Input must be a string."
+msgstr ""
+
+#@ default
+#: includes/GetPostsForm.php:1433
+msgid "set_tpl(): Formatting string must not be empty!"
+msgstr ""
+
+#@ default
+#: includes/GetPostsQuery.php:429
+msgid "Invalid alpha input:"
+msgstr ""
+
+#@ default
+#: includes/GetPostsQuery.php:434
+msgid "Invalid post_type:"
+msgstr ""
+
+#@ default
+#: includes/GetPostsQuery.php:440
+msgid "Invalid post_status:"
+msgstr ""
+
+#@ default
+#: includes/GetPostsQuery.php:446
+msgid "Invalid column name. Column names may only contain alphanumeric characters and underscores: "
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:677
+msgid "Invalid input argument.  Arrays not allowed as argument names."
+msgstr "Ungültiges Eingabe-Argument. Arrays sind als Argument-Namen nicht erlaubt."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:682
+msgid "Empty input argument."
+msgstr "Leeres Eingabe-Argument."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:779
+#, php-format
+msgid "Empty input for %s. Using default parameters."
+msgstr "Leere Eingabe für% s. Gebrauche Standard-Parameter."
+
+#@ default
+#: includes/GetPostsQuery.php:800
+#, php-format
+msgid "Invalid order: %s. Order may only be \"ASC\" or \"DESC\"."
+msgstr ""
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:812
+#, php-format
+msgid "orderby column not a default post column: %s"
+msgstr "Nach Spalten ordnen. Keine Standard-Post-Spalte: %s"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:816
+#, php-format
+msgid "Invalid column name supplied for orderby: %s"
+msgstr "Ungültiger Spaltenname angegeben für die Sortierung durch %s"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:841
+#, php-format
+msgid "Invalid date argument: %s"
+msgstr "Ungültige Datum: %s"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:853
+#, php-format
+msgid "Invalid datetime argument: %s"
+msgstr "Ungültiges Datum-Zeit Argument: %s"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:906
+#, php-format
+msgid "Taxonomy does not exist: %s"
+msgstr "Taxonomie nicht existent: %s"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:931
+msgid "Invalid parameter for join_rule. join_rule must be \"AND\" or \"OR\""
+msgstr "Ungültige Parameter für join_rule. join_rule muss \"AND\" or \"OR\" sein"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:942
+msgid "Invalid parameter for match_rule. match_rule may be \"contains\", \"starts_with\", or \"ends_with\""
+msgstr "Ungültige Parameter für match_rule. match_rule kann  \"contains\", \"starts_with\", oder \"ends_with\" enthalten."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:954
+msgid "Invalid date column."
+msgstr "Ungültige Daten-Spalte"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:968
+msgid "post_mime_type contains illegal characters.  Input ignored."
+msgstr "post_mime_type enthält ungültige Character.  Eingabe ignoriert."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:980
+#, php-format
+msgid "Invalid argument name %s.  Input ignored."
+msgstr "Ungültiger Argument-Name %s. Eingabe ignoriert."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:993
+#, php-format
+msgid "Filtering on direct column/value: %s"
+msgstr "Filterung auf direkte Spalte/Wert:% s"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1484
+#: includes/GetPostsQuery.php:1613
+#, php-format
+msgid "The %s operator cannot operate on an array of values."
+msgstr "Der %s-Operator kann nicht auf einem Array von Werten angewandt werden."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1700
+msgid "Search parameters ignored: search_term and search_columns must be set."
+msgstr "Such-Parameter ignoriert: search_term und search_columns müssen eingestellt werden."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1894
+msgid "Arguments"
+msgstr "Argumente"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1896
+msgid "For more information on how to use this function, see the documentation for the <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/get_posts\">GetPostsQuery::get_posts()</a> function."
+msgstr "Für weitere Informationen, wie Sie diese Funktion verwenden, finden Sie in der Dokumentation der  <a href=\"http://code.google.com/p/wordpress-summarize-posts/wiki/get_posts\">GetPostsQuery::get_posts()</a> Funktion."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1897
+msgid "Raw Database Queries"
+msgstr "Raw Datenanfragen an die Datenbank"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1901
+msgid "Comparable Shortcode"
+msgstr "Vergleichbare Shortcodes"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1903
+msgid "Results"
+msgstr "Ergebnisse"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1917
+msgid "No arguments supplied."
+msgstr "Keine Argumente geliefert."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1969
+msgid "Execution Time"
+msgstr "Laufzeit"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1970
+#, php-format
+msgid "%s seconds"
+msgstr "%s Sekunden"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:1996
+#: includes/SP_Post.php:216
+msgid "Errors"
+msgstr "Fehler"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:2029
+msgid "There were no notices."
+msgstr "Es gab keine Hinweise."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:2032
+msgid "Notices"
+msgstr "Notizen"
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:2270
+msgid "There were no warnings."
+msgstr "Es gab keine Warnungen."
+
+#@ custom-content-type-mgr
+#: includes/GetPostsQuery.php:2273
+msgid "Warnings"
+msgstr "Warnungen"
+
+#@ custom-content-type-mgr
+#: includes/StandardizedCustomFields.php:113
+#, php-format
+msgid "The %s field is required."
+msgstr "Das Feld %s ist erforderlich."
+
+#@ custom-content-type-mgr
+#: includes/StandardizedCustomFields.php:146
+msgid "This post has validation errors.  The post will remain in draft status until they are corrected."
+msgstr "Dieser Beitrag hat Validierungsfehler. Der Beitrag wird im Entwurf-Status bleiben, bis sie korrigiert werden."
+
+#@ custom-content-type-mgr
+#: includes/SummarizePosts_Widget.php:11
+msgid "Summarize Posts"
+msgstr "Beiträge zusammenfassen"
+
+#@ custom-content-type-mgr
+#: includes/SummarizePosts_Widget.php:12
+msgid "List posts according to flexible search criteria."
+msgstr "Liste Beiträge nach flexiblen Suchkriterien."
+
+#@ custom-content-type-mgr
+#: includes/SummarizePosts_Widget.php:62
+msgid "Search Criteria"
+msgstr "Such-Kriterien."
+
+#@ custom-content-type-mgr
+#: includes/SummarizePosts_Widget.php:62
+msgid "Define Search"
+msgstr "Suche definieren."
+
+#@ custom-content-type-mgr
+#: includes/constants.php:26
+msgid "CCTM could not read the WordPress upload directory path!"
+msgstr "CCTM konnte den WordPress-Upload-Verzeichnis-Pfad nicht lesen!"
+
+#@ custom-content-type-mgr
+#: includes/functions.php:62
+#, php-format
+msgid "The %s field is not defined as a custom field."
+msgstr "Das %s-feld ist nicht als benutzerdefiniertes Feld definiert."
+
+#@ custom-content-type-mgr
+#: includes/functions.php:120
+#, php-format
+msgid "Invalid field name: %s"
+msgstr "Ungültiger Feldname: %s."
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:30
+#, php-format
+msgid "%1$s has detected that there are some active plugins that may be incompatible with it. We recommend disabling the following plugins:"
+msgstr "%s1$s hat festgestellt, dass es einige aktive Plugins nicht kompatibel mit ihm sind. Wir empfehlen, dass Sie die folgenden Plugins deaktivieren, um seine Funktion zu gewährleisten:"
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:37
+msgid "Continued use of these plugins may cause erratic behavior and certain functionality on your site may break entirely. See the <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/IncompatiblePlugins\">wiki</a> for more information."
+msgstr "Die weitere Nutzung dieser Plugins kann zu ungewöhnlichem Verhalten führen und bestimmte Funktionen auf Ihrer Website können vollständig zusammenbrechen. Sehen Sie sich die <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/wiki/IncompatiblePlugins\">Wiki</a> für weitere Informationen an."
+
+#@ custom-content-type-mgr
+#: tests/CCTMtests.php:137
+#, php-format
+msgid "%1$s requires PHP %2$s or newer."
+msgstr "%1$s benötigt PHP %2$s oder neuer."
+
+#@ custom-content-type-mgr
+#: updates/0.9.4.php:144
+#, php-format
+msgid "You may have to change your template for the %s post_type! Any instances of get_custom_field('%s') or print_custom_field('%s') in the single-%s.php file should be replaced with get_custom_field('%s') or print_custom_field('%s').  You may also use the 'Custom Fields-->Merge' command to merge field definitions."
+msgstr "Eventuell müssen Sie Ihre Vorlage für den %s post_type ändern! Alle Instanzen von get_custom_field ('%s') oder print_custom_field ('%s') in der Single-%s.php-Datei sollte mit get_custom_field ('%s') oder print_custom_field ('%s') ersetzt werden. Sie können auch den 'Custom Fields->Merge'-Befehl benutzen, um Felddefinitionen zu verschmelzen."
+
+#@ custom-content-type-mgr
+#: upload_form_handler.php:27
+msgid "<p>There was a problem uploading. Did you select a file? If you continue to have problems, please try using WordPress' <a href='media-new.php'>built-in manager</a> to upload new media.</p>"
+msgstr "<p>Es trat ein Fehler beim Hochladen auf. Haben Sie eine Datei ausgewählt? Falls Sie weiterhin Probleme mit dem Hochladen haben, versuchen Sie bitte den WordPress-eigenen <a href='media-new.php'>built-in manager</a>, um mehrere Dateien auf einmal hoch zu laden.</p>"
+
+#@ custom-content-type-mgr
+#: validators/emailaddress.php:14
+msgid "Check for a valid email address."
+msgstr "Überprüfen Sie, ob die Email-Adresse richtig ist."
+
+#@ custom-content-type-mgr
+#: validators/emailaddress.php:34
+#, php-format
+msgid "The %s field is not a valid email address."
+msgstr "Beim Feld %s handelt es sich nicht um eine gültige Email-Adresse."
+
+#@ custom-content-type-mgr
+#: validators/number.php:21
+msgid "Ensure that the input is a number of the type you have configured."
+msgstr "Stellen Sie sicher, dass die Eingabe eine Zahl ist, die Sie kofiguriert haben."
+
+#@ custom-content-type-mgr
+#: validators/number.php:29
+msgid "Number"
+msgstr "Zahl"
+
+#@ custom-content-type-mgr
+#: validators/number.php:69
+msgid "Min Value"
+msgstr "Mindestwert"
+
+#@ custom-content-type-mgr
+#: validators/number.php:71
+msgid "Max Value"
+msgstr "Höchstwert"
+
+#@ custom-content-type-mgr
+#: validators/number.php:74
+msgid "Allow Negative Numbers"
+msgstr "Erlaube negative Zahlenwerte"
+
+#@ custom-content-type-mgr
+#: validators/number.php:76
+msgid "Allow Decimals"
+msgstr "Erlaube Dezimalzahlen"
+
+#@ custom-content-type-mgr
+#: validators/number.php:77
+msgid "Maximum Decimal Places"
+msgstr "Maximale Dezimalstellen"
+
+#@ custom-content-type-mgr
+#: validators/number.php:80
+msgid "Decimal Separator"
+msgstr "Dezimaltrennzeichen"
+
+#@ custom-content-type-mgr
+#: validators/number.php:82
+msgid "Period"
+msgstr "Periode"
+
+#@ custom-content-type-mgr
+#: validators/number.php:83
+msgid "Comma"
+msgstr "Komma"
+
+#@ custom-content-type-mgr
+#: validators/number.php:101
+#, php-format
+msgid "The %s field must be numeric."
+msgstr "Das %s-Feld muss numerische Zeichen beinhalten."
+
+#@ custom-content-type-mgr
+#: validators/number.php:104
+#, php-format
+msgid "The %s field may not be negative."
+msgstr "Das %s-Feld darf keine negativen Zahlen beinhalten."
+
+#@ custom-content-type-mgr
+#: validators/number.php:107
+#, php-format
+msgid "The %s field must be between %s and %s."
+msgstr "Das %s-Feld muss Zahlen im Bereich zwischen %s und %s beinhalten."
+
+#@ custom-content-type-mgr
+#: validators/number.php:110
+#, php-format
+msgid "The %s field must be greater than %s."
+msgstr "Das %s-Feld muss Werte beinhalten, die größer als %s sind."
+
+#@ custom-content-type-mgr
+#: validators/number.php:113
+#, php-format
+msgid "The %s field must be less than %s."
+msgstr "Das %s-Feld muss Werte beinhalten, die kleiner als %s sind."
+
+#@ custom-content-type-mgr
+#: validators/number.php:117
+#, php-format
+msgid "The %s field must be a whole number (no decimals allowed)."
+msgstr "Das %s-Feld muss ganze Zahlen beinhalten."
+
+#@ custom-content-type-mgr
+#: validators/number.php:121
+#, php-format
+msgid "The %s field cannot contain more than %s decimal places."
+msgstr "Das %s-Feld darf nicht mehr als %s Dezimalstellen ebinhalten."
+
+#@ custom-content-type-mgr
+#: validators/url.php:14
+msgid "Check for a valid URL."
+msgstr "Überprüfen Sie den URL auf seine Gültigkeit."
+
+#@ custom-content-type-mgr
+#: validators/url.php:22
+msgid "URL"
+msgstr "URL"
+
+#@ custom-content-type-mgr
+#: validators/url.php:41
+#, php-format
+msgid "The %s field is not a valid URL."
+msgstr "Das %s-Feld beinhaltet keinen gültigen URL."
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:1
+msgid "I am sorry that you are having trouble with this plugin, but thank you for taking the time to file a bug. It helps out everybody who uses this code. Your input is valuable! Click the link above to launch the bug tracker."
+msgstr "Es tut mir leid, dass Sie Schwierigkeiten mit diesem Plugin haben, aber ich danke Ihnen, dass Sie sich die Zeit nehmen, um einen Bug zu melden. Das hilft allen, die diesen Code nutzen. Ihr Beitrag ist wertvoll! Klicken Sie auf den Link oben, um den Bug-Tracker starten."
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:9
+msgid "System Info"
+msgstr "System Info"
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:10
+msgid "Please paste the following text into your bug report so I can better diagnose the problem you are experiencing."
+msgstr "Bitte fügen Sie den folgenden Text in Ihren Fehlerbericht ein, damit ich das Problem besser diagnostizieren kann."
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:49
+msgid "When reporting bugs, remember the following key points:"
+msgstr "Wenn Sie Bugs berichten, beachten Sie bitte folgende Punkte:"
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:52
+msgid "<strong>If the bug can't be reproduced, it can't be fixed.</strong> Provide <em>detailed</em> instructions so that someone else can make the plugin fail for themselves."
+msgstr "<strong> Wenn der Fehler nicht reproduziert werden kann, wird er nicht behoben werden können. </ strong> Bitte geben <em>detaillierte</em> Anweisungen, so dass jemand anderes versuchen kann, den Fehler zu wiederholen, um so das Programm zu verbessern."
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:53
+msgid "<strong>Be ready to provide extra information if the programmer needs it.</strong> If they didn't need it, they wouldn't be asking for it."
+msgstr "<strong>Bitte helfen Sie mit, zusätzliche Informationen zu liefern, wenn der Programmierer danach fragt. </strong> Er würde Sie nicht fragen wenn er Ihre Hilfe nicht bräuchte."
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:54
+msgid "<strong>Write clearly.</strong> Make sure what you write can't be misinterpreted. Avoid pronouns, and error on the side of providing too much information instead of too little."
+msgstr "<strong> Bitte beschreiben Sie den/die Fehler eindeutig. </ strong> Achten Sie darauf, was man Sie nicht falsch interpretiert. Vermeiden Sie Pronomen und Fehler durch zu viele Informationen statt wenige Informationen mit besserem Inhalt."
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:56
+msgid "Consider using <a href=\"http://www.techsmith.com/jing/free/\">Jing</a> to do a screencast of the problem!"
+msgstr "Erwägen Sie die Verwendung <a href=\"http://www.techsmith.com/jing/free/\">Jing</ a>, um einen Screencast von dem Problem zu erstellen!"
+
+#@ custom-content-type-mgr
+#: views/bug_report.php:57
+msgid "The gist of this was inspired by <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/bugs.html\">How to Report Bugs Effectively</a> by Simon Tatham."
+msgstr "Der Kern wurde durch <a href=\"http://www.chiark.greenend.org.uk/~sgtatham/bugs.html\"> inspiriert. Wie man Bugs effektiv Meldet </ a> von Simon Tatham."
+
+#@ custom-content-type-mgr
+#: views/custom_field.php:39
+msgid "More Information"
+msgstr "Weitere Informationen"
+
+#@ custom-content-type-mgr
+#: views/custom_field.php:50
+msgid "Associations"
+msgstr "Verbände"
+
+#@ custom-content-type-mgr
+#: views/custom_field.php:52
+msgid "Which post-types should this field be attached to?"
+msgstr "Zu welchem Post-Typ soll dieses Feld hinzu gefügt werden?"
+
+#@ custom-content-type-mgr
+#: views/custom_field_types.php:5
+#: views/custom_field_types.php:12
+msgid "Field Type Description"
+msgstr "Feld-Typ-Beschreibung."
+
+#@ custom-content-type-mgr
+#: views/export.php:8
+msgid "Before exporting, please describe your current configuration. Your settings will be preserved."
+msgstr "Bitte beschreiben Sie Ihre aktuelle Konfiguration vor dem Export. Ihre Einstellungen bleiben dadurch erhalten."
+
+#@ custom-content-type-mgr
+#: views/export.php:20
+#: views/preview_def.php:13
+msgid "Author URL"
+msgstr "URL des Autors"
+
+#@ custom-content-type-mgr
+#: views/export.php:23
+#: views/preview_def.php:14
+msgid "Template URL"
+msgstr "Vorlagen-URL"
+
+#@ custom-content-type-mgr
+#: views/export.php:25
+msgid "If you have created a public theme that goes along with this content definition, paste the URL here."
+msgstr "Wenn Sie ein Theme veröffentlichen, das einhergeht mit diesen Inhalten, fügen Sie bitte seine URL hier ein"
+
+#@ default
+#: views/export.php:34
+msgid "Download"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: views/export.php:35
+msgid "Save to Library"
+msgstr "In Bibliothek speichern"
+
+#@ custom-content-type-mgr
+#: views/import.php:15
+msgid "Manage Library"
+msgstr "Bibliothek verwalten"
+
+#@ custom-content-type-mgr
+#: views/import.php:28
+#, php-format
+msgid "You can import an existing %s definition file from your computer or choose one from your uploads directory: %s. You probably will only use this when you are first setting up your site."
+msgstr "Sie können eine vorhandene Definition-%s-Datei von Ihrem Computer oder aus Ihren Upload-Verzeichnis:%s importieren . Sie werden diese Funktion wahrscheinlich nur verwenden, wenn Sie zum ersten Mal Einstellungen an Ihrer Seite vornehmen."
+
+#@ custom-content-type-mgr
+#: views/import.php:33
+msgid "Definitions on File"
+msgstr "Definitionen der Datei"
+
+#@ custom-content-type-mgr
+#: views/import.php:76
+msgid "Library empty."
+msgstr "Bibliothek ist leer."
+
+#@ custom-content-type-mgr
+#: views/import.php:85
+msgid "Delete Selected"
+msgstr "Lösche ausgewählten Eintrag."
+
+#@ custom-content-type-mgr
+#: views/import.php:92
+msgid "Upload Definitions"
+msgstr "Definitionen hochladen."
+
+#@ custom-content-type-mgr
+#: views/import.php:100
+msgid "Upload New File"
+msgstr "Neue Datei hochladen"
+
+#@ default
+#: views/import.php:103
+msgid "Upload"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: views/info.php:18
+#: views/purge.php:18
+msgid "Records"
+msgstr "Aufzeichnungen"
+
+#@ custom-content-type-mgr
+#: views/info.php:29
+#: views/purge.php:29
+msgid "Distribution of Posts"
+msgstr "Verteilung der Beiträge"
+
+#@ custom-content-type-mgr
+#: views/info.php:36
+#: views/purge.php:36
+msgid "Count"
+msgstr "Zählen"
+
+#@ custom-content-type-mgr
+#: views/info.php:38
+#: views/purge.php:38
+msgid "Number Active"
+msgstr "Anzahl Aktive"
+
+#@ custom-content-type-mgr
+#: views/info.php:40
+#: views/purge.php:40
+msgid "Number Inactive"
+msgstr "Anzahl Inaktive"
+
+#@ custom-content-type-mgr
+#: views/info.php:44
+#: views/purge.php:44
+msgid "Active vs. Inactive Post Types"
+msgstr "Aktive gegenüber inaktive Posts"
+
+#@ custom-content-type-mgr
+#: views/list_custom_fields.php:4
+#: views/list_custom_fields.php:12
+msgid "Type"
+msgstr "Type"
+
+#@ custom-content-type-mgr
+#: views/list_custom_fields.php:5
+#: views/list_custom_fields.php:13
+#: views/post_type.php:473
+#: views/post_type.php:482
+#: views/sortable-list.php:24
+#: views/sortable-list.php:33
+msgid "Field"
+msgstr "Feld"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:126
+msgid "Basic"
+msgstr "Grundlage"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:127
+msgid "Labels"
+msgstr "Beschriftungen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:128
+msgid "Fields"
+msgstr "Felder"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:129
+msgid "Columns"
+msgstr "Spalten"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:130
+msgid "Menu"
+msgstr "Menü"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:131
+msgid "URLs"
+msgstr "URLs"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:132
+msgid "Advanced"
+msgstr "Erweitert"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:133
+#: views/post_type.php:724
+msgid "Taxonomies"
+msgstr "Taxonomien"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:148
+msgid "This name may show up in your URLs, e.g. ?movie=epic-movie. This will also make a new theme file available, starting with prefix named \"single-\", e.g. <code>single-movie.php</code>."
+msgstr "Dieser Name kann sich in Ihren URLs zeigen, z. B. ?movie=epic-movie. Damit wird auch eine neue Theme-Datei zur Verfügung gestellt, beginnend mit dem Präfix-Namen \"single-\", zB <code>single-movie.php</code>."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:161
+msgid "The menu name text. This string is the name to give menu items. Defaults to value of name."
+msgstr "Der Name des Menüpunktes. Standardmäßig der Wert der Zeichenkette des Namens."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:176
+msgid "Leave this checked to use the default posts icon."
+msgstr "Lassen Sie diese Markierung unverändert, um das Standard-Icon für Beiträge zu verwenden."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:191
+msgid "Choose an icon from the list below or paste a full URL to a 16x16 icon here."
+msgstr "Wählen Sie ein Symbol aus der Liste oder fügen Sie eine vollständige URL zu einer 16x16-Pixel-Icon-Grafik hinzu."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:207
+msgid "Singular"
+msgstr "Einzahl"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:215
+msgid "Main Menu Label (Plural)"
+msgstr "Hauptmenü Beschriftung (Mehrzahl)"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:229
+msgid "The add new text. The default is Add New for both hierarchical and non-hierarchical types."
+msgstr "Der \"Neuer Eintrag\" Text. Per Standard ist für beide, die hierarchischen und nicht hierarchischen Arten \"Neuer Eintrag\"."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:235
+msgid "Add New Item"
+msgstr "Neuer Eintrag"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:241
+msgid "The add new item text. Default is Add New Post/Add New Page"
+msgstr "Neuer Eintrag. Standard ist Neuer Eintrag/Neue Seite"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:247
+msgid "Edit Item"
+msgstr "Bearbeite Eintrag"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:253
+msgid "The edit item text. Default is Edit Post/Edit Page"
+msgstr "Eintrag bearbeiten. Standard ist Eintrag bearbeiten/Seite bearbeiten"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:259
+msgid "New Item"
+msgstr "Neuer Eintrag"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:265
+msgid "The new item text. Default is New Post/New Page"
+msgstr "Neuer Eintrag. Standard ist Neuer Eintrag/Neue Seite"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:273
+msgid "View Item"
+msgstr "Betrachte Eintrag."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:279
+msgid "The view item text. Default is View Post/View Page"
+msgstr " Standard ist Betrachte Eintrag/Betrachte Seite"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:286
+msgid "Search Items"
+msgstr "Suche-Eintrag"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:293
+msgid "The search items text. Default is Search Posts/Search Pages"
+msgstr "Suche-Eintrag. Standard ist Suche Eintrag/Suche Seite"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:305
+msgid "The not found text. Default is No posts found/No pages found"
+msgstr "Nicht gefunden. Standard ist Kein Eintrag gefunden/Keine Seite gefunden"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:312
+msgid "Not Found in Trash"
+msgstr "Im Papierkorb nicht gefunden"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:318
+msgid "The not found in trash text. Default is No posts found in Trash/No pages found in Trash"
+msgstr "Nicht im Papierkorb gefunden. Standard ist Eintrag nicht im Papierkorb gefunden/Seite nicht im Papierkorb gefunden"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:325
+msgid "Parent Item Colon"
+msgstr "Übergeordnetes Element Colon"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:327
+msgid "The parent text (used only on hierarchical types). Default is <em>Parent Page</em>"
+msgstr "Eltern Texti (nur gebraucht bei hierarchischen Typen). Standard ist <em>Parent Page</em>"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:334
+msgid "Your post type must have either the title or content boxes checked; otherwise WordPress will revert to the default behavior and include the title and the content fields."
+msgstr "Die Inhalts-Typ muss entweder den Titel oder das Inhalt-Kästchen markiert haben, ansonsten wird WordPress das Standardverhalten wiederherstellen und wählt dabei den Titel und den Inhalt Felder aus."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:367
+msgid "Currently, this functionality is overridden by any custom fields you have defined for this content type."
+msgstr "Derzeit ist diese Funktion durch die benutzerdefinierten Felder, die Sie für diesen Inhaltstyp definiert haben, außer Kraft gesetzt ."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:373
+msgid "A Post Format is a piece of meta information that can be used by a theme to customize its presentation of a post."
+msgstr "Das Post-Format ist ein Teil der Meta-Informationen, die von einem Thema verwendet werden können, um die Präsentation eines Beitrags anzupassen."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:385
+msgid "Page Attributes"
+msgstr "Seiten-Attribute"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:387
+msgid "When checked, the create/edit screens will include a meta box for menu position and other page attributes."
+msgstr "Wird diese Option aktiviert, wird der Seite für die die Erstellung/Bearbeitung von Anzeigen eine Meta-Box für Menü-Position und andere Attribute hinzugefügt."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:397
+msgid "Featured image. The active theme must also support post-thumbnails. Include a line like the following in your theme's functions.php file: <br/><code>add_theme_support( 'post-thumbnails', array( 'name_of_your_post_type_here' ) );</code>"
+msgstr "Vorgestelltes Bild. Das aktive Theme muss auch Post-Thumbnails unterstützen. Fügen Sie eine Zeile wie die folgende in Ihrer Theme-Datei functions.php ein: <br/> <code> add_theme_support ('post-thumbnails', array ('Name_des_Inhalts-Typs_hier')); </ code>"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:404
+msgid "Allows parent to be specified."
+msgstr "Erlaubt dem Elternelement spezifiziert zu sein."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:410
+msgid "Use Custom Hierarchy"
+msgstr "Gebrauche benutzerdefinierte Hierarchie"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:411
+msgid "Allows custom hierarchies to be specified. Hierarchical must be checked."
+msgstr "Erlaubt benutzerdefinierten Hierarchien spezifiziert zu werden. Dazu muss \"Hierarchisch\" ausgewählt sein."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:416
+msgid "Custom Hierarchies"
+msgstr "Benutzerdefinierte Hiearchien"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:417
+msgid "Warning: this feature is experimental. Implementing it deviates from standard WordPress behavior. See <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=9\" target=\"_blank\">Issue 9</a> in the bugtracker."
+msgstr "WARNUNG: Diese Funktion ist experimentell. Seine Implementierung weicht ab vom standard-WordPress-Verhalten. Siehe <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=9\" target=\"_blank\">Problem 9</a> im Bugtracker."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:421
+msgid "Include Drafts?"
+msgstr "Entwürfe mit einbeziehen?"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:422
+msgid "By default, WordPress only allows you to use published pages in your hierarchy. Select this option to override that behavior."
+msgstr "Per Standard erlaubt WordPress nur Veröffentlichte Seiten der Hiearchie hinzu zu fügen. Aktivieren Sie diese Funktion, um dieses Verhalten ausser Kraft zu setzen."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:425
+msgid "Parent Post Types"
+msgstr "Eltern-Element des Inhaltstyps"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:426
+msgid "By default, WordPress only allows you to use posts of the same post-type in your hierarchy. Select which post types should be available as parents."
+msgstr "Per Standard erlaubt WordPress nur Inhalte gleichen Types in der Hiearchie. Bitte wählen Sie, welcher Inhaltstyp als Eltern-Element auswählbar sein soll."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:463
+msgid "Customize Columns"
+msgstr "Anpassbare Spalten"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:464
+msgid "You can customize the columns visible when you display a list of all posts in this post-type. WARNING: you can only use custom columns if the post-type name does not contain hyphens; underscores are Ok."
+msgstr "Sie können die sichtbaren Spalten anpassen, wenn Sie eine Liste aller Posts dieses Inhaltstyps anzeigen lassen. WARNUNG: Sie können nur dann benutzerdefinierte Spalten gebrauchen, wenn der Post-Typ Name keine Bindestriche enthält. Unterstriche sind in Ordnung."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:498
+msgid "These settings only apply if you have the <em>Show Admin User Interface</em> selected."
+msgstr "Diese Einstellungen gelten nur, wenn Sie <em>Zeige Admin-Benutzeroberfläche</em> ausgewählt haben"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:502
+msgid "Show in Menus"
+msgstr "In Menüs anzeigen"
+
+#@ default
+#: views/post_type.php:504
+msgid "Yes"
+msgstr ""
+
+#@ default
+#: views/post_type.php:505
+msgid "No"
+msgstr ""
+
+#@ default
+#@ custom-content-type-mgr
+#: views/post_type.php:506
+#: views/post_type.php:556
+#: views/post_type.php:563
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:509
+msgid "Custom top-level Menu"
+msgstr "Benutzerdefiniertes Top-Level-Menü"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:512
+msgid "Whether to show the post type in the admin menu. Change this to <em>Custom</em> to specify a top level page like <code>tools.php</code> or <code>edit.php?post_type=page</code>"
+msgstr "Post-Typ im Admin-Menü anzeigen. Ändern Sie dies in <em>Benutzerdefiniert</em>, um eine Top-Level-Seite wie <code>tools.php</code> oder <code>edit.php?post_type=page</code> anzuzeigen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:519
+msgid "This setting determines where this post type should appear in the left-hand admin menu. Default: null (below Comments). E.g. \"21\" would cause this content type to display below Pages and above Comments."
+msgstr "Diese Einstellung legt fest, wo diese Art Post in der linken Admin-Menü angezeigt werden soll. Vorgabe: NULL (unter Kommentare). Z.B. \"21\" würde dazu führen, diese Art des Inhalts auf Unterseiten und oberhalb von Kommentaren angezeigt wird."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:523
+msgid "below Links"
+msgstr "Unterhalb von Links"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:525
+msgid "below Comments"
+msgstr "Unterhalb von Kommentaren"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:527
+msgid "below Plugins"
+msgstr "Unterhalb der PlugIns"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:528
+msgid "below Users"
+msgstr "Unterhalb der User"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:529
+msgid "below Tools"
+msgstr "Unterhalb der Wekzeuge"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:530
+msgid "below Settings"
+msgstr "Unterhalb der Einstellungen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:562
+msgid "Currently, this is the only custom permalink structure that is supported. Other formats are not supported.  Your URLs will look like http://site.com/your_post_type/your-title/"
+msgstr "Derzeit ist dies die einzig unterstützte, benutzerdefinierte Permalink-Struktur. Andere Formate werden nicht unterstützt. Ihre URLs werden aussehen wie http://ihre_seite.de/ihr_inhaltstyp/ihr_titel/"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:563
+msgid "Evaluate the contents of slug"
+msgstr "Bewerten der Inhalte der Bruchstücke"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:582
+msgid "(optional) Name of the query var to use for this post type. E.g. \"my-var\" would make for URLs like http://site.com/?my-var=your-title. If blank, the default structure is http://site.com/?post_type=your_post_type&p=18"
+msgstr "(Optional) Name der Abfrage VAR für diesen Beitrag Typ zu verwenden. Z.B. \"my-var\" würder URLs wie http://ihre_seite.de/?my-var=ihr_titel erzeugen. Wenn leer, dann ist die Standard-Struktur http://ihre_seite.de/?post_type=your_post_type&p=18"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:596
+msgid "Check All"
+msgstr "Alles auswählen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:603
+msgid "Set the public attribute verbosely so WordPress behaves as you would expect it to. See <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=212\">Issue 212</a> in the bug tracker."
+msgstr "Setzen Sie das \"Public Attribut\" ausführlich so verhält sich WordPress, wie man es erwarten würde. Siehe <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=212\"> Problem 212 </a> in den Bug-Tracker."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:617
+msgid "Whether post_type is available for selection in navigation menus (under <em>Appearance --> Menus</em>). Your theme must support menus for this option to have any effect. Default: value of public argument"
+msgstr "Ob post_type für die Selektion in Navigations-Menüs verfügbar ist (unter <em>Aussehen -> Menüs</em>). Ihr Theme muss Menüs für diese Option unterstützen, um wirksam zu sein. Standard: Wert des öffentlichen Arguments"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:625
+msgid "Publicly Queriable"
+msgstr "Öffebtlich abfragbar"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:626
+msgid "Whether post_type queries can be performed from the front end. Usually this matches up with the <em>Public</em> setting."
+msgstr "Ob post_type Abfragen vom Frontend aus durchgeführt werden können. Normalerweise stimmt diese Einstellung mit <em>Öffentlich</em>-überein."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:634
+msgid "Include in Search"
+msgstr "Mit in die Suche einschliessen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:635
+msgid "Whether to include posts with this post type in search results."
+msgstr "Sollen Beiträge mit diesem Post-Typ in den Suchergebnissen eingeschlossen werden?."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:643
+msgid "Include in RSS feed"
+msgstr "in RSS-Feeds einschliessen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:644
+msgid "Should posts with this post type be included in the RSS feed?"
+msgstr "Sollen Inhalte dieses Post-Typs in die RSS-Feeds eingeschlossen werden?"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:670
+msgid "Allows cross-blog notification. See <a href=\"http://codex.wordpress.org/Introduction_to_Blogging#Trackbacks\">official documentation</a>."
+msgstr "Erlaubt die Blog-übergreifende Benachrichtigung. Siehe <a href=\"http://codex.wordpress.org/Introduction_to_Blogging#Trackbacks\">Offizielle Dokumentation</a>."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:677
+msgid "If checked, your template will require the <code>comments_template();</code> function."
+msgstr "Wenn ausgewählt, wird Ihre Vorlage die <code>comments_template();</code>-Funktion benötigen"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:684
+msgid "Revisions are useful if you ever need to go back to an older version of a document. WARNING: revisions do not store custom field data!  This is a limitation of WordPress (see <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=266\">issue 266</a>)."
+msgstr "Revisionen sind nützlich, um zurück zu einer älteren Version eines Dokuments zurück kehren zu können. WARNUNG: Änderungen speichern keine Daten der benutzerdefinierte Felder! Dies ist eine Einschränkung von WordPress (siehe <a href=\"http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=266\">Problem 266</a>)."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:690
+msgid "Enable Archives"
+msgstr "Ermögliche Archivierung"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:692
+msgid "If enabled, posts will be listed in archive lists (e.g. by month). This also enables posts to show up in tag or category lists."
+msgstr "Wenn aktiviert, werden Posts im Archiv gelistet (Z.B. monatlich) Das führt ebenfalls dazu, dass Posts in den Tag- oder Kategorielisten erscheinen."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:704
+msgid "How do you want your posts to sort?"
+msgstr "Wie möchten Sie Ihre Posts sortiert haben?"
+
+#@ default
+#: views/post_type.php:713
+msgid "ASC"
+msgstr ""
+
+#@ default
+#: views/post_type.php:714
+msgid "DESC"
+msgstr ""
+
+#@ custom-content-type-mgr
+#: views/post_type.php:716
+msgid "If you specify a custom <code>Order By</code>, this setting will determine if your posts sort in ascending or descending order."
+msgstr "Wenn Sie eine benutzerdefinierte <code>Order By</code> Suche angeben, wird diese Einstellung in absteigender oder aufsteigender Reihenfolge sortieren."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:726
+msgid "Taxonomies offer ways to classify data as an aid to searching."
+msgstr "Taxonomien bieten Möglichkeiten, um Daten als Hilfsmittel für die Suche zu klassifizieren."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:727
+msgid "Currently, this plugin only allows you to use default taxonomies with your content types. We recommend using momo360modena's <a href='http://wordpress.org/extend/plugins/simple-taxonomy/'>Simple Taxonomy</a> plugin to create custom taxonomies."
+msgstr "Momentan erlaubt dieses PlugIn nur Standard-Taxonomien mit Ihren Inhaltstypen zu verwenden. Wir empfehlen die Verwendung des <a href='http://wordpress.org/extend/plugins/simple-taxonomy/'>einfache Taxonomie </a> Plugin von momo360modena, um benutzerdefinierte Taxonomien zu erstellen."
+
+#@ custom-content-type-mgr
+#: views/post_type.php:731
+msgid "Enable Categories"
+msgstr "Erlaube Kategorien"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:732
+msgid "Hierarchical based classification."
+msgstr "Hierarchisch basierte Klassifikation"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:738
+msgid "Enable Tags"
+msgstr "Ermögliche Tags"
+
+#@ custom-content-type-mgr
+#: views/post_type.php:739
+msgid "Simple word associations."
+msgstr "Einfache Wort-Assoziationen."
+
+#@ custom-content-type-mgr
+#: views/preview_def.php:7
+msgid "Activate!"
+msgstr "Aktivieren!"
+
+#@ custom-content-type-mgr
+#: views/preview_def.php:18
+#: views/templates/default.php:49
+msgid "Content Types"
+msgstr "Inhaltstypen"
+
+#@ custom-content-type-mgr
+#: views/preview_def.php:29
+msgid "Foreign post-type"
+msgstr "Fremder Inhaltstyp"
+
+#@ custom-content-type-mgr
+#: views/preview_def.php:45
+msgid "Custom fields"
+msgstr "Benutzerdefinierte Felder"
+
+#@ custom-content-type-mgr
+#: views/preview_def.php:73
+msgid "Source file"
+msgstr "Quelldatei"
+
+#@ custom-content-type-mgr
+#: views/preview_def.php:74
+msgid "Created in CCTM Version"
+msgstr "Erstellt in CCTM Version"
+
+#@ custom-content-type-mgr
+#: views/preview_def.php:75
+msgid "Database Encoding"
+msgstr "Datenbank Kodierung"
+
+#@ custom-content-type-mgr
+#: views/preview_def.php:76
+msgid "Date Created"
+msgstr "Erstellungsdatum"
+
+#@ custom-content-type-mgr
+#: views/sample_template.php:9
+msgid "CSS for Manager Pages"
+msgstr "CSS für Management-Seiten"
+
+#@ custom-content-type-mgr
+#: views/sample_template.php:12
+msgid "HTML for Manager Pages"
+msgstr "HTML für Management-Seiten"
+
+#@ custom-content-type-mgr
+#: views/settings.php:7
+msgid "Delete Posts"
+msgstr "Lösche Posts"
+
+#@ custom-content-type-mgr
+#: views/settings.php:9
+msgid "Check this option if you want to delete posts when you delete a post-type definition."
+msgstr "Aktivieren Sie diese Option, um Beiträge zu löschen, wenn Sie eine Post-Typ-Definition löschen möchten."
+
+#@ custom-content-type-mgr
+#: views/settings.php:16
+msgid "Delete Custom Fields"
+msgstr "Lösche benutzerdefinierte Felder"
+
+#@ custom-content-type-mgr
+#: views/settings.php:18
+msgid "Check this option if you want to delete custom fields from the database when you delete a custom field definition."
+msgstr "Aktivieren Sie diese Option, um benutzerdefinierte Felder aus der Datenbank zu löschen, wenn Sie ein benutzerdefiniertes Feld-Definition löschen möchten."
+
+#@ custom-content-type-mgr
+#: views/settings.php:26
+msgid "Add Custom Fields"
+msgstr "Füge benutzerdefiniertes Feld hinzu"
+
+#@ custom-content-type-mgr
+#: views/settings.php:28
+msgid "Check this option if you want to force custom fields to be created in the database when you associate custom field with a content type."
+msgstr "Aktivieren Sie diese Option, um zu erzwingen, dass benutzerdefinierte Felder in der Datenbank erstellt werden, wenn Sie ein benutzerdefiniertes Feld einem Inhalts-Typ zuordnen möchten."
+
+#@ custom-content-type-mgr
+#: views/settings.php:38
+msgid "Update Default Values"
+msgstr "Standardwerte aktualisieren"
+
+#@ custom-content-type-mgr
+#: views/settings.php:40
+msgid "Check this option if you want custom fields containing the old default value to be updated when the default value is changed."
+msgstr "Aktivieren Sie diese Option, wenn Sie wünschen, dass Inhalte benutzerdefinierter Felder, die alte standard-Werte enthalten, dann aktualisiert werden, wenn der Standardwert geändert wird."
+
+#@ custom-content-type-mgr
+#: views/settings.php:47
+msgid "Show Custom Fields Menu"
+msgstr "Menü für Benutzerdefinierte Felder anzeigen"
+
+#@ custom-content-type-mgr
+#: views/settings.php:49
+msgid "Check this option if you want a \"Custom Fields\" menu item to appear under each post-type."
+msgstr "Aktivieren Sie diese Option, wenn Sie wünschen, dass ein \"Custom Fields\" Menü unter jedem Inhaltstypen angezeigt wird."
+
+#@ custom-content-type-mgr
+#: views/settings.php:56
+msgid "Show Settings Menu"
+msgstr "Zeige Einstellungs-Menü"
+
+#@ custom-content-type-mgr
+#: views/settings.php:58
+msgid "Check this option if you want a \"Settings\" menu item to appear under each custom post-type."
+msgstr "ktivieren Sie diese Option, wenn Sie wünschen, dass ein \"Settings\" Menü unter jedem benutzerdefinierten Inhaltstyp angezeigt werden soll."
+
+#@ custom-content-type-mgr
+#: views/settings.php:65
+msgid "Display Foreign Post Types"
+msgstr "Fremde Inhaltstypen anzeigen"
+
+#@ custom-content-type-mgr
+#: views/settings.php:67
+msgid "Check this box if you want to display any post-types registered with some other plugin. You won't be able to edit them, but you'll know they are there."
+msgstr "Aktivieren Sie diese Option, wenn Sie wünschen, dass beliebige Inhaltstypen, die mit einem PlugIn verknüpft sind, angezeigt werden soll. Sie werden diese nicht bearbeiten können, aber dennoh wissen, dass sie vorhanden sind."
+
+#@ custom-content-type-mgr
+#: views/settings.php:74
+msgid "Cache Thumbnail Images"
+msgstr "Bild-Thumbnails anzeigen"
+
+#@ custom-content-type-mgr
+#: views/settings.php:76
+msgid "Check this option to let CCTM generate low-quality, smaller images for use in the post-selector for relation, image, and media fields."
+msgstr "Aktivieren Sie diese Option, wenn Sie wünschen, dass das CCTM verkleinerte Versionen in geringer Qualität erzeugt, die in Verbindung mit der Inhalts-Auswahl, Bildern und Medienfelder angezeigt werden."
+
+#@ custom-content-type-mgr
+#: views/settings.php:86
+msgid "Save Empty Fields"
+msgstr "Speichere leere Felder"
+
+#@ custom-content-type-mgr
+#: views/settings.php:88
+msgid "If checked, the CCTM will create a row in the postmeta table for the values for each post's custom fields. Uncheck this if you need to save some space in your database."
+msgstr "Aktivieren Sie diese Option, wenn Sie wünschen, dass das CCTM eine je Zeile für jedes benutzerdefinierte Feld in der Postmeta Tabelle erzeugt. Deaktvieren Sie diese Funktion, wenn Sie in Ihrer Datenbank Platz wollen."
+
+#@ custom-content-type-mgr
+#: views/settings.php:95
+msgid "Summarize Posts TinyMCE Button"
+msgstr "\"Fasse Inhalte des TinyMCE zusammen\"-Button"
+
+#@ custom-content-type-mgr
+#: views/settings.php:97
+msgid "Provides a TinyMCE button for a graphically choosing search criteria and generating a Summarize Posts shortcode."
+msgstr "Bietet eine TinyMCE-Taste für eine grafische Wahl der Suchkriterien und das Erzeugen eines zusammenfassenden Inhalts-Shortcode."
+
+#@ custom-content-type-mgr
+#: views/settings.php:104
+msgid "Custom Fields TinyMCE Button"
+msgstr "\"Benutzerdefinierte Felder Tiny MCE\"-Button"
+
+#@ custom-content-type-mgr
+#: views/settings.php:106
+msgid "Provides a TinyMCE button for a graphically choosing a custom field whose value you wish to display in the main content block."
+msgstr "Bietet eine TinyMCE-Taste für die Wahl des grafischen benutzerdefinierten Feldes, dessen Wert Sie im Hauptinhalt-Block anzeigen möchten."
+
+#@ custom-content-type-mgr
+#: views/settings.php:113
+msgid "Flush Permalink Rules"
+msgstr "Permalink Regeln bereinigen"
+
+#@ custom-content-type-mgr
+#: views/settings.php:115
+msgid "Usually, you need the CCTM to flush the WordPress permalink rules in order to support URL mappings to your custom posts.  Other plugins may also do this, so you can save on the overhead by disabling this."
+msgstr "Normalerweise wünschen Sie, dass CCTM die WordPress Permalink-Regeln bereinigt, um URL-Zuordnungen Ihrer eigenen Beiträge zu unterstützen. Andere Plugins können dies auch tun, so können Sie Speicherüberladung verhindern, wenn Sie diese Funktion deaktivieren."
+
+#@ custom-content-type-mgr
+#: views/settings.php:122
+msgid "Show Pages in RSS Feed"
+msgstr "Seiten in RSS-Feeds anzeigen"
+
+#@ custom-content-type-mgr
+#: views/settings.php:125
+msgid "Should your pages show up in your RSS feed?"
+msgstr "Sollen Ihre Seiten in Ihren RSS-Feeds angezeigt werden?"
+
+#@ custom-content-type-mgr
+#: views/sortable-list.php:22
+msgid "Included"
+msgstr "Inbegriffen"
+
+#@ custom-content-type-mgr
+#: views/templates/default.php:54
+msgid "Info"
+msgstr "Info"
+
+#@ custom-content-type-mgr
+#: views/templates/default.php:75
+msgid "Support this Plugin"
+msgstr "Unterstütze dieses PlugIn"
+
+#@ custom-content-type-mgr
+#: views/templates/default.php:86
+msgid "Get eMail Updates"
+msgstr "Emails über Aktualisierungen anfordern"
+
+#@ custom-content-type-mgr
+#: views/templates/default.php:90
+msgid "Forum"
+msgstr "Forum"
+
+#@ custom-content-type-mgr
+#: views/templates/tinymce.php:13
+msgid "You can place a shortcode in your content to print out custom field values."
+msgstr "Sie können eine Kurzwahlnummer in Ihrem Inhalt platzieren, um Werte benutzerdefinierter Felder auszudrucken ."
+
+#@ custom-content-type-mgr
+#: views/tools.php:1
+msgid "The following tools implement additional functionality to this plugin."
+msgstr "Die folgenden Werkzeuge beinhalten zusätzliche Funktionen für dieses PlugIn."
+
+#@ custom-content-type-mgr
+#: views/tools.php:7
+msgid "Import a <code>.cctm.json</code> definition file to jump-start your site."
+msgstr "Importieren Sie eine <code>.cctm.json</code>-Definitions-Datei, um Starthilfe zu Ihrer Website zu erhalten."
+
+#@ custom-content-type-mgr
+#: views/tools.php:13
+msgid "Export your site's content-type and custom-field definitions."
+msgstr "Exportieren Sie die Inhaltstyp- und die benutzerdefinierten Felddefinitionen Ihrer Website."
+
+#@ custom-content-type-mgr
+#: views/tools.php:19
+msgid "Clear any cached images or other files that have been generated."
+msgstr "Beseitigen Sie alle gecachten Bilder oder andere Dateien, die erzeugt wurden."
+
+#@ custom-content-type-mgr
+#: views/tools.php:25
+msgid "Purge your database of orphaned posts that do not have a post-type defined for them.  Warning: this will permanently delete data!"
+msgstr "Bereinigen Sie die Datenbank von verwaisten Posts. Das sind solche, für die keine die keine Post-Typen definiert sind. WARNUNG: Hiermit werden Daten unwiederbringlich gelöscht!"
+
+#@ custom-content-type-mgr
+#: views/tools.php:29
+msgid "Detect Post Types"
+msgstr "Ermittle Post Typen"
+
+#@ custom-content-type-mgr
+#: views/tr_custom_field_type.php:13
+msgid "Create"
+msgstr "Erzeuge"
+
+#@ custom-content-type-mgr
+#: views/tr_custom_field_type.php:14
+msgid "More Info"
+msgstr "Weitere Informationen"
+

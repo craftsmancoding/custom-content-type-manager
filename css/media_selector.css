@@ -1,0 +1,36 @@
+/* This is only used for the PostSelector controller when a user chooses to select a new
+media item (e.g. a new image) */
+.mini-thumbnail {
+	vertical-align:middle;
+}
+
+.media_detail 
+{
+	display:none;
+	margin-left:40px;
+}
+
+.post_selector_title{
+
+}
+.post_selector_toggler {
+	text-align: right;
+	margin-right: 200px;
+}
+.media_info {
+	padding-left:20px;
+}
+
+
+.post_selector_pagination_link {
+	text-decoration:underline;
+}
+
+.post_selector_pagination_link:hover {
+	cursor: pointer;
+	text-decoration:underline;
+}
+
+.post_selector_pagination_active_page {
+	font-weight: 700;
+}

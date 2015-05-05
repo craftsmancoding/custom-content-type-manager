@@ -1,0 +1,114 @@
+<style>
+		/*------------------------------------------------------------------------------
+Used to format search forms generated via the GetPostsForm::generate() function.
+Included via file_get_contents() (icky) to avoid styles being overwritten on
+page loads.
+------------------------------------------------------------------------------*/
+
+* {
+	margin:0px;
+	padding:0px;
+	font-family:Arial, Helvetica, sans-serif;
+} 
+
+ul, li {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+
+p, a, h1, h2, h3, h4, h5, li {
+	font-weight:normal;
+	line-height: 1.5em;
+}
+
+.clear {
+	height:0px; 
+	overflow:hidden; 
+	display:block; 
+	clear:both;
+	visibility:hidden;
+}
+
+.getpostsform {
+	width: 300px;
+	padding: 10px;
+}
+
+.getpostsform div {
+	padding: 0 0 10px 0;
+}
+
+.input_title {
+	float: left;
+	color: black;
+	font-size:15px;
+	font-weight: bold;
+}
+
+.input_description {
+	float: left;
+	font-size:13px;
+	color: #696969;
+	font-style: italic;
+	padding: 0 0 3px 0;
+}
+
+.input_field {
+	padding: 3px 4px;
+	border:1px solid #919191;
+	margin: 1px 0 10px 0;
+	width: 200px;
+	font-size:13px;
+	float: left;
+}
+
+.input_wrapper, .input_checkbox, .label_checkbox, .input_radio, .label_radio {
+	float: left;
+}
+
+.input_checkbox, .input_radio {
+	clear: both;
+	margin: 1px 4px 0 0;
+}
+
+.label_checkbox, .label_radio {
+	margin: 0 0 6px 0;
+	font-size:13px;
+}
+
+.select_options {
+	float: left;
+	margin: 2px 0 10px;
+	padding: 2px;
+	width: 210px;
+}
+
+.multi_select {
+	width: 210px;
+	border: 1px solid #919191;
+	float: left;
+	margin: 2px 0 10px 0;
+}
+
+.js_button_wrapper {
+	clear:both;
+	display:block;
+}
+.js_button {
+	cursor:pointer;
+	display:inline; 
+}
+		</style>
+		<form method="post" action="" class="getpostsform" id="getpostsform1">
+			
+			
+		<div id="search_term_wrapper" class="input_wrapper">
+			<label for="gpf_search_term" class="input_title" id="search_term_label">Search Term</label>
+			<span class="input_description" id="search_term_description">Search posts for this term. Use the <em>search_columns</em> parameter to specify which columns are searched for the term.</span>
+			<input class="input_field input_field" type="text" name="gpf_search_term" id="gpf_search_term" value="" />
+			
+		</div>
+		
+			<input type="submit" value="Search" />
+		</form>

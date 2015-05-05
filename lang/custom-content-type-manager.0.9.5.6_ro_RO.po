@@ -1,0 +1,691 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Content Type Manager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-27 00:04-0700\n"
+"PO-Revision-Date: 2012-02-02 16:22+0200\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: Romania\n"
+"Language-Team: Web Geeks\n"
+"Last-Translator: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../index.php:58
+msgid "Function"
+msgstr "Funcţia"
+
+#: ../index.php:67
+msgid "Class"
+msgstr "Clasa"
+
+#: ../index.php:76
+msgid "Constant"
+msgstr "Constantă"
+
+#: ../post-selector.php:41
+msgid "You do not have permission to edit posts."
+msgstr "Nu aveţi permisiunea de a edita posturi."
+
+#: ../includes/CCTM.php:130
+#: ../includes/CCTM.php:167
+msgid "Remove This Field"
+msgstr "Eliminaţi acest câmp"
+
+#: ../includes/CCTM.php:294
+msgid "Create Custom Content Type"
+msgstr "Creaţi Custom tip de conţinut"
+
+#: ../includes/CCTM.php:298
+msgid "Create New Content Type"
+msgstr "Crea nou tip de conţinut"
+
+#: ../includes/CCTM.php:315
+#, php-format
+msgid "The content type %s has been created"
+msgstr "Tipul conţinutului %s a fost creat"
+
+#: ../includes/CCTM.php:354
+#, fuzzy, php-format
+msgid "Deactivate Content Type %s"
+msgstr "Dezactiva tipul de conţinut %s"
+
+#: ../includes/CCTM.php:358
+#: ../includes/single_content_type_tr.php:25
+#: ../includes/single_content_type_tr.php:63
+msgid "Deactivate"
+msgstr "Dezactivaţi"
+
+#: ../includes/CCTM.php:378
+#, php-format
+msgid "You are about to deactivate the %s post type. Deactivation does not delete anything."
+msgstr "Doriţi să dezactivaţi tipul %s post. Dezactivarea nu şterge ceva."
+
+#: ../includes/CCTM.php:385
+#, php-format
+msgid "After deactivation, %s posts will be unavailable to the outside world. %s will be removed from the administration menus and you will no longer be able to edit them using the WordPress manager."
+msgstr "După dezactivarea, posturi %s va fi disponibil pentru lumea exterioară. %s va fi eliminat din meniurile administraţiei şi nu vei putea să editaţi-le folosind managerul de WordPress."
+
+#: ../includes/CCTM.php:391
+#, php-format
+msgid "This would affect %1$s published %2$s sposts."
+msgstr "Acest lucru ar afecta %1$ s publicat %2$ s sposts."
+
+#: ../includes/CCTM.php:395
+#: ../includes/CCTM.php:439
+msgid "Are you sure you want to do this?"
+msgstr "Eşti sigur că vrei să faci acest lucru?"
+
+#: ../includes/CCTM.php:416
+#, fuzzy, php-format
+msgid "Delete Content Type: %s"
+msgstr "Ştergeţi tipul de conţinut: %s"
+
+#: ../includes/CCTM.php:420
+#: ../includes/single_content_type_tr.php:87
+msgid "Delete"
+msgstr "Ştergere"
+
+#: ../includes/CCTM.php:430
+#, fuzzy, php-format
+msgid "The post type %s has been deleted"
+msgstr "Tipul post %s a fost şters"
+
+#: ../includes/CCTM.php:437
+#, php-format
+msgid "You are about to delete the %s post type. This will remove all of its settings from the database, but this will NOT delete any rows from the wp_posts table. However, without a custom post type defined for those rows, they will be essentially invisible to WordPress."
+msgstr "Doriţi să ştergeţi tipul %s post. Aceasta va elimina toate setările sale din baza de date, dar nu aceasta va şterge toate rândurile din tabelul wp_posts. Cu toate acestea, fără un tip de post particularizate definite pentru aceste rânduri, acestea vor fi, în esenţă, invizibile pentru WordPress."
+
+#: ../includes/CCTM.php:451
+msgid "Invalid post type."
+msgstr "Tip nevalid post."
+
+#: ../includes/CCTM.php:453
+msgid "Back"
+msgstr "Spate"
+
+#: ../includes/CCTM.php:476
+msgid "Edit Content Type: "
+msgstr "Editare tip de conţinut: "
+
+#: ../includes/CCTM.php:480
+msgid "Save"
+msgstr "Salvare"
+
+#: ../includes/CCTM.php:500
+#, fuzzy, php-format
+msgid "Settings for %s have been updated."
+msgstr "Setările pentru %s au fost actualizate."
+
+#: ../includes/CCTM.php:564
+#, php-format
+msgid "%s contains invalid characters."
+msgstr "%s conţine caractere incorecte."
+
+#: ../includes/CCTM.php:572
+#, php-format
+msgid "%s is too long."
+msgstr "%s este prea lung."
+
+#: ../includes/CCTM.php:578
+#: ../includes/CCTM.php:939
+#, php-format
+msgid "%s is a reserved name."
+msgstr "%s este un nume rezervat."
+
+#: ../includes/CCTM.php:597
+msgid "There were errors in the names of your custom fields."
+msgstr "Au existat erori în numele dumneavoastră câmpuri particularizate."
+
+#: ../includes/CCTM.php:598
+msgid "Names must not exceed 20 characters in length."
+msgstr "Numele nu trebuie să depășească 20 de caractere în lungime."
+
+#: ../includes/CCTM.php:599
+msgid "Names may contain the letters a-z and underscores only."
+msgstr "Numele pot conţine litere a-z şi linii de subliniere numai."
+
+#: ../includes/CCTM.php:600
+msgid "You cannot name your field using any reserved name."
+msgstr "Tu nu poate nume de domeniu folosind orice nume rezervate."
+
+#: ../includes/CCTM.php:608
+#, fuzzy, php-format
+msgid "Custom fields for %s have been updated"
+msgstr "Câmpuri particularizate pentru %s au fost actualizate"
+
+#: ../includes/CCTM.php:631
+#, php-format
+msgid "The %s post type does not have any custom fields yet."
+msgstr "Tip de post %s nu are câmpuri particularizate încă."
+
+#: ../includes/CCTM.php:633
+msgid "Click the button above to add a custom field."
+msgstr "Faceţi clic pe butonul de mai sus pentru a adăuga un câmp particularizat."
+
+#: ../includes/CCTM.php:670
+#, php-format
+msgid "WordPress supports a custom theme file for each registered post-type (content-type). Copy the text below into a file named <strong>%s</strong> and save it into your active theme."
+msgstr "WordPress acceptă un fişier temă particularizată pentru fiecare post-type înregistrate (conţinutul-tip). Copiaţi textul de mai jos într-un fişier numit <strong>%s</strong> şi salvaţi-l în temă activă."
+
+#: ../includes/CCTM.php:673
+#, php-format
+msgid "You are currently using the %1$s theme. Save the file into the %2$s directory."
+msgstr "În prezent utilizaţi tema %1$ s. Salvaţi fişierul în directorul %2$ s."
+
+#: ../includes/CCTM.php:726
+msgid "Built-in post type"
+msgstr "Clădire-înăuntru post tip"
+
+#: ../includes/CCTM.php:921
+msgid "Name is required."
+msgstr "Numele este necesară."
+
+#: ../includes/CCTM.php:928
+#, php-format
+msgid "The post type name cannot begin with %s because that is a reserved prefix."
+msgstr "Numele de tip post nu poate începe cu %s pentru că este un prefix rezervate."
+
+#: ../includes/CCTM.php:937
+#: ../includes/CCTM.php:946
+msgid "Please choose another name."
+msgstr "Vă rugăm să alegeţi alt nume."
+
+#: ../includes/CCTM.php:948
+#, fuzzy, php-format
+msgid "%s is already in use as a registered taxonomy name."
+msgstr "%s este deja utilizat ca un nume de taxonomie înregistrate."
+
+#: ../includes/CCTM.php:958
+msgid "That name is already in use."
+msgstr "Acest nume este deja în uz."
+
+#: ../includes/CCTM.php:1086
+msgid "Label"
+msgstr "Eticheta"
+
+#: ../includes/CCTM.php:1094
+#: ../includes/CCTM.php:1138
+msgid "Name"
+msgstr "nume"
+
+#: ../includes/CCTM.php:1097
+#, fuzzy
+msgid "The name identifies the option_name in the wp_postmeta database table. You will use this name in your template functions to identify this custom field."
+msgstr "Numele identifică option_name în tabelul de date wp_postmeta. Veţi utiliza acest nume în funcţii dumneavoastră şablon pentru a identifica acest câmp particularizat."
+
+#: ../includes/CCTM.php:1102
+#: ../includes/CCTM.php:1162
+msgid "Description"
+msgstr "Descriere"
+
+#: ../includes/CCTM.php:1110
+msgid "Input Type"
+msgstr "Tip intrare"
+
+#: ../includes/CCTM.php:1119
+msgid "Sort Order"
+msgstr "Ordinea de sortare"
+
+#: ../includes/CCTM.php:1122
+msgid "This controls where this field will appear on the page. Fields with smaller numbers will appear higher on the page."
+msgstr "Acest control în cazul în care acest câmp va apărea pe pagina. Câmpurile cu numere mai mici vor apărea mai mare pe pagina."
+
+#: ../includes/CCTM.php:1141
+msgid "Unique singular name to identify this post type in the database, e.g. \"movie\",\"book\". This may show up in your URLs, e.g. ?movie=star-wars. This will also make a new theme file available, starting with prefix named \"single-\", e.g. <strong>single-movie.php</strong>. The name should be lowercase with only letters and underscores. This name cannot be changed!"
+msgstr ", exemplu <strong>single-movie.php</strong>. Numele trebuie să fie mici cu numai scrisori şi linii de subliniere. Acest nume nu poate fi schimbat!"
+
+#: ../includes/CCTM.php:1146
+msgid "Singular Label"
+msgstr "Eticheta singular"
+
+#: ../includes/CCTM.php:1149
+msgid "Human readable single instance of this content type, e.g. \"Post\""
+msgstr ""
+
+#: ../includes/CCTM.php:1154
+msgid "Menu Label (Plural)"
+msgstr "Meniu eticheta (Plural)"
+
+#: ../includes/CCTM.php:1157
+msgid "Plural name used in the admin menu, e.g. \"Posts\""
+msgstr ""
+
+#: ../includes/CCTM.php:1170
+msgid "Show Admin User Interface"
+msgstr "Arată Admin User Interface"
+
+#: ../includes/CCTM.php:1173
+msgid "Should this post type be visible on the back-end?"
+msgstr "Acest tip de post ar trebui să fie vizibile pe back-end?"
+
+#: ../includes/CCTM.php:1178
+msgid "Capability Type"
+msgstr "Capacitatea de tip"
+
+#: ../includes/CCTM.php:1181
+msgid "The post type to use for checking read, edit, and delete capabilities. Default: \"post\""
+msgstr ""
+
+#: ../includes/CCTM.php:1186
+msgid "Public"
+msgstr "Publice"
+
+#: ../includes/CCTM.php:1189
+msgid "Should these posts be visible on the front-end?"
+msgstr "Aceste posturi ar trebui să fie vizibile pe front-end?"
+
+#: ../includes/CCTM.php:1194
+msgid "Hierarchical"
+msgstr "Ierarhică"
+
+#: ../includes/CCTM.php:1197
+msgid "Allows parent to be specified (Page Attributes should be checked)"
+msgstr "Permite-mamă să fie specificate (pagina atributele ar trebui verificate)"
+
+#: ../includes/CCTM.php:1203
+#: ../includes/PostSelector.php:208
+msgid "Title"
+msgstr "Titlul"
+
+#: ../includes/CCTM.php:1207
+msgid "Post Title"
+msgstr "Post titlu"
+
+#: ../includes/CCTM.php:1213
+msgid "Content"
+msgstr "Conţinut"
+
+#: ../includes/CCTM.php:1217
+msgid "Main content block."
+msgstr "Bloc principal de conţinut."
+
+#: ../includes/CCTM.php:1223
+msgid "Author"
+msgstr "Autor"
+
+#: ../includes/CCTM.php:1227
+msgid "Track the author."
+msgstr "Urmări autorul."
+
+#: ../includes/CCTM.php:1233
+msgid "Thumbnail"
+msgstr "Miniatură"
+
+#: ../includes/CCTM.php:1237
+msgid "Featured image (the activetheme must also support post-thumbnails)"
+msgstr "Imagine recomandate (activetheme trebuie să accepte, de asemenea, post-thumbnails)"
+
+#: ../includes/CCTM.php:1243
+#: ../includes/PostSelector.php:209
+msgid "Excerpt"
+msgstr "Fragment"
+
+#: ../includes/CCTM.php:1247
+msgid "Small summary field."
+msgstr "Câmpul însumare mici."
+
+#: ../includes/CCTM.php:1253
+msgid "Trackbacks"
+msgstr "Urmăritori"
+
+#: ../includes/CCTM.php:1263
+msgid "Supports Custom Fields"
+msgstr "Acceptă câmpuri particularizate"
+
+#: ../includes/CCTM.php:1273
+msgid "Enable Comments"
+msgstr "Permite Comentarii"
+
+#: ../includes/CCTM.php:1283
+msgid "Store Revisions"
+msgstr "Magazin revizuiri"
+
+#: ../includes/CCTM.php:1293
+msgid "Enable Page Attributes"
+msgstr "Permite pagina atribute"
+
+#: ../includes/CCTM.php:1297
+msgid "(template and menu order; hierarchical must be checked)"
+msgstr "(şablon şi meniul comenzi; ierarhică trebuie verificată)"
+
+#: ../includes/CCTM.php:1303
+msgid "Menu Position"
+msgstr "Poziţia meniul"
+
+#: ../includes/CCTM.php:1315
+msgid "This setting determines where this post type should appear in the left-hand admin menu. Default: null (below Comments)"
+msgstr "Această setare determină dacă acest tip de post ar trebui să apară în meniul de admin pe partea stângă. Implicit: null (de mai jos Comentarii)"
+
+#: ../includes/CCTM.php:1316
+#: ../includes/CCTM.php:1318
+msgid "below Posts"
+msgstr "mai jos Posts"
+
+#: ../includes/CCTM.php:1317
+msgid "below Media"
+msgstr "continuare Mass-Media"
+
+#: ../includes/CCTM.php:1319
+msgid "below Pages"
+msgstr "mai jos pagini"
+
+#: ../includes/CCTM.php:1320
+msgid "below first separator"
+msgstr "mai jos prima separator"
+
+#: ../includes/CCTM.php:1321
+msgid "below second separator"
+msgstr "mai jos al doilea separator"
+
+#: ../includes/CCTM.php:1328
+msgid "Menu Icon"
+msgstr "Meniul pictogramă"
+
+#: ../includes/CCTM.php:1331
+msgid "Menu icon URL."
+msgstr "Meniul pictogramă URL."
+
+#: ../includes/CCTM.php:1336
+msgid "Use Default Menu Icon"
+msgstr "Utiliza implicit meniul pictogramă"
+
+#: ../includes/CCTM.php:1339
+msgid "If checked, your post type will use the posts icon"
+msgstr "Dacă verificate, tipul post va utiliza pictograma de posturi"
+
+#: ../includes/CCTM.php:1344
+msgid "Rewrite Slug"
+msgstr "Rescrie Slug"
+
+#: ../includes/CCTM.php:1347
+msgid "Prepend posts with this slug - defaults to post type's name"
+msgstr "Adauge posturi cu acest slug - implicite pentru a posta nume de tip"
+
+#: ../includes/CCTM.php:1352
+msgid "Rewrite with Permalink Front"
+msgstr "Rescrie cu Permalink faţă"
+
+#: ../includes/CCTM.php:1355
+msgid "Allow permalinks to be prepended with front base - defaults to checked"
+msgstr "Permite permalinks pentru a fi prefixate cu față de bază - implicit este verificat"
+
+#: ../includes/CCTM.php:1360
+msgid "Permalink Action"
+msgstr "Permalink acţiune"
+
+#: ../includes/CCTM.php:1371
+msgid "Use permalink rewrites for this post_type? Default: Off"
+msgstr "Utilizaţi rescrie permalink pentru acest post_type? Implicit: Off"
+
+#: ../includes/CCTM.php:1372
+msgid "URLs for custom post_types will always look like: http://site.com/?post_type=book&p=39 even if the rest of the site is using a different permalink structure."
+msgstr "URL-uri pentru post_types personalizat întotdeauna va arata ca: chiar dacă restul site-ului este folosind o structură permalink diferite http://site.com/?post_type=book&p=39."
+
+#: ../includes/CCTM.php:1373
+msgid "You MUST use the custom permalink structure: \"/%postname%/\". Other formats are <strong>not</strong> supported.  Your URLs will look like http://site.com/movie/star-wars/"
+msgstr ". Alte formate sunt <strong>nerecunoscute</strong>.  URL-uri vă va arăta http://site.com/movie/star-wars/"
+
+#: ../includes/CCTM.php:1380
+msgid "Query Variable"
+msgstr "Interogare variabilă"
+
+#: ../includes/CCTM.php:1383
+msgid ""
+"(optional) Name of the query var to use for this post type.\n"
+"\t\t\tE.g. \"movie\" would make for URLs like http://site.com/?movie=star-wars. \n"
+"\t\t\tIf blank, the default structure is http://site.com/?post_type=movie&p=18"
+msgstr ""
+"(optional) Name of the query var to use for this post type.\n"
+"E.g. \"movie\" would make for URLs like http://site.com/?movie=star-wars. If blank, the default structure is http://site.com/?post_type=movie&p=18"
+
+#: ../includes/CCTM.php:1390
+msgid "Can Export"
+msgstr "Puteţi exporta"
+
+#: ../includes/CCTM.php:1393
+msgid "Can this post_type be exported."
+msgstr "Pot fi exportate acest post_type."
+
+#: ../includes/CCTM.php:1398
+msgid "Show in Nav Menus"
+msgstr "Arată în meniuri Nav"
+
+#: ../includes/CCTM.php:1401
+msgid "Whether post_type is available for selection in navigation menus. Default: value of public argument"
+msgstr "Dacă post_type este folositor pentru selecţie în meniuri de navigare. Implicită: valoare argument publice"
+
+#: ../includes/CCTM.php:1533
+msgid "Settings"
+msgstr "Setări"
+
+#: ../includes/CCTM.php:1579
+#, php-format
+msgid "The %s plugin encountered errors! It cannot load!"
+msgstr "Plugin-ul %s întâlnit erori! Este imposibil de încărcat!"
+
+#: ../includes/CCTM.php:1662
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nu aveţi permisiuni suficiente pentru a accesa această pagină."
+
+#: ../includes/CCTM.php:1674
+msgid "The name of the post-type cannot be changed. The name may show up in your URLs, e.g. ?movie=star-wars. This will also make a new theme file available, starting with prefix named \"single-\", e.g. <strong>single-movie.php</strong>."
+msgstr ", exemplu <strong>single-movie.php</strong>."
+
+#: ../includes/errors.php:12
+#, php-format
+msgid "Missing Class: %s"
+msgstr "Lipseşte clasa: %s"
+
+#: ../includes/FormGenerator.php:174
+msgid "Choose Media"
+msgstr "Selectaţi Mass-Media"
+
+#: ../includes/FormGenerator.php:218
+msgid "Choose Reference"
+msgstr "Selectaţi trimitere"
+
+#: ../includes/functions.php:74
+#, php-format
+msgid "No custom fields defined for %1$s field."
+msgstr "Nu câmpuri particularizate definite pentru câmpul %1$ s."
+
+#: ../includes/PostSelector.php:143
+msgid "Dimensions"
+msgstr "Dimensiuni"
+
+#: ../includes/PostSelector.php:167
+#: ../includes/PostSelector.php:201
+msgid "Select"
+msgstr "Selectaţi"
+
+#: ../includes/PostSelector.php:168
+#: ../includes/PostSelector.php:202
+msgid "Show / Hide"
+msgstr "Arată / ascunde"
+
+#: ../includes/PostSelector.php:170
+#: ../includes/PostSelector.php:205
+msgid "View Original"
+msgstr "Vizualizare Original"
+
+#: ../includes/PostSelector.php:173
+msgid "Filename"
+msgstr "Numele fişierului"
+
+#: ../includes/PostSelector.php:174
+#: ../includes/PostSelector.php:204
+msgid "File Type"
+msgstr "Tipul de fişier"
+
+#: ../includes/PostSelector.php:175
+#: ../includes/PostSelector.php:206
+msgid "Date Uploaded"
+msgstr "Data încărcat"
+
+#: ../includes/PostSelector.php:210
+msgid "Modified"
+msgstr "Modificate"
+
+#: ../includes/PostSelector.php:222
+msgid "Choose Date"
+msgstr "Alegeţi data"
+
+#: ../includes/PostSelector.php:266
+msgid "Invalid post_type."
+msgstr "Post_type nevalid."
+
+#: ../includes/PostSelector.php:275
+msgid "Invalid post_mime_type."
+msgstr "Post_mime_type nevalid."
+
+#: ../includes/PostSelector.php:289
+#: ../includes/PostSelector.php:295
+msgid "Invalid field_name."
+msgstr "Field_name nevalid."
+
+#: ../includes/PostSelector.php:692
+msgid "Sorry, no results found."
+msgstr "Ne pare rău, nici un rezultat găsit."
+
+#: ../includes/PostSelector.php:736
+msgid "Search"
+msgstr "Căutare"
+
+#: ../includes/PostSelector.php:737
+msgid "Reset"
+msgstr "Resetare"
+
+#: ../includes/single_content_type_tr.php:25
+#: ../includes/single_content_type_tr.php:63
+#, fuzzy
+msgid "Deactivate this content type"
+msgstr "Dezactiva acest tip de conţinut"
+
+#: ../includes/single_content_type_tr.php:30
+#: ../includes/single_content_type_tr.php:49
+#: ../includes/single_content_type_tr.php:72
+#: ../includes/single_content_type_tr.php:94
+#, fuzzy
+msgid "Manage Custom Fields"
+msgstr "Gestionaţi câmpuri particularizate"
+
+#: ../includes/single_content_type_tr.php:32
+#: ../includes/single_content_type_tr.php:51
+#: ../includes/single_content_type_tr.php:74
+#: ../includes/single_content_type_tr.php:96
+msgid "View Sample Template"
+msgstr "Vizualizare eşantion şablon"
+
+#: ../includes/single_content_type_tr.php:42
+msgid "Activate custom field management"
+msgstr "Activa câmp particularizat management"
+
+#: ../includes/single_content_type_tr.php:42
+#: ../includes/single_content_type_tr.php:84
+#, fuzzy
+msgid "Activate"
+msgstr "Activa"
+
+#: ../includes/single_content_type_tr.php:70
+#: ../includes/single_content_type_tr.php:92
+msgid "Edit"
+msgstr "Editare"
+
+#: ../includes/single_content_type_tr.php:84
+#, fuzzy
+msgid "Activate this content type"
+msgstr "Activa acest tip de conţinut"
+
+#: ../includes/single_content_type_tr.php:87
+#, fuzzy
+msgid "Delete this content type"
+msgstr "Ştergeţi acest tip de conţinut"
+
+#: ../includes/StandardizedCustomFields.php:80
+msgid "Custom Fields"
+msgstr "Câmpuri particularizate"
+
+#: ../includes/StandardizedCustomFields.php:133
+msgid "Settings Page"
+msgstr "Pagina Setări"
+
+#: ../includes/StandardizedCustomFields.php:135
+#, php-format
+msgid "Custom fields can be added and configured using the %1$s %2$s"
+msgstr "Câmpuri particularizate pot fi adăugate şi configurate folosind %1$ s %2$ s"
+
+#: ../includes/pages/basic_form.php:30
+msgid "Cancel"
+msgstr "Revocare"
+
+#: ../includes/pages/default.php:3
+msgid "Add New Content Type"
+msgstr "Adăugaţi tipul de conţinut nou"
+
+#: ../includes/pages/manage_custom_fields.php:61
+msgid "Remove"
+msgstr "Eliminare"
+
+#: ../includes/pages/manage_custom_fields.php:93
+msgid "Add Option"
+msgstr "Adăugaţi opţiune"
+
+#: ../includes/pages/manage_custom_fields.php:146
+msgid "Add Custom Field"
+msgstr "Adăugare câmp personalizat"
+
+#: ../includes/pages/manage_custom_fields.php:161
+msgid "Save Changes"
+msgstr "Salvaţi modificările"
+
+#: ../includes/pages/manage_custom_fields.php:162
+msgid "Done"
+msgstr "Adoptat"
+
+#: ../tests/CCTMtests.php:21
+#, php-format
+msgid "%1$s requires MySQL %2$s or newer."
+msgstr "%1$ s necesită MySQL %2$ s sau mai nou."
+
+#: ../tests/CCTMtests.php:24
+#: ../tests/CCTMtests.php:113
+msgid "Talk to your system administrator about upgrading."
+msgstr "Vorbesc cu administratorul de sistem despre upgrade-ul."
+
+#: ../tests/CCTMtests.php:66
+#: ../tests/CCTMtests.php:75
+msgid "%1$s requires version %$2% of the %3$s plugin."
+msgstr "%1$ s necesită versiunea % 2% $ %3$ s plug-in."
+
+#: ../tests/CCTMtests.php:82
+#, php-format
+msgid "The %1$s plugin is not installed."
+msgstr "Plugin-ul %1$ s nu este instalat."
+
+#: ../tests/CCTMtests.php:97
+#, php-format
+msgid "%1$s requires WordPress %2$s or newer. <a href=\"http://codex.wordpress.org/Upgrading_WordPress\">Please update!</a>"
+msgstr "%1$s Vă rugăm să actualizaţi! %2$s  <a href=\"http://codex.wordpress.org/Upgrading_WordPress\">Please update!</a>"
+
+#: ../tests/CCTMtests.php:110
+#, php-format
+msgid "%1$s requires PHP %2$s or newer"
+msgstr "%1$ s necesită PHP %2$ s sau mai nou"
+
+#: ../tests/CCTMtests.php:137
+#, php-format
+msgid "%1$s requires the %2$s PHP extension."
+msgstr "%1$ s necesită %2$ s extensia PHP."
+
+#: ../tests/CCTMtests.php:142
+msgid "Talk to your system administrator about reconfiguring PHP."
+msgstr "Vorbesc cu administratorul de sistem despre reconfigurare PHP."
+
+#~ msgid "%$1s is a reserved name."
+#~ msgstr "%$ 1s este un nume rezervat."
