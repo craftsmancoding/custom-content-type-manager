@@ -35,7 +35,8 @@ DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 cd $DIR;
 cd $SVNDIR;
 SVNDIR=`pwd`;
-
+SVNTRUNK=`svn info ${SVNDIR} | grep 'URL:' | sed -e 's/URL: //'`
+SVNTAGS=$(echo $SVNTRUNK | sed -e 's/trunk/tags/')
 
 # Verify Data
 if [[ -d $SVNDIR ]] && [[ -d ${SVNDIR}/.svn ]]; then
@@ -49,12 +50,19 @@ fi
 # Prep the tmp dir
 rm -rf $TMPDIR;
 # We want rsync to use the trailing slash for referencing this directory, otherwise a sub-dir will be created
-rsync -arvz ${DIR}/ $TMPDIR --exclude=".git" --exclude=".gitignore" --exclude="*.sh" --exclude=".idea";
+rsync -arz ${DIR}/ $TMPDIR --exclude=".git" --exclude=".gitignore" --exclude="*.sh" --exclude=".idea";
 
 # Update the version?
 if [[ -z $1 ]]; then
     # We need something in here for the code block to be valid
     echo "Version number NOT updated."
+
+    # Move from tmp into svn
+    rsync -arz ${TMPDIR}/ $SVNDIR;
+
+    cd $SVNDIR;
+    svn commit -m "Storing changes via automated script"
+
 else
     echo "Updating the version to ${1}";
     cd $TMPDIR;
@@ -62,16 +70,21 @@ else
     sed -i '' "s/Stable tag:.*/Stable tag: ${1}/" readme.txt
     sed -i '' "s/Version:.*/Version: ${1}/" readme.txt
     sed -i '' "s/.*const version = .*/    const version = '${1}'\;/" includes/CCTM.php
+
+    # Move it all from tmp into svn
+    rsync -arvz ${TMPDIR}/ $SVNDIR;
+
+    # Tag the Git repo
+    cd $DIR;
+    git tag -a v${1} -m "Tagging version ${1} via automated script"
+    git push origin v${1}
+
+    # Commit
+    svn commit ${SVNDIR} -m "Committing changes for version ${1} via automated script"
+
+    # SVN copy from trunk to tag
+    svn copy ${SVNTRUNK} ${SVNTAGS}/${1} -m "Tagging version ${1} via automated script"
 fi
-
-# Move it all from tmp into svn
-rsync -arvz ${TMPDIR}/ $SVNDIR;
-
-
-# Commit
-# svn info ${SVNDIR} | grep 'URL:' | sed -e 's/URL: //'
-
-# Copy from trunk to tag
 
 
 # SUCCESS

@@ -90,7 +90,7 @@ The most recent Git version of the code is located at:
 
 = 0.9.8 =
 
-* Security fix for code execution in Metaboxes (https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=511)
+* Security fix for code execution in Metaboxes (introduced in https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=511).  Thanks to Iain Wallace @strawp for identifying CVE-2015-3173
 
 = 0.9.7.13 =
 
