@@ -1,5 +1,5 @@
 /**
- * This is a modified version of the Thickbox file: we use it to override the built-in 
+ * This is a modified version of the Thickbox file: we use it to override the built-in
  * thickbox's "tb_remove" function because it does not play well with JQuery tabs.
  * See http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=192&sort=milestone
  *
@@ -9,15 +9,16 @@
  */
 
 function tb_remove() {
- 	jQuery("#TB_imageOff").unbind("click");
-	jQuery("#TB_closeWindowButton").unbind("click");
+    jQuery("#TB_imageOff").unbind("click");
+    jQuery("#TB_closeWindowButton").unbind("click");
 //	jQuery("#TB_window").fadeOut("fast",function(){jQuery('#TB_window,#TB_overlay,#TB_HideSelect').trigger("unload").unbind().remove();});
-	jQuery("#TB_window").fadeOut("fast",function(){jQuery('#TB_window,#TB_overlay,#TB_HideSelect').unload("#TB_ajaxContent").unbind().remove();});
-	jQuery("#TB_load").remove();
-	if (typeof document.body.style.maxHeight == "undefined") {//if IE 6
-		jQuery("body","html").css({height: "auto", width: "auto"});
-		jQuery("html").css("overflow","");
-	}
-	jQuery(document).unbind('.thickbox');
-	return false;
+    jQuery("#TB_window").fadeOut("fast",function(){jQuery('#TB_window,#TB_overlay,#TB_HideSelect').unload("#TB_ajaxContent").unbind().remove();});
+    jQuery("#TB_load").remove();
+    jQuery("body").removeClass("modal-open");
+    if (typeof document.body.style.maxHeight == "undefined") {//if IE 6
+        jQuery("body","html").css({height: "auto", width: "auto"});
+        jQuery("html").css("overflow","");
+    }
+    jQuery(document).unbind('.thickbox');
+    return false;
 }
