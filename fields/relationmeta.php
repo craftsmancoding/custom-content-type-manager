@@ -466,6 +466,7 @@ class CCTM_relationmeta extends CCTM_FormElement
 			return array($str);
 		}
 		else {
+            $out = stripslashes_deep($out);
 			return $out;
 		}
 	}
