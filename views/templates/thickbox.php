@@ -30,7 +30,7 @@ serialization.
 		<input type="hidden" name="page_number" id="page_number" value="<?php print $data['page_number']; ?>" />
 		<input type="hidden" name="orderby" id="orderby" value="<?php print $data['orderby']; ?>" />
 		<input type="hidden" name="order" id="order" value="<?php print $data['order']; ?>" />
-		<input type="hidden" name="exclude" id="exclude" value="<?php print implode(',',$data['exclude']); ?>" />
+		<input type="hidden" name="exclude" id="exclude" value="<?php //print implode(',',$data['exclude']); ?>" />
 
 		<div id="cctm_thickbox_menu">
 			<?php print $data['menu']; ?>	
