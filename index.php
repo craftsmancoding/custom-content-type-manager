@@ -95,6 +95,7 @@ foreach ($constants_used as $c_name )
 	}
 }
 
+
 // Check stuff when the plugin is activated.
 register_activation_hook(__FILE__, 'cctm_run_tests');
 
