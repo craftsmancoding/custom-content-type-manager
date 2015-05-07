@@ -82,11 +82,11 @@ class CCTM_hidden extends CCTM_FormElement {
 		// Populate the values (i.e. properties) of this field
 		$this->id      = str_replace(array('[',']',' '), '_', $this->name);
 
-		$fieldtpl = '';
-		$wrappertpl = '';
+        $upload_dir = wp_upload_dir();
+        $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$this->id.'/oncreate.php';
 
-		if ($this->evaluate_create_value) {
-			$this->value = eval($this->create_value_code);
+		if (file_exists($file)) {
+			$this->value = include $file;
 		}
 		else {
 			$this->value  = $this->default_value;
@@ -98,7 +98,7 @@ class CCTM_hidden extends CCTM_FormElement {
 				, 'fields/elements/_default.tpl'
 			)
 		);
-
+        // Add this flag so we can distinguish between create and edit events
 		return CCTM::parse($fieldtpl, $this->get_props()) 
 			. '<input type="hidden" name="_cctm_is_create" value="1" />';
 	}
@@ -117,12 +117,12 @@ class CCTM_hidden extends CCTM_FormElement {
 		// Populate the values (i.e. properties) of this field
 		$this->id      = $this->name;
 
-		$fieldtpl = '';
-		$wrappertpl = '';
+        $upload_dir = wp_upload_dir();
+        $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$this->id.'/onedit.php';
 
-		if ($this->evaluate_update_value) {
-			$this->value = eval($this->update_value_code);
-		}
+        if (file_exists($file)) {
+            $this->value = include $file;
+        }
 		else {
 			$this->value  = htmlspecialchars( html_entity_decode($this->get_value($current_value,'to_string') ));
 		}
@@ -147,24 +147,10 @@ class CCTM_hidden extends CCTM_FormElement {
 	 * @return string
 	 */
 	public function get_edit_field_definition($def) {
-	   // eval update/create value = euv/ecv
-		$is_ecv_checked = '';
-		$is_euv_checked = '';
-		$is_onsave_checked = '';
-		
-		if (isset($def['evaluate_create_value']) && $def['evaluate_create_value'] == 1) {
-			$is_ecv_checked = 'checked="checked"';
-		}
-		if (isset($def['evaluate_update_value']) && $def['evaluate_update_value'] == 1) {
-			$is_euv_checked = 'checked="checked"';
-		}
-		if (isset($def['evaluate_onsave']) && $def['evaluate_onsave'] == 1) {
-			$is_onsave_checked = 'checked="checked"';
-		}
-	
+
 		// Standard
 		$out = $this->format_standard_fields($def, false);
-		
+
 		// Evaluate Default Value (use PHP eval)
 		$out .= '
 			<div class="postbox">
@@ -172,34 +158,24 @@ class CCTM_hidden extends CCTM_FormElement {
 			<h3 class="hndle"><span>'. __('Special', CCTM_TXTDOMAIN).'</span></h3>
 			<div class="inside">
 			<div class="'.self::wrapper_css_class .'" id="evaluate_default_value_wrapper">
-				 <label for="evaluate_default_value" class="cctm_label cctm_checkbox_label" id="evaluate_default_value_label">'
-			. __('EXPERIMENTAL USE ONLY. Use PHP eval to calculate values? (Omit the php tags and return a value, e.g. <code>return date(\'Y-m-d\');</code> ).', CCTM_TXTDOMAIN) .
-			'</label>
-				 <br />
-				 <input type="checkbox" name="evaluate_create_value" class="cctm_checkbox" id="evaluate_create_value" value="1" '. $is_ecv_checked.'/> '
-			.__('Evaluate "OnCreate". This executes when the form for a new post is drawn.', CCTM_TXTDOMAIN).'<br/>
-			
-				<input type="checkbox" name="evaluate_update_value" class="cctm_checkbox" id="evaluate_update_value" value="1" '. $is_euv_checked.'/> '
-			.__('Evaluate "OnEdit".  This executes when the form for an existing post is drawn.', CCTM_TXTDOMAIN).'<br/>
-    			<input type="checkbox" name="evaluate_onsave" class="cctm_checkbox" id="evaluate_onsave" value="1" '. $is_onsave_checked.'/> '
-			.__('Evaluate "OnSave". This executes when the post form is submitted.', CCTM_TXTDOMAIN).'
-			 </div>
-			 
-			 <div class="'.self::wrapper_css_class .'" id="evaluate_create_value_wrapper">
-			 		<label for="create_value_code" class="cctm_label cctm_textarea_label" id="create_value_code_label">'.__('OnCreate',CCTM_TXTDOMAIN).'</label>
+				 <p>'
+			. __('EXPERIMENTAL USE ONLY. You can add .php files to  <code>wp-content/uploads/cctm/fields/{fieldname}/</code> to dynamically calculate or modify values, e.g. <code>&lt;?php return date("Y-m-d"); ?&gt;</code>. The allowed file names are listed below.', CCTM_TXTDOMAIN) .
+			'</p>
+				 <ul>
+				 <li>
+				 '
+			.__('<code>oncreate.php</code> This executes when the form for a new post is drawn.', CCTM_TXTDOMAIN).'</li>
 
-			 		<textarea id="evaluate_create_value" name="create_value_code" rows="5" cols="60">'.$def['create_value_code'].'</textarea>
-			 		<label for="evaluate_update_value" class="cctm_label cctm_textarea_label" id="evaluate_update_value_label">'.__('OnEdit', CCTM_TXTDOMAIN).'</label>
-			 		<textarea id="evaluate_update_value" name="update_value_code" rows="5" cols="60">'.$def['update_value_code'].'</textarea>
-			 		<label for="onsave_code" class="cctm_label cctm_textarea_label" id="onsave_code_label">'.__('OnSave', CCTM_TXTDOMAIN).'</label>
-			 		<textarea id="onsave_code" name="onsave_code" rows="5" cols="60">'.$def['onsave_code'].'</textarea>
-			 	
+				<li>'
+			.__('<code>onedit.php</code> This executes when the form for an existing post is drawn.', CCTM_TXTDOMAIN).'</li>
+    			<li>'
+			.__('<code>onsave.php</code> This executes when the post form is submitted.', CCTM_TXTDOMAIN).'</li>
 			 </div>
-			 	
-			 	
+
+
 			 	</div><!-- /inside -->
 			</div><!-- /postbox -->';
-		
+
 		// Output Filter
 		$out .= $this->format_available_output_filters($def);
 
@@ -219,11 +195,12 @@ class CCTM_hidden extends CCTM_FormElement {
 		global $wp_version;
 
 		if ( isset($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]) ) {
-//                print_r($_POST);  print 'asdfasdfasdf'; exit;
-//                print_r($this->props); exit;
-            if ($this->props['evaluate_onsave']) {
 
-                return eval($this->onsave_code);
+            $upload_dir = wp_upload_dir();
+            $file = $upload_dir['basedir'] .'/'.CCTM::base_storage_dir.'/fields/'.$field_name.'/onsave.php';
+            if (file_exists($file)) {
+
+                return include $file;
             }
             else {
                 return stripslashes(trim($posted_data[ CCTM_FormElement::post_name_prefix . $field_name ]));
