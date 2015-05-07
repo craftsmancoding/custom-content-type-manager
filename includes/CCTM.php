@@ -2512,6 +2512,14 @@ class CCTM {
 				&& !in_array($post_type, self::$built_in_post_types)
 				&& isset($def['post_type'])
 				) {
+//                if (!isset($def['hierarchical']))
+//                {
+//                    print 'NOT '; exit;
+//                }
+//                else {
+//                    print 'SET'; print '<pre>'.print_r($def, true); exit;
+//                }
+                CCTM::log(print_r($def,true));
 				register_post_type( $post_type, $def );
 			}
 		}

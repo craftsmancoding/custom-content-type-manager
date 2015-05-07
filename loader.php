@@ -111,15 +111,15 @@ if (empty(CCTM::$errors)) {
 				// Forces custom post types to sort correctly
 				add_filter('posts_orderby', 'CCTM::order_posts');
 				add_filter('posts_join', 'CCTM::posts_join');
-				
+
 			}
 		}
-		
+
         add_filter('media_upload_tabs', 'CCTM::customize_upload_tabs');
 	}
 
 	// Enable archives for custom post types
-	add_filter('request', 'CCTM::request_filter');
+	//add_filter('request', 'CCTM::request_filter');
 
 
 	// Modifies the "Right Now" widget
@@ -132,5 +132,16 @@ if (empty(CCTM::$errors)) {
 	add_filter('sanitize_title', 'CCTM::filter_sanitize_title', 1, 3);
 }
 
+function pros_add_rewrite_rules($aRules) {
+    print 'asdfasf'; exit;
+    $aNewRules = array('movie/([^/]+)/?$' => 'index.php?post_type=movie&name=$matches[1]');
+    $aRules = $aNewRules + $aRules;
+    return $aRules;
+}
 
+// hook add_rewrite_rules function into rewrite_rules_array
+//
+if ( !is_admin() ) {
+    add_filter('rewrite_rules_array', 'pros_add_rewrite_rules');
+}
 /*EOF*/
