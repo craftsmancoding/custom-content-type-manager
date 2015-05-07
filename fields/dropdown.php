@@ -361,7 +361,7 @@ class CCTM_dropdown extends CCTM_FormElement
 					, $option_txt
 					, $opt_i
 					, $value_txt
-					, $option_css_id, __('Delete')
+					, $option_css_id, __('X')
 					, $opt_i
 					, __('Set as Default')
 				);
