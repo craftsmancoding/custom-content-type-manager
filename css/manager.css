@@ -182,19 +182,18 @@ span.custom_field_icon {
 #cctm_mainmenu a {
 	padding-left: 15px;
 	padding-right: 15px;
-	padding-bottom: 5px;
+	padding-bottom: 4px;
 	padding-top: 3px;
 	text-decoration: none;
 }
 
 a.cctm_tab {
 	border: 1px solid gray;
-	background-color: #ededed;
+	background-color: #F1F1F1;
 }
 
 a.cctm_active {
-	border-bottom: 1px solid white;
-	background-color: white;
+	border-bottom: 1px solid #F1F1F1;
 }
 
 /* Formats rows of data, e.g. in the import definition */

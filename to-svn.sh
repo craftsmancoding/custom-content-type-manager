@@ -16,9 +16,9 @@
 # 3. commit the SVN code
 
 
-#################
+#####################################################
 # CONFIGURATION
-#################
+#####################################################
 # Temp dir -- will be deleted!
 # Omit trailing slash.
 # Don't use spaces or weird chars in the dir names.
@@ -27,12 +27,32 @@ TMPDIR="/tmp/cctm"
 # Relative to this dir
 SVNDIR="../../cctm.svn"
 
+#####################################################
+# END CONFIG
+#####################################################
+
 
 # Resolve SVNDIR to an absolute dir
 # One-liner similar to PHP's __DIR__ -- omits trailing slash
 DIR="$( cd "$(dirname "$0")" ; pwd -P )"
 
 cd $DIR;
+
+# Update the version?
+if [[ -z $1 ]]; then
+    # We need something in here for the code block to be valid
+    echo "Version number NOT updated."
+else
+    echo "Updating the version to ${1}";
+    cd $TMPDIR;
+    sed -i '' "s/Version:.*/Version: ${1}/" index.php
+    sed -i '' "s/Stable tag:.*/Stable tag: ${1}/" readme.txt
+    sed -i '' "s/Version:.*/Version: ${1}/" readme.txt
+    sed -i '' "s/.*const version = .*/    const version = '${1}'\;/" includes/CCTM.php
+fi
+
+
+# Remember: the SVNDIR is relative to this file
 cd $SVNDIR;
 SVNDIR=`pwd`;
 SVNTRUNK=`svn info ${SVNDIR} | grep 'URL:' | sed -e 's/URL: //'`
@@ -54,24 +74,18 @@ rsync -arz ${DIR}/ $TMPDIR --exclude=".git" --exclude=".gitignore" --exclude="*.
 
 # Update the version?
 if [[ -z $1 ]]; then
-    # We need something in here for the code block to be valid
-    echo "Version number NOT updated."
 
     # Move from tmp into svn
+    echo "Syncing from ${TMPDIR}/ to $SVNDIR"
     rsync -arz ${TMPDIR}/ $SVNDIR;
 
     cd $SVNDIR;
     svn commit -m "Storing changes via automated script"
 
 else
-    echo "Updating the version to ${1}";
-    cd $TMPDIR;
-    sed -i '' "s/Version:.*/Version: ${1}/" index.php
-    sed -i '' "s/Stable tag:.*/Stable tag: ${1}/" readme.txt
-    sed -i '' "s/Version:.*/Version: ${1}/" readme.txt
-    sed -i '' "s/.*const version = .*/    const version = '${1}'\;/" includes/CCTM.php
 
     # Move it all from tmp into svn
+    echo "Syncing from ${TMPDIR}/ to $SVNDIR"
     rsync -arvz ${TMPDIR}/ $SVNDIR;
 
     # Tag the Git repo
@@ -85,7 +99,6 @@ else
     # SVN copy from trunk to tag
     svn copy ${SVNTRUNK} ${SVNTAGS}/${1} -m "Tagging version ${1} via automated script"
 fi
-
 
 # SUCCESS
 exit 0;

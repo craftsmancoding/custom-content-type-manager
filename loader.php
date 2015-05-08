@@ -34,6 +34,7 @@ CCTM::load_file('/config/lang/dictionaries.php');
 // Get admin ready, print any CCTMtests::$errors in the admin dashboard
 add_action( 'admin_notices', 'CCTM::print_notices');
 
+
 if (empty(CCTM::$errors)) {
 	// Load up the CCTM data from wp_options, populates CCTM::$data
 	CCTM::load_data();
@@ -130,6 +131,8 @@ if (empty(CCTM::$errors)) {
 
 	// Needs to be first in priority (before WP) so we can look for any slashes indicating hierarchical post-types
 	add_filter('sanitize_title', 'CCTM::filter_sanitize_title', 1, 3);
+
+
 }
 
 function pros_add_rewrite_rules($aRules) {

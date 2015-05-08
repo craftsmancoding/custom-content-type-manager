@@ -36,7 +36,7 @@ if (!isset($data['help']) || empty($data['help'])) {
 
 	<?php /*---------------- HEADER and TABS --------------------------- */ ?>
 	<div id="cctm_header">
-		<img src="<?php print CCTM_URL; ?>/images/cctm-logo.jpg" alt="custom-content-type-manager-logo" width="88" height="55" style="float:left; margin-right:20px;"/>
+		<img src="<?php print CCTM_URL; ?>/images/cctm-logo.png" alt="custom-content-type-manager-logo" width="88" height="55" style="float:left; margin-right:20px;"/>
 		<p class="cctm_header_text">Custom Content Type Manager <span class="cctm_version">[<?php print CCTM::get_current_version(); ?>]</span>
 			<a href="<?php print $data['help']; ?>" target="_new" title="Contextual Help" style="text-decoration: none;">
 				<img src="<?php print CCTM_URL; ?>/images/question-mark.gif" width="16" height="16" />

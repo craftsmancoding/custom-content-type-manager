@@ -3,7 +3,7 @@
 Plugin Name: Custom Content Type Manager : Advanced Custom Post Types
 Description: Allows users to create custom post types and custom fields, including dropdowns, checkboxes, and images. This gives WordPress CMS functionality making it easier to use WP for eCommerce or content-driven sites.
 Author: Everett Griffiths
-Version: 0.9.8
+Version: 0.9.8.2
 Author URI: https://www.craftsmancoding.com/
 Plugin URI: https://github.com/craftsmancoding/custom-content-type-manager
 ------------------------------------------------------------------------------*/
@@ -94,6 +94,7 @@ foreach ($constants_used as $c_name )
 		$error_items .= sprintf('<li>%1$s: %2$s</li>', __('Constant', 'custom-content-type-mgr'), $f_name );
 	}
 }
+
 
 // Check stuff when the plugin is activated.
 register_activation_hook(__FILE__, 'cctm_run_tests');

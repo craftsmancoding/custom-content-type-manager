@@ -3,9 +3,9 @@ Contributors: fireproofsocks
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FABHDKPU7P6LN
 Tags: cms, content management, custom post types, custom content types, custom fields, images, image fields, ecommerce, modx
 Requires at least: 3.3.0
-Tested up to: 4.2.1
-Stable tag: 0.9.7.13
-Version: 0.9.8.0
+Tested up to: 4.2.2
+Stable tag: 0.9.8.2
+Version: 0.9.8.2
 
 Break out of your blog!  Create custom fields for dropdowns, images, and more!  This plugin gives Wordpress true CMS functionality.
 
