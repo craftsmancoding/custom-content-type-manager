@@ -2519,7 +2519,7 @@ class CCTM {
 //                else {
 //                    print 'SET'; print '<pre>'.print_r($def, true); exit;
 //                }
-                CCTM::log(print_r($def,true));
+                //CCTM::log(print_r($def,true));
 				register_post_type( $post_type, $def );
 			}
 		}
