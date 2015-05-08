@@ -135,19 +135,4 @@ if (empty(CCTM::$errors)) {
 
 }
 
-function pros_add_rewrite_rules($aRules) {
-    //print 'asdfasf'; exit;
-
-    CCTM::log(__FUNCTION__);
-    $aNewRules = array('movie/([^/]+)/?$' => 'index.php?post_type=movie&name=$matches[1]');
-    $aRules = $aNewRules + $aRules;
-    return $aRules;
-}
-
-// hook add_rewrite_rules function into rewrite_rules_array
-//
-if ( !is_admin() ) {
-    CCTM::log('filter... pros_add_rewrite_rules');
-    add_filter('rewrite_rules_array', 'pros_add_rewrite_rules');
-}
 /*EOF*/

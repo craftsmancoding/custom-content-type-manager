@@ -431,8 +431,14 @@ class CCTM {
 				array_walk($tmp_capability_type,'trim');
 				$def['capability_type'] = $tmp_capability_type;
 			}
-		}		
+		}
 		unset($def['custom_orderby']);
+
+        // https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=534
+        if (isset($def['query_var']) && empty($def['query_var']))
+        {
+            unset($def['query_var']);
+        }
 
 		return $def;
 	}
