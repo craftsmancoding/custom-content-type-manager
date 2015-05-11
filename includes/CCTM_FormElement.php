@@ -669,8 +669,13 @@ abstract class CCTM_FormElement {
 			if (is_numeric($str)) {
 				return $str;
 			}
-			if (!is_array($str)) {			
-    			$out = (array) json_decode($str, true);
+            // Version of PHP matters, unfortunately.
+            // https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=557
+            if (!is_array($str)) {
+                $firstChar = mb_substr($str, 0, 1, 'utf-8');
+                if ($firstChar == '{' || $firstChar == '[') {
+                    $out = (array) json_decode($str, true);
+                }
             }
             else {
                 $out = $str;

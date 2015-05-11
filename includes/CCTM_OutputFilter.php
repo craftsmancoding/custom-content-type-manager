@@ -77,9 +77,15 @@ abstract class CCTM_OutputFilter {
 			return $input; // No JSON converting necessary: PHP array supplied.
 		}
 		else {
-			// This will destroy the input if it's not json
-			$output = json_decode($input, true);
-			
+			// This will destroy the input if it's not json, but behavior varies between PHP versions
+            // https://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=557
+            if (!is_array($input)) {
+                $firstChar = mb_substr($input, 0, 1, 'utf-8');
+                if ($firstChar == '{' || $firstChar == '[') {
+                    $output = (array) json_decode($input, true);
+                }
+            }
+
 			// See http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=121
 			if ( !is_array($output) ) {
 				$this->is_array_input = false;
