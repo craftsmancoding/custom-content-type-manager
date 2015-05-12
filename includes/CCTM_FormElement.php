@@ -895,7 +895,6 @@ abstract class CCTM_FormElement {
 
 			// it's a CREATE operation
 			if ( empty($this->original_name) ) {
-
 				if ( isset(CCTM::$data['custom_field_defs']) && is_array(CCTM::$data['custom_field_defs'])) {
 					foreach (CCTM::$data['custom_field_defs'] as $cf =>$def) {
 						if (strtolower($posted_data['name']) == strtolower($cf)) {
@@ -908,9 +907,10 @@ abstract class CCTM_FormElement {
 			elseif ( $this->original_name != $posted_data['name'] ) {
 				if ( isset(CCTM::$data['custom_field_defs']) && is_array(CCTM::$data['custom_field_defs'])) {
 						if (strtolower($posted_data['name']) == strtolower($cf)) {
-							$this->errors['name'][] = sprintf( __('The name %s is already in use. Please choose another name.', CCTM_TXTDOMAIN), '<em>'.$posted_data['name'].'</em>');						
+							$this->errors['name'][] = sprintf( __('The name %s is already in use. Please choose another name.', CCTM_TXTDOMAIN), '<em>'.$posted_data['name'].'</em>');
+                            $posted_data['name'] = '';
 						}
-					$posted_data['name'] = '';
+
 				}
 			}
 		}

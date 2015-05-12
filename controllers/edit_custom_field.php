@@ -5,7 +5,7 @@ if (!current_user_can('administrator')) exit('Admins only.');
 * Edit a custom field.  
 *
 * @param string $field_type identifies the type of field we're editing
-* @param string $field_name	uniquely identifies this field inside this post_type
+* @param string $field_name	uniquely identifies this field inside this post_type (comes from $_GET)
 
 ------------------------------------------------------------------------------*/
 // Make sure the field exists
@@ -36,7 +36,10 @@ $displayable_types = CCTM::get_post_types();
 	
 $field_type = self::$data['custom_field_defs'][$field_name]['type'];
 $field_data = self::$data['custom_field_defs'][$field_name]; // Data object we will save
-
+//print '<pre>';
+//print 'Field Name: '. $field_name.'<br/>'; exit;
+//print '<pre>';
+//print_r(self::$data); exit;
 if(!$FieldObj = CCTM::load_object($field_type, 'fields')) {
 	die('Field not found.');
 }
@@ -50,6 +53,11 @@ $data['change_field_type'] = '<br/><a href="?page=cctm_fields&a=change_field_typ
 
 // Save if submitted...
 if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_name']) ) {
+    //print_r('SUBMITTED!<pre>');
+    //print 'POST:';
+    //print_r($_POST);
+    //print 'GET';
+    //print_r($_GET);
 	// A little cleanup before we handoff to save_definition_filter
 	unset($_POST[ $data['nonce_name'] ]);
 	unset($_POST['_wp_http_referer']);
@@ -122,9 +130,10 @@ if ( !empty($_POST) && check_admin_referer($data['action_name'], $data['nonce_na
 	}
 	// Save;
 	else {
-		// die(print_r($field_data,true));
+
 		// Unset the old field if the name changed ($field_name is passed via $_GET)
 		if ($field_name != $field_data['name']) {
+
 			unset(self::$data['custom_field_defs'][$field_name]);
 			// update database... but what if the new name is taken?
 		}
