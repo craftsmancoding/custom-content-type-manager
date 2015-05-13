@@ -1,1 +1,0 @@
-<option value="[+value+]" [+is_selected+]>[+option+]</option>

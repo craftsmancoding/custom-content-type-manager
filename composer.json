@@ -1,0 +1,32 @@
+{
+  "name": "craftsmancoding/custom-content-type-manager",
+  "description": "Custom Post Type Manager for WordPress",
+  "type": "wordpress-plugin",
+  "keywords": ["wordpress","post-type","cms","cctm"],
+  "homepage": "https://github.com/craftsmancoding/custom-content-type-manager",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Everett Griffiths",
+      "email": "everett@craftsmancoding.com",
+      "homepage" : "https://github.com/craftsmancoding/custom-content-type-manager"
+    }
+  ],
+  "support": {
+    "email": "donotreply@craftsmancoding.org",
+    "issues": "https://github.com/craftsmancoding/custom-content-type-manager/issues",
+    "forum": "https://wordpress.org/support/plugin/custom-content-type-manager",
+    "wiki": "https://github.com/craftsmancoding/custom-content-type-manager/wiki",
+    "source": "https://github.com/craftsmancoding/custom-content-type-manager"
+  },
+  "require": {
+    "php": ">=5.3",
+    "windwalker/renderer": "2.*",
+    "illuminate/view": "4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "CCTM\\":"src/"
+    }
+  }
+}

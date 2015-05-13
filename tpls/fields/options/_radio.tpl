@@ -1,2 +1,0 @@
-<input type="radio" name="[+name_prefix+][+name+]" class="cctm_radio [+class+]" id="[+id_prefix+][+id+][+i+]"  value="[+value+]" [+is_checked+]/> 
-<label for="[+id_prefix+][+id+][+i+]" class="cctm_radio_label">[+option+]</label><br />

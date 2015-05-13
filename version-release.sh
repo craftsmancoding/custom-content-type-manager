@@ -133,7 +133,7 @@ function mv_thru_tmpdir
     rm -rf $TMPDIR;
     echo "Syncing to ${TMPDIR}"
     # We want rsync to use the trailing slash for referencing this directory, otherwise a sub-dir will be created
-    rsync -arz ${SRCDIR}/ $TMPDIR --exclude=".git" --exclude=".gitignore" --exclude="*.sh" --exclude=".idea";
+    rsync -arz ${SRCDIR}/ $TMPDIR --exclude=".git" --exclude="tests" --exclude=".gitignore" --exclude="*.sh" --exclude="*.xml" --exclude=".idea";
 
     echo "Syncing from ${TMPDIR}/ to $SVNDIR"
     rsync -arvz ${TMPDIR}/ $SVNDIR;
@@ -194,8 +194,8 @@ verify_readme;
 
 mv_thru_tmpdir;
 remove_files_from_svn;
-tag_git_version;
-tag_svn_version;
+#tag_git_version;
+#tag_svn_version;
 
 # SUCCESS
 exit 0;

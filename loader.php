@@ -1,30 +1,10 @@
 <?php
 if ( ! defined('WP_CONTENT_DIR')) exit('No direct script access allowed');
 /**
- * This file (loader.php) is called only when we've checked for any potential
- * conflicts with function names, class names, or constant names. With so many WP
- * plugins available and so many potential conflicts out there, I've attempted to
- * avoid the headaches caused from name pollution as much as possible.
- *
- * @package
+ * This file is only called when we've guaranteed PHP 5.3.0 or greater.
  */
 
-
-/*
-Run tests only upon activation
-http://codex.wordpress.org/Function_Reference/register_activation_hook
-*/
-
-require_once 'includes/CCTM.php';
-require_once 'includes/constants.php';
-require_once 'includes/SummarizePosts.php';
-require_once 'includes/GetPostsQuery.php';
-require_once 'includes/SummarizePosts_Widget.php';
-require_once 'includes/CCTM_Post_Widget.php';
-require_once 'includes/StandardizedCustomFields.php';
-require_once 'includes/CCTM_FormElement.php';
-require_once 'includes/CCTM_Ajax.php';
-require_once 'includes/functions.php';
+return;
 
 CCTM::$Ajax = new CCTM_Ajax();
 
