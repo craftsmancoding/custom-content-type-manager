@@ -4,8 +4,8 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: cms, content management, custom post types, custom content types, custom fields, images, image fields, ecommerce, modx
 Requires at least: 3.3.0
 Tested up to: 4.2.2
-Stable tag: 0.9.8.5
-Version: 0.9.8.5
+Stable tag: 0.9.8.6
+Version: 0.9.8.6
 
 Break out of your blog!  Create custom fields for dropdowns, images, and more!  This plugin gives Wordpress true CMS functionality.
 
@@ -86,6 +86,10 @@ The most recent SVN version of the code is located at:
 The most recent Git version of the code is located at:
 
 	https://github.com/craftsmancoding/custom-content-type-manager
+
+= 0.9.8.6 =
+
+* Fixed error renaming custom fields.
 
 = 0.9.8.5 =
 
@@ -467,6 +471,10 @@ If you are eager to see a particular feature implemented in a future release, pl
 
 
 == Upgrade Notice ==
+
+= 0.9.8.6 =
+
+* Fixed error renaming custom fields. All users should upgrade.
 
 = 0.9.8.5 =
 
