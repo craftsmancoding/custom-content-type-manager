@@ -11,6 +11,7 @@
 function tb_remove() {
     jQuery("#TB_imageOff").unbind("click");
     jQuery("#TB_closeWindowButton").unbind("click");
+    jQuery("body").removeClass('modal-open');
 //	jQuery("#TB_window").fadeOut("fast",function(){jQuery('#TB_window,#TB_overlay,#TB_HideSelect').trigger("unload").unbind().remove();});
     jQuery("#TB_window").fadeOut("fast",function(){jQuery('#TB_window,#TB_overlay,#TB_HideSelect').unload("#TB_ajaxContent").unbind().remove();});
     jQuery("#TB_load").remove();
