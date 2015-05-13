@@ -34,6 +34,7 @@ SVNDIR="../../cctm.svn"
 #####################################################
 # END CONFIG
 #####################################################
+
 # Most bash variables are global, but not the arguments
 # so we pass them to another variable.
 VERSION=$1;
@@ -53,46 +54,12 @@ function verify_version {
         exit 2;
     fi
 
-    if [[ $VERSION < "1.0.0" ]]; then
-        echo 'New version must be greater than existing versions!';
-        exit 3;
-    fi
 }
 
 # Resolve SVNDIR to an absolute dir
 # One-liner similar to PHP's __DIR__ -- omits trailing slash
 function get_abs_pwd {
     SRCDIR="$( cd "$(dirname "$0")" ; pwd -P )"
-}
-
-# Will remove files from SVN control if they are not in the 
-# Git repo
-function sync_svn {
-    
-    # Get relative paths
-    cd $SVNDIR
-    SVNFILES=`find * -type f`
-
-    while read -r LINE; do
-    
-        TESTFILE=${SRCDIR}/${LINE}
-        if [[ ! -e $TESTFILE ]]; then
-            echo "${TESTFILE} does NOT exist";
-            svn delete ${TESTFILE};
-        fi
-    
-    done <<< "$SVNFILES"
-}
-
-# Update the plugin version
-function update_version {
-    cd $SRCDIR;
-    echo "Updating the version to ${VERSION}";
-    cd $TMPDIR;
-    sed -i '' "s/Version:.*/Version: ${VERSION}/" index.php
-    sed -i '' "s/Stable tag:.*/Stable tag: ${VERSION}/" readme.txt
-    sed -i '' "s/Version:.*/Version: ${VERSION}/" readme.txt
-    sed -i '' "s/.*const version = .*/    const version = '${VERSION}'\;/" includes/CCTM.php
 }
 
 # Make sure the SVNDIR is actually a working copy.
@@ -113,37 +80,98 @@ function verify_svn_dir
     fi
 }
 
+
 function update_svn {
     cd $SVNDIR;
     svn update
 }
 
 
-
-# Prep the tmp dir
-function prep_tmp_dir
-{
-    rm -rf $TMPDIR;
-    # We want rsync to use the trailing slash for referencing this directory, otherwise a sub-dir will be created
-    rsync -arz ${SRCDIR}/ $TMPDIR --exclude=".git" --exclude=".gitignore" --exclude="*.sh" --exclude=".idea";
+function get_current_version {
+    cd $SVNDIR;
+    CURRENTVERSION=`grep 'Stable tag:' readme.txt | cut -d : -f 2 | tr -d '[[:space:]]'`
+    echo "Latest stable tag referenced by SVN trunk is version ${CURRENTVERSION}";
 }
 
-# Tag the version
-function tag_version
-{
 
-    # Move it all from tmp into svn
-    # Alternatively, get all files:
-    # find . -type f
-    # Then do svn delete of files in the svn directory which have been removed from git directory
+# Gotta have the proper notices in place
+function verify_readme {
+    cd $SRCDIR
+    CNT=`grep "${VERSION}" readme.txt | wc -l`
+
+    if [[ $CNT -lt 3 ]]; then
+        echo "readme.txt must have entries for the Change Log and Upgrade Notice!";
+        echo "Aborting version release.";
+        exit 4;
+    fi
+
+}
+
+
+
+# Update the plugin version
+function update_version {
+
+    if [[ $VERSION < $CURRENTVERSION ]]; then
+        echo 'New version must be greater than existing versions!';
+        exit 3;
+    fi
+
+    cd $SRCDIR;
+    echo "Updating documentation in source files to version ${VERSION}";
+
+    sed -i '' "s/Version:.*/Version: ${VERSION}/" index.php
+    sed -i '' "s/Stable tag:.*/Stable tag: ${VERSION}/" readme.txt
+    sed -i '' "s/Version:.*/Version: ${VERSION}/" readme.txt
+    sed -i '' "s/.*const version = .*/    const version = '${VERSION}'\;/" includes/CCTM.php
+}
+
+
+
+function mv_thru_tmpdir
+{
+    rm -rf $TMPDIR;
+    echo "Syncing to ${TMPDIR}"
+    # We want rsync to use the trailing slash for referencing this directory, otherwise a sub-dir will be created
+    rsync -arz ${SRCDIR}/ $TMPDIR --exclude=".git" --exclude=".gitignore" --exclude="*.sh" --exclude=".idea";
+
     echo "Syncing from ${TMPDIR}/ to $SVNDIR"
     rsync -arvz ${TMPDIR}/ $SVNDIR;
 
+    cd $SVNDIR;
+    svn add *
+}
+
+# Will remove files from SVN control if they are not in the
+# Git repo
+function remove_files_from_svn {
+
+    # Get relative paths
+    cd $SVNDIR
+    SVNFILES=`find * -type f`
+
+    while read -r LINE; do
+
+        TESTFILE=${SRCDIR}/${LINE}
+        if [[ ! -e $TESTFILE ]]; then
+            echo "${TESTFILE} is being removed from the repo";
+            svn delete ${TESTFILE};
+        fi
+
+    done <<< "$SVNFILES"
+}
+
+function tag_git_version
+{
     # Tag the Git repo
     cd $SRCDIR;
     git tag -a v${1} -m "Tagging version ${1} via automated script"
     git push origin v${1}
+}
 
+# Tag the version
+function tag_svn_version
+{
     # Commit
     svn commit ${SVNDIR} -m "Committing changes for version ${1} via automated script"
 
@@ -151,8 +179,23 @@ function tag_version
     svn copy ${SVNTRUNK} ${SVNTAGS}/${1} -m "Tagging version ${1} via automated script"
 }
 
-verify_version;
 
+#################################################
+# MAIN
+#################################################
+verify_version;
+get_abs_pwd;
+
+verify_svn_dir;
+update_svn;
+get_current_version;
+update_version;
+verify_readme;
+
+mv_thru_tmpdir;
+remove_files_from_svn;
+tag_git_version;
+tag_svn_version;
 
 # SUCCESS
 exit 0;
