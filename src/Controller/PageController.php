@@ -7,11 +7,9 @@
  *
  * See http://asika.windspeaker.co/post/3975-use-blade-template-engine-outside-laravel
  *
-*@package CCTM
+ * @package CCTM
  */
 
-//use Windwalker\Renderer\BladeRenderer;
-// use Pimple\Container;
 use CCTM\Exceptions\NotAllowedException;
 
 class PageController extends BaseController{
@@ -22,9 +20,20 @@ class PageController extends BaseController{
         return $out;
     }
 
+    /**
+     * We need a function we can reference in callbacks without control over arguments passed in, so this is where we
+     * hard-code a specific template.
+     * @return mixed
+     */
+    public function getIndex()
+    {
+        return $this->getItem('index');
+    }
+
     public function getItem($id)
     {
-        return $this->render( $this->dic['BladeRenderer']->render($id));
+        $out = $this->dic['BladeRenderer']->render($id, array());
+        return $this->render($out);
     }
 
     public function getCollection()

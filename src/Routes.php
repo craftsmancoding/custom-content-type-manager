@@ -23,6 +23,9 @@ use Pimple\Container;
  *
  * Remember: PUT requests must be idempotent!!!
  *
+ * In PHP: admin_url('admin-ajax.php');
+ * In JS: ajaxurl
+ *
  * @package CCTM
  */
 class Routes {
@@ -46,10 +49,6 @@ class Routes {
         {
             return $this->dic['GET'][$key];
         }
-//        elseif(isset($this->dic['POST']) && isset($this->dic['POST'][$key]))
-//        {
-//            return $this->dic['POST'][$key];
-//        }
         return $default;
     }
 

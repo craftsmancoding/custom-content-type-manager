@@ -6,7 +6,7 @@ class BaseController {
 
     protected $dic;
 
-    public function __constuct(Container $dic)
+    public function __construct(Container $dic)
     {
         $this->dic = $dic;
     }

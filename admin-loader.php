@@ -10,37 +10,56 @@ if ( ! defined('WP_CONTENT_DIR')) exit('No direct script access allowed');
  */
 
 use Windwalker\Renderer\BladeRenderer;
+use League\Flysystem\Filesystem;
+use League\Flysystem\Adapter\Local as Adapter;
+use Pimple\Container;
+use Webmozart\Json\JsonEncoder;
+use Webmozart\Json\JsonDecoder;
 use CCTM\Controller\PageController;
 use CCTM\Controller\AjaxController;
 use CCTM\Routes;
-use Pimple\Container;
-
 
 
 // Set up Dependency Injection
 $container = new Container();
-$container['template_paths'] = function ($c) {
+$container['storage_dir'] = function ($c) {
     $upload_dir = wp_upload_dir();
-    $upload_dir = $upload_dir['basedir'].'/cctm';
+    return $upload_dir['basedir'].'/cctm';
+};
+$container['template_paths'] = function ($c) {
     $paths = new SplPriorityQueue;
     $paths->insert(CCTM_PATH.'/views', 100);
-    $paths->insert($upload_dir.'/cctm/views', 200);
+    $paths->insert($c['storage_dir'].'/cctm/views', 200);
     return $paths;
+};
+
+$container['Filesystem'] = function ($c)
+{
+    return new Filesystem(new Adapter($c['storage_dir']));
+};
+$container['JsonDecoder'] = function ($c)
+{
+    return new JsonDecoder();
+};
+$container['JsonEncoder'] = function ($c)
+{
+    return new JsonEncoder();
 };
 $container['printer'] = $container->protect(function ($out) {
     print $out;
 });
 $container['ajax_printer'] = $container->protect(function ($out) {
-    print $out;
+    echo $out;
     wp_die();
 });
 $container['BladeRenderer'] = function ($c) {
     return new BladeRenderer($c['template_paths'], array('cache_path' => get_temp_dir()));
 };
 $container['PageController'] = function ($c) {
-    return new PageController($c['BladeRenderer'], $c['printer']);
+    return new PageController($c);
 };
-$container['POST'] = json_decode(file_get_contents('php://input'));
+
+$container['POST'] = $c['JsonDecoder']->decode(file_get_contents('php://input'));
 $container['GET'] = $_GET;
 
 
@@ -123,6 +142,8 @@ add_action('admin_menu', function() {
 // Further routing will be done internally in the AjaxController class
 //add_action( 'wp_ajax_cctm', array(new AjaxController($container), 'getIndex'));
 add_action( 'wp_ajax_cctm', array(new Routes($container), 'handle'));
+// Trying to get rid of the <span class="ng-scope">0</span>
+//add_action( 'wp_ajax_cctm2', function(){ print 'Yol...'; });
 
 
 /*EOF*/
