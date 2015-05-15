@@ -3,15 +3,45 @@ if ( ! defined('WP_CONTENT_DIR')) exit('No direct script access allowed');
 /**
  * This file is only called when we've guaranteed PHP 5.3.0 or greater.
  * Loaded only when we're within the admin dashboard (does NOT mean the current user is admin)
+ * All the methods and variables specific to WordPress are kept in this file; this area of the
+ * code is difficult to test.
+ *
+ * TODO: how to test more?
  */
+
 use Windwalker\Renderer\BladeRenderer;
-use CCTM\Controller\AdminController;
+use CCTM\Controller\PageController;
 use CCTM\Controller\AjaxController;
+use CCTM\Routes;
+use Pimple\Container;
 
-$upload_dir = wp_upload_dir();
-$upload_dir = $upload_dir['basedir'].'/cctm';
 
 
+// Set up Dependency Injection
+$container = new Container();
+$container['template_paths'] = function ($c) {
+    $upload_dir = wp_upload_dir();
+    $upload_dir = $upload_dir['basedir'].'/cctm';
+    $paths = new SplPriorityQueue;
+    $paths->insert(CCTM_PATH.'/views', 100);
+    $paths->insert($upload_dir.'/cctm/views', 200);
+    return $paths;
+};
+$container['printer'] = $container->protect(function ($out) {
+    print $out;
+});
+$container['ajax_printer'] = $container->protect(function ($out) {
+    print $out;
+    wp_die();
+});
+$container['BladeRenderer'] = function ($c) {
+    return new BladeRenderer($c['template_paths'], array('cache_path' => get_temp_dir()));
+};
+$container['PageController'] = function ($c) {
+    return new PageController($c['BladeRenderer'], $c['printer']);
+};
+$container['POST'] = json_decode(file_get_contents('php://input'));
+$container['GET'] = $_GET;
 
 
 add_action('admin_init', function(){
@@ -61,10 +91,9 @@ add_action('admin_init', function(){
 
 // Main menu item
 add_action('admin_menu', function() {
-    global $upload_dir;
-    $paths = new \SplPriorityQueue;
-    $paths->insert(CCTM_PATH.'/views', 100);
-    $paths->insert($upload_dir.'/cctm/views', 200);
+
+    global $container;
+
 
     wp_enqueue_script('angular', CCTM_URL . '/assets/components/angular/angular.js' );
     wp_enqueue_script('angular-animate', CCTM_URL . '/assets/components/angular-animate/angular-animate.js' );
@@ -81,10 +110,7 @@ add_action('admin_menu', function() {
         'manage_options',						// capability
         'cctm',								    // menu-slug (should be unique)
         array(
-            new AdminController(
-                //new BladeRenderer(array(CCTM_PATH.'/views',$upload_dir.'/views'), array('cache_path' => get_temp_dir()))
-                new BladeRenderer($paths, array('cache_path' => get_temp_dir()))
-            ),
+            new PageController($container),
             'getIndex'
         ), // callback function
         // see https://developer.wordpress.org/resource/dashicons/#media-code
@@ -95,7 +121,8 @@ add_action('admin_menu', function() {
 
 // All CCTM Ajax requests will use action = 'cctm'.
 // Further routing will be done internally in the AjaxController class
-add_action( 'wp_ajax_cctm', array(new AjaxController(), 'getIndex'));
+//add_action( 'wp_ajax_cctm', array(new AjaxController($container), 'getIndex'));
+add_action( 'wp_ajax_cctm', array(new Routes($container), 'handle'));
 
 
 /*EOF*/

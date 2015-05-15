@@ -23,7 +23,7 @@ if ( ! defined('WP_CONTENT_DIR')) exit('No direct script access allowed');
     <a href="#/main" ng-class="{active: nav.isActive('/main')}">Post Types</a>
     <a href="#/settings" ng-class="{active: nav.isActive('/settings')}">Settings</a>
 
-
+    {{ __('This is translated.') }}
     <div ng-view></div>
 
 </div>
