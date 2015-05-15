@@ -20,10 +20,10 @@ if ( ! defined('WP_CONTENT_DIR')) exit('No direct script access allowed');
 <h2>CCTM</h2>
 <div ng-app="cctmApp">
 
+    <a href="#/main" ng-class="{active: nav.isActive('/main')}">Post Types</a>
     <a href="#/settings" ng-class="{active: nav.isActive('/settings')}">Settings</a>
 
-    <div ng-controller="MainController">
-        Main Controller x
-    </div>
+
+    <div ng-view></div>
 
 </div>

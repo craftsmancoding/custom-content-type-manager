@@ -70,7 +70,10 @@ add_action('admin_menu', function() {
     wp_enqueue_script('angular-animate', CCTM_URL . '/assets/components/angular-animate/angular-animate.js' );
     wp_enqueue_script('angular-route', CCTM_URL . '/assets/components/angular-route/angular-route.js' );
     wp_enqueue_script('cctm-app', CCTM_URL . '/app/app.module.js' );
-    wp_enqueue_script('cctm-routes', CCTM_URL . '/app/app.routes.js' );
+    wp_enqueue_script('cctm-app.main', CCTM_URL . '/app/components/main/main.js' );
+    wp_enqueue_script('cctm-app.settings', CCTM_URL . '/app/components/settings/settings.js' );
+
+    //wp_enqueue_script('cctm-routes', CCTM_URL . '/app/app.routes.js' );
 
     add_menu_page(
         __('Manage Custom Content Types', 'cctm'),  // page title
