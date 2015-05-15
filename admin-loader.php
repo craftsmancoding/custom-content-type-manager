@@ -5,6 +5,8 @@ if ( ! defined('WP_CONTENT_DIR')) exit('No direct script access allowed');
  * Loaded only when we're within the admin dashboard (does NOT mean the current user is admin)
  */
 use Windwalker\Renderer\BladeRenderer;
+use CCTM\Controller\AdminController;
+use CCTM\Controller\AjaxController;
 
 $upload_dir = wp_upload_dir();
 $upload_dir = $upload_dir['basedir'].'/cctm';
@@ -35,20 +37,21 @@ add_action('admin_init', function(){
         wp_enqueue_script('jquery-ui-sortable');
         wp_enqueue_script('jquery-ui-dialog');
 
-//        wp_enqueue_script('cctm_manager', CCTM_URL . '/js/manager.js' );
+
 
         // The following makes PHP variables available to Javascript the "correct" way.
-        wp_register_script( 'cctm_js', 'assets/js/cctm.js' );
-
-        wp_localize_script( 'cctm_js', 'cctm', array(
-            'cctm_url' => CCTM_URL,
-            'ajax_nonce' => wp_create_nonce('ajax_nonce')
+        wp_register_script('cctm_js', 'assets/js/cctm.js' );
+        wp_localize_script('cctm_js', 'cctm', array(
+            'url' => CCTM_URL,
+            'nonce' => wp_create_nonce('cctm_nonce')
         ));
 
         // Enqueued script with localized data.
         wp_enqueue_script('cctm_js');
 
-
+        //wp_enqueue_script('angular', CCTM_URL . '/assets/components/angular/angular.min.js' );
+        //wp_enqueue_script('angular-animate', CCTM_URL . '/assets/components/angular-animate/angular-animate.min.js' );
+        //wp_enqueue_script('angular-route', CCTM_URL . '/assets/components/angular-route/angular-route.min.js' );
     }
 
     // Allow each custom field to load up any necessary CSS/JS.
@@ -61,7 +64,13 @@ add_action('admin_menu', function() {
     global $upload_dir;
     $paths = new \SplPriorityQueue;
     $paths->insert(CCTM_PATH.'/views', 100);
-    $paths->insert($upload_dir.'/views', 200);
+    $paths->insert($upload_dir.'/cctm/views', 200);
+
+    wp_enqueue_script('angular', CCTM_URL . '/assets/components/angular/angular.js' );
+    wp_enqueue_script('angular-animate', CCTM_URL . '/assets/components/angular-animate/angular-animate.js' );
+    wp_enqueue_script('angular-route', CCTM_URL . '/assets/components/angular-route/angular-route.js' );
+    wp_enqueue_script('cctm-app', CCTM_URL . '/app/app.module.js' );
+    wp_enqueue_script('cctm-routes', CCTM_URL . '/app/app.routes.js' );
 
     add_menu_page(
         __('Manage Custom Content Types', 'cctm'),  // page title
@@ -69,7 +78,7 @@ add_action('admin_menu', function() {
         'manage_options',						// capability
         'cctm',								    // menu-slug (should be unique)
         array(
-            new \CCTM\AdminController(
+            new AdminController(
                 //new BladeRenderer(array(CCTM_PATH.'/views',$upload_dir.'/views'), array('cache_path' => get_temp_dir()))
                 new BladeRenderer($paths, array('cache_path' => get_temp_dir()))
             ),
@@ -83,7 +92,7 @@ add_action('admin_menu', function() {
 
 // All CCTM Ajax requests will use action = 'cctm'.
 // Further routing will be done internally in the AjaxController class
-add_action( 'wp_ajax_cctm', array(new \CCTM\AjaxController(), 'getIndex'));
+add_action( 'wp_ajax_cctm', array(new AjaxController(), 'getIndex'));
 
 
 /*EOF*/

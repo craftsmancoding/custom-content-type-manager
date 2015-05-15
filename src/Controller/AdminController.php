@@ -1,4 +1,4 @@
-<?php namespace CCTM;
+<?php namespace CCTM\Controller;
 /**
  * Class AdminController
  *

@@ -1,4 +1,5 @@
-<?php namespace CCTM;
+<?php namespace CCTM\Controller;
+
 class AjaxController {
 
     public function getIndex()

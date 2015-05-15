@@ -1,0 +1,43 @@
+{
+  "name": "cctm",
+  "version": "2.0.0",
+  "description": "WordPress plugin for Custom Post Types",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.31",
+    "karma-jasmine": "^0.3.5"
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craftsmancoding/custom-content-type-manager.git"
+  },
+  "keywords": [
+    "WordPress",
+    "Post",
+    "Type",
+    "Content",
+    "Type",
+    "CMS",
+    "Custom",
+    "Fields"
+  ],
+  "author": "Everett Griffiths",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/craftsmancoding/custom-content-type-manager/issues"
+  },
+  "homepage": "https://github.com/craftsmancoding/custom-content-type-manager"
+}
