@@ -1,11 +1,13 @@
 <?php namespace CCTM\Model;
 
+use CCTM\Exceptions\FileNotFoundException;
 use CCTM\Exceptions\NotFoundException;
 
 class BaseModel {
 
     protected $dic;
     protected $attr;
+    protected $id;
     protected $subdir; // starts with leading slash
 
     public function __construct($dic, array $attributes = array())
@@ -33,10 +35,15 @@ class BaseModel {
         {
             throw new NotFoundException('Invalid resource name');
         }
+
+        if (!$exists = $this->dic['Filesystem']->has())
+        {
+            throw new FileNotFoundException('File not found: '.$this->getLocalDir().$id.'.json');
+        }
         return $this->dic['JsonDecoder']->decodeFile($this->getLocalDir().$id.'.json'); // '/path/to/file.json'
     }
 
-    public function getCollection()
+    public function getCollection(array $filters=array())
     {
         // TODO: cache this so we're not having to iterate and parse every @!% file
     }
@@ -54,7 +61,9 @@ class BaseModel {
 
     public function save()
     {
-        $this->dic['JsonEncoder']->encodeFile($this->attr, '/path/to/file.json');
+
+        //$this->dic['JsonEncoder']->encode($this->attr, '/path/to/file.json');
+        $this->dic['Filesystem']->put($file, $contents);
     }
 }
 
