@@ -15,9 +15,11 @@ use League\Flysystem\Adapter\Local as Adapter;
 use Pimple\Container;
 use Webmozart\Json\JsonEncoder;
 use Webmozart\Json\JsonDecoder;
+use Particle\Validator\Validator;
 use CCTM\Controller\PageController;
 use CCTM\Controller\AjaxController;
 use CCTM\Routes;
+
 
 
 // Set up Dependency Injection
@@ -47,6 +49,9 @@ $container['JsonEncoder'] = function ($c)
 };
 $container['printer'] = $container->protect(function ($out) {
     print $out;
+});
+$container['Validator'] = $container->factory(function ($c) {
+    return new Validator();
 });
 $container['ajax_printer'] = $container->protect(function ($out) {
     echo $out;

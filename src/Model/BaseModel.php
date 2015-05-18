@@ -9,38 +9,83 @@ class BaseModel {
     protected $attr;
     protected $id;
     protected $subdir; // starts with leading slash
+    protected $ext = '.json';
+    protected $pk; // primary key (should be one of the attributes)
+    protected $context = 'update'; // create | update
 
     public function __construct($dic, array $attributes = array())
     {
-        $this->dic;
+        $this->dic = $dic;
         $this->attr = $attributes;
+        // For testing the BaseModel, otherwise $this->subdir set in the child class
+        if (empty($this->subdir))
+        {
+            $this->subdir = $dic['subdir'];
+        }
+        if (empty($this->pk)) {
+            $this->pk = $dic['pk'];
+        }
+        if (!empty($attributes))
+        {
+            $this->context = 'create';
+        }
     }
 
     /**
-     * Gets the full path to the storage directory with trailing slash
+     * Gets the rel path to the storage directory with trailing slash
      * @return string
      */
     public function getLocalDir()
     {
-        $subdir = trim($this->subdir,'/');
-        return $this->dic['storage_dir'].'/'.$subdir.'/';
+        return trim($this->subdir,'/') . '/';
+    }
+
+    /**
+     * Relative filename
+     *
+     * @param $id
+     *
+     * @return string
+     * @throws NotFoundException
+     */
+    public function getFilename($id)
+    {
+        // Avoid directory transversing
+        if (!preg_match('/^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$/', $id))
+        {
+            throw new NotFoundException('Invalid resource name');
+        }
+        return $this->getLocalDir().$id.$this->ext;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Says whether we are updating an existing item or creating a new one
+     */
+    public function isNew()
+    {
+        return ($this->context == 'create');
     }
 
     public function getItem($id)
     {
         //$this->dic['Filesystem']->read($id);
         // TODO: permissions: can read?
-        // Avoid directory transversing
-        if (!preg_match('/^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$/', $id))
-        {
-            throw new NotFoundException('Invalid resource name');
-        }
 
-        if (!$exists = $this->dic['Filesystem']->has())
+
+        if (!$exists = $this->dic['Filesystem']->has($this->getFilename($id)))
         {
             throw new FileNotFoundException('File not found: '.$this->getLocalDir().$id.'.json');
         }
-        return $this->dic['JsonDecoder']->decodeFile($this->getLocalDir().$id.'.json'); // '/path/to/file.json'
+
+        $this->attr = $this->dic['JsonDecoder']->decode($this->dic['Filesystem']->read($this->getFilename($id)));
+        $this->context = 'update';
+        $this->id = $id;
+        return $this->attr;
     }
 
     public function getCollection(array $filters=array())
@@ -61,9 +106,14 @@ class BaseModel {
 
     public function save()
     {
+        // Check PK
+        // Validate
 
-        //$this->dic['JsonEncoder']->encode($this->attr, '/path/to/file.json');
-        $this->dic['Filesystem']->put($file, $contents);
+        $this->context = 'update';
+
+
+        //;
+        //$this->dic['Filesystem']->put($file, $this->dic['JsonEncoder']->encode($this->attr));
     }
 }
 
