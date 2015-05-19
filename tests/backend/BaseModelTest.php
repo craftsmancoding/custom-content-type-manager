@@ -31,6 +31,13 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
         {
             return new JsonEncoder();
         };
+        $this->dic['Validator'] = function ($c)
+        {
+            return \Mockery::mock('Validator')
+                ->shouldReceive('validate')
+                ->andReturn(true)
+                ->getMock();
+        };
 
 
     }
@@ -45,7 +52,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
 
     public function testGetLocalDir()
     {
-        $M = new BaseModel($this->dic);
+        $M = new BaseModel($this->dic, $this->dic['Validator']);
 
         $dir = $M->getLocalDir();
 
@@ -54,10 +61,11 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
 
     public function testIsNew()
     {
-        $M = new BaseModel($this->dic);
+        $M = new BaseModel($this->dic, $this->dic['Validator']);
         $this->assertFalse($M->isNew());
 
-        $M = new BaseModel($this->dic, array('a'=>'apple'));
+        $M = new BaseModel($this->dic, $this->dic['Validator']);
+        $M->create(array('a'=>'apple','pk'=>'test'));
         $this->assertTrue($M->isNew());
 
         $M->save();
@@ -80,7 +88,8 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
             return new JsonEncoder();
         };
 
-        $M = new BaseModel($dic, array('a'=>'apple'));
+        $M = new BaseModel($dic, $this->dic['Validator']);
+        $M->create(array('a' => 'apple'));
         $this->assertTrue($M->isNew());
         $M->getItem('a');
         $this->assertFalse($M->isNew());
@@ -93,8 +102,26 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
     public function testGetItemFail()
     {
         // setUp
-        $M = new BaseModel($this->dic);
+        $M = new BaseModel($this->dic, $this->dic['Validator']);
         $Item = $M->getItem('does-not-exist');
+    }
+
+    /**
+     * @expectedException CCTM\Exceptions\NotFoundException
+     */
+    public function testGetFilename()
+    {
+        $M = new BaseModel($this->dic, $this->dic['Validator']);
+        $M->getFilename('../../usr/password');
+    }
+
+    /**
+     * @expectedException CCTM\Exceptions\NotFoundException
+     */
+    public function testGetFilename2()
+    {
+        $M = new BaseModel($this->dic, $this->dic['Validator']);
+        $M->getFilename('');
     }
 
     public function testGetItem()
@@ -118,7 +145,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
         };
 
 
-        $M = new BaseModel($dic);
+        $M = new BaseModel($dic, $this->dic['Validator']);
         $apple = $M->getItem('a');
 
         $this->assertEquals('banana', $apple->b);
@@ -146,7 +173,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
         };
 
 
-        $M = new BaseModel($dic);
+        $M = new BaseModel($dic, $this->dic['Validator']);
         $this->assertNull($M->getId());
         $M->getItem('a');
         $this->assertEquals('a', $M->getId());
@@ -154,10 +181,16 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
 
     public function testSave()
     {
-        $M = new BaseModel($this->dic, array('x'=>'Xerxes'));
+        $M = new BaseModel($this->dic, $this->dic['Validator']);
+        $M->create(array('x'=>'Xerxes','pk'=>'x'));
+
         $M->save();
 
-     //   $this->assertTrue($this->dic['Filesystem']->has('x.json'));
+        $this->assertTrue($this->dic['Filesystem']->has($this->dic['subdir'].'x.json'));
     }
 
+    public function testGetCollection()
+    {
+        
+    }
 }

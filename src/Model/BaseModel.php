@@ -1,6 +1,7 @@
 <?php namespace CCTM\Model;
 
 use CCTM\Exceptions\FileNotFoundException;
+use CCTM\Exceptions\InvalidAttributesException;
 use CCTM\Exceptions\NotFoundException;
 
 class BaseModel {
@@ -12,11 +13,12 @@ class BaseModel {
     protected $ext = '.json';
     protected $pk; // primary key (should be one of the attributes)
     protected $context = 'update'; // create | update
+    protected $validator; // separate from $dic so we don't need to rely a convention to get the exact validator classname
 
-    public function __construct($dic, array $attributes = array())
+    public function __construct($dic, $validator)
     {
         $this->dic = $dic;
-        $this->attr = $attributes;
+
         // For testing the BaseModel, otherwise $this->subdir set in the child class
         if (empty($this->subdir))
         {
@@ -25,10 +27,10 @@ class BaseModel {
         if (empty($this->pk)) {
             $this->pk = $dic['pk'];
         }
-        if (!empty($attributes))
-        {
-            $this->context = 'create';
-        }
+//        if (!empty($attributes))
+//        {
+//            $this->context = 'create';
+//        }
     }
 
     /**
@@ -90,7 +92,7 @@ class BaseModel {
 
     public function getCollection(array $filters=array())
     {
-        // TODO: cache this so we're not having to iterate and parse every @!% file
+        // TODO: cache this? so we're not having to iterate and parse every @!% file
     }
 
     public function get($key)
@@ -103,17 +105,31 @@ class BaseModel {
         $this->attr[$key] = $value;
     }
 
+    public function create(array $attributes = array())
+    {
+        $this->context = 'create';
+        $this->attr = $attributes;
+    }
 
     public function save()
     {
         // Check PK
+        $id = (isset($this->attr[$this->pk])) ? $this->attr[$this->pk] : null;
+        if(!$id)
+        {
+            throw new InvalidAttributesException('Missing primary key.');
+        }
         // Validate
+        if (!$this->dic['Validator']->validate($this->attr, $this->context))
+        {
+            throw new InvalidAttributesException($this->dic['Validator']->getMessages());
+        }
 
+
+        // On the way out, mark this as an update
         $this->context = 'update';
 
-
-        //;
-        //$this->dic['Filesystem']->put($file, $this->dic['JsonEncoder']->encode($this->attr));
+        $this->dic['Filesystem']->put($this->getFilename($id), $this->dic['JsonEncoder']->encode($this->attr));
     }
 }
 

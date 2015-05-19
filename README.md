@@ -54,3 +54,6 @@ Writing this plugin would have driven me insane without the help of the hard wor
 - https://github.com/ventoviro/windwalker-renderer
 - https://github.com/thephpleague/flysystem
 - https://github.com/webmozart/json
+- http://validator.particle-php.com/en/latest/
+
+? https://libraries.io/packagist/mcustiel%2Fphp-simple-config/0.3
