@@ -15,14 +15,14 @@ trait DotNotation {
     protected $data = array();
 
 
-    public function __isset($key)
+    public function isNodeSet($key)
     {
-        $array =& $this->data;
-        if (isset($array[$key]))
+
+        if (isset($this->data[$key]))
         {
             return true;
         }
-
+        $array = $this->data;
         foreach (explode('.', $key) as $part) {
             if (!is_array($array) or !isset($array[$part]))
             {
@@ -36,26 +36,21 @@ trait DotNotation {
 
     }
 
-    public function __unset($key)
+    public function nodeUnset($key)
     {
         $array =& $this->data;
-        if (isset($array[$key]))
-        {
-            unset($array[$key]);
-            return;
-        }
 
-        foreach (explode('.', $key) as $part) {
-            if (!is_array($array) or !isset($array[$part]))
-            {
-                return;
+        $parts = explode(".", $key);
+
+        while (count($parts) > 1) {
+            $part = array_shift($parts);
+
+            if (isset($array[$part]) and is_array($array[$part])) {
+                $array =& $array[$part];
             }
-
-            $array = $array[$part];
         }
 
         unset($array[array_shift($parts)]);
-        return;
     }
 
     /**
@@ -100,7 +95,6 @@ trait DotNotation {
      */
     public function mergeArray(array $array)
     {
-        //return $this->data = array_merge_recursive($this->data, $array);
         return $this->data = array_replace_recursive($this->data, $array);
     }
 

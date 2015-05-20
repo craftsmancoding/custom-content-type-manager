@@ -22,6 +22,11 @@ class DotNotationTest extends PHPUnit_Framework_TestCase {
             'dog' => 'Odie'
         ),
         'fish' => 'salmon',
+        'x' => array(
+            'y' => array(
+                'z' => 'jackpot'
+            )
+        ),
         'tags' => array('one','two','three')
     );
 
@@ -85,6 +90,32 @@ class DotNotationTest extends PHPUnit_Framework_TestCase {
 
         $this->assertEquals('Snoopy', $dot->get('mammals.dog'));
 
+
+    }
+
+    /**
+     * @depends testIsInitiallyEmpty
+     */
+    public function testIsNodeSet($dot)
+    {
+        $dot->fromArray($this->array);
+        $this->assertTrue($dot->isNodeSet('mammals.dog'));
+        $this->assertFalse($dot->isNodeSet('mammals.lizard'));
+        $this->assertTrue($dot->isNodeSet('fish'));
+        $this->assertFalse($dot->isNodeSet('amphibian'));
+    }
+
+    /**
+     * @depends testIsInitiallyEmpty
+     */
+    public function testNodeUnset($dot)
+    {
+        $dot->fromArray($this->array);
+        $dot->nodeUnset('x.y.z');
+        $this->assertFalse($dot->isNodeSet('x.y.z'));
+        $this->assertEquals('salmon', $dot->get('fish'));
+        $this->assertTrue($dot->isNodeSet('fish'));
+        $this->assertFalse($dot->isNodeSet('amphibian'));
 
     }
 }

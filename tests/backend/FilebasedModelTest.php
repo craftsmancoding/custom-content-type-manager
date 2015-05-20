@@ -43,8 +43,8 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
     // Root directories cannot be deleted
     public function tearDown()
     {
-        return new Filesystem(new Adapter(__DIR__));
-        $this->dic['Filesystem']->deleteDir(__DIR__.'/tmp/');
+        $FS = new Filesystem(new Adapter(__DIR__));
+        $FS->deleteDir('/tmp/');
     }
 
 
@@ -196,12 +196,19 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
 
     public function testGetCollection()
     {
+        $this->dic['Filesystem'] = function ($c)
+        {
+            return new Filesystem(new Adapter($c['storage_dir'].'collection/'));
+        };
+
         $M = new FilebasedModel($this->dic, $this->dic['Validator']);
-        $x = $M->getCollection();
 
         // Add a non JSON file to the mix... make sure it is skipped.
+        $this->dic['Filesystem']->put('a.json', '{"a":"apple"}');
+        $this->dic['Filesystem']->put('b.json', '{"b":"banana"}');
         $this->dic['Filesystem']->put('fly.txt', 'In the ointment');
 
+        $x = $M->getCollection();
         $this->assertEquals(2, count($x));
 
     }
