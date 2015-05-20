@@ -5,9 +5,9 @@ use League\Flysystem\Filesystem;
 use League\Flysystem\Adapter\Local as Adapter;
 use Webmozart\Json\JsonEncoder;
 use Webmozart\Json\JsonDecoder;
-use CCTM\Model\BaseModel;
+use CCTM\Model\FilebasedModel;
 
-class BaseModelTest extends PHPUnit_Framework_TestCase {
+class FilebasedModelTest extends PHPUnit_Framework_TestCase {
 
     public $dic;
 
@@ -16,8 +16,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
     public function setUp()
     {
         $this->dic = new Container();
-        $this->dic['storage_dir'] = __DIR__;
-        $this->dic['subdir'] = '/tmp/';
+        $this->dic['storage_dir'] = __DIR__.'/tmp/';
         $this->dic['pk'] = 'pk';
         $this->dic['Filesystem'] = function ($c)
         {
@@ -44,36 +43,25 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
     // Root directories cannot be deleted
     public function tearDown()
     {
-
-        $this->dic['Filesystem']->deleteDir($this->dic['subdir']);
+        return new Filesystem(new Adapter(__DIR__));
+        $this->dic['Filesystem']->deleteDir(__DIR__.'/tmp/');
     }
 
-
-
-    public function testGetLocalDir()
-    {
-        $M = new BaseModel($this->dic, $this->dic['Validator']);
-
-        $dir = $M->getLocalDir();
-
-        $this->assertEquals('tmp/', $dir);
-    }
 
     public function testIsNew()
     {
-        $M = new BaseModel($this->dic, $this->dic['Validator']);
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
         $this->assertFalse($M->isNew());
 
-        $M = new BaseModel($this->dic, $this->dic['Validator']);
-        $M->create(array('a'=>'apple','pk'=>'test'));
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
+        $M->fromArray(array('a'=>'apple','pk'=>'test'));
         $this->assertTrue($M->isNew());
 
         $M->save();
         $this->assertFalse($M->isNew());
 
         $dic = new Container();
-        $dic['storage_dir'] = __DIR__;
-        $dic['subdir'] = '/storage_dir/';
+        $dic['storage_dir'] = __DIR__.'/storage_dir/';
         $dic['pk'] = 'pk';
         $dic['Filesystem'] = function ($c)
         {
@@ -88,8 +76,8 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
             return new JsonEncoder();
         };
 
-        $M = new BaseModel($dic, $this->dic['Validator']);
-        $M->create(array('a' => 'apple'));
+        $M = new FilebasedModel($dic, $this->dic['Validator']);
+        $M->fromArray(array('a' => 'apple'));
         $this->assertTrue($M->isNew());
         $M->getItem('a');
         $this->assertFalse($M->isNew());
@@ -102,7 +90,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
     public function testGetItemFail()
     {
         // setUp
-        $M = new BaseModel($this->dic, $this->dic['Validator']);
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
         $Item = $M->getItem('does-not-exist');
     }
 
@@ -111,7 +99,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFilename()
     {
-        $M = new BaseModel($this->dic, $this->dic['Validator']);
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
         $M->getFilename('../../usr/password');
     }
 
@@ -120,7 +108,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
      */
     public function testGetFilename2()
     {
-        $M = new BaseModel($this->dic, $this->dic['Validator']);
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
         $M->getFilename('');
     }
 
@@ -128,8 +116,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
     {
         // Different setup for the REAL directory
         $dic = new Container();
-        $dic['storage_dir'] = __DIR__;
-        $dic['subdir'] = '/storage_dir/';
+        $dic['storage_dir'] = __DIR__.'/storage_dir/';
         $dic['pk'] = 'pk';
         $dic['Filesystem'] = function ($c)
         {
@@ -145,7 +132,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
         };
 
 
-        $M = new BaseModel($dic, $this->dic['Validator']);
+        $M = new FilebasedModel($dic, $this->dic['Validator']);
         $apple = $M->getItem('a');
 
         $this->assertEquals('banana', $apple->b);
@@ -156,8 +143,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
     {
         // Different setup for the REAL directory
         $dic = new Container();
-        $dic['storage_dir'] = __DIR__;
-        $dic['subdir'] = '/storage_dir/';
+        $dic['storage_dir'] = __DIR__.'/storage_dir/';
         $dic['pk'] = 'pk';
         $dic['Filesystem'] = function ($c)
         {
@@ -173,7 +159,7 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
         };
 
 
-        $M = new BaseModel($dic, $this->dic['Validator']);
+        $M = new FilebasedModel($dic, $this->dic['Validator']);
         $this->assertNull($M->getId());
         $M->getItem('a');
         $this->assertEquals('a', $M->getId());
@@ -181,15 +167,53 @@ class BaseModelTest extends PHPUnit_Framework_TestCase {
 
     public function testSave()
     {
-        $M = new BaseModel($this->dic, $this->dic['Validator']);
-        $M->create(array('x'=>'Xerxes','pk'=>'x'));
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
+        $M->fromArray(array('x'=>'Xerxes','pk'=>'x'));
 
         $M->save();
 
-        $this->assertTrue($this->dic['Filesystem']->has($this->dic['subdir'].'x.json'));
+        $this->assertTrue($this->dic['Filesystem']->has('x.json'));
+    }
+
+
+    public function testSetDeep()
+    {
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
+        $M->fromArray(array('x'=>array('y'=>'z')));
+
+        $this->assertEquals('z',$M->x->y);
+
+        $M->fromArray(array('x'=>array('cat','dog','goat')));
+        $this->assertTrue(is_array($M->x));
+
+        $obj = new stdClass();
+        $obj->x = 'y';
+
+
+        $M->fromArray($obj);
+        $this->assertEquals('y', $M->x);
     }
 
     public function testGetCollection()
+    {
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
+        $x = $M->getCollection();
+
+        // Add a non JSON file to the mix... make sure it is skipped.
+        $this->dic['Filesystem']->put('fly.txt', 'In the ointment');
+
+        $this->assertEquals(2, count($x));
+
+    }
+
+
+    public function testDuplicate()
+    {
+        $M = new FilebasedModel($this->dic, $this->dic['Validator']);
+
+    }
+
+    public function testDelete()
     {
         
     }

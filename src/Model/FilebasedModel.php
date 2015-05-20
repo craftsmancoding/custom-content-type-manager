@@ -4,13 +4,12 @@ use CCTM\Exceptions\FileNotFoundException;
 use CCTM\Exceptions\InvalidAttributesException;
 use CCTM\Exceptions\NotFoundException;
 
-class BaseModel {
+class FilebasedModel {
 
     protected $dic;
     protected $attr;
     protected $id;
-    protected $subdir; // starts with leading slash
-    protected $ext = '.json';
+    protected $ext = 'json'; // without the dot
     protected $pk; // primary key (should be one of the attributes)
     protected $context = 'update'; // create | update
     protected $validator; // separate from $dic so we don't need to rely a convention to get the exact validator classname
@@ -19,31 +18,39 @@ class BaseModel {
     {
         $this->dic = $dic;
 
-        // For testing the BaseModel, otherwise $this->subdir set in the child class
-        if (empty($this->subdir))
-        {
-            $this->subdir = $dic['subdir'];
-        }
+        // For testing the BaseModel, otherwise set in the child class
         if (empty($this->pk)) {
             $this->pk = $dic['pk'];
         }
-//        if (!empty($attributes))
-//        {
-//            $this->context = 'create';
-//        }
     }
 
-    /**
-     * Gets the rel path to the storage directory with trailing slash
-     * @return string
-     */
-    public function getLocalDir()
+    public function __isset($key)
     {
-        return trim($this->subdir,'/') . '/';
+        return (isset($this->attr->$key)) ? true : false;
+    }
+
+    public function __unset($key)
+    {
+        unset($this->attr->$key);
+    }
+
+    public function __get($key)
+    {
+        return (isset($this->attr->$key)) ? $this->attr->$key : null;
+    }
+
+    public function __set($key, $value)
+    {
+        $this->attr->$key = $value;
+    }
+
+    public function getAttributes()
+    {
+        return $this->attr;
     }
 
     /**
-     * Relative filename
+     * Get relative filename within the Flysystem root
      *
      * @param $id
      *
@@ -57,7 +64,7 @@ class BaseModel {
         {
             throw new NotFoundException('Invalid resource name');
         }
-        return $this->getLocalDir().$id.$this->ext;
+        return $id.'.'.$this->ext;
     }
 
     public function getId()
@@ -87,34 +94,65 @@ class BaseModel {
         $this->attr = $this->dic['JsonDecoder']->decode($this->dic['Filesystem']->read($this->getFilename($id)));
         $this->context = 'update';
         $this->id = $id;
-        return $this->attr;
+        return $this;
     }
 
+    // TODO: filters
     public function getCollection(array $filters=array())
     {
-        // TODO: cache this? so we're not having to iterate and parse every @!% file
+        // TODO: cache this?
+        $contents = $this->dic['Filesystem']->listContents('/');
+
+        // Sample contents
+        //        Array
+        //        (
+        //            [type] => file
+        //            [path] => x.json
+        //            [timestamp] => 1432097947
+        //            [size] => 23
+        //            [dirname] =>
+        //            [basename] => x.json
+        //            [extension] => json
+        //            [filename] => x
+        //        )
+        foreach ($contents as $i => $c)
+        {
+            if ($c['extension'] != $this->ext)
+            {
+                continue;
+            }
+
+            $contents[$i] = $this->getItem($c['filename']);
+        }
+        return $contents;
     }
 
-    public function get($key)
-    {
-        return (isset($this->attr[$key])) ? $this->attr[$key] : null;
-    }
-
-    public function set($key, $value)
-    {
-        $this->attr[$key] = $value;
-    }
-
-    public function create(array $attributes = array())
+    /**
+     * Supply an array or an object
+     * From https://stackoverflow.com/questions/1869091/how-to-convert-an-array-to-object-in-php
+     * @param mixed $attributes
+     */
+    public function fromArray($attributes = array())
     {
         $this->context = 'create';
-        $this->attr = $attributes;
+        $this->attr = $this->dic['JsonDecoder']->decode( ($this->dic['JsonEncoder']->encode($attributes)));
     }
+
+
+    public function duplicate($new_id)
+    {
+        if ($exists = $this->dic['Filesystem']->has($this->getFilename($new_id)))
+        {
+            throw new FileExistsException('File cannot be ovewritten. '.$this->getFilename($new_id));
+        }
+    }
+
 
     public function save()
     {
         // Check PK
-        $id = (isset($this->attr[$this->pk])) ? $this->attr[$this->pk] : null;
+        $pk = $this->pk; // prepare string
+        $id = (isset($this->attr->$pk)) ? $this->attr->$pk : null;
         if(!$id)
         {
             throw new InvalidAttributesException('Missing primary key.');
@@ -125,8 +163,7 @@ class BaseModel {
             throw new InvalidAttributesException($this->dic['Validator']->getMessages());
         }
 
-
-        // On the way out, mark this as an update
+        // After validation, mark this as an update
         $this->context = 'update';
 
         $this->dic['Filesystem']->put($this->getFilename($id), $this->dic['JsonEncoder']->encode($this->attr));
