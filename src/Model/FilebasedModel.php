@@ -4,6 +4,15 @@ use CCTM\Exceptions\FileNotFoundException;
 use CCTM\Exceptions\InvalidAttributesException;
 use CCTM\Exceptions\NotFoundException;
 
+/**
+ * Class FilebasedModel
+ *
+ * This base class is an interface for using flat files to store object data, e.g. JSON files.
+ * The intended use case is that one directory contains files representing one data type: all
+ * JSON files in that directory should have a normalized structure.
+ *
+ * @package CCTM\Model
+ */
 class FilebasedModel {
 
     protected $dic;
