@@ -22,13 +22,20 @@ class FilebasedModel {
     protected $id;
     protected $ext = 'json'; // without the dot
     protected $pk; // primary key (should be one of the attributes)
-    protected $context = 'update'; // create | update
+    protected $context = 'create'; // create | update
+    protected $filesystem;
     protected $validator; // separate from $dic so we don't need to rely a convention to get the exact validator classname
 
-    public function __construct($dic, $validator)
+    /**
+     * TODO: inputs:  full-path to model, validator [, attributes? ]
+     * @param $dic
+     * @param $validator
+     */
+    public function __construct($dic, $filesystem, $validator)
     {
         $this->dic = $dic;
-
+        $this->filesystem = $filesystem;
+        
         // For testing the BaseModel, otherwise set in the child class
         if (empty($this->pk)) {
             $this->pk = $dic['pk'];
@@ -69,16 +76,16 @@ class FilebasedModel {
 
     public function getItem($id)
     {
-        //$this->dic['Filesystem']->read($id);
+        //$this->filesystem->read($id);
         // TODO: permissions: can read?
 
 
-        if (!$exists = $this->dic['Filesystem']->has($this->getFilename($id)))
+        if (!$exists = $this->filesystem->has($this->getFilename($id)))
         {
-            throw new FileNotFoundException('File not found: '.$this->getLocalDir().$id.'.json');
+            throw new FileNotFoundException('File not found: '.$this->getFilename($id));
         }
 
-        $this->fromArray((array) $this->dic['JsonDecoder']->decode($this->dic['Filesystem']->read($this->getFilename($id))));
+        $this->fromArray((array) $this->dic['JsonDecoder']->decode($this->filesystem->read($this->getFilename($id))));
         $this->context = 'update';
         $this->id = $id;
         return $this;
@@ -88,7 +95,7 @@ class FilebasedModel {
     public function getCollection(array $filters=array())
     {
         // TODO: cache this?
-        $contents = $this->dic['Filesystem']->listContents('/');
+        $contents = $this->filesystem->listContents('/');
 
         //return $contents;
         // Sample contents
@@ -117,14 +124,23 @@ class FilebasedModel {
     }
 
 
+    public function delete()
+    {
+
+    }
+
     public function duplicate($new_id)
     {
-        if ($exists = $this->dic['Filesystem']->has($this->getFilename($new_id)))
+        if ($exists = $this->filesystem->has($this->getFilename($new_id)))
         {
             throw new FileExistsException('File cannot be ovewritten. '.$this->getFilename($new_id));
         }
     }
 
+    public function rename($new_id)
+    {
+
+    }
 
     public function save()
     {
@@ -144,7 +160,7 @@ class FilebasedModel {
         // After validation, mark this as an update
         $this->context = 'update';
 
-        $this->dic['Filesystem']->put($this->getFilename($id), $this->dic['JsonEncoder']->encode($this->attr));
+        $this->filesystem->put($this->getFilename($id), $this->dic['JsonEncoder']->encode($this->data));
     }
 }
 
