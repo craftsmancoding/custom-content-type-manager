@@ -10,7 +10,7 @@ use CCTM\Model\FilebasedModel;
 class FilebasedModelTest extends PHPUnit_Framework_TestCase {
 
     public $dic;
-    
+
     public function setUp()
     {
         $this->dic = new Container();
@@ -163,8 +163,14 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
     public function testDelete()
     {
         $M = new FilebasedModel($this->dic, $this->dic['Filesystem'], $this->dic['Validator']);
+        $M->fromArray(array('x'=>'Xerxes','pk'=>'x'));
 
-        //$M->fromArray();
+        $M->save();
+
+        $this->assertTrue($this->dic['Filesystem']->has('x.json'));
+
+        $M->delete();
+        $this->assertFalse($this->dic['Filesystem']->has('x.json'));
     }
 
     public function testRename()

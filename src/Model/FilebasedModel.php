@@ -28,7 +28,9 @@ class FilebasedModel {
 
     /**
      * TODO: inputs:  full-path to model, validator [, attributes? ]
+     *
      * @param $dic
+     * @param $filesystem
      * @param $validator
      */
     public function __construct($dic, $filesystem, $validator)
@@ -126,28 +128,54 @@ class FilebasedModel {
 
     public function delete()
     {
-
+       // print $this->getId(); exit;
+        return $this->filesystem->delete($this->getFilename($this->id));
+        // do action?  Hook related items to this?
     }
 
+    /**
+     * This is a file operation.  If the object attributes have not been persisted (i.e. saved to file),
+     * then the new copy will not contain them.
+     *
+     * @param $new_id
+     *
+     * @throws FileExistsException
+     * @throws NotFoundException
+     */
     public function duplicate($new_id)
     {
+        // Has this file been saved yet?
+        // if ($this->isNew())
+
         if ($exists = $this->filesystem->has($this->getFilename($new_id)))
         {
-            throw new FileExistsException('File cannot be ovewritten. '.$this->getFilename($new_id));
+            throw new FileExistsException('Target file cannot be ovewritten. '.$this->getFilename($new_id));
         }
+
+        // $filesystem->copy('filename.txt', 'duplicate.txt');
+
+        // $copy = $this->getItem($new_id);
+        // Update primary key
+        // $copy->set($this->pk, $new_id);
+        // $copy->save();
+        // return $copy
     }
 
     public function rename($new_id)
     {
-
+        $oldname = $this->getFilename($this->getId());
+        $newname = $this->getFilename($new_id);
+        // update pk
+        // $this->set($this->pk, $new_id);
+        // $filesystem->rename($oldname, $newname);
     }
 
     public function save()
     {
         // Check PK
         $pk = $this->pk; // prepare string
-        $id = ($this->isNodeSet($this->pk)) ? $this->get($pk) : null;
-        if(!$id)
+        $this->id = ($this->isNodeSet($this->pk)) ? $this->get($pk) : null;
+        if(!$this->id)
         {
             throw new InvalidAttributesException('Missing primary key.');
         }
@@ -160,7 +188,7 @@ class FilebasedModel {
         // After validation, mark this as an update
         $this->context = 'update';
 
-        $this->filesystem->put($this->getFilename($id), $this->dic['JsonEncoder']->encode($this->data));
+        $this->filesystem->put($this->getFilename($this->id), $this->dic['JsonEncoder']->encode($this->data));
     }
 }
 
