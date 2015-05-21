@@ -57,3 +57,5 @@ Writing this plugin would have driven me insane without the help of the hard wor
 - http://validator.particle-php.com/en/latest/
 
 ? https://libraries.io/packagist/mcustiel%2Fphp-simple-config/0.3
+
+http://jsonapi.org/

@@ -127,11 +127,11 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
         $R = new Routes($this->dic);
 
         $this->assertEquals('getCollection',$R->getMethodName('get'));
-        $this->assertEquals('getItem',$R->getMethodName('get', 123));
-        $this->assertEquals('createItem',$R->getMethodName('post'));
-        $this->assertEquals('updateItem',$R->getMethodName('post', 123));
-        $this->assertEquals('overwriteItem',$R->getMethodName('put', 123));
-        $this->assertEquals('deleteItem',$R->getMethodName('delete', 123));
+        $this->assertEquals('getResource',$R->getMethodName('get', 123));
+        $this->assertEquals('createResource',$R->getMethodName('post'));
+        $this->assertEquals('updateResource',$R->getMethodName('post', 123));
+        $this->assertEquals('overwriteResource',$R->getMethodName('put', 123));
+        $this->assertEquals('deleteResource',$R->getMethodName('delete', 123));
     }
 
     /**
@@ -177,7 +177,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
         );
         $dic['TestController'] = function ($c) {
             return \Mockery::mock('TestController')
-                ->shouldReceive('getItem')
+                ->shouldReceive('getResource')
                 ->andReturn('Fuzzcake')
                 ->getMock();
         };

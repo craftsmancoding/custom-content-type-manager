@@ -9,17 +9,22 @@ use Pimple\Container;
  * Class Routes
  *
  * Used to route requests internally for the CCTM admin pages and api.
- * Returns the output of a controller class.  The controller called depends on the inputs. So the behavior of this class is coupled with the injected input (usually $_POST and $_GET data), and the function names it maps to in the controllers implements the
+ * Returns the output of a controller class method.  The controller called depends on the inputs. So the behavior of this class is coupled with the injected input (usually $_POST and $_GET data), and the function names it maps to in the controllers implements the
  * ideas from the StormPath API and "best practices" in REST API design.
  *
  * Controller methods are:
  *
- *  getItem($id)        - GET id specified, read-only
+ *  getResource($id)        - GET id specified, read-only
  *  getCollection()     - GET without id, read-only
- *  deleteItem($id)     - DELETE
- *  createItem()        - POST
- *  updateItem($id)     - POST updates only those items passed in the request body
- *  overwriteItem($id)  - PUT (indempotent)
+ *  deleteResource($id)     - DELETE
+ *  createResource()        - POST
+ *  updateResource($id)     - POST updates only those items passed in the request body
+ *  overwriteResource($id)  - PUT (indempotent)
+ *
+ * Verbs:
+ *
+ * POST : e.g. POST /fields -- when you don't know resource location (e.g. when the id is being auto generated)
+ * PUT : when you DO know the resource ID. Can be used to update OR create, but you must pass in the FULL object with all attributes.
  *
  * Remember: PUT requests must be idempotent!!!
  *
@@ -103,17 +108,17 @@ class Routes {
     {
         if ($verb == 'get')
         {
-            return ($id) ? 'getItem' : 'getCollection';
+            return ($id) ? 'getResource' : 'getCollection';
         }
         elseif ($verb == 'post')
         {
-            return ($id) ? 'updateItem' : 'createItem';
+            return ($id) ? 'updateResource' : 'createResource';
         }
         elseif ($verb == 'put')
         {
             if ($id)
             {
-                return 'overwriteItem';
+                return 'overwriteResource';
             }
             else
             {
@@ -124,7 +129,7 @@ class Routes {
         {
             if ($id)
             {
-                return 'deleteItem';
+                return 'deleteResource';
             }
             else
             {

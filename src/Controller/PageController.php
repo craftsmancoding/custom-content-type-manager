@@ -12,13 +12,29 @@
 
 use CCTM\Exceptions\NotAllowedException;
 
-class PageController extends BaseController{
+//class PageController extends BaseController{
+class PageController {
 
+    // From BaseController
+    public function __construct(Container $dic, callable $render_callback)
+    {
+        $this->dic = $dic;
+        $this->render_callback = $render_callback;
+    }
+
+    /**
+     * @param $out
+     *
+     * @return mixed
+     */
     public function render($out)
     {
-        call_user_func($this->dic['printer'], $out);
+        call_user_func($this->render_callback, $this->getResponseCode());
+        call_user_func($this->render_callback, $out);
         return $out;
     }
+
+
 
     /**
      * We need a function we can reference in callbacks without control over arguments passed in, so this is where we
@@ -27,33 +43,33 @@ class PageController extends BaseController{
      */
     public function getIndex()
     {
-        return $this->getItem('index');
+        return $this->getResource('index');
     }
 
-    public function getItem($id)
+    public function getResource($id)
     {
         $out = $this->dic['BladeRenderer']->render($id, array());
         return $this->render($out);
     }
 
-    public function getCollection()
-    {
-        throw new NotAllowedException('Action not allowed.');
-    }
-
-    public function deleteItem($id)
-    {
-        throw new NotAllowedException('Action not allowed.');
-    }
-
-    public function createItem()
-    {
-        throw new NotAllowedException('Action not allowed.');
-    }
-
-    public function updateItem($id)
-    {
-        throw new NotAllowedException('Action not allowed.');
-    }
+//    public function getCollection()
+//    {
+//        throw new NotAllowedException('Action not allowed.');
+//    }
+//
+//    public function deleteResource($id)
+//    {
+//        throw new NotAllowedException('Action not allowed.');
+//    }
+//
+//    public function createResource()
+//    {
+//        throw new NotAllowedException('Action not allowed.');
+//    }
+//
+//    public function updateResource($id)
+//    {
+//        throw new NotAllowedException('Action not allowed.');
+//    }
 }
 /*EOF*/

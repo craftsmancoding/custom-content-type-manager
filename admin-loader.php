@@ -64,8 +64,16 @@ $container['PageController'] = function ($c) {
     return new PageController($c);
 };
 
+$container['header'] = $container->protect(function ($out) {
+    header($out);
+});
+$container['http_response_code'] = $container->protect(function ($out) {
+    http_response_code($out);
+});
 $container['POST'] = $c['JsonDecoder']->decode(file_get_contents('php://input'));
 $container['GET'] = $_GET;
+
+
 
 
 add_action('admin_init', function(){
@@ -134,7 +142,7 @@ add_action('admin_menu', function() {
         'manage_options',						// capability
         'cctm',								    // menu-slug (should be unique)
         array(
-            new PageController($container),
+            new PageController($container, $this->dic['printer']),
             'getIndex'
         ), // callback function
         // see https://developer.wordpress.org/resource/dashicons/#media-code
@@ -146,7 +154,7 @@ add_action('admin_menu', function() {
 // All CCTM Ajax requests will use action = 'cctm'.
 // Further routing will be done internally in the AjaxController class
 //add_action( 'wp_ajax_cctm', array(new AjaxController($container), 'getIndex'));
-add_action( 'wp_ajax_cctm', array(new Routes($container), 'handle'));
+add_action( 'wp_ajax_cctm', array(new Routes($container, $container['ajax_printer']), 'handle'));
 // Trying to get rid of the <span class="ng-scope">0</span>
 //add_action( 'wp_ajax_cctm2', function(){ print 'Yol...'; });
 

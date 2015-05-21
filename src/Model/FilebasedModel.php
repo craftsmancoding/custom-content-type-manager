@@ -3,6 +3,7 @@
 use CCTM\Exceptions\FileNotFoundException;
 use CCTM\Exceptions\InvalidAttributesException;
 use CCTM\Exceptions\NotFoundException;
+use CCTM\Interfaces\ResourceInterface;
 
 /**
  * Class FilebasedModel
@@ -13,7 +14,7 @@ use CCTM\Exceptions\NotFoundException;
  *
  * @package CCTM\Model
  */
-class FilebasedModel {
+class FilebasedModel implements ResourceInterface{
 
     use \CCTM\Traits\DotNotation;
 
