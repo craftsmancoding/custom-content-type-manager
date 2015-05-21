@@ -15,7 +15,6 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
     {
         $this->dic = new Container();
         $this->dic['storage_dir'] = __DIR__.'/tmp/';
-        $this->dic['pk'] = 'pk';
         $this->dic['Filesystem'] = function ($c)
         {
             return new Filesystem(new Adapter($c['storage_dir']));
@@ -52,7 +51,7 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($M->isNew());
 
         $M = new FilebasedModel($this->dic, $this->dic['Filesystem'], $this->dic['Validator']);
-        $M->fromArray(array('a'=>'apple','pk'=>'test'));
+        $M->fromArray(array('a'=>'apple','id'=>'test'));
         $this->assertTrue($M->isNew());
 
         $M->save();
@@ -61,19 +60,19 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
         $M = new FilebasedModel($this->dic, $this->dic['Filesystem'], $this->dic['Validator']);
         $M->fromArray(array('a' => 'apple'));
         $this->assertTrue($M->isNew());
-        $M->getItem('test');
-        $this->assertFalse($M->isNew());
+        $test = $M->getOne('test');
+        $this->assertFalse($test->isNew());
 
     }
 
     /**
      * @expectedException CCTM\Exceptions\NotFoundException
      */
-    public function testGetItemFail()
+    public function testGetOneFail()
     {
         // setUp
         $M = new FilebasedModel($this->dic, $this->dic['Filesystem'], $this->dic['Validator']);
-        $Item = $M->getItem('does-not-exist');
+        $Item = $M->getOne('does-not-exist');
     }
 
     /**
@@ -94,10 +93,10 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
         $M->getFilename('');
     }
 
-    public function testGetItem()
+    public function testGetOne()
     {
         $M = new FilebasedModel($this->dic, new Filesystem(new Adapter(__DIR__.'/storage_dir/')), $this->dic['Validator']);
-        $apple = $M->getItem('a');
+        $apple = $M->getOne('a');
 
         $this->assertEquals('banana', $apple->get('b'));
 
@@ -107,14 +106,14 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
     {
         $M = new FilebasedModel($this->dic, new Filesystem(new Adapter(__DIR__.'/storage_dir/')), $this->dic['Validator']);
         $this->assertNull($M->getId());
-        $M->getItem('a');
-        $this->assertEquals('a', $M->getId());
+        $one = $M->getOne('a');
+        $this->assertEquals('a', $one->getId());
     }
 
     public function testSave()
     {
         $M = new FilebasedModel($this->dic, $this->dic['Filesystem'], $this->dic['Validator']);
-        $M->fromArray(array('x'=>'Xerxes','pk'=>'x'));
+        $M->fromArray(array('x'=>'Xerxes','id'=>'x'));
 
         $M->save();
 
@@ -157,13 +156,20 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
     public function testDuplicate()
     {
         $M = new FilebasedModel($this->dic, $this->dic['Filesystem'], $this->dic['Validator']);
+        $M->fromArray(array('x'=>'Xerxes','id'=>'x'));
 
+        $M->save();
+        $this->assertTrue($this->dic['Filesystem']->has('x.json'));
+        $this->assertFalse($this->dic['Filesystem']->has('y.json'));
+        $M->duplicate('y');
+        $this->assertTrue($this->dic['Filesystem']->has('x.json'));
+        $this->assertTrue($this->dic['Filesystem']->has('y.json'));
     }
 
     public function testDelete()
     {
         $M = new FilebasedModel($this->dic, $this->dic['Filesystem'], $this->dic['Validator']);
-        $M->fromArray(array('x'=>'Xerxes','pk'=>'x'));
+        $M->fromArray(array('x'=>'Xerxes','id'=>'x'));
 
         $M->save();
 
@@ -175,6 +181,19 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
 
     public function testRename()
     {
+        $M = new FilebasedModel($this->dic, $this->dic['Filesystem'], $this->dic['Validator']);
+        $M->fromArray(array('x'=>'Xerxes','id'=>'x'));
 
+        $M->save();
+
+        $this->assertTrue($this->dic['Filesystem']->has('x.json'));
+        $this->assertFalse($this->dic['Filesystem']->has('zz.json'));
+
+        $M->rename('zz');
+
+        //$c = $this->dic['Filesystem']->listContents('/');
+        //print_r($c);
+        $this->assertTrue($this->dic['Filesystem']->has('zz.json'));
+        $this->assertFalse($this->dic['Filesystem']->has('x.json'));
     }
 }

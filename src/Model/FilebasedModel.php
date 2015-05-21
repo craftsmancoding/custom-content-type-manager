@@ -21,7 +21,7 @@ class FilebasedModel {
 
     protected $id;
     protected $ext = 'json'; // without the dot
-    protected $pk; // primary key (should be one of the attributes)
+    protected $pk = 'id'; // name of primary key (should be one of the attributes)
     protected $context = 'create'; // create | update
     protected $filesystem;
     protected $validator; // separate from $dic so we don't need to rely a convention to get the exact validator classname
@@ -37,11 +37,6 @@ class FilebasedModel {
     {
         $this->dic = $dic;
         $this->filesystem = $filesystem;
-        
-        // For testing the BaseModel, otherwise set in the child class
-        if (empty($this->pk)) {
-            $this->pk = $dic['pk'];
-        }
     }
 
 
@@ -76,7 +71,7 @@ class FilebasedModel {
         return ($this->context == 'create');
     }
 
-    public function getItem($id)
+    public function getOne($id)
     {
         //$this->filesystem->read($id);
         // TODO: permissions: can read?
@@ -87,10 +82,15 @@ class FilebasedModel {
             throw new FileNotFoundException('File not found: '.$this->getFilename($id));
         }
 
-        $this->fromArray((array) $this->dic['JsonDecoder']->decode($this->filesystem->read($this->getFilename($id))));
+        // Tricky... because this class represents both a specific object AND actions on objects/collections in general,
+        // there can be headaches when fetching/duplicating/renaming objects
+        $one = clone $this;
+        $one->fromArray((array) $one->dic['JsonDecoder']->decode($this->filesystem->read($one->getFilename($id))));
+        $one->context = 'update';
         $this->context = 'update';
-        $this->id = $id;
-        return $this;
+        $one->id = $id; // required for duplication
+        //$this->id = $id; // required getId
+        return $one;
     }
 
     // TODO: filters
@@ -120,7 +120,7 @@ class FilebasedModel {
                 continue;
             }
 
-            $filtered[] = $this->getItem($c['filename']);
+            $filtered[] = $this->getOne($c['filename']);
         }
         return $filtered;
     }
@@ -129,8 +129,9 @@ class FilebasedModel {
     public function delete()
     {
        // print $this->getId(); exit;
-        return $this->filesystem->delete($this->getFilename($this->id));
+        $this->filesystem->delete($this->getFilename($this->id));
         // do action?  Hook related items to this?
+        return;
     }
 
     /**
@@ -139,6 +140,7 @@ class FilebasedModel {
      *
      * @param $new_id
      *
+     * @return FilebasedModel
      * @throws FileExistsException
      * @throws NotFoundException
      */
@@ -152,22 +154,19 @@ class FilebasedModel {
             throw new FileExistsException('Target file cannot be ovewritten. '.$this->getFilename($new_id));
         }
 
-        // $filesystem->copy('filename.txt', 'duplicate.txt');
+        $this->filesystem->copy($this->getFilename($this->getId()), $this->getFilename($new_id));
 
-        // $copy = $this->getItem($new_id);
+        $copy = $this->getOne($new_id);
         // Update primary key
-        // $copy->set($this->pk, $new_id);
-        // $copy->save();
-        // return $copy
+        $copy->set($copy->pk, $new_id);
+        $copy->save();
+        return $copy;
     }
 
     public function rename($new_id)
     {
-        $oldname = $this->getFilename($this->getId());
-        $newname = $this->getFilename($new_id);
-        // update pk
-        // $this->set($this->pk, $new_id);
-        // $filesystem->rename($oldname, $newname);
+        $this->duplicate($new_id);
+        $this->delete();
     }
 
     public function save()
