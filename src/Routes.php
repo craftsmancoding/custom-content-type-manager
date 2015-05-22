@@ -19,7 +19,7 @@ use Pimple\Container;
  *  deleteResource($id)     - DELETE
  *  createResource()        - POST
  *  updateResource($id)     - POST updates only those items passed in the request body
- *  overwriteResource($id)  - PUT (indempotent)
+ *  putResource($id)  - PUT (indempotent) can either create or update. All object params must be included!
  *
  * Verbs:
  *

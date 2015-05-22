@@ -130,7 +130,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals('getResource',$R->getMethodName('get', 123));
         $this->assertEquals('createResource',$R->getMethodName('post'));
         $this->assertEquals('updateResource',$R->getMethodName('post', 123));
-        $this->assertEquals('overwriteResource',$R->getMethodName('put', 123));
+        $this->assertEquals('putResource',$R->getMethodName('put', 123));
         $this->assertEquals('deleteResource',$R->getMethodName('delete', 123));
     }
 

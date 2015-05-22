@@ -28,9 +28,11 @@ class ControllerTest extends PHPUnit_Framework_TestCase
 //            ->getMock();
         $this->resource = \Mockery::mock('\\CCTM\\Interfaces\\ResourceInterface')
             ->shouldReceive('getOne')
-            ->andReturn('foo')
+            ->andReturn(\Mockery::self())
             ->shouldReceive('getCollection')
             ->andReturn(array('of','stuff'))
+            ->shouldReceive('delete')
+            ->andReturn(true)
             ->getMock();
 
         $this->controller = $this->getMockBuilder('\\CCTM\\Controller\\ResourceController')
@@ -63,13 +65,35 @@ class ControllerTest extends PHPUnit_Framework_TestCase
     public function testGetResource()
     {
         $r = $this->controller->getResource('test');
-        $this->assertEquals('foo', $r);
+        $this->assertTrue(is_a($r, '\\CCTM\\Interfaces\\ResourceInterface'));
     }
 
     public function testGetCollection()
     {
         $r = $this->controller->getCollection('test');
+        $this->assertTrue(is_array($r));
         $this->assertEquals(array('of','stuff'), $r);
+    }
+
+    public function testDeleteResource()
+    {
+        $r = $this->controller->deleteResource('test');
+    $this->assertTrue($r);
+    }
+
+    public function testCreateResource()
+    {
+
+    }
+
+    public function testUpdateResource()
+    {
+
+    }
+
+    public function testPutResource()
+    {
+
     }
 }
 /*EOF*/

@@ -13,6 +13,7 @@ abstract class ResourceController {
     public function __construct(Container $dic, ResourceInterface $resource, callable $render_callback)
     {
         $this->dic = $dic;
+        // TODO: filter out "private" POST vars?
         $this->resource = $resource;
         $this->render_callback = $render_callback;
     }
@@ -58,14 +59,18 @@ abstract class ResourceController {
 
     public function deleteResource($id)
     {
-
+        return $this->resource->getOne($id)->delete();
     }
 
     public function createResource()
     {
-
+        $this->resource->fromArray($this->dic['POST']);
     }
 
+    /**
+
+     * @param $id
+     */
     public function updateResource($id)
     {
 
@@ -76,7 +81,7 @@ abstract class ResourceController {
      *
      * @param $id
      */
-    public function overwriteResource($id)
+    public function putResource($id)
     {
 
     }

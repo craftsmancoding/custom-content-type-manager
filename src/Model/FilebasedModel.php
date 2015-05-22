@@ -129,10 +129,9 @@ class FilebasedModel implements ResourceInterface{
 
     public function delete()
     {
-       // print $this->getId(); exit;
         $this->filesystem->delete($this->getFilename($this->id));
         // do action?  Hook related items to this?
-        return;
+        return true;
     }
 
     /**
