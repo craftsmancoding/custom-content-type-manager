@@ -4,6 +4,7 @@ use CCTM\Exceptions\FileNotFoundException;
 use CCTM\Exceptions\InvalidAttributesException;
 use CCTM\Exceptions\NotFoundException;
 use CCTM\Interfaces\ResourceInterface;
+use Pimple\Container;
 
 /**
  * Class FilebasedModel
@@ -11,6 +12,8 @@ use CCTM\Interfaces\ResourceInterface;
  * This base class is an interface for using flat files to store object data, e.g. JSON files.
  * The intended use case is that one directory contains files representing one data type: all
  * JSON files in that directory should have a normalized structure.
+ *
+ * TODO: make abstract?
  *
  * @package CCTM\Model
  */
@@ -30,11 +33,11 @@ class FilebasedModel implements ResourceInterface{
     /**
      * TODO: inputs:  full-path to model, validator [, attributes? ]
      *
-     * @param $dic
-     * @param $filesystem
-     * @param $validator
+     * @param $dic Container
+     * @param $filesystem object
+     * @param $validator object
      */
-    public function __construct($dic, $filesystem, $validator)
+    public function __construct(Container $dic, $filesystem, $validator)
     {
         $this->dic = $dic;
         $this->filesystem = $filesystem;

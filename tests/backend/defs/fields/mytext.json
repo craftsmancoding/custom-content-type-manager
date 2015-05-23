@@ -1,0 +1,9 @@
+{
+  "id": "mytext",
+  "label" : "My Text",
+  "description": "Just a simple text field",
+  "class": "",
+  "extra": "",
+  "default_value": "",
+  "default_filter": ""
+}

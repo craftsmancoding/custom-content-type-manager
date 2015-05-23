@@ -1,5 +1,6 @@
 <?php namespace CCTM\Interfaces;
 interface ResourceInterface {
+
     public function getOne($id);
     public function getCollection(array $filters=array());
     public function delete();

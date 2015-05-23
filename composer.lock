@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c1eb1fae230ce6f0406cce86235c20c5",
+    "hash": "a14fe52114a5cc927450c5f5b4acfb17",
     "packages": [
         {
             "name": "illuminate/container",
@@ -376,67 +376,54 @@
             "time": "2015-03-29 14:01:43"
         },
         {
-            "name": "league/fractal",
-            "version": "0.12.0",
+            "name": "neomerx/json-api",
+            "version": "v0.3.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/fractal.git",
-                "reference": "0a51dcb6398dc2377d086210d0624996a1df8322"
+                "url": "https://github.com/neomerx/json-api.git",
+                "reference": "43801b14cec9988c19b15cce90ce8dadcd7d342f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/fractal/zipball/0a51dcb6398dc2377d086210d0624996a1df8322",
-                "reference": "0a51dcb6398dc2377d086210d0624996a1df8322",
+                "url": "https://api.github.com/repos/neomerx/json-api/zipball/43801b14cec9988c19b15cce90ce8dadcd7d342f",
+                "reference": "43801b14cec9988c19b15cce90ce8dadcd7d342f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4"
+                "php": ">=5.5.0"
             },
             "require-dev": {
-                "illuminate/contracts": "~5.0",
-                "mockery/mockery": "~0.9",
-                "pagerfanta/pagerfanta": "~1.0.0",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~1.5",
-                "zendframework/zend-paginator": "~2.3"
-            },
-            "suggest": {
-                "illuminate/pagination": "The Illuminate Pagination component.",
-                "pagerfanta/pagerfanta": "Pagerfanta Paginator",
-                "zendframework/zend-paginator": "Zend Framework Paginator"
+                "mockery/mockery": "~0.9.4",
+                "phpunit/phpunit": "~4.6",
+                "scrutinizer/ocular": "~1.1"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.13-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "League\\Fractal\\": "src"
+                    "Neomerx\\JsonApi\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Apache-2.0"
             ],
             "authors": [
                 {
-                    "name": "Phil Sturgeon",
-                    "email": "me@philsturgeon.uk",
-                    "homepage": "http://philsturgeon.uk/",
-                    "role": "Developer"
+                    "name": "neomerx",
+                    "email": "info@neomerx.com"
                 }
             ],
-            "description": "Handle the output of complex data structures ready for API output.",
-            "homepage": "http://fractal.thephpleague.com/",
+            "description": "Framework agnostic JSON API (jsonapi.org) implementation",
+            "homepage": "https://github.com/neomerx/json-api",
             "keywords": [
+                "JSON-API",
                 "api",
                 "json",
-                "league",
-                "rest"
+                "jsonapi",
+                "jsonapi.org",
+                "neomerx"
             ],
-            "time": "2015-03-19 15:16:43"
+            "time": "2015-05-18 22:45:32"
         },
         {
             "name": "particle/validator",
@@ -1891,7 +1878,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3"
+        "php": ">=5.4"
     },
     "platform-dev": []
 }
