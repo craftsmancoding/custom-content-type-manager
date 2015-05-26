@@ -1,5 +1,5 @@
 <?php namespace CCTM\Exceptions;
 
-class InvalidAttributesException extends \Exception {
+class InvalidAttributesException extends CCTMException {
 
 }

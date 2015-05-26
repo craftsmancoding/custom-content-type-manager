@@ -6,11 +6,13 @@ use CCTM\Exceptions\NotFoundException;
 class RoutesTest extends PHPUnit_Framework_TestCase {
 
     private $dic;
+    private $callback;
 
     protected function setUp()
     {
         $this->dic = new Container();
         $this->dic['POST'] = array();
+        $this->callback = function($out,$code){};
     }
 
     public function testPimple()
@@ -31,7 +33,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
             'x' => 'x-ray'
         );
 
-        $R = new Routes($this->dic);
+        $R = new Routes($this->dic, $this->callback);
         $actual = $R->input('x');
         $this->assertEquals('x-ray',$actual);
 
@@ -45,7 +47,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
         );
 
         $dic['GET'] = array();
-        $R = new Routes($dic);
+        $R = new Routes($dic, $this->callback);
 
         $actual = $R->getVerb();
         $this->assertEquals('get',$actual);
@@ -55,12 +57,12 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
     {
         $dic = new Container();
         $dic['GET'] = array(
-            '_resource' => 'valid'
+            '_resource' => 'fields'
         );
 
-        $R = new Routes($dic);
+        $R = new Routes($dic, $this->callback);
         $actual = $R->getResourceName();
-        $this->assertEquals('Valid',$actual);
+        $this->assertEquals('Fields',$actual);
     }
 
     /**
@@ -68,7 +70,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
      */
     public function testNotFound()
     {
-        $R = new Routes($this->dic);
+        $R = new Routes($this->dic, $this->callback);
         $R->getResourceName();
     }
 
@@ -82,8 +84,8 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
             '_verb' => 'invalid'
         );
 
-        $R = new Routes($this->dic);
-        $R->handle();
+        $R = new Routes($this->dic, $this->callback);
+        $R->getVerb();
     }
 
     /**
@@ -96,8 +98,8 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
             '_resource' => array('invalid')
         );
 
-        $R = new Routes($this->dic);
-        $R->handle();
+        $R = new Routes($this->dic, $this->callback);
+        $R->getResourceName();
     }
 
     /**
@@ -110,13 +112,13 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
             '_resource' => 'not-valid-classname'
         );
 
-        $R = new Routes($this->dic);
-        $R->handle();
+        $R = new Routes($this->dic, $this->callback);
+        $R->getResourceName();
     }
 
     public function testGetControllerName()
     {
-        $R = new Routes($this->dic);
+        $R = new Routes($this->dic, $this->callback);
 
         $this->assertEquals('SomethingController', $R->getControllerName('something'));
     }
@@ -124,7 +126,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
 
     public function testGetMethodName()
     {
-        $R = new Routes($this->dic);
+        $R = new Routes($this->dic, $this->callback);
 
         $this->assertEquals('getCollection',$R->getMethodName('get'));
         $this->assertEquals('getResource',$R->getMethodName('get', 123));
@@ -139,7 +141,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
      */
     public function testDisallowedMethodNames1()
     {
-        $R = new Routes($this->dic);
+        $R = new Routes($this->dic, $this->callback);
         $R->getMethodName('put');
     }
 
@@ -149,7 +151,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
      */
     public function testDisallowedMethodNames2()
     {
-        $R = new Routes($this->dic);
+        $R = new Routes($this->dic, $this->callback);
         $R->getMethodName('delete');
     }
 
@@ -157,33 +159,77 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
     {
         $dic = new Container();
         $dic['GET'] = array(
-            '_resource' => 'Test'
+            '_resource' => 'Fields'
         );
-        $dic['TestController'] = function ($c) {
-            return \Mockery::mock('TestController')
+        $dic['FieldsController'] = function ($c) {
+            return \Mockery::mock('FieldsController')
                 ->shouldReceive('getCollection')
                 ->andReturn('Yankee Doodle')
                 ->getMock();
         };
 
-        $R = new Routes($dic);
+        $R = new Routes($dic, $this->callback);
         $actual = $R->handle();
         $this->assertEquals('Yankee Doodle',$actual);
 
         $dic = new Container();
         $dic['GET'] = array(
-            '_resource' => 'Test',
+            '_resource' => 'Fields',
             '_id' => 123
         );
-        $dic['TestController'] = function ($c) {
-            return \Mockery::mock('TestController')
+        $dic['FieldsController'] = function ($c) {
+            return \Mockery::mock('FieldsController')
                 ->shouldReceive('getResource')
                 ->andReturn('Fuzzcake')
                 ->getMock();
         };
 
-        $R = new Routes($dic);
+        $R = new Routes($dic, $this->callback);
         $actual = $R->handle();
         $this->assertEquals('Fuzzcake',$actual);
+    }
+
+
+    public function testErrorResponse()
+    {
+        $dic = new Container();
+        $dic['GET'] = array(
+            '_resource' => 'invalid',
+        );
+
+        $R = new Routes($dic, $this->callback);
+        $actual = $R->handle();
+
+        $this->assertTrue(!empty($actual));
+        $data = json_decode($actual);
+        $this->assertTrue(is_object($data));
+        $this->assertTrue(isset($data->errors));
+        $this->assertTrue(is_array($data->errors));
+        $this->assertEquals(404, $data->errors[0]->status);
+    }
+
+    public function testErrorResponse2()
+    {
+        $dic = new Container();
+        $dic['GET'] = array(
+            '_resource' => 'fields',
+            '_id' => 'doest-not-exist'
+        );
+        $dic['FieldsController'] = function ($c) {
+            return \Mockery::mock('FieldsController')
+                ->shouldReceive('getResource')
+                ->andThrow('\\CCTM\\Exceptions\\FileNotFoundException','OMG!!')
+                ->getMock();
+        };
+
+        $R = new Routes($dic, $this->callback);
+        $actual = $R->handle();
+print $actual; exit;
+        $this->assertTrue(!empty($actual));
+        $data = json_decode($actual);
+        $this->assertTrue(is_object($data));
+        $this->assertTrue(isset($data->errors));
+        $this->assertTrue(is_array($data->errors));
+        $this->assertEquals(404, $data->errors[0]->status);
     }
 }

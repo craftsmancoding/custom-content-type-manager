@@ -61,3 +61,4 @@ Writing this plugin would have driven me insane without the help of the hard wor
 https://github.com/neomerx/json-api
 
 http://jsonapi.org/
+https://github.com/mgonto/restangular

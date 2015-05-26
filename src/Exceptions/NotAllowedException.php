@@ -1,5 +1,5 @@
 <?php namespace CCTM\Exceptions;
 
-class NotAllowedException extends \Exception {
+class NotAllowedException extends CCTMException {
 
 }

@@ -4,6 +4,7 @@ use CCTM\Exceptions\FileNotFoundException;
 use CCTM\Exceptions\InvalidAttributesException;
 use CCTM\Exceptions\NotFoundException;
 use CCTM\Interfaces\ResourceInterface;
+use CCTM\Interfaces\ValidatorInterface;
 use Pimple\Container;
 
 /**
@@ -28,19 +29,20 @@ class FilebasedModel implements ResourceInterface{
     protected $pk = 'id'; // name of primary key (should be one of the attributes)
     protected $context = 'create'; // create | update
     protected $filesystem;
-    protected $validator; // separate from $dic so we don't need to rely a convention to get the exact validator classname
+    protected $validator;
 
     /**
      * TODO: inputs:  full-path to model, validator [, attributes? ]
      *
-     * @param $dic Container
-     * @param $filesystem object
-     * @param $validator object
+     * @param                           $dic        Container
+     * @param                           $filesystem object
+     * @param ValidatorInterface|object $validator  object
      */
-    public function __construct(Container $dic, $filesystem, $validator)
+    public function __construct(Container $dic, $filesystem, ValidatorInterface $validator)
     {
         $this->dic = $dic;
         $this->filesystem = $filesystem;
+        $this->validator = $validator;
     }
 
 
@@ -182,9 +184,9 @@ class FilebasedModel implements ResourceInterface{
             throw new InvalidAttributesException('Missing primary key.');
         }
         // Validate
-        if (!$this->dic['Validator']->validate($this->toArray(), $this->context))
+        if (!$this->validator->validate($this->toArray(), $this->context))
         {
-            throw new InvalidAttributesException($this->dic['Validator']->getMessages());
+            throw new InvalidAttributesException($this->validator->getMessages());
         }
 
         // After validation, mark this as an update

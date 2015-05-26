@@ -53,24 +53,33 @@ $container['printer'] = $container->protect(function ($out) {
 $container['Validator'] = $container->factory(function ($c) {
     return new Validator();
 });
-$container['ajax_printer'] = $container->protect(function ($out) {
+$container['ajax_printer'] = $container->protect(function ($out,$code=200) {
+    http_response_code($code);
     echo $out;
     wp_die();
 });
 $container['BladeRenderer'] = function ($c) {
     return new BladeRenderer($c['template_paths'], array('cache_path' => get_temp_dir()));
 };
+// All Controllers must be defined here (manual "Factory")
 $container['PageController'] = function ($c) {
-    return new PageController($c);
+    return new PageController($c, $c['printer']);
 };
+//$container['FieldsController'] = function ($c) {
+//    return new FieldsController($c, $c['printer']);
+//};
 
 $container['header'] = $container->protect(function ($out) {
     header($out);
 });
+$container['__'] = $container->protect(function ($str) {
+    return __($str, 'cctm');
+});
 $container['http_response_code'] = $container->protect(function ($out) {
     http_response_code($out);
 });
-$container['POST'] = $c['JsonDecoder']->decode(file_get_contents('php://input'));
+$container['POST'] = $_POST;
+//$container['POST'] = $container['JsonDecoder']->decode(file_get_contents('php://input'));
 $container['GET'] = $_GET;
 
 
@@ -84,7 +93,6 @@ add_action('admin_init', function(){
     // on of our CCTM pages
     if ( in_array($file, array('post.php', 'post-new.php', 'edit.php', 'widgets.php')) || preg_match('/^cctm.*/', $page) ) {
 
-        //print 'asdfasdf'; exit;
 //        wp_register_style('CCTM_css', CCTM_URL . '/css/manager.css');
 //        wp_enqueue_style('CCTM_css');
         // Hand-holding: If your custom post-type omits the main content block,
@@ -142,7 +150,7 @@ add_action('admin_menu', function() {
         'manage_options',						// capability
         'cctm',								    // menu-slug (should be unique)
         array(
-            new PageController($container, $this->dic['printer']),
+            new PageController($container, $container['printer']),
             'getIndex'
         ), // callback function
         // see https://developer.wordpress.org/resource/dashicons/#media-code
@@ -155,6 +163,7 @@ add_action('admin_menu', function() {
 // Further routing will be done internally in the AjaxController class
 //add_action( 'wp_ajax_cctm', array(new AjaxController($container), 'getIndex'));
 add_action( 'wp_ajax_cctm', array(new Routes($container, $container['ajax_printer']), 'handle'));
+//print admin_url('admin-ajax.php'); exit;
 // Trying to get rid of the <span class="ng-scope">0</span>
 //add_action( 'wp_ajax_cctm2', function(){ print 'Yol...'; });
 

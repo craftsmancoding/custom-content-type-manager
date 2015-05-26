@@ -1,8 +1,13 @@
 <?php namespace CCTM;
 
+
+use CCTM\Exceptions\CCTMException;
 use CCTM\Exceptions\InvalidVerbException;
 use CCTM\Exceptions\NotAllowedException;
 use CCTM\Exceptions\NotFoundException;
+use Neomerx\JsonApi\Encoder\Encoder;
+use \Neomerx\JsonApi\Encoder\JsonEncodeOptions;
+
 use Pimple\Container;
 
 /**
@@ -30,22 +35,31 @@ use Pimple\Container;
  *
  * In PHP: admin_url('admin-ajax.php');
  * In JS: ajaxurl
+ * Will return something like http://domain.tld/wp-admin/admin-ajax.php
+ *
+ * Set the "action" parameter to "cctm" to hit the CCTM api endpoint, e.g.
+ *
+ *  $.post(ajaxurl, {action:"cctm"}, function(response) { alert(response); });
  *
  * @package CCTM
  */
 class Routes {
 
-    public static $verb = '_verb';
-    public static $resource = '_resource';
+    public static $verb = '_verb';          // workaround
+    public static $resource = '_resource';  // in lieu of this being part of the base URL
     public static $id = '_id';
 
     public static $verbs = array('get','post', 'put', 'delete');
 
+    // !! Warning !! this is hard-coded
+    public static $available = array('fields','filters','page','posttypes','settings','validators');
     private $dic;
+    private $render_callback;
 
-    public function __construct(Container $dic)
+    public function __construct(Container $dic, callable $render_callback)
     {
         $this->dic = $dic;
+        $this->render_callback = $render_callback;
     }
 
     public function input($key, $default = null)
@@ -77,15 +91,36 @@ class Routes {
     {
         if (!$resource_name = $this->input(self::$resource))
         {
-            throw new NotFoundException('Unspecified resource');
+            throw new NotFoundException('Unspecified resource', 40400, array(
+                    'id' => 'NotFoundException',
+                    'href' => '',
+                    'status' => 404,
+                    'title' => 'Resource Type Not Specified',
+                    'detail' => 'The resource type was not specified. Pass a value in the parameter: '.self::$resource,
+            ));
         }
         if (!is_scalar($resource_name))
         {
-            throw new NotFoundException('Invalid data type');
+            throw new NotFoundException('Invalid data type', 40401, array(
+                'id' => 'NotFoundException',
+                'href' => '',
+                'status' => 404,
+                'title' => 'Invalid Data Type',
+                'detail' => 'The '.self::$resource.' parameter must be a string.',
+            ));
         }
-        if (!preg_match('/^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$/', $resource_name))
+
+        $resource_name = strtolower($resource_name);
+
+        if (!in_array($resource_name, self::$available))
         {
-            throw new NotFoundException('Invalid resource name');
+            throw new NotFoundException('Invalid Resource Type', 40402, array(
+                'id' => 'NotFoundException',
+                'href' => '',
+                'status' => 404,
+                'title' => 'Invalid Resource Type',
+                'detail' => 'The named resource type must be one of the following available types: '. implode(', ', self::$available),
+            ));
         }
         return ucfirst(strtolower($resource_name));
     }
@@ -118,7 +153,7 @@ class Routes {
         {
             if ($id)
             {
-                return 'overwriteResource';
+                return 'putResource';
             }
             else
             {
@@ -148,13 +183,39 @@ class Routes {
      */
     public function handle()
     {
-        $verb = $this->getVerb();
-        $resource_name = $this->getResourceName();
-        $controller_name = $this->getControllerName($resource_name);
-        $id = $this->input(self::$id);
-        $method_name = $this->getMethodName($verb,$id);
 
-        return $this->dic[$controller_name]->$method_name($id);
+
+
+        try
+        {
+            $verb = $this->getVerb();
+            $resource_name = $this->getResourceName();
+            $controller_name = $this->getControllerName($resource_name);
+            $id = $this->input(self::$id);
+            $method_name = $this->getMethodName($verb,$id);
+
+            return $this->dic[$controller_name]->$method_name($id);
+        }
+        catch (CCTMException $e)
+        {
+
+            $error = new \Neomerx\JsonApi\Document\Error(
+                (string) $e->getMessage(),
+                //(string) $e->getId(),
+                null, // 'href', TODO: link to wiki
+                (string) $e->getStatus(), // HTTP status code
+                (string) $e->getCode(), // force this to be a string
+                (string) $e->getTitle(),
+                (string) $e->getDetail()
+            );
+
+            $out = Encoder::instance(array(), new JsonEncodeOptions(JSON_PRETTY_PRINT))->error($error);
+
+            call_user_func($this->render_callback, $out, $e->getStatus());
+
+            return $out; // <-- We only get here when testing: when we inject a callback that does not exit
+        }
+
     }
 
 }

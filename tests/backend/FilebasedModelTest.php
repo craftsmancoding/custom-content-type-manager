@@ -29,14 +29,14 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
         };
         $this->dic['Validator'] = function ($c)
         {
-            return \Mockery::mock('Validator')
+            return \Mockery::mock('CCTM\\Interfaces\\ValidatorInterface')
                 ->shouldReceive('validate')
                 ->andReturn(true)
                 ->getMock();
         };
 
-
     }
+
     // Root directories cannot be deleted
     public function tearDown()
     {

@@ -11,6 +11,7 @@
  */
 
 use CCTM\Exceptions\NotAllowedException;
+use Pimple\Container;
 
 //class PageController extends BaseController{
 class PageController {
@@ -29,7 +30,7 @@ class PageController {
      */
     public function render($out)
     {
-        call_user_func($this->render_callback, $this->getResponseCode());
+//        call_user_func($this->render_callback, $this->getResponseCode());
         call_user_func($this->render_callback, $out);
         return $out;
     }

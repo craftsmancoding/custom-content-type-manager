@@ -27,7 +27,7 @@
     "league/flysystem": "1.0.3",
     "webmozart/json": "1.0.0",
     "pimple/pimple": "3.0.0",
-    "particle/validator": "0.3.0"
+    "particle/validator": "0.4.2"
   },
   "require-dev": {
     "phpunit/phpunit": "4.6.6",
