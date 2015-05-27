@@ -67,6 +67,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
 
     /**
      * @expectedException \CCTM\Exceptions\NotFoundException
+     * @expectedExceptionCode 40400
      */
     public function testNotFound()
     {
@@ -76,6 +77,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
 
     /**
      * @expectedException \CCTM\Exceptions\InvalidVerbException
+     * @expectedExceptionCode 50100
      */
     public function testInvalidVerb()
     {
@@ -90,6 +92,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
 
     /**
      * @expectedException \CCTM\Exceptions\NotFoundException
+     * @expectedExceptionCode 40410
      */
     public function testInvalidResourceName1()
     {
@@ -104,6 +107,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
 
     /**
      * @expectedException \CCTM\Exceptions\NotFoundException
+     * @expectedExceptionCode 40420
      */
     public function testInvalidResourceName2()
     {
@@ -132,22 +136,24 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals('getResource',$R->getMethodName('get', 123));
         $this->assertEquals('createResource',$R->getMethodName('post'));
         $this->assertEquals('updateResource',$R->getMethodName('post', 123));
-        $this->assertEquals('putResource',$R->getMethodName('put', 123));
+        $this->assertEquals('patchResource',$R->getMethodName('patch', 123));
         $this->assertEquals('deleteResource',$R->getMethodName('delete', 123));
     }
 
     /**
      * @expectedException \CCTM\Exceptions\NotAllowedException
+     * @expectedExceptionCode 40000
      */
     public function testDisallowedMethodNames1()
     {
         $R = new Routes($this->dic, $this->callback);
-        $R->getMethodName('put');
+        $R->getMethodName('patch');
     }
 
 
     /**
      * @expectedException \CCTM\Exceptions\NotAllowedException
+     * @expectedExceptionCode 40010
      */
     public function testDisallowedMethodNames2()
     {
@@ -189,47 +195,4 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals('Fuzzcake',$actual);
     }
 
-
-    public function testErrorResponse()
-    {
-        $dic = new Container();
-        $dic['GET'] = array(
-            '_resource' => 'invalid',
-        );
-
-        $R = new Routes($dic, $this->callback);
-        $actual = $R->handle();
-
-        $this->assertTrue(!empty($actual));
-        $data = json_decode($actual);
-        $this->assertTrue(is_object($data));
-        $this->assertTrue(isset($data->errors));
-        $this->assertTrue(is_array($data->errors));
-        $this->assertEquals(404, $data->errors[0]->status);
-    }
-
-    public function testErrorResponse2()
-    {
-        $dic = new Container();
-        $dic['GET'] = array(
-            '_resource' => 'fields',
-            '_id' => 'doest-not-exist'
-        );
-        $dic['FieldsController'] = function ($c) {
-            return \Mockery::mock('FieldsController')
-                ->shouldReceive('getResource')
-                ->andThrow('\\CCTM\\Exceptions\\FileNotFoundException','OMG!!')
-                ->getMock();
-        };
-
-        $R = new Routes($dic, $this->callback);
-        $actual = $R->handle();
-print $actual; exit;
-        $this->assertTrue(!empty($actual));
-        $data = json_decode($actual);
-        $this->assertTrue(is_object($data));
-        $this->assertTrue(isset($data->errors));
-        $this->assertTrue(is_array($data->errors));
-        $this->assertEquals(404, $data->errors[0]->status);
-    }
 }

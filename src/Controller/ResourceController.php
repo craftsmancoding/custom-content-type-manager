@@ -25,9 +25,11 @@ abstract class ResourceController {
      */
     public function render($out)
     {
-        call_user_func($this->render_callback, $this->getResponseCode());
+        call_user_func($this->render_callback, $out, $this->getResponseCode());
         // call_user_func($this->render_callback, $out);
         return $out;
+        
+        $out = $this->dic['JsonApi']->encode($this->resource);
     }
 
     /**
@@ -77,11 +79,12 @@ abstract class ResourceController {
     }
 
     /**
-     * Indempotent: this creates/updates the item with the payload
+     * From the JSON-API Spec: "the server MUST interpret the missing fields as if they
+     * were included with their current values. It MUST NOT interpret them as null values."
      *
      * @param $id
      */
-    public function putResource($id)
+    public function patchResource($id)
     {
 
     }

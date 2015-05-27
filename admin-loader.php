@@ -15,6 +15,8 @@ use League\Flysystem\Adapter\Local as Adapter;
 use Pimple\Container;
 use Webmozart\Json\JsonEncoder;
 use Webmozart\Json\JsonDecoder;
+use Neomerx\JsonApi\Encoder\Encoder;
+use Neomerx\JsonApi\Encoder\JsonEncodeOptions;
 use Particle\Validator\Validator;
 use CCTM\Controller\PageController;
 use CCTM\Controller\AjaxController;
@@ -47,30 +49,41 @@ $container['JsonEncoder'] = function ($c)
 {
     return new JsonEncoder();
 };
-$container['printer'] = $container->protect(function ($out) {
-    print $out;
-});
+
 $container['Validator'] = $container->factory(function ($c) {
     return new Validator();
-});
-$container['ajax_printer'] = $container->protect(function ($out,$code=200) {
-    http_response_code($code);
-    echo $out;
-    wp_die();
 });
 $container['BladeRenderer'] = function ($c) {
     return new BladeRenderer($c['template_paths'], array('cache_path' => get_temp_dir()));
 };
+$container['JsonApi'] = function ($c) {
+    return Encoder::instance(array(
+        'CCTM\\Model\\Field'  => 'CCTM\\Schema\\FieldSchema',
+    ), new JsonEncodeOptions(JSON_PRETTY_PRINT));
+};
+
 // All Controllers must be defined here (manual "Factory")
 $container['PageController'] = function ($c) {
     return new PageController($c, $c['printer']);
 };
 //$container['FieldsController'] = function ($c) {
-//    return new FieldsController($c, $c['printer']);
+//      $Filesystem = new Filesystem(new Adapter($c['storage_dir'].'/fields'));
+//      $Validator = new \CCTM\Validators\FieldValidator($c['Validator']);
+//      $F = new \CCTM\Model\Field($c, $Filesystem, $Validator);
+//    return new FieldsController($c, new \CCTM\Model\Field($c, $Filesystem, $Validator), $c['printer']);
 //};
 
+// Functions
 $container['header'] = $container->protect(function ($out) {
     header($out);
+});
+$container['printer'] = $container->protect(function ($out) {
+    print $out;
+});
+$container['ajax_printer'] = $container->protect(function ($out,$code=200) {
+    http_response_code($code);
+    echo $out;
+    wp_die();
 });
 $container['__'] = $container->protect(function ($str) {
     return __($str, 'cctm');
@@ -78,6 +91,11 @@ $container['__'] = $container->protect(function ($str) {
 $container['http_response_code'] = $container->protect(function ($out) {
     http_response_code($out);
 });
+$container['get_post_types'] = $container->protect(function ($args=array(), $output='names', $operator='and') {
+    return get_post_types($args, $output, $operator);
+});
+
+// Globals
 $container['POST'] = $_POST;
 //$container['POST'] = $container['JsonDecoder']->decode(file_get_contents('php://input'));
 $container['GET'] = $_GET;

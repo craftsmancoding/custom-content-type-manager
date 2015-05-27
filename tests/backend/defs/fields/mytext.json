@@ -2,8 +2,8 @@
   "id": "mytext",
   "label" : "My Text",
   "description": "Just a simple text field",
-  "class": "",
-  "extra": "",
-  "default_value": "",
+  "class": "\\CCTM\\Fields\\Text",
+  "extra": "data-something='nada'",
+  "default_value": "Yes",
   "default_filter": ""
 }

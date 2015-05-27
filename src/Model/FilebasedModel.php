@@ -2,7 +2,6 @@
 
 use CCTM\Exceptions\FileNotFoundException;
 use CCTM\Exceptions\InvalidAttributesException;
-use CCTM\Exceptions\NotFoundException;
 use CCTM\Interfaces\ResourceInterface;
 use CCTM\Interfaces\ValidatorInterface;
 use Pimple\Container;
@@ -52,14 +51,20 @@ class FilebasedModel implements ResourceInterface{
      * @param $id
      *
      * @return string
-     * @throws NotFoundException
+     * @throws FileNotFoundException
      */
     public function getFilename($id)
     {
         // Avoid directory transversing
         if (!preg_match('/^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$/', $id))
         {
-            throw new NotFoundException('Invalid resource name');
+            throw new FileNotFoundException('Invalid File Name', 40450, array(
+                'id' => 'FileNotFoundException',
+                'href' => '',
+                'status' => 404,
+                'title' => 'Invalid File Name',
+                'detail' => 'Files must be identified by stubs only, without extensions.  Directory traversing and sub-directories are not allowed',
+            ));
         }
         return $id.'.'.$this->ext;
     }
@@ -147,7 +152,7 @@ class FilebasedModel implements ResourceInterface{
      *
      * @return FilebasedModel
      * @throws FileExistsException
-     * @throws NotFoundException
+     * @throws FileNotFoundException
      */
     public function duplicate($new_id)
     {

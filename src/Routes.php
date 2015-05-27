@@ -24,7 +24,7 @@ use Pimple\Container;
  *  deleteResource($id)     - DELETE
  *  createResource()        - POST
  *  updateResource($id)     - POST updates only those items passed in the request body
- *  putResource($id)  - PUT (indempotent) can either create or update. All object params must be included!
+ *  patchResource($id)  - PATCH (indempotent) All object params must be included!
  *
  * Verbs:
  *
@@ -49,7 +49,7 @@ class Routes {
     public static $resource = '_resource';  // in lieu of this being part of the base URL
     public static $id = '_id';
 
-    public static $verbs = array('get','post', 'put', 'delete');
+    public static $verbs = array('get','post', 'patch', 'delete');
 
     // !! Warning !! this is hard-coded
     public static $available = array('fields','filters','page','posttypes','settings','validators');
@@ -77,7 +77,12 @@ class Routes {
 
         if (!in_array($verb, self::$verbs))
         {
-            throw new InvalidVerbException('Unsupported method: '.$verb);
+            throw new InvalidVerbException('Method Not Implemented', 50100, array(
+                'id' => 'InvalidVerbException',
+                'href' => '',
+                'status' => 501,
+                'detail' => 'Only the following request verbs (i.e. methods) are allowed: '.implode(', ', self::$verbs).'. Pass them using the '.self::$verb.' parameter.',
+            ));
         }
         return $verb;
     }
@@ -91,21 +96,19 @@ class Routes {
     {
         if (!$resource_name = $this->input(self::$resource))
         {
-            throw new NotFoundException('Unspecified resource', 40400, array(
+            throw new NotFoundException('Resource Type Not Specified', 40400, array(
                     'id' => 'NotFoundException',
                     'href' => '',
                     'status' => 404,
-                    'title' => 'Resource Type Not Specified',
                     'detail' => 'The resource type was not specified. Pass a value in the parameter: '.self::$resource,
             ));
         }
         if (!is_scalar($resource_name))
         {
-            throw new NotFoundException('Invalid data type', 40401, array(
+            throw new NotFoundException('Invalid Data Type', 40410, array(
                 'id' => 'NotFoundException',
                 'href' => '',
                 'status' => 404,
-                'title' => 'Invalid Data Type',
                 'detail' => 'The '.self::$resource.' parameter must be a string.',
             ));
         }
@@ -114,11 +117,10 @@ class Routes {
 
         if (!in_array($resource_name, self::$available))
         {
-            throw new NotFoundException('Invalid Resource Type', 40402, array(
+            throw new NotFoundException('Invalid Resource Type', 40420, array(
                 'id' => 'NotFoundException',
                 'href' => '',
                 'status' => 404,
-                'title' => 'Invalid Resource Type',
                 'detail' => 'The named resource type must be one of the following available types: '. implode(', ', self::$available),
             ));
         }
@@ -149,15 +151,21 @@ class Routes {
         {
             return ($id) ? 'updateResource' : 'createResource';
         }
-        elseif ($verb == 'put')
+        // the server MUST interpret the missing fields as if they were included with their current values. It MUST NOT interpret them as null values.
+        elseif ($verb == 'patch')
         {
             if ($id)
             {
-                return 'putResource';
+                return 'patchResource';
             }
             else
             {
-                throw new NotAllowedException('Put not allowed without resource id.');
+                throw new NotAllowedException('Missing ID', 40000, array(
+                    'id' => 'NotAllowedException',
+                    'href' => '',
+                    'status' => 400,
+                    'detail' => 'PATCH requests must reference a specific resource by its id.',
+                ));
             };
         }
         elseif ($verb == 'delete')
@@ -168,7 +176,12 @@ class Routes {
             }
             else
             {
-                throw new NotAllowedException('Resource id required. deleteCollection not allowed.');
+                throw new NotAllowedException('Missing ID', 40010, array(
+                    'id' => 'NotAllowedException',
+                    'href' => '',
+                    'status' => 400,
+                    'detail' => 'DELETE requests must reference a specific resource by its id.',
+                ));
             }
         }
     }
@@ -183,9 +196,6 @@ class Routes {
      */
     public function handle()
     {
-
-
-
         try
         {
             $verb = $this->getVerb();
@@ -200,12 +210,11 @@ class Routes {
         {
 
             $error = new \Neomerx\JsonApi\Document\Error(
-                (string) $e->getMessage(),
-                //(string) $e->getId(),
+                (string) $e->getId(),
                 null, // 'href', TODO: link to wiki
                 (string) $e->getStatus(), // HTTP status code
                 (string) $e->getCode(), // force this to be a string
-                (string) $e->getTitle(),
+                (string) $e->getMessage(),
                 (string) $e->getDetail()
             );
 
