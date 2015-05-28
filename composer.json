@@ -23,7 +23,7 @@
     "php": ">=5.4",
     "windwalker/renderer": "2.*",
     "illuminate/view": "4.*",
-    "neomerx/json-api": "0.3.0",
+    "neomerx/json-api": "0.4.1",
     "league/flysystem": "1.0.3",
     "webmozart/json": "1.0.0",
     "pimple/pimple": "3.0.0",

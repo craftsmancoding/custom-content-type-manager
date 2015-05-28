@@ -1,6 +1,6 @@
 <?php namespace CCTM\Model;
 
-class Field extends FilebasedModel
+class Taxonomy extends FilebasedModel
 {
     function hydrate()
     {

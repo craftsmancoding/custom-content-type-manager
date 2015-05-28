@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e3e48dc24350ee3263a2b76554a857e3",
+    "hash": "f075005a3221c6ccb36e0124dd938419",
     "packages": [
         {
             "name": "illuminate/container",
@@ -377,16 +377,16 @@
         },
         {
             "name": "neomerx/json-api",
-            "version": "v0.3.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neomerx/json-api.git",
-                "reference": "43801b14cec9988c19b15cce90ce8dadcd7d342f"
+                "reference": "682e94d30beaa63d59656c4183c1454d0a5916bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neomerx/json-api/zipball/43801b14cec9988c19b15cce90ce8dadcd7d342f",
-                "reference": "43801b14cec9988c19b15cce90ce8dadcd7d342f",
+                "url": "https://api.github.com/repos/neomerx/json-api/zipball/682e94d30beaa63d59656c4183c1454d0a5916bc",
+                "reference": "682e94d30beaa63d59656c4183c1454d0a5916bc",
                 "shasum": ""
             },
             "require": {
@@ -423,7 +423,7 @@
                 "jsonapi.org",
                 "neomerx"
             ],
-            "time": "2015-05-18 22:45:32"
+            "time": "2015-05-28 17:22:18"
         },
         {
             "name": "particle/validator",
@@ -565,7 +565,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.5.11",
+            "version": "v2.5.12",
             "target-dir": "Symfony/Component/Finder",
             "source": {
                 "type": "git",
@@ -1395,16 +1395,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "74ffb87f527f24616f72460e54b595f508dccb5c"
+                "reference": "787e06820578ca103b21e323e27f0e2eb0712ae5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/74ffb87f527f24616f72460e54b595f508dccb5c",
-                "reference": "74ffb87f527f24616f72460e54b595f508dccb5c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/787e06820578ca103b21e323e27f0e2eb0712ae5",
+                "reference": "787e06820578ca103b21e323e27f0e2eb0712ae5",
                 "shasum": ""
             },
             "require": {
@@ -1446,7 +1446,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-04-02 05:36:41"
+            "time": "2015-05-28 09:50:37"
         },
         {
             "name": "sebastian/comparator",
@@ -1821,7 +1821,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",

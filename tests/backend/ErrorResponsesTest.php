@@ -140,8 +140,6 @@ class ErrorResponsesTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(404, $data->errors[0]->status);
         $this->assertEquals(40450, $data->errors[0]->code);
 
-        $expected = json_decode(file_get_contents(__DIR__.'/responses/40450.json'));
-        $this->assertEquals($data,$expected);
     }
 
     public function test50100()

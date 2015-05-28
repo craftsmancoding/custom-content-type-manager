@@ -1,0 +1,12 @@
+{
+  "errors": [
+    {
+      "id": "MyErrorId",
+      "href": "http:\/\/github.com\/somewhere\/wiki",
+      "status": "500",
+      "code": "50066",
+      "title": "There was a Problem",
+      "detail": "Details go here."
+    }
+  ]
+}

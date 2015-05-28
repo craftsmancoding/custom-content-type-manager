@@ -61,7 +61,7 @@ $container['Validator'] = $container->factory(function ($c) {
 $container['BladeRenderer'] = function ($c) {
     return new BladeRenderer($c['template_paths'], array('cache_path' => get_temp_dir()));
 };
-$container['JsonApi'] = function ($c) {
+$container['JsonApiEncoder'] = function ($c) {
     return Encoder::instance(array(
         'CCTM\\Model\\Field'  => 'CCTM\\Schema\\FieldSchema',
     ), new JsonEncodeOptions(JSON_PRETTY_PRINT));
@@ -85,8 +85,13 @@ $container['header'] = $container->protect(function ($out) {
 $container['printer'] = $container->protect(function ($out) {
     print $out;
 });
-$container['ajax_printer'] = $container->protect(function ($out,$code=200) {
+$container['ajax_printer'] = $container->protect(function ($out,$headers=array('Content-Type: application/vnd.api+json'), $code=200) {
     http_response_code($code);
+    //header('Content-Type: application/vnd.api+json');
+    foreach ($headers as $h)
+    {
+        header($h);
+    }
     echo $out;
     wp_die();
 });
@@ -95,6 +100,9 @@ $container['__'] = $container->protect(function ($str) {
 });
 $container['http_response_code'] = $container->protect(function ($out) {
     http_response_code($out);
+});
+$container['resource_url'] = $container->protect(function ($resource,$id) {
+    return admin_url('admin-ajax.php').'?action=cctm&_resource='.$resource.'&id='.$id;
 });
 $container['get_post_types'] = $container->protect(function ($args=array(), $output='names', $operator='and') {
     return get_post_types($args, $output, $operator);

@@ -14,15 +14,16 @@ class FieldSchema extends SchemaProvider
     }
     public function getAttributes($field)
     {
+        // "type" and "id" are reserved keywords and cannot be used as resource object attributes
         return array(
-            'id'  => $field->get('id'),
-            'type'  => $field->get('type'),
+            'discriminator'  => $field->get('discriminator'),
             'label'  => $field->get('label'),
             'description'  => $field->get('description'),
             'class'  => $field->get('class'),
             'extra'  => $field->get('extra'),
             'default_value'  => $field->get('default_value'),
             'default_filter'  => $field->get('default_filter'),
+            'validator'  => $field->get('validator'),
             'meta'  => $field->get('meta'),
         );
         // return $field->toArray();
@@ -40,9 +41,7 @@ class FieldSchema extends SchemaProvider
 
     public function getSelfUrl($resource)
     {
-        return '/asdfasdf';
-        // TODO: set dynamically per installation location
-        return $this->getBaseSelfUrl($resource).$this->getId($resource);
+        return $resource->getResourceUrl($this->resourceType, $this->getId($resource));
     }
 
 }

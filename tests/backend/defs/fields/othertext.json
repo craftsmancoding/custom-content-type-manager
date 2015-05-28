@@ -1,10 +1,10 @@
 {
-  "id": "mytext",
+  "id": "othertext",
   "discriminator": "\\CCTM\\Fields\\Text",
-  "label" : "My Text",
-  "description": "Just a simple text field",
+  "label" : "Other Text",
+  "description": "Another text field",
   "css_class": "some-class",
-  "extra": "data-something='nada'",
+  "extra": "data-something='nothing'",
   "default_value": "Yes",
   "default_filter": "",
   "validator":{

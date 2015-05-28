@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "type": "fields",
+      "id": "mytext",
+      "attributes": {
+        "discriminator": "CCTM\\Fields\\Text",
+        "label": "My Text Field",
+        "description": "Just a description",
+        "class": null,
+        "extra": "",
+        "default_value": "12",
+        "default_filter": "",
+        "validator": {
+          "discriminator": "",
+          "meta": []
+        },
+        "meta": []
+      },
+      "links": {
+        "self": "http:\/\/example.com\/?action=cctm&_resource=fields&id=mytext"
+      }
+    },
+    {
+      "type": "fields",
+      "id": "othertext",
+      "attributes": {
+        "discriminator": "CCTM\\Fields\\Text",
+        "label": "Some other Text Field",
+        "description": "another a description",
+        "class": null,
+        "extra": "",
+        "default_value": "13",
+        "default_filter": "",
+        "validator": {
+          "discriminator": "",
+          "meta": []
+        },
+        "meta": []
+      },
+      "links": {
+        "self": "http:\/\/example.com\/?action=cctm&_resource=fields&id=othertext"
+      }
+    }
+  ]
+}

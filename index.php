@@ -36,13 +36,13 @@ function cctm_run_tests()
 
 // Test for the bare minimums...
 // These tests happen on EVERY page request, so best to keep it light.
-if ( version_compare( phpversion(), '5.3.0', '<') ) {
+if ( version_compare( phpversion(), '5.4.0', '<') ) {
     add_action('admin_notices', 'cctm_cannot_load');
     return; // exit
 }
 
 
-// Proceed with PHP 5.3.0 compatible stuff
+// Proceed with PHP 5.4.0 compatible stuff
 require_once 'vendor/autoload.php';
 require_once 'loader.php';
 if ( is_admin())

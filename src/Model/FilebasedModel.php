@@ -1,5 +1,6 @@
 <?php namespace CCTM\Model;
 
+use CCTM\Exceptions\FileExistsException;
 use CCTM\Exceptions\FileNotFoundException;
 use CCTM\Exceptions\InvalidAttributesException;
 use CCTM\Interfaces\ResourceInterface;
@@ -43,6 +44,10 @@ class FilebasedModel implements ResourceInterface{
         $this->validator = $validator;
     }
 
+    public function getResourceUrl($type, $id=null)
+    {
+        return call_user_func($this->dic['resource_url'], $type,$id);
+    }
 
     /**
      * Get relative filename within the Flysystem root
@@ -68,9 +73,23 @@ class FilebasedModel implements ResourceInterface{
         return $id.'.'.$this->ext;
     }
 
+    /**
+     * Get the primary key
+     * @return mixed|null
+     */
     public function getId()
     {
-        return $this->id;
+        return ($this->isNodeSet($this->pk)) ? $this->get($this->pk) : null;
+        //return $this->id;
+    }
+
+    /**
+     * Override "id" as the primary identifier for this object
+     * @param $key
+     */
+    public function setPk($key)
+    {
+        $this->pk = $key;
     }
 
     /**
@@ -165,10 +184,10 @@ class FilebasedModel implements ResourceInterface{
 
         if ($exists = $this->filesystem->has($this->getFilename($new_id)))
         {
-            throw new FileExistsException('File not found', 50010, array(
+            throw new FileExistsException('File not found', 40900, array(
                 'id' => 'FileExistsException',
                 'href' => '',
-                'status' => 500,
+                'status' => 409,
                 'detail' => 'File cannot be duplicated because the target file cannot be overwritten: '.$this->getFilename($new_id),
             ));
         }
@@ -199,19 +218,26 @@ class FilebasedModel implements ResourceInterface{
                 'id' => 'InvalidAttributesException',
                 'href' => '',
                 'status' => 500,
-                'detail' => 'You cannot ',
+                'detail' => 'You cannot save this object without specifying its unique primary key ('.$this->pk.')',
             ));
         }
         // Validate
         if (!$this->validator->validate($this->toArray(), $this->context))
         {
-            throw new InvalidAttributesException($this->validator->getMessages());
+            throw new InvalidAttributesException('Validation Error', 40020, array(
+                'id' => 'InvalidAttributesException',
+                'href' => '',
+                'status' => 400,
+                'detail' => 'Input validation failed with the following errors: '.$this->validator->getMessages(),
+            ));
         }
 
         // After validation, mark this as an update
         $this->context = 'update';
 
         $this->filesystem->put($this->getFilename($this->id), $this->dic['JsonEncoder']->encode($this->data));
+
+        return true;
     }
 }
 

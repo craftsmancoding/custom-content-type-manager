@@ -1,7 +1,11 @@
 <?php
 use Pimple\Container;
-use CCTM\Routes;
-use CCTM\Exceptions\NotFoundException;
+use League\Flysystem\Filesystem;
+use League\Flysystem\Adapter\Local as Adapter;
+use Neomerx\JsonApi\Encoder\Encoder;
+use Neomerx\JsonApi\Encoder\JsonEncodeOptions;
+use Webmozart\Json\JsonEncoder;
+use Webmozart\Json\JsonDecoder;
 
 /**
  * Class ControllerTest
@@ -15,75 +19,132 @@ class ControllerTest extends PHPUnit_Framework_TestCase
 
     private $dic;
     private $resource;
+    private $controller;
+    private $mock_resource;
+    private $mock_controller;
+
+
 
     protected function setUp()
     {
         $this->dic         = new Container();
         $this->dic['POST'] = array();
-        $this->dic['render_callback'] = $this->dic->protect(function ($out) {
-            // do nothing
+        // Simulate a response
+        $this->dic['render_callback'] = $this->dic->protect(function ($str, $headers=array('Content-Type: application/vnd.api+json'), $code) {
+            $out = 'HTTP/1.1 '.$code."\n";
+            //$out .= 'Content-Type: application/vnd.api+json'."\n";
+            foreach ($headers as $h)
+            {
+                $out .= $h ."\n";
+            }
+            $out .= $str;
+            return $out;
+
+        });
+        $this->dic['resource_url'] = $this->dic->protect(function ($resource,$id) {
+            return 'http://example.com/?action=cctm&_resource='.$resource.'id='.$id;
         });
 
-//        $this->resource = $this->getMockBuilder('\\CCTM\\Interfaces\\ResourceInterface')
-//            ->getMock();
-        $this->resource = \Mockery::mock('\\CCTM\\Interfaces\\ResourceInterface')
+
+        $this->dic['Filesystem'] = $this->dic->protect(function ($dir) {
+            return new Filesystem(new Adapter($dir));
+        });
+        $this->dic['JsonDecoder'] = function ($c)
+        {
+            return new JsonDecoder();
+        };
+        $this->dic['JsonEncoder'] = function ($c)
+        {
+            return new JsonEncoder();
+        };
+        $this->dic['Validator'] = function ($c)
+        {
+            return \Mockery::mock('CCTM\\Interfaces\\ValidatorInterface')
+                ->shouldReceive('validate')
+                ->andReturn(true)
+                ->getMock();
+        };
+        $this->dic['JsonApiEncoder'] = function ($c) {
+            return Encoder::instance(array(
+                'CCTM\\Model\\Field'  => 'CCTM\\Schema\\FieldSchema',
+            ), new JsonEncodeOptions(JSON_PRETTY_PRINT));
+        };
+
+        $this->resource = new \CCTM\Model\Field($this->dic,__DIR__.'/defs/fields',$this->dic['Validator']);
+        $this->mock_resource = \Mockery::mock('\\CCTM\\Interfaces\\ResourceInterface')
             ->shouldReceive('getOne')
             ->andReturn(\Mockery::self())
-            ->shouldReceive('getCollection')
-            ->andReturn(array('of','stuff'))
             ->shouldReceive('delete')
+            ->andReturn(true)
+            ->shouldReceive('fromArray')
+            ->andReturn(true)
+            ->shouldReceive('getId')
+            ->andReturn('test')
+            ->shouldReceive('save')
             ->andReturn(true)
             ->getMock();
 
         $this->controller = $this->getMockBuilder('\\CCTM\\Controller\\ResourceController')
             ->setConstructorArgs(array($this->dic, $this->resource, $this->dic['render_callback']))
             ->getMockForAbstractClass();
+
+        $this->mock_controller = $this->getMockBuilder('\\CCTM\\Controller\\ResourceController')
+            ->setConstructorArgs(array($this->dic, $this->mock_resource, $this->dic['render_callback']))
+            ->getMockForAbstractClass();
+
     }
 
     // This is a bit hard to mock
     public function testConstructor()
     {
-        $resource = $this->getMockBuilder('\\CCTM\\Interfaces\\ResourceInterface')
-        ->getMock();
 
         $controller = $this->getMockBuilder('\\CCTM\\Controller\\ResourceController')
-            ->setConstructorArgs(array($this->dic, $resource, $this->dic['render_callback']))
+            ->setConstructorArgs(array($this->dic, $this->resource, $this->dic['render_callback']))
             ->getMockForAbstractClass();
     }
 
     public function testRender()
     {
-        $this->assertEquals('garbage', $this->controller->render('garbage'));
-    }
-
-    public function testResponseCode()
-    {
-        $this->controller->setResponseCode(300);
-        $this->assertEquals(300, $this->controller->getResponseCode());
+        $out = "HTTP/1.1 200
+Content-Type: application/vnd.api+json
+garbage";
+        $this->assertEquals($out, $this->controller->render('garbage'));
     }
 
     public function testGetResource()
     {
-        $r = $this->controller->getResource('test');
-        $this->assertTrue(is_a($r, '\\CCTM\\Interfaces\\ResourceInterface'));
+        $out = $this->controller->getResource('mytext');
+
+        $this->assertContains('HTTP/1.1 200', $out);
+        $this->assertContains('Content-Type: application/vnd.api+json', $out);
+        $this->assertContains('"type": "fields"', $out);
+
     }
 
     public function testGetCollection()
     {
-        $r = $this->controller->getCollection('test');
-        $this->assertTrue(is_array($r));
-        $this->assertEquals(array('of','stuff'), $r);
+        $out = $this->controller->getCollection();
+
+        $this->assertContains('HTTP/1.1 200', $out);
+        $this->assertContains('Content-Type: application/vnd.api+json', $out);
+        $this->assertContains('"type": "fields"', $out);
+        $this->assertContains('"id": "mytext"', $out);
+        $this->assertContains('"id": "othertext"', $out);
     }
 
     public function testDeleteResource()
     {
-        $r = $this->controller->deleteResource('test');
-    $this->assertTrue($r);
+        $out = $this->mock_controller->deleteResource('test');
+
+        $this->assertContains('HTTP/1.1 204', $out);
+
     }
 
     public function testCreateResource()
     {
+        $out = $this->mock_controller->createResource('test');
 
+        $this->assertContains('HTTP/1.1 204', $out);
     }
 
     public function testUpdateResource()
@@ -91,7 +152,7 @@ class ControllerTest extends PHPUnit_Framework_TestCase
 
     }
 
-    public function testPutResource()
+    public function testPatchResource()
     {
 
     }
