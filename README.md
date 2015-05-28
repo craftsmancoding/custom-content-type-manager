@@ -62,3 +62,12 @@ https://github.com/neomerx/json-api
 
 http://jsonapi.org/
 https://github.com/mgonto/restangular
+
+
+## TODO (before refactor is complete)
+
+Fieldtype class: fetch all classes implementing interface
+Posttypes controller + model
+API responses for update + delete etc.
+Filesystem Factor... function where you pass local dir, get a Flysystem object
+Localization

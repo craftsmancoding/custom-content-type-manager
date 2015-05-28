@@ -31,16 +31,15 @@ class FilebasedModel implements ResourceInterface{
     protected $validator;
 
     /**
-     * TODO: inputs:  full-path to model, validator [, attributes? ]
      *
      * @param                           $dic        Container
-     * @param                           $filesystem object
+     * @param                           $dir        string
      * @param ValidatorInterface|object $validator  object
      */
-    public function __construct(Container $dic, $filesystem, ValidatorInterface $validator)
+    public function __construct(Container $dic, $dir, ValidatorInterface $validator)
     {
         $this->dic = $dic;
-        $this->filesystem = $filesystem;
+        $this->filesystem = $this->dic['Filesystem']($dir);
         $this->validator = $validator;
     }
 
@@ -90,7 +89,12 @@ class FilebasedModel implements ResourceInterface{
 
         if (!$exists = $this->filesystem->has($this->getFilename($id)))
         {
-            throw new FileNotFoundException('File not found: '.$this->getFilename($id));
+            throw new FileNotFoundException('File not found', 50000, array(
+                'id' => 'FileNotFoundException',
+                'href' => '',
+                'status' => 500,
+                'detail' => 'File not found: '.$this->getFilename($id),
+            ));
         }
 
         // Tricky... because this class represents both a specific object AND actions on objects/collections in general,
@@ -161,7 +165,12 @@ class FilebasedModel implements ResourceInterface{
 
         if ($exists = $this->filesystem->has($this->getFilename($new_id)))
         {
-            throw new FileExistsException('Target file cannot be ovewritten. '.$this->getFilename($new_id));
+            throw new FileExistsException('File not found', 50010, array(
+                'id' => 'FileExistsException',
+                'href' => '',
+                'status' => 500,
+                'detail' => 'File cannot be duplicated because the target file cannot be overwritten: '.$this->getFilename($new_id),
+            ));
         }
 
         $this->filesystem->copy($this->getFilename($this->getId()), $this->getFilename($new_id));
@@ -186,7 +195,12 @@ class FilebasedModel implements ResourceInterface{
         $this->id = ($this->isNodeSet($this->pk)) ? $this->get($pk) : null;
         if(!$this->id)
         {
-            throw new InvalidAttributesException('Missing primary key.');
+            throw new InvalidAttributesException('Missing Primary Key', 50020, array(
+                'id' => 'InvalidAttributesException',
+                'href' => '',
+                'status' => 500,
+                'detail' => 'You cannot ',
+            ));
         }
         // Validate
         if (!$this->validator->validate($this->toArray(), $this->context))

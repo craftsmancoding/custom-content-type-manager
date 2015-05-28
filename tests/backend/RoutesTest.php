@@ -14,14 +14,7 @@ class RoutesTest extends PHPUnit_Framework_TestCase {
         $this->dic['POST'] = array();
         $this->callback = function($out,$code){};
     }
-
-    public function testPimple()
-    {
-        $this->assertTrue(isset($this->dic['POST']));
-        $this->assertFalse(isset($this->dic['unset']));
-        $this->assertFalse(isset($this->dic['POST']['unset']));
-    }
-
+    
     /**
      *
      *

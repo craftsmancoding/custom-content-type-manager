@@ -37,10 +37,15 @@ $container['template_paths'] = function ($c) {
     return $paths;
 };
 
-$container['Filesystem'] = function ($c)
-{
-    return new Filesystem(new Adapter($c['storage_dir']));
-};
+//$container['Filesystem'] = function ($c)
+//{
+//    return new Filesystem(new Adapter($c['storage_dir']));
+//};
+
+$container['Filesystem'] = $container->protect(function ($dir) {
+    return new Filesystem(new Adapter($dir));
+});
+
 $container['JsonDecoder'] = function ($c)
 {
     return new JsonDecoder();

@@ -1,9 +1,11 @@
 {
   "id": "mytext",
+  "type": "\\CCTM\\Fields\\Text",
   "label" : "My Text",
   "description": "Just a simple text field",
-  "class": "\\CCTM\\Fields\\Text",
+  "css_class": "some-class",
   "extra": "data-something='nada'",
   "default_value": "Yes",
-  "default_filter": ""
+  "default_filter": "",
+  "meta":{}
 }

@@ -66,7 +66,7 @@ class FilebasedModelTest extends PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @expectedException CCTM\Exceptions\NotFoundException
+     * @expectedException CCTM\Exceptions\FileNotFoundException
      */
     public function testGetOneFail()
     {
