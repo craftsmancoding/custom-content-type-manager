@@ -7,14 +7,32 @@ if ( ! defined('WP_CONTENT_DIR')) exit('No direct script access allowed');
 
 //        var data = {
 //            'action': 'cctm',
-//            'whatever': 1234
+//            'whatever': 1234,
+//            '_resource':'fields'
+//
 //        };
-
+        var data = {};
+        //alert(data);
         // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-        //$.post(ajaxurl, data, function(response) {
-        $.post(ajaxurl+'?action=cctm', data, function(response) {
-            var obj = jQuery.parseJSON(response);
-           // alert('Got this from the server: ' + obj.hash);
+//        $.post(ajaxurl, data, function(response) {
+//            //alert("response...");
+//            console.log('This is the response', response);
+////        $.post(ajaxurl+'?action=cctm', data, function(response) {
+//            //var obj = jQuery.parseJSON(response);
+//           //alert('Got this from the server: ' + obj.hash);
+//        });
+
+        $.ajax({
+            type: "POST",
+            url: ajaxurl+'?action=cctm&_resource=fields',
+            data: data,
+            success: function(msg){
+                console.info(msg);
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                //alert(xhr.responseText);
+                console.error(xhr.responseText);
+            }
         });
     });
 </script>

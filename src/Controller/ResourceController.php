@@ -34,6 +34,8 @@ use Pimple\Container;
  * 204 No Content - if a deletion request is successful and no content is returned.
  * 200 OK - A server MUST return a 200 OK status code if a deletion request is successful and the server responds with only top-level "meta" data.
  *
+ * For filters, see http://jsonapi.org/examples/ and http://jsonapi.org/recommendations/
+ * e.g. GET /comments?filter[post]=1,2&filter[author]=12
  *
  * @package CCTM\Controller
  */
@@ -43,7 +45,6 @@ abstract class ResourceController {
     protected $dic;
     protected $resource;
     protected $render_callback;
-    protected $response_code; // e.g. 200, 404, etc
 
     public function __construct(Container $dic, ResourceInterface $resource, callable $render_callback)
     {
@@ -59,7 +60,7 @@ abstract class ResourceController {
      * @param $http_status_code integer 200
      * @return mixed
      */
-    public function render($out, array $headers=array(), $http_status_code=200)
+    public function render($out, array $headers=array('Content-Type: application/vnd.api+json'), $http_status_code=200)
     {
 
         return call_user_func($this->render_callback, $out, $headers, $http_status_code);
@@ -84,7 +85,7 @@ abstract class ResourceController {
 
     public function deleteResource($id)
     {
-        $out = $this->resource->getOne($id)->delete();
+        $this->resource->getOne($id)->delete();
         return $this->render('',array(),204);
     }
 
@@ -93,11 +94,18 @@ abstract class ResourceController {
      *  - 201 Created and the full object
      *  - 202 Accepted if the action is queued for later processing
      *  - 204 No Content is acceptable if the request included a client generated ID
+     * See http://jsonapi.org/format/#crud
      */
     public function createResource()
     {
+        $this->resource->fromArray($this->dic['POST']['data']['attributes']);
 
-        $this->resource->fromArray($this->dic['POST']);
+        // Patch the id over as an attribute
+        if (isset($this->dic['POST']['data']['id']))
+        {
+            $this->resource->set('id', $this->dic['POST']['data']['id']);
+        }
+
         if ($this->resource->getId())
         {
             $this->resource->save();
@@ -105,18 +113,30 @@ abstract class ResourceController {
         }
         else
         {
-            $out = $this->dic['JsonApiEncoder']->encode($resource);
+            $out = $this->dic['JsonApiEncoder']->encode($this->resource);
             return $this->render($out,array('Content-Type: application/vnd.api+json'),201);
         }
     }
 
     /**
-
+     * Unclear from JSON API spec (?) is behavior of the POST update...
+     * POST is not indempotent (whereas PUT is).
+     * Here I'm interpreting a POST to a specific resource ($id is set) as
+     * a PUT: all resource attributes should be included in the request. Any
+     * that are omitted will be eliminated from the resource or set to null.
+     * A full response body is returned.
+     *
      * @param $id
+     *
+     * @return string
      */
     public function updateResource($id)
     {
-
+        $resource = $this->resource->getOne($id);
+        $resource->fromArray($this->dic['POST']['data']['attributes']);
+        $resource->save();
+        $out = $this->dic['JsonApiEncoder']->encode($this->resource);
+        return $this->render($out);
     }
 
     /**
@@ -124,10 +144,18 @@ abstract class ResourceController {
      * were included with their current values. It MUST NOT interpret them as null values."
      *
      * @param $id
+     *
+     * @return string
      */
     public function patchResource($id)
     {
-
+        $resource = $this->resource->getOne($id);
+        foreach ($this->dic['POST']['data']['attributes'] as $key => $val)
+        {
+            $resource->set($key, $val);
+        }
+        $this->resource->save();
+        return $this->render('',array(),204);
     }
 
 }

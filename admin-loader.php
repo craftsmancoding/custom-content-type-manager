@@ -20,6 +20,7 @@ use Neomerx\JsonApi\Encoder\JsonEncodeOptions;
 use Particle\Validator\Validator;
 use CCTM\Controller\PageController;
 use CCTM\Controller\AjaxController;
+use CCTM\Controller\FieldsController;
 use CCTM\Routes;
 
 
@@ -71,12 +72,11 @@ $container['JsonApiEncoder'] = function ($c) {
 $container['PageController'] = function ($c) {
     return new PageController($c, $c['printer']);
 };
-//$container['FieldsController'] = function ($c) {
-//      $Filesystem = new Filesystem(new Adapter($c['storage_dir'].'/fields'));
-//      $Validator = new \CCTM\Validators\FieldValidator($c['Validator']);
-//      $F = new \CCTM\Model\Field($c, $Filesystem, $Validator);
-//    return new FieldsController($c, new \CCTM\Model\Field($c, $Filesystem, $Validator), $c['printer']);
-//};
+$container['FieldsController'] = function ($c) {
+      $Validator = new \CCTM\Validators\FieldValidator($c['Validator']);
+      $F = new \CCTM\Model\Field($c, $c['storage_dir'].'/fields', $Validator);
+    return new FieldsController($c, $F, $c['ajax_printer']);
+};
 
 // Functions
 $container['header'] = $container->protect(function ($out) {
@@ -86,12 +86,13 @@ $container['printer'] = $container->protect(function ($out) {
     print $out;
 });
 $container['ajax_printer'] = $container->protect(function ($out,$headers=array('Content-Type: application/vnd.api+json'), $code=200) {
+
     http_response_code($code);
-    //header('Content-Type: application/vnd.api+json');
     foreach ($headers as $h)
     {
         header($h);
     }
+
     echo $out;
     wp_die();
 });
@@ -116,7 +117,14 @@ $container['GET'] = $_GET;
 
 
 
-add_action('admin_init', function(){
+add_action('admin_init', function() {
+
+    //print '<pre>'; var_export(get_post_types(array(),'objects')); print '</pre>'; exit;
+//    $pt = get_post_type_object('book');
+//    print '<pre>';
+//    print json_encode($pt,JSON_PRETTY_PRINT);
+//    print '</pre>';
+//    exit;
     $file = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/')+1);
     $page = (isset($_GET['page'])) ? $_GET['page'] : '';
 

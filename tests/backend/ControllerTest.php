@@ -28,7 +28,16 @@ class ControllerTest extends PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->dic         = new Container();
-        $this->dic['POST'] = array();
+        $this->dic['POST'] = array(
+            'data' => array(
+                'id' => 'xyz',
+                'attributes' => array(
+                    'x' => 'xylophone',
+                    'y' => 'yak',
+                    'z' => 'zebra'
+                )
+            )
+        );
         // Simulate a response
         $this->dic['render_callback'] = $this->dic->protect(function ($str, $headers=array('Content-Type: application/vnd.api+json'), $code) {
             $out = 'HTTP/1.1 '.$code."\n";
@@ -67,6 +76,7 @@ class ControllerTest extends PHPUnit_Framework_TestCase
         $this->dic['JsonApiEncoder'] = function ($c) {
             return Encoder::instance(array(
                 'CCTM\\Model\\Field'  => 'CCTM\\Schema\\FieldSchema',
+                'Mockery_1_CCTM_Interfaces_ResourceInterface'  => 'CCTM\\Schema\\FieldSchema',
             ), new JsonEncodeOptions(JSON_PRETTY_PRINT));
         };
 
@@ -82,6 +92,12 @@ class ControllerTest extends PHPUnit_Framework_TestCase
             ->andReturn('test')
             ->shouldReceive('save')
             ->andReturn(true)
+            ->shouldReceive('set')
+            ->andReturn(null)
+            ->shouldReceive('get')
+            ->andReturn(null)
+            ->shouldReceive('getResourceUrl')
+            ->andReturn('http://example.com/api')
             ->getMock();
 
         $this->controller = $this->getMockBuilder('\\CCTM\\Controller\\ResourceController')
@@ -149,12 +165,16 @@ garbage";
 
     public function testUpdateResource()
     {
+        $out = $this->mock_controller->updateResource('test');
 
+        $this->assertContains('HTTP/1.1 200', $out);
     }
 
     public function testPatchResource()
     {
+        $out = $this->mock_controller->createResource('test');
 
+        $this->assertContains('HTTP/1.1 204', $out);
     }
 }
 /*EOF*/

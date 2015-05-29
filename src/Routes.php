@@ -196,6 +196,15 @@ class Routes {
      */
     public function handle()
     {
+//        http_response_code(201);
+//        header('Content-Type: application/vnd.api+json');
+////        foreach ($headers as $h)
+////        {
+////            header($h);
+////        }
+//        echo "Bail...";
+//        wp_die();
+
         try
         {
             $verb = $this->getVerb();
@@ -220,8 +229,8 @@ class Routes {
 
             $out = Encoder::instance(array(), new JsonEncodeOptions(JSON_PRETTY_PRINT))->error($error);
 
-            call_user_func($this->render_callback, $out, $e->getStatus());
-
+            call_user_func($this->render_callback, $out, array('Content-Type: application/vnd.api+json'), $e->getStatus());
+            //print 'xxxx'; exit;
             return $out; // <-- We only get here when testing: when we inject a callback that does not exit
         }
 

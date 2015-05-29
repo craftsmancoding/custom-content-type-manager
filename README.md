@@ -62,7 +62,7 @@ https://github.com/neomerx/json-api
 
 http://jsonapi.org/
 https://github.com/mgonto/restangular
-
+https://github.com/WP-API/WP-API
 
 ## TODO (before refactor is complete)
 
@@ -71,3 +71,8 @@ Posttypes controller + model
 API responses for update + delete etc.
 Filesystem Factor... function where you pass local dir, get a Flysystem object
 Localization
+
+
+## Rants
+
+get_post_type_object is NOT the converse of the register_post_type function.  It's maddeningly close, but register_post_type uses "supports" and "capabilities"... so you have to use post_type_supports and get_post_type_capabilities to fill in some of the gaps. 
