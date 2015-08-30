@@ -429,8 +429,8 @@ just want to make sure that the form is presented uncorrupted.
 				// checkbox_id, css_id, checked_value
 				/* Handle custom hierarchical stuff */
 				$i = 0;
-				$args = array('public' => true );
-				$post_types = get_post_types($args);
+				$args = array( 'public' => true, 'publicly_queryable' => true );
+				$post_types = get_post_types( $args, '', 'or' );
 				//print_r($data['post_type']s); exit;
 				foreach ( $post_types as $pt => $v ) {
 					$is_checked = '';
