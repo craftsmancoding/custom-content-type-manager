@@ -1318,7 +1318,7 @@ class CCTM {
 							if ( !preg_match('/^\./', $f2) && preg_match('/\.class\.php$/', $f2) ) {
 								$shortname = basename($f2);
 								$shortname = preg_replace('/\.class\.php$/', '', $shortname);
-								$files[$shortname] = $dir.'/'.$subdir.'/'.$f2;
+								$files[$shortname] = $dir.'/'.$f.'/'.$f2;
 							}
 						}
 					}
