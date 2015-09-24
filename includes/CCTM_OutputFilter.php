@@ -70,7 +70,7 @@ abstract class CCTM_OutputFilter {
 			return array();
 		}
 		
-		$the_array = array();
+		$output = array();
 		
 		if (is_array($input)) {
 			$this->is_array_input = true;
