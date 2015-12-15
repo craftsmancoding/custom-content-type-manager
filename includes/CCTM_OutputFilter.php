@@ -87,7 +87,7 @@ abstract class CCTM_OutputFilter {
             }
 
 			// See http://code.google.com/p/wordpress-custom-content-type-manager/issues/detail?id=121
-			if ( !is_array($output) ) {
+			if (empty($output) || !is_array($output) ) {
 				$this->is_array_input = false;
 				if (empty($output) && !empty($input)) {					
 					return array($input);
